@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fenn, larry</title>
+    <description>some of my research, thoughts, and projects.
+</description>
+    <link>http://larryfenn.com/</link>
+    <atom:link href="http://larryfenn.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 09 Nov 2015 16:39:02 -0500</pubDate>
+    <lastBuildDate>Mon, 09 Nov 2015 16:39:02 -0500</lastBuildDate>
+    <generator>Jekyll v3.0.0</generator>
+    
+      <item>
+        <title>Mathematica Projects</title>
+        <description>&lt;p&gt;This is the archive listing of all the old Mathematica projects hosted on the old website.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 09 Nov 2015 16:00:00 -0500</pubDate>
+        <link>http://larryfenn.com/personal/2015/11/09/mathematica.html</link>
+        <guid isPermaLink="true">http://larryfenn.com/personal/2015/11/09/mathematica.html</guid>
+        
+        <category>mathematica</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
+    
+      <item>
+        <title>Mixed Procedures For Stochastic Optimization</title>
+        <description>&lt;p&gt;This is a significant generalization of my earlier stochastic optimization efforts. I presented as an author at the INFORMS annual conference in Philadelphia.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 04 Nov 2015 10:02:14 -0500</pubDate>
+        <link>http://larryfenn.com/research/2015/11/04/stochastic-optimization2.html</link>
+        <guid isPermaLink="true">http://larryfenn.com/research/2015/11/04/stochastic-optimization2.html</guid>
+        
+        <category>stochastic-optimization</category>
+        
+        
+        <category>research</category>
+        
+      </item>
+    
+      <item>
+        <title>Decision Trees For Survey Construction</title>
+        <description>&lt;p&gt;This is a companion piece to a piece of research currently being done by Christina Zamfirescu of Hunter College about automated survey construction.&lt;/p&gt;
+
+&lt;p&gt;The article covers a few examples and transformations in parallel with her work which uses a different method. As cited in the Electronic Journal of Statistics: Electron. J. Statist. 9 (2015), no. 2, 2202–2254. doi:10.1214/15-EJS1067.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;../decisiontrees.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 22 Jul 2015 02:02:03 -0400</pubDate>
+        <link>http://larryfenn.com/research/2015/07/22/decision-trees.html</link>
+        <guid isPermaLink="true">http://larryfenn.com/research/2015/07/22/decision-trees.html</guid>
+        
+        <category>decision-trees</category>
+        
+        
+        <category>research</category>
+        
+      </item>
+    
+      <item>
+        <title>Stochastic Optimization</title>
+        <description>&lt;p&gt;Research done through Felisa Vazquez-Abad at Hunter College on stochastic optimization algorithms to solve a particular transit problem.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 30 Dec 2014 01:02:03 -0500</pubDate>
+        <link>http://larryfenn.com/research/2014/12/30/stochastic-optimization.html</link>
+        <guid isPermaLink="true">http://larryfenn.com/research/2014/12/30/stochastic-optimization.html</guid>
+        
+        <category>stochastic-optimization</category>
+        
+        
+        <category>research</category>
+        
+      </item>
+    
+  </channel>
+</rss>
