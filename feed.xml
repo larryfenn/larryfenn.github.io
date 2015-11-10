@@ -6,9 +6,27 @@
 </description>
     <link>http://larryfenn.com/</link>
     <atom:link href="http://larryfenn.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 10 Nov 2015 01:37:51 -0500</pubDate>
-    <lastBuildDate>Tue, 10 Nov 2015 01:37:51 -0500</lastBuildDate>
+    <pubDate>Tue, 10 Nov 2015 02:45:15 -0500</pubDate>
+    <lastBuildDate>Tue, 10 Nov 2015 02:45:15 -0500</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
+    
+      <item>
+        <title>Assorted Academic Writing</title>
+        <description>&lt;p&gt;This is an archive of expository papers I have written. I have attempted to organize them by most relevant subject area.
+&lt;!--more--&gt;&lt;/p&gt;
+&lt;h1&gt;Algebra&lt;/h1&gt;
+&lt;p&gt;&lt;a class=&quot;page-link&quot; href=&quot;/assets/writing/unityhoms.pdf&quot;&gt;The existence of an injective homomorphism between \(\text{Hom}\left(\dfrac{\mathbb{Q}\lvert\zeta\rvert}{\mathbb{Q}}\right)\) and the multiplicative group \(R_n\) where \(\{x\in R_n\colon \gcd(x, n) = 1\}\)&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 10 Nov 2015 02:05:00 -0500</pubDate>
+        <link>http://larryfenn.com/personal/2015/11/10/assorted-papers.html</link>
+        <guid isPermaLink="true">http://larryfenn.com/personal/2015/11/10/assorted-papers.html</guid>
+        
+        <category>archive</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>Mathematica Projects</title>
@@ -46,7 +64,7 @@
 
 &lt;p&gt;The article covers a few examples and transformations in parallel with her work which uses a different method. As cited in the Electronic Journal of Statistics: Electron. J. Statist. 9 (2015), no. 2, 2202–2254. doi:10.1214/15-EJS1067.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;../decisiontrees.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/research/decisiontrees.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 22 Jul 2015 02:02:03 -0400</pubDate>
         <link>http://larryfenn.com/research/2015/07/22/decision-trees.html</link>
@@ -62,6 +80,17 @@
       <item>
         <title>Stochastic Optimization</title>
         <description>&lt;p&gt;Research done through Felisa Vazquez-Abad at Hunter College on stochastic optimization algorithms to solve a particular transit problem.&lt;/p&gt;
+
+&lt;p&gt;Her original problem came by way of the Melbourne airport, which was seeking to implement a bus system to connect long-term parking lots with the airport terminals.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/research/stopt.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1&gt;Problem&lt;/h1&gt;
+&lt;p&gt;The problem is a constrained optimization problem, where the constraint is rather tricky mathematically(although standard for industry and policy): 95% of passengers should not have to wait more than 10 minutes. The problem domain is on number of buses, and a control variable dictating the headway between buses.&lt;/p&gt;
+&lt;h1&gt;Modeling&lt;/h1&gt;
+&lt;p&gt;Modeling proceeded with one unique twist: by assuming buses were not allowed to pass each other, it is possible to use a Markov process on the sample paths for separate buses (rather than on separate instances of time). This allows for simulation to be sped up enormously, since the simulation no longer needs to simulate individual timesteps. As an additional boon, it was proven that this model supports unbiased IPA estimators for derivatives, allowing an implementation of gradient search that is much more efficient than FDM gradient search.&lt;/p&gt;
+&lt;h1&gt;Further Work&lt;/h1&gt;
+&lt;p&gt;The direction I am taking this in the future is to generalize where the techniques used in solving this problem are applicable. Of particular curiosity is if it can be generalized in a way that makes it applicable to something like the bike-sharing program now seen in many cities.&lt;/p&gt;
 </description>
         <pubDate>Tue, 30 Dec 2014 01:02:03 -0500</pubDate>
         <link>http://larryfenn.com/research/2014/12/30/stochastic-optimization.html</link>
