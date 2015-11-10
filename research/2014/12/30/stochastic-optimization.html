@@ -60,12 +60,25 @@
   <div class="post-content" itemprop="articleBody">
     <p>Research done through Felisa Vazquez-Abad at Hunter College on stochastic optimization algorithms to solve a particular transit problem.</p>
 
+<p>Her original problem came by way of the Melbourne airport, which was seeking to implement a bus system to connect long-term parking lots with the airport terminals.</p>
+
+<p><a href="/research/stopt.pdf">PDF</a></p>
+
+<h1>Problem</h1>
+<p>The problem is a constrained optimization problem, where the constraint is rather tricky mathematically(although standard for industry and policy): 95% of passengers should not have to wait more than 10 minutes. The problem domain is on number of buses, and a control variable dictating the headway between buses.</p>
+<h1>Modeling</h1>
+<p>Modeling proceeded with one unique twist: by assuming buses were not allowed to pass each other, it is possible to use a Markov process on the sample paths for separate buses (rather than on separate instances of time). This allows for simulation to be sped up enormously, since the simulation no longer needs to simulate individual timesteps. As an additional boon, it was proven that this model supports unbiased IPA estimators for derivatives, allowing an implementation of gradient search that is much more efficient than FDM gradient search.</p>
+<h1>Further Work</h1>
+<p>The direction I am taking this in the future is to generalize where the techniques used in solving this problem are applicable. Of particular curiosity is if it can be generalized in a way that makes it applicable to something like the bike-sharing program now seen in many cities.</p>
+
   </div>
+  
   <div class="tags">
   Tags: 
   <a href="/tag/stochastic-optimization">stochastic-optimization</a>
   
   </div>
+  
   <br>
   <br>
   <div class="previous-next">
