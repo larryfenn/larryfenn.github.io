@@ -1,0 +1,186 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      6706,        177]
+NotebookOptionsPosition[      6389,        161]
+NotebookOutlinePosition[      6732,        176]
+CellTagsIndexPosition[      6689,        173]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"F", "[", 
+    RowBox[{"x_", ",", "y_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y"}], "}"}], "+", 
+    FractionBox[
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "y"}]}], "}"}], 
+     RowBox[{
+      SuperscriptBox["x", "2"], "+", 
+      SuperscriptBox["y", "2"]}]]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"ContourPlot", "[", 
+    RowBox[{
+     RowBox[{"Im", "[", 
+      RowBox[{
+       FractionBox[
+        RowBox[{
+         RowBox[{"Complex", "[", 
+          RowBox[{"x", ",", "y"}], "]"}], "+", 
+         SqrtBox[
+          RowBox[{
+           SuperscriptBox[
+            RowBox[{"Complex", "[", 
+             RowBox[{"x", ",", "y"}], "]"}], "2"], "-", "4"}]], "-", 
+         RowBox[{"2", 
+          RowBox[{"Complex", "[", 
+           RowBox[{"\[CapitalDelta]x", ",", "\[CapitalDelta]y"}], "]"}]}]}], 
+        RowBox[{"2", 
+         SqrtBox[
+          RowBox[{
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"1", "-", "\[CapitalDelta]x"}], ")"}], "2"], "+", 
+           SuperscriptBox["\[CapitalDelta]y", "2"]}]]}]], "+", 
+       FractionBox[
+        RowBox[{"2", 
+         SqrtBox[
+          RowBox[{
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"1", "-", "\[CapitalDelta]x"}], ")"}], "2"], "+", 
+           SuperscriptBox["\[CapitalDelta]y", "2"]}]]}], 
+        RowBox[{
+         RowBox[{"Complex", "[", 
+          RowBox[{"x", ",", "y"}], "]"}], "+", 
+         SqrtBox[
+          RowBox[{
+           SuperscriptBox[
+            RowBox[{"Complex", "[", 
+             RowBox[{"x", ",", "y"}], "]"}], "2"], "-", "4"}]], "-", 
+         RowBox[{"2", 
+          RowBox[{"Complex", "[", 
+           RowBox[{"\[CapitalDelta]x", ",", "\[CapitalDelta]y"}], 
+           "]"}]}]}]]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y", ",", 
+       RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Full"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[CapitalDelta]x", ",", 
+     RowBox[{"-", ".2"}], ",", 
+     RowBox[{"-", ".05"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[CapitalDelta]y", ",", ".025", ",", ".1"}], "}"}], ",", 
+   RowBox[{"Deployed", "\[Rule]", "True"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6064322843975253`*^9, 3.6064323633389025`*^9}, {
+  3.6064324158542852`*^9, 3.6064325976004553`*^9}, {3.6064338910294757`*^9, 
+  3.606434054646063*^9}, {3.60643411429345*^9, 3.606434312428627*^9}, {
+  3.6064343897993946`*^9, 3.606434390940079*^9}, {3.606434424180722*^9, 
+  3.6064344883244276`*^9}, {3.606434545183404*^9, 3.6064345459021916`*^9}, {
+  3.6064346211460505`*^9, 3.606434642085168*^9}, {3.6064346924211946`*^9, 
+  3.606434729204932*^9}, {3.6064348111022134`*^9, 3.60643482087466*^9}, {
+  3.6064349349551215`*^9, 3.6064349360176783`*^9}, {3.6064349692711*^9, 
+  3.6064350031725783`*^9}, {3.606435520453415*^9, 3.606435704160365*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`\[CapitalDelta]x$$ = -0.1174, $CellContext`\
+\[CapitalDelta]y$$ = 0.07150000000000001, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`\[CapitalDelta]x$$], -0.2, -0.05}, {
+      Hold[$CellContext`\[CapitalDelta]y$$], 0.025, 0.1}}, Typeset`size$$ = {
+    768., {378., 382.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`\[CapitalDelta]x$94311$$ = 
+    0, $CellContext`\[CapitalDelta]y$94312$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`\[CapitalDelta]x$$ = -0.2, $CellContext`\
+\[CapitalDelta]y$$ = 0.025}, "ControllerVariables" :> {
+        Hold[$CellContext`\[CapitalDelta]x$$, \
+$CellContext`\[CapitalDelta]x$94311$$, 0], 
+        Hold[$CellContext`\[CapitalDelta]y$$, \
+$CellContext`\[CapitalDelta]y$94312$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> ContourPlot[
+        Im[(
+           Complex[$CellContext`x, $CellContext`y] + (
+             Complex[$CellContext`x, $CellContext`y]^2 - 4)^Rational[1, 2] - 
+           2 Complex[$CellContext`\[CapitalDelta]x$$, $CellContext`\
+\[CapitalDelta]y$$])/(
+          2 ((1 - $CellContext`\[CapitalDelta]x$$)^2 + $CellContext`\
+\[CapitalDelta]y$$^2)^Rational[1, 2]) + 
+         2 ((1 - $CellContext`\[CapitalDelta]x$$)^2 + $CellContext`\
+\[CapitalDelta]y$$^2)^Rational[1, 2]/(
+          Complex[$CellContext`x, $CellContext`y] + (
+            Complex[$CellContext`x, $CellContext`y]^2 - 4)^Rational[1, 2] - 2 
+          Complex[$CellContext`\[CapitalDelta]x$$, $CellContext`\
+\[CapitalDelta]y$$])], {$CellContext`x, 0, 3}, {$CellContext`y, -1, 1}, 
+        ImageSize -> Full], 
+      "Specifications" :> {{$CellContext`\[CapitalDelta]x$$, -0.2, -0.05}, \
+{$CellContext`\[CapitalDelta]y$$, 0.025, 0.1}}, 
+      "Options" :> {Deployed -> True}, "DefaultOptions" :> {}],
+     ImageSizeCache->{819., {445., 450.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.6064357053479137`*^9}]
+}, Open  ]]
+},
+WindowSize->{945, 985},
+WindowMargins->{{Automatic, -3}, {0, Automatic}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 3067, 81, 268, "Input"],
+Cell[3649, 105, 2724, 53, 912, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

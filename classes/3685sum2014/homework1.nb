@@ -1,0 +1,479 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     17599,        470]
+NotebookOptionsPosition[     16589,        433]
+NotebookOutlinePosition[     16932,        448]
+CellTagsIndexPosition[     16889,        445]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"First", " ", "homework", " ", 
+   RowBox[{"problem", ":", " ", "precision"}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.6120559459234657`*^9, 3.6120559599731483`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"x_", ",", "y_"}], "]"}], ":=", 
+   FractionBox[
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"x", "+", "y"}], ")"}], "2"], "-", 
+     RowBox[{"2", "*", "x", "*", "y"}], "-", 
+     SuperscriptBox["y", "2"]}], 
+    SuperscriptBox["x", "2"]]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{
+     SuperscriptBox["10.0", 
+      RowBox[{"-", "i"}]], ",", 
+     SuperscriptBox["10", "3"]}], "]"}], " ", ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "1", ",", "7"}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{
+     SuperscriptBox["10", 
+      RowBox[{"-", "i"}]], ",", 
+     SuperscriptBox["10", "3"]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "1", ",", "7"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.610634086210909*^9, 3.6106341153252363`*^9}, {
+   3.6106344216996927`*^9, 3.6106344257964115`*^9}, {3.610634474521874*^9, 
+   3.610634524907082*^9}, {3.6106347504725533`*^9, 3.6106348261621504`*^9}, {
+   3.610634939516963*^9, 3.610634946602666*^9}, {3.6110157764463806`*^9, 
+   3.611015777865322*^9}, 3.6110158620672016`*^9, {3.612055941717127*^9, 
+   3.6120559444364786`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1.0000000009313224`", ",", "0.9999994654208422`", ",", "1.00000761449337`",
+    ",", "1.0011717677116394`", ",", "0.`", ",", "0.`", ",", 
+   RowBox[{"-", "11641.532182693483`"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.6106344290265555`*^9, {3.610634478770693*^9, 3.6106345254534445`*^9}, {
+   3.610634758779066*^9, 3.610634827900303*^9}, {3.610634941262121*^9, 
+   3.610634946794793*^9}, 3.6110157782725945`*^9, 3.6110158625695343`*^9, 
+   3.6110179685778246`*^9, 3.611082693124292*^9, 3.6110856611184216`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.6106344290265555`*^9, {3.610634478770693*^9, 3.6106345254534445`*^9}, {
+   3.610634758779066*^9, 3.610634827900303*^9}, {3.610634941262121*^9, 
+   3.610634946794793*^9}, 3.6110157782725945`*^9, 3.6110158625695343`*^9, 
+   3.6110179685778246`*^9, 3.611082693124292*^9, 3.6110856611194215`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"Riemann", " ", "sum", " ", "problem"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.6120560486969695`*^9, 3.6120560567853355`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"g", "[", "x_", "]"}], ":=", 
+   SuperscriptBox["x", "2"]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[CapitalDelta]x", "=", ".025"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Sum", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"g", "[", "x", "]"}], "\[CapitalDelta]x"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "1"}], ",", 
+     RowBox[{"1", "-", "\[CapitalDelta]x"}], ",", "\[CapitalDelta]x"}], 
+    "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6110158485577793`*^9, 3.611015988437734*^9}}],
+
+Cell[BoxData["0.6668750000000003`"], "Output",
+ CellChangeTimes->{{3.6110159852506204`*^9, 3.611015988673891*^9}, 
+   3.611016250858*^9, 3.6110179699927635`*^9, 3.6110826931883354`*^9, 
+   3.6110856611644535`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"out", "=", 
+   RowBox[{
+    RowBox[{"DynamicModule", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"n", "=", "2"}], "}"}], ",", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Manipulator", "[", 
+         RowBox[{
+          RowBox[{"Dynamic", "[", "n", "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"2", ",", 
+            SuperscriptBox["2", "8"], ",", "2"}], "}"}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Dynamic", "[", 
+         RowBox[{"StringForm", "[", 
+          RowBox[{"\"\<Right Riemann sum area: ``\>\"", ",", 
+           RowBox[{"N", "[", 
+            RowBox[{"Sum", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"g", "[", 
+                RowBox[{
+                 RowBox[{"-", "1"}], "+", 
+                 RowBox[{"i", "*", 
+                  FractionBox["2", "n"]}]}], "]"}], 
+               FractionBox["2", "n"]}], ",", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", "0", ",", 
+                RowBox[{"n", "-", "1"}]}], "}"}]}], "]"}], "]"}]}], "]"}], 
+         "]"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"Dynamic", "[", 
+         RowBox[{"Show", "[", 
+          RowBox[{
+           RowBox[{"Plot", "[", 
+            RowBox[{
+             SuperscriptBox["x", "2"], ",", 
+             RowBox[{"{", 
+              RowBox[{"x", ",", 
+               RowBox[{"-", "1"}], ",", "1"}], "}"}]}], "]"}], ",", 
+           RowBox[{"DiscretePlot", "[", 
+            RowBox[{
+             RowBox[{"g", "[", "t", "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"t", ",", 
+               RowBox[{
+                RowBox[{"-", "1"}], "+", 
+                FractionBox["2", "n"]}], ",", "1", ",", 
+               FractionBox["2", "n"]}], "}"}], ",", 
+             RowBox[{"ExtentSize", "\[Rule]", "Left"}], ",", 
+             RowBox[{"PlotMarkers", "\[Rule]", "\"\<Point\>\""}]}], "]"}]}], 
+          "]"}], "]"}], ",", 
+        RowBox[{"Dynamic", "[", 
+         RowBox[{"StringForm", "[", 
+          RowBox[{"\"\<Left Riemann sum area: ``\>\"", ",", 
+           RowBox[{"N", "[", 
+            RowBox[{"Sum", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"g", "[", 
+                RowBox[{
+                 RowBox[{"-", "1"}], "+", 
+                 RowBox[{"i", "*", 
+                  FractionBox["2", "n"]}]}], "]"}], 
+               FractionBox["2", "n"]}], ",", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", "1", ",", "n"}], "}"}]}], "]"}], "]"}]}], 
+          "]"}], "]"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"Dynamic", "[", 
+         RowBox[{"Show", "[", 
+          RowBox[{
+           RowBox[{"Plot", "[", 
+            RowBox[{
+             SuperscriptBox["x", "2"], ",", 
+             RowBox[{"{", 
+              RowBox[{"x", ",", 
+               RowBox[{"-", "1"}], ",", "1"}], "}"}]}], "]"}], ",", 
+           RowBox[{"DiscretePlot", "[", 
+            RowBox[{
+             RowBox[{"g", "[", "t", "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"t", ",", 
+               RowBox[{"-", "1"}], ",", 
+               RowBox[{"1", "-", 
+                FractionBox["2", "n"]}], ",", 
+               FractionBox["2", "n"]}], "}"}], ",", 
+             RowBox[{"ExtentSize", "\[Rule]", "Right"}], ",", 
+             RowBox[{"PlotMarkers", "\[Rule]", "\"\<Point\>\""}]}], "]"}]}], 
+          "]"}], "]"}]}], "\[IndentingNewLine]", "}"}]}], "]"}], "[", 
+    RowBox[{"[", "2", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"out", "[", 
+  RowBox[{"[", "1", "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"out", "[", 
+  RowBox[{"[", "2", "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"out", "[", 
+  RowBox[{"[", "3", "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"out", "[", 
+  RowBox[{"[", "4", "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"out", "[", 
+  RowBox[{"[", "5", "]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6110165262570057`*^9, 3.6110166569273787`*^9}, {
+  3.611016705919239*^9, 3.6110167103204613`*^9}, {3.611016770128461*^9, 
+  3.611016975135846*^9}, {3.6110170315601997`*^9, 3.611017083615182*^9}, {
+  3.6110171255035734`*^9, 3.61101714250745*^9}, {3.611017468884322*^9, 
+  3.611017474479086*^9}, {3.611017845517995*^9, 3.611017959730722*^9}, {
+  3.611018003887112*^9, 3.6110181230363913`*^9}, {3.611018207539924*^9, 
+  3.6110182187869406`*^9}, {3.6110182491987762`*^9, 3.611018293595765*^9}, {
+  3.6110183333073525`*^9, 3.611018380256947*^9}, {3.611018416109371*^9, 
+  3.611018542479974*^9}, {3.6110186009625874`*^9, 3.611018651016606*^9}, {
+  3.6110186963941727`*^9, 3.611018716611581*^9}, {3.611018785397133*^9, 
+  3.6110188110400105`*^9}, {3.6110826831654177`*^9, 3.6110826837054524`*^9}, {
+  3.611085746873164*^9, 3.6110857795437517`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  PaneBox[
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`paused$$ = 0, 
+    Typeset`rate$$ = Automatic, Typeset`dir$$ = Forward}, 
+    StyleBox[
+     DynamicBox[FEPrivate`FrontEndResource["FEExpressions", "Manipulator04"][
+       Dynamic[$CellContext`n], 
+       Dynamic[$CellContext`n], {2, 256, 2}, Medium, Small, Automatic, True, 
+       Automatic, False, True, True, All, False, {}, 
+       Dynamic[Typeset`open$$], 
+       Dynamic[Typeset`paused$$], 
+       Dynamic[Typeset`rate$$], 
+       Dynamic[Typeset`dir$$]],
+      ImageSizeCache->{212., {12., 17.}}],
+     DynamicUpdating->True],
+    DynamicModuleValues:>{}],
+   BaselinePosition->Baseline,
+   ImageMargins->0],
+  Manipulate`InterpretManipulator[
+   Dynamic[$CellContext`n], {2, 256, 2}, {}]]], "Output",
+ CellChangeTimes->{{3.6110186158528013`*^9, 3.6110186514468956`*^9}, {
+   3.611018696757427*^9, 3.61101871703588*^9}, {3.611018786562907*^9, 
+   3.611018811343223*^9}, {3.611082684709118*^9, 3.611082693329427*^9}, 
+   3.611085661185466*^9, {3.6110857493698177`*^9, 3.611085779813932*^9}}],
+
+Cell[BoxData[
+ DynamicBox[ToBoxes[
+   StringForm["Right Riemann sum area: ``", 
+    N[
+     Sum[$CellContext`g[-1 + $CellContext`i (2/$CellContext`n)] (
+       2/$CellContext`n), {$CellContext`i, 0, $CellContext`n - 1}]]], 
+   StandardForm],
+  ImageSizeCache->{296., {2., 8.}}]], "Output",
+ CellChangeTimes->{{3.6110186158528013`*^9, 3.6110186514468956`*^9}, {
+   3.611018696757427*^9, 3.61101871703588*^9}, {3.611018786562907*^9, 
+   3.611018811343223*^9}, {3.611082684709118*^9, 3.611082693329427*^9}, 
+   3.611085661185466*^9, {3.6110857493698177`*^9, 3.611085779819935*^9}}],
+
+Cell[BoxData[
+ DynamicBox[ToBoxes[
+   Show[
+    Plot[$CellContext`x^2, {$CellContext`x, -1, 1}], 
+    DiscretePlot[
+     $CellContext`g[$CellContext`t], {$CellContext`t, -1 + 2/$CellContext`n, 
+      1, 2/$CellContext`n}, ExtentSize -> Left, PlotMarkers -> "Point"]], 
+   StandardForm],
+  ImageSizeCache->{360., {115., 118.}}]], "Output",
+ CellChangeTimes->{{3.6110186158528013`*^9, 3.6110186514468956`*^9}, {
+   3.611018696757427*^9, 3.61101871703588*^9}, {3.611018786562907*^9, 
+   3.611018811343223*^9}, {3.611082684709118*^9, 3.611082693329427*^9}, 
+   3.611085661185466*^9, {3.6110857493698177`*^9, 3.611085779821935*^9}}],
+
+Cell[BoxData[
+ DynamicBox[ToBoxes[
+   StringForm["Left Riemann sum area: ``", 
+    N[
+     Sum[$CellContext`g[-1 + $CellContext`i (2/$CellContext`n)] (
+       2/$CellContext`n), {$CellContext`i, 1, $CellContext`n}]]], 
+   StandardForm],
+  ImageSizeCache->{279., {2., 8.}}]], "Output",
+ CellChangeTimes->{{3.6110186158528013`*^9, 3.6110186514468956`*^9}, {
+   3.611018696757427*^9, 3.61101871703588*^9}, {3.611018786562907*^9, 
+   3.611018811343223*^9}, {3.611082684709118*^9, 3.611082693329427*^9}, 
+   3.611085661185466*^9, {3.6110857493698177`*^9, 3.61108577985596*^9}}],
+
+Cell[BoxData[
+ DynamicBox[ToBoxes[
+   Show[
+    Plot[$CellContext`x^2, {$CellContext`x, -1, 1}], 
+    DiscretePlot[
+     $CellContext`g[$CellContext`t], {$CellContext`t, -1, 1 - 
+      2/$CellContext`n, 2/$CellContext`n}, ExtentSize -> Right, PlotMarkers -> 
+     "Point"]], StandardForm],
+  ImageSizeCache->{360., {115., 118.}}]], "Output",
+ CellChangeTimes->{{3.6110186158528013`*^9, 3.6110186514468956`*^9}, {
+   3.611018696757427*^9, 3.61101871703588*^9}, {3.611018786562907*^9, 
+   3.611018811343223*^9}, {3.611082684709118*^9, 3.611082693329427*^9}, 
+   3.611085661185466*^9, {3.6110857493698177`*^9, 3.6110857798579607`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"Fibonacci", " ", "#", " ", "problem"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.612056302875939*^9, 3.612056306297685*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Standard", ":", " ", 
+    RowBox[{
+    "the", " ", "first", " ", "and", " ", "second", " ", "Fibonacci", " ", 
+     "numbers", " ", "are", " ", "1", " ", "and", " ", "1"}]}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"index", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"fib", "=", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1"}], "}"}]}], ";"}], " ", 
+   RowBox[{"(*", 
+    RowBox[{"fib", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       SubscriptBox["F", 
+        RowBox[{"n", "-", "1"}]], ",", 
+       SubscriptBox["F", "n"]}], "}"}]}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ans", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"While", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"fib", "[", 
+       RowBox[{"[", "2", "]"}], "]"}], "<", "4000000"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"temp", "=", 
+       RowBox[{"fib", "[", 
+        RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"fib", "[", 
+        RowBox[{"[", "1", "]"}], "]"}], "=", 
+       RowBox[{"fib", "[", 
+        RowBox[{"[", "2", "]"}], "]"}]}], ";", 
+      RowBox[{"(*", 
+       RowBox[{
+        SubscriptBox["F", 
+         RowBox[{"n", "-", "1"}]], " ", "is", " ", "replaced", " ", "by", " ", 
+        SubscriptBox["F", "n"]}], "*)"}], "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"fib", "[", 
+        RowBox[{"[", "2", "]"}], "]"}], "+=", "temp"}], ";", 
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["F", "n"], " ", "is", " ", "replaced", " ", "by", " ", 
+         SubscriptBox["F", 
+          RowBox[{"n", "+", "1"}]]}], "=", 
+        RowBox[{
+         SubscriptBox["F", "n"], "+", 
+         SubscriptBox["F", 
+          RowBox[{"n", "-", "1"}]]}]}], "*)"}], "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Mod", "[", 
+          RowBox[{
+           RowBox[{"fib", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], ",", "2"}], "]"}], "\[Equal]", 
+         "0"}], ",", 
+        RowBox[{"ans", "+=", 
+         RowBox[{"fib", "[", 
+          RowBox[{"[", "1", "]"}], "]"}]}]}], "]"}], " ", ";", 
+      RowBox[{"(*", 
+       RowBox[{"accumulate", " ", "even", " ", "Fibonacci", " ", "numbers"}], 
+       "*)"}], "\[IndentingNewLine]", 
+      RowBox[{"index", "++"}], ";"}]}], "\[IndentingNewLine]", "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"StringForm", "[", 
+    RowBox[{
+    "\"\<The ``rd Fibonacci number, ``, is the largest one less than \
+4,000,000\>\"", ",", " ", "index", ",", " ", 
+     RowBox[{"fib", "[", 
+      RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"StringForm", "[", 
+    RowBox[{
+    "\"\<The sum of all even Fibonacci numbers up to \
+\!\(\*SubscriptBox[\(F\), \(``\)]\) is ``\>\"", ",", " ", "index", ",", " ", 
+     "ans"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.611082899388836*^9, 3.611083246800691*^9}, {
+   3.611083338747301*^9, 3.6110834893615584`*^9}, {3.6110839580723133`*^9, 
+   3.6110839771842546`*^9}, 3.6110842690944233`*^9}],
+
+Cell[BoxData[
+ InterpretationBox["\<\"The \\!\\(33\\)rd Fibonacci number, \\!\\(3524578\\), \
+is the largest one less than 4,000,000\"\>",
+  StringForm[
+  "The ``rd Fibonacci number, ``, is the largest one less than 4,000,000", 33,
+    3524578],
+  Editable->False]], "Output",
+ CellChangeTimes->{3.611084269667804*^9, 3.6110856613315663`*^9}],
+
+Cell[BoxData[
+ InterpretationBox["\<\"The sum of all even Fibonacci numbers up to \
+\\!\\(\\*SubscriptBox[\\(F\\), \\(\\!\\(33\\)\\)]\\) is \\!\\(4613732\\)\"\>",
+  StringForm[
+  "The sum of all even Fibonacci numbers up to \!\(\*SubscriptBox[\(F\), \(``\
+\)]\) is ``", 33, 4613732],
+  Editable->False]], "Output",
+ CellChangeTimes->{3.611084269667804*^9, 3.611085661333564*^9}]
+}, Open  ]]
+},
+WindowSize->{1902, 914},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 208, 4, 31, "Input"],
+Cell[CellGroupData[{
+Cell[790, 28, 1307, 36, 96, "Input"],
+Cell[2100, 66, 558, 10, 31, "Output"],
+Cell[2661, 78, 443, 8, 31, "Output"]
+}, Open  ]],
+Cell[3119, 89, 168, 3, 31, "Input"],
+Cell[CellGroupData[{
+Cell[3312, 96, 574, 16, 72, "Input"],
+Cell[3889, 114, 213, 3, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4139, 122, 4817, 114, 297, "Input"],
+Cell[8959, 238, 1086, 24, 46, "Output"],
+Cell[10048, 264, 578, 11, 31, "Output"],
+Cell[10629, 277, 627, 12, 248, "Output"],
+Cell[11259, 291, 572, 11, 31, "Output"],
+Cell[11834, 304, 632, 12, 248, "Output"]
+}, Open  ]],
+Cell[12481, 319, 164, 3, 31, "Input"],
+Cell[CellGroupData[{
+Cell[12670, 326, 3177, 86, 272, "Input"],
+Cell[15850, 414, 342, 7, 31, "Output"],
+Cell[16195, 423, 378, 7, 31, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
