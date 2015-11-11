@@ -6,8 +6,8 @@
 </description>
     <link>http://larryfenn.com/</link>
     <atom:link href="http://larryfenn.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 11 Nov 2015 18:21:28 -0500</pubDate>
-    <lastBuildDate>Wed, 11 Nov 2015 18:21:28 -0500</lastBuildDate>
+    <pubDate>Wed, 11 Nov 2015 18:29:34 -0500</pubDate>
+    <lastBuildDate>Wed, 11 Nov 2015 18:29:34 -0500</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
     
       <item>
@@ -130,7 +130,7 @@ A series of notes I typed up for the benefit of a student over the course of a f
 
 &lt;p&gt;&lt;a href=&quot;/personal/minima/&quot;&gt;Deterministic optimization: gradient search and Newton’s method.&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;/personal/newton/netwonvbisect.nb&quot;&gt;Bisection&lt;/a&gt;, &lt;a href=&quot;/personal/newton/newtonvsecant.nb&quot;&gt;secant method comparisons.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/personal/newton/newtonvbisect.nb&quot;&gt;Bisection&lt;/a&gt;, &lt;a href=&quot;/personal/newton/newtonvsecant.nb&quot;&gt;secant method comparisons.&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/personal/rm/exerciseresistance.nb&quot;&gt;Fixed stepsize&lt;/a&gt;, &lt;a href=&quot;/personal/rm/exerciseresistancedynamic.nb&quot;&gt;dynamic stepsize RM optimization.&lt;/a&gt;&lt;/p&gt;
 </description>
