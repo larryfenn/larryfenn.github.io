@@ -6,22 +6,104 @@
 </description>
     <link>http://larryfenn.com/</link>
     <atom:link href="http://larryfenn.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 10 Nov 2015 03:01:40 -0500</pubDate>
-    <lastBuildDate>Tue, 10 Nov 2015 03:01:40 -0500</lastBuildDate>
+    <pubDate>Wed, 11 Nov 2015 18:21:28 -0500</pubDate>
+    <lastBuildDate>Wed, 11 Nov 2015 18:21:28 -0500</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
+    
+      <item>
+        <title>Centrality &amp; Maximal Entropy Random Walks</title>
+        <description>&lt;p&gt;Node centrality can be tricky to measure if it is not assumed the whole graph structure is accessible. However, approximation techniques can be used (in particular, an approximation to maximal entropy random walks) to determine central nodes.&lt;/p&gt;
+
+&lt;h1&gt;Centrality&lt;/h1&gt;
+&lt;p&gt;One of the definitions of centrality for a graph is eigenvalue centrality. Eigenvalue centrality is useful in that it takes into account the centrality of neighbors (and, recursively, neighbors of neighbors and so on). Solving the eigenvalue problem for a graph adjacency matrix is best done numerically. Once finished, every node in the graph receives an appropriate centrality score.&lt;/p&gt;
+
+&lt;p&gt;However, it may be that the structure of the whole graph is not available all at once. For example, consider the social network of friends as defined on all people- obtaining the structure of this graph requires interviewing every person on Earth and asking them to list their friends out. If we permit the existence of local information (for example, the results of interviewing one person), then it may be possible to determine approximate notions of centrality.&lt;/p&gt;
+
+&lt;p&gt;In the case of degree centrality this is easy and uninteresting: each person’s score is simply the number of people they know. However, it turns out more sophisticated notions of centrality can also be&lt;/p&gt;
+
+&lt;h1&gt;Random Walks&lt;/h1&gt;
+&lt;p&gt;The idea is to employ random walks that have high probabilities of being in more central nodes. Random walks on graphs are defined by the probability of travelling along edges conditioned on the current location of the walker. The maximal entropy random walk is essentially the random walk given by uniformly choosing at random a direction &lt;i&gt;among all possible paths in the graph that go through that edge&lt;/i&gt; (contrast this with the uniform random walk, which chooses each edge uniformly at random).&lt;/p&gt;
+
+&lt;p&gt;But wait! Isn’t it the case that one would need the global structure of the graph in order to determine the space of “all possible graphs through an edge”? This is in fact the case; however, an approximation to the maximal entropy random walk is possible to define up to an order which represents neighbor distance; for example, using an order 2 approximation to the random walk in the social network problem would consist in interviewing all people with a degree of separation equal to 2 from the current person.&lt;/p&gt;
+
+&lt;h1&gt;Conclusion&lt;/h1&gt;
+&lt;p&gt;A lot of these subjects were really cool to investigate. Eigenvalue centrality (and other more exotic notions of centrality based on it) introduced me to spectral graph theory, which is a fascinating subject on its own; but better yet, my existing love for numerical analysis, linear algebra, and approximation algorithms blends perfectly with spectral graph theory because all-too often the underlying graph is simply too large for any other technique to work (for example, links between webpages).&lt;/p&gt;
+
+&lt;p&gt;In a similar vein, random walks (and maximal entropy random walks in particular) fall almost exactly into the same niche, except with probability theory thrown in. Once again, approximation is necessary.&lt;/p&gt;
+
+&lt;h1&gt;Files&lt;/h1&gt;
+&lt;p&gt;For those interested in proofs and pretty diagrams, I have written up a more rigorous and detailed treatment on the subject.&lt;br /&gt;
+&lt;a href=&quot;/personal/merw/text.pdf&quot;&gt;PDF&lt;/a&gt;&lt;br /&gt;
+I have also given presentations about this exact topic; here is the slide deck I use.&lt;br /&gt;
+&lt;a href=&quot;/personal/merw/presentation.pdf&quot;&gt;Slides&lt;/a&gt;&lt;br /&gt;
+The implementation and diagrams are from the following Mathematica files.&lt;br /&gt;
+&lt;a href=&quot;/personal/merw/graphs.nb&quot;&gt;Notebook 1&lt;/a&gt;, &lt;a href=&quot;/personal/merw/graphs2.nb&quot;&gt;Notebook 2&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 11 Nov 2015 17:12:00 -0500</pubDate>
+        <link>http://larryfenn.com/personal/2015/11/11/merw.html</link>
+        <guid isPermaLink="true">http://larryfenn.com/personal/2015/11/11/merw.html</guid>
+        
+        <category>graph-theory</category>
+        
+        <category>probability</category>
+        
+        <category>mathematica</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>Assorted Academic Writing</title>
         <description>&lt;p&gt;This is an archive of expository papers I have written. I have attempted to organize them by most relevant subject area.
 &lt;!--more--&gt;&lt;/p&gt;
 &lt;h1&gt;Algebra&lt;/h1&gt;
-&lt;p&gt;&lt;a class=&quot;page-link&quot; href=&quot;/assets/writing/unityhoms.pdf&quot;&gt;The existence of an injective homomorphism between \(\text{Hom}\left(\dfrac{\mathbb{Q}\lvert\zeta\rvert}{\mathbb{Q}}\right)\) and the multiplicative group \(R_n\) where \(\{x\in R_n\colon \gcd(x, n) = 1\}\)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/assets/writing/unityhoms.pdf&quot;&gt;The existence of an injective homomorphism between \(\text{Hom}\left(\dfrac{\mathbb{Q}\lvert\zeta\rvert}{\mathbb{Q}}\right)\) and the multiplicative group \(R_n\) where \(\{x\in R_n\colon \gcd(x, n) = 1\}\)&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;/assets/writing/miscalg.pdf&quot;&gt;The group of rigid motions of the cube is isomorphic to \(S_4\), and some group actions from a group to itself.&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;Linear Algebra&lt;/h1&gt;
+&lt;p&gt;A series of notes I typed up for the benefit of a student over the course of a spring linear algebra class.&lt;br /&gt;
+&lt;a href=&quot;/assets/writing/linalgnotes/notes.pdf&quot;&gt;Part 1: Definitions, Zorn’s Lemma&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;/assets/writing/linalgnotes/notes2.pdf&quot;&gt;Part 2: Representation, Products, Duals&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;/assets/writing/linalgnotes/notes3.pdf&quot;&gt;Part 3: Infinite Product/Sum Isomorphism, Riesz&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;/assets/writing/linalgnotes/notes4.pdf&quot;&gt;Part 4: Tensor Products&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;/assets/writing/linalgnotes/notes5.pdf&quot;&gt;Part 5: Exterior Products&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;/assets/writing/linalgnotes/notes6.pdf&quot;&gt;Part 6: Determinants&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1&gt;Numerical Analysis&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;/assets/writing/numanalysis/cranknicolson.pdf&quot;&gt;Crank-Nicolson notes&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+A series of notes I typed up for the benefit of a student over the course of a fall numerical analysis class.&lt;br /&gt;
+&lt;a href=&quot;/assets/writing/numanalysis/notes1.pdf&quot;&gt;Part 1: Function Spaces&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;/assets/writing/numanalysis/notes2.pdf&quot;&gt;Part 2: Multi-Index, Fourier Transform&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;/assets/writing/numanalysis/notes3.pdf&quot;&gt;Part 3: Stability, DFT, Lax Equivalence&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;/assets/writing/numanalysis/notes4.pdf&quot;&gt;Part 4: Lax-Richtmyer Theorem&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;/assets/writing/numanalysis/notes5.pdf&quot;&gt;Part 5: Elliptical PDEs, FEM&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1&gt;Real Analysis/Measure Theory&lt;/h1&gt;
+&lt;p&gt;Proofs of the following:&lt;br /&gt;
+1. Integrability of \( f\) on \(\mathbb{R}\) does not necessarily imply the convergence of \(f(x)\) to \(0\) as \(x\to\infty\)&lt;br /&gt;
+2. If \( f\) is integrable on \(\mathbb{R}\), then \(F(x) = \displaystyle\int_{-\infty}^x f(t)\ dt\) is uniformly continuous.&lt;br /&gt;
+3. Chebyshev’s Inequality&lt;br /&gt;
+4. \(f\) real-valued and integrable on \(\mathbb{R}^d\) and \(\displaystyle\int_E f(x)\ dx\geq 0\) for every measurable \(E\) implies \(f(x) \geq 0\) a.e.&lt;br /&gt;
+5. A function can be integrable yet unbounded in any interval.&lt;br /&gt;
+&lt;a href=&quot;/assets/writing/ra.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1&gt;Quantum Mechanics&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;/assets/writing/qm.pdf&quot;&gt;Bell’s Inequality discussion.&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 10 Nov 2015 02:05:00 -0500</pubDate>
         <link>http://larryfenn.com/personal/2015/11/10/assorted-papers.html</link>
         <guid isPermaLink="true">http://larryfenn.com/personal/2015/11/10/assorted-papers.html</guid>
         
         <category>archive</category>
+        
+        <category>algebra</category>
+        
+        <category>linear-algebra</category>
+        
+        <category>numerical-analysis</category>
+        
+        <category>quantum-mechanics</category>
         
         
         <category>personal</category>
@@ -31,10 +113,32 @@
       <item>
         <title>Mathematica Projects</title>
         <description>&lt;p&gt;This is the archive listing of all the old Mathematica projects hosted on the old website.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/personal/airfoil/airfoil.nb&quot;&gt;Dynamic airfoil flow solver.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/personal/blackscholes/collocation.nb&quot;&gt;Black-Scholes option pricing implementation via collocation.&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/V2bwRxtws9w&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href=&quot;/personal/fdm/&quot;&gt;FDM: 3D heat equation, 2D wave equation, cell diffusion.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/personal/fem/fem.nb&quot;&gt;FEM obstructed channel flow solution.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/personal/fem/helmholtz.nb&quot;&gt;FEM 2D Helmholtz equation solution.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/personal/interpolation/&quot;&gt;Interpolation to arbitrary degree.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/personal/minima/&quot;&gt;Deterministic optimization: gradient search and Newton’s method.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/personal/newton/netwonvbisect.nb&quot;&gt;Bisection&lt;/a&gt;, &lt;a href=&quot;/personal/newton/newtonvsecant.nb&quot;&gt;secant method comparisons.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/personal/rm/exerciseresistance.nb&quot;&gt;Fixed stepsize&lt;/a&gt;, &lt;a href=&quot;/personal/rm/exerciseresistancedynamic.nb&quot;&gt;dynamic stepsize RM optimization.&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 09 Nov 2015 16:00:00 -0500</pubDate>
         <link>http://larryfenn.com/personal/2015/11/09/mathematica.html</link>
         <guid isPermaLink="true">http://larryfenn.com/personal/2015/11/09/mathematica.html</guid>
+        
+        <category>archive</category>
         
         <category>mathematica</category>
         
@@ -45,13 +149,32 @@
     
       <item>
         <title>Mixed Procedures For Stochastic Optimization</title>
-        <description>&lt;p&gt;This is a significant generalization of my earlier stochastic optimization efforts. I presented as an author at the INFORMS annual conference in Philadelphia.&lt;/p&gt;
+        <description>&lt;p&gt;This is a significant generalization of my earlier stochastic optimization efforts. I presented as an author at the INFORMS 2015 Annual Conference in Philadelphia.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/research/INFORMS2015.pdf&quot;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A big part of the generalization was defining a more abstract setting for the problem. In a nutshell, this work concentrates on two things:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Using interval estimation to provide confidence levels and error tolerances.&lt;/li&gt;
+  &lt;li&gt;Attempting to optimize over continuous and discrete domains.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Some of the notes created during the research process for both deterministic and stochastic cases: &lt;a href=&quot;/research/stopt2notes1.pdf&quot;&gt;PDF1&lt;/a&gt;, &lt;a href=&quot;/research/stopt2notes2.pdf&quot;&gt;PDF2&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The experimental results from the presentation were generated and processed in Python before using Mathematica to render the graphs.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/research/noisy.py&quot;&gt;Code&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This is an ongoing work, so expect to see another post about this before 2016!&lt;/p&gt;
 </description>
         <pubDate>Wed, 04 Nov 2015 10:02:14 -0500</pubDate>
         <link>http://larryfenn.com/research/2015/11/04/stochastic-optimization2.html</link>
         <guid isPermaLink="true">http://larryfenn.com/research/2015/11/04/stochastic-optimization2.html</guid>
         
         <category>stochastic-optimization</category>
+        
+        <category>optimization</category>
         
         
         <category>research</category>
@@ -60,9 +183,9 @@
     
       <item>
         <title>Decision Trees For Survey Construction</title>
-        <description>&lt;p&gt;This is a companion piece to a piece of research currently being done by Christina Zamfirescu of Hunter College about automated survey construction.&lt;/p&gt;
+        <description>&lt;p&gt;This is a companion piece to a piece of research currently being done by Christina Zamfirescu of Hunter College about automated survey construction. As cited in the Electronic Journal of Statistics: Electron. J. Statist. 9 (2015), no. 2, 2202–2254. doi:10.1214/15-EJS1067.&lt;/p&gt;
 
-&lt;p&gt;The article covers a few examples and transformations in parallel with her work which uses a different method. As cited in the Electronic Journal of Statistics: Electron. J. Statist. 9 (2015), no. 2, 2202–2254. doi:10.1214/15-EJS1067.&lt;/p&gt;
+&lt;p&gt;The article covers a few examples and transformations in parallel with her work which uses a different method.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/decisiontrees.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -79,7 +202,7 @@
     
       <item>
         <title>Stochastic Optimization</title>
-        <description>&lt;p&gt;Research done through Felisa Vazquez-Abad at Hunter College on stochastic optimization algorithms to solve a particular transit problem.&lt;/p&gt;
+        <description>&lt;p&gt;Research done through Felisa Vazquez-Abad at Hunter College on stochastic optimization algorithms to solve a particular transit problem. Based off work presented at the INFORMS 2013 Winter Simulation Conference.&lt;/p&gt;
 
 &lt;p&gt;Her original problem came by way of the Melbourne airport, which was seeking to implement a bus system to connect long-term parking lots with the airport terminals.&lt;/p&gt;
 
@@ -98,8 +221,29 @@
         
         <category>stochastic-optimization</category>
         
+        <category>optimization</category>
+        
+        <category>simulation</category>
+        
         
         <category>research</category>
+        
+      </item>
+    
+      <item>
+        <title>Minima Finding</title>
+        <description>&lt;p&gt;These are notes, originally written for a class I gave, about two line search methods for finding a minima in the deterministic context. I’m pretty happy about how the typesetting turned out, as it was my first foray into a “real” \(\TeX\) article.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/personal/minima/minimafinding.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 19 Jun 2014 02:02:03 -0400</pubDate>
+        <link>http://larryfenn.com/personal/2014/06/19/minima.html</link>
+        <guid isPermaLink="true">http://larryfenn.com/personal/2014/06/19/minima.html</guid>
+        
+        <category>optimization</category>
+        
+        
+        <category>personal</category>
         
       </item>
     
