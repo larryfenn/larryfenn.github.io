@@ -6,8 +6,8 @@
 </description>
     <link>http://larryfenn.com/</link>
     <atom:link href="http://larryfenn.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 11 Nov 2015 18:29:34 -0500</pubDate>
-    <lastBuildDate>Wed, 11 Nov 2015 18:29:34 -0500</lastBuildDate>
+    <pubDate>Wed, 11 Nov 2015 18:45:02 -0500</pubDate>
+    <lastBuildDate>Wed, 11 Nov 2015 18:45:02 -0500</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
     
       <item>
@@ -102,6 +102,8 @@ A series of notes I typed up for the benefit of a student over the course of a f
         <category>linear-algebra</category>
         
         <category>numerical-analysis</category>
+        
+        <category>real-analysis</category>
         
         <category>quantum-mechanics</category>
         
