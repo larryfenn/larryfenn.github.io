@@ -198,15 +198,15 @@ pre {
       .site-nav .trigger {
         clear: both;
         display: none; }
-      .site-nav:hover .trigger {
-        display: block;
-        padding-bottom: 5px; }
       .site-nav .page-link {
         display: block;
         padding: 5px 10px;
         margin-left: 20px; }
         .site-nav .page-link:not(:last-child) {
           margin-right: 0; } }
+
+.expand {
+  display: block !important; }
 
 /**
  * Site footer

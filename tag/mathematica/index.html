@@ -13,9 +13,15 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://larryfenn.com/tag/mathematica/">
   <link rel="alternate" type="application/rss+xml" title="fenn, larry" href="http://larryfenn.com/feed.xml">
-  <script type="text/javascript"
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    jQuery(function($){
+      $( '.site-nav' ).click(function() {
+        $( '.trigger').toggleClass('expand')
+      })
+    })
+  </script>
 </head>
 
 
@@ -38,7 +44,7 @@
 
       <div class="trigger">
         <a class="page-link" href="/about">About</a>
-        <a class="page-link" href="/research/">Research & Projects</a>
+        <a class="page-link" href="/research/">Research</a>
         <a class="page-link" href="/classes/">Classes</a>
         <a class="page-link" href="/personal/">Personal</a>
       </div>
@@ -63,6 +69,8 @@
     <p class="summary"><p>Node centrality can be tricky to measure if it is not assumed the whole graph structure is accessible. However, approximation techniques can be used (in particular, an approximation to maximal entropy random walks) to determine central nodes.</p>
 
 </p>
+  
+  
   
   
   
