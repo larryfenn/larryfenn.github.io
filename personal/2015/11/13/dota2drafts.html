@@ -128,9 +128,10 @@
 <h2 id="basic-observation-hero-popularity">Basic observation: Hero popularity</h2>
 
 <p>One simple question we can address right now is popularity: which heroes are the most frequently banned or picked? Even better, the ordered nature of the records allows us to distinguish which heroes are frequent first bans or picks. There are two teams, each getting five picks and five bans in some sequence (i.e. there are ten picks and ten bans total per game). After trimming the column headings from the csv, a simple Hadoop MapReduce task accumulates the frequencies for all hero picks and bans by when they occur.</p>
-
-<p><img src="/personal/dota2drafts/figure_1.png" width="800" height="600" /></p>
-
+<figure>
+    <img src="/personal/dota2drafts/figure_2.png" width="800" height="600" />
+    <figcaption>Figure 1: Picks (red) and bans (blue) with phase (1-10) represented by bar stack. A lot of heroes are higher priority bans than picks. Some heroes are much more represented in later phases: Anti-Mage, Gyrocopter, TA.</figcaption>
+</figure>
 <p>Parsing the MapReduce results into a pandas dataframe, I chose to graph the heroes that were most frequently banned/picked in total, with a stacked bar plot showing which phase the bans/picks come in on. This communicates which heroes are popular first picks or bans, i.e. heroes crucial to a team’s strategy succeeding (in the case of bans) or heroes that are particularly strong in the metagame (in the case of picks). Similarly, the timing of a pick or ban has implications; without diving too deep into the strategy of the game, hero drafting revolves around two primary goals:</p>
 
 <ol>

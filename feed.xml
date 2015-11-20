@@ -6,8 +6,8 @@
 </description>
     <link>http://larryfenn.com/</link>
     <atom:link href="http://larryfenn.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 20 Nov 2015 03:15:47 -0500</pubDate>
-    <lastBuildDate>Fri, 20 Nov 2015 03:15:47 -0500</lastBuildDate>
+    <pubDate>Fri, 20 Nov 2015 08:36:55 -0500</pubDate>
+    <lastBuildDate>Fri, 20 Nov 2015 08:36:55 -0500</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
     
       <item>
@@ -75,9 +75,10 @@
 &lt;h2 id=&quot;basic-observation-hero-popularity&quot;&gt;Basic observation: Hero popularity&lt;/h2&gt;
 
 &lt;p&gt;One simple question we can address right now is popularity: which heroes are the most frequently banned or picked? Even better, the ordered nature of the records allows us to distinguish which heroes are frequent first bans or picks. There are two teams, each getting five picks and five bans in some sequence (i.e. there are ten picks and ten bans total per game). After trimming the column headings from the csv, a simple Hadoop MapReduce task accumulates the frequencies for all hero picks and bans by when they occur.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/personal/dota2drafts/figure_1.png&quot; width=&quot;800&quot; height=&quot;600&quot; /&gt;&lt;/p&gt;
-
+&lt;figure&gt;
+    &lt;img src=&quot;/personal/dota2drafts/figure_2.png&quot; width=&quot;800&quot; height=&quot;600&quot; /&gt;
+    &lt;figcaption&gt;Figure 1: Picks (red) and bans (blue) with phase (1-10) represented by bar stack. A lot of heroes are higher priority bans than picks. Some heroes are much more represented in later phases: Anti-Mage, Gyrocopter, TA.&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;p&gt;Parsing the MapReduce results into a pandas dataframe, I chose to graph the heroes that were most frequently banned/picked in total, with a stacked bar plot showing which phase the bans/picks come in on. This communicates which heroes are popular first picks or bans, i.e. heroes crucial to a team’s strategy succeeding (in the case of bans) or heroes that are particularly strong in the metagame (in the case of picks). Similarly, the timing of a pick or ban has implications; without diving too deep into the strategy of the game, hero drafting revolves around two primary goals:&lt;/p&gt;
 
 &lt;ol&gt;
