@@ -6,9 +6,114 @@
 </description>
     <link>http://larryfenn.com/</link>
     <atom:link href="http://larryfenn.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 18 Nov 2015 18:56:58 -0500</pubDate>
-    <lastBuildDate>Wed, 18 Nov 2015 18:56:58 -0500</lastBuildDate>
+    <pubDate>Fri, 20 Nov 2015 02:45:31 -0500</pubDate>
+    <lastBuildDate>Fri, 20 Nov 2015 02:45:31 -0500</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
+    
+      <item>
+        <title>Dota 2 Drafting Part 1: Data Collection</title>
+        <description>&lt;p&gt;Dota 2 captain’s mode entails a drafting phase where a sequence of picks and bans are issued by the team captains. As of this writing, there have been 1,933,725,512 total matches of Dota 2 played, in all modes. It may be possible now with this body of data to build a machine learning algorithm for prediction and for drafting suggestions.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;getting-the-data&quot;&gt;Getting the data&lt;/h2&gt;
+
+&lt;p&gt;The web API for Dota 2 has two functions we can use to grab match data as a JSON object from some index. The first, &lt;code&gt;GetMatchHistory&lt;/code&gt;, has a game mode argument and date argument which would make it ideal for stratifying the data by patch release. However, it has three flaws that preclude its use:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;It is capped (for some reason, most likely a bug judging from all the angry dev forum posts) at grabbing the most recent 500 games.&lt;/li&gt;
+  &lt;li&gt;It does not return the pick/ban record, only the game type of a match.&lt;/li&gt;
+  &lt;li&gt;The game mode argument currently does not work (lol Valve).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The second function, &lt;code&gt;GetMatchHistoryBySequenceNum&lt;/code&gt;, does return the pick/ban record and does not have any limitation on how far it can reach, but it does not support any date parameters. Thus, determining the actual patch number a match was played in will necessitate going into the records and accessing the UNIX time that the match was played at. The other complication &lt;code&gt;GetMatchHistoryBySequenceNum&lt;/code&gt; has is that the sequence numbers do not directly map to the order in which matches were played- I suspect that the sequence number is issued to a match once it has finished being indexed and processed into the Dota 2 database. In other words, it is no guarantee if the sequence number for match A is higher than the sequence number for match B that match A was played after match B.&lt;/p&gt;
+
+&lt;p&gt;The typical output from the &lt;code&gt;GetMatchHistoryBySequenceNum&lt;/code&gt; call (for a captain’s mode match) looks like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&amp;quot;result&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&amp;quot;status&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// success code&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&amp;quot;matches&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;s&quot;&gt;&amp;quot;players&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+                    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;c1&quot;&gt;// omitted: player ids and statistics such as gold earned&lt;/span&gt;
+                    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;s&quot;&gt;&amp;quot;radiant_win&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;s&quot;&gt;&amp;quot;duration&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2333&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// our metric for how hard a team won the game&lt;/span&gt;
+                &lt;span class=&quot;s&quot;&gt;&amp;quot;start_time&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1447002472&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;s&quot;&gt;&amp;quot;match_id&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1923658257&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;s&quot;&gt;&amp;quot;match_seq_num&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1700000293&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;c1&quot;&gt;// omitted: other game data not relevant to us&lt;/span&gt;
+                &lt;span class=&quot;s&quot;&gt;&amp;quot;picks_bans&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+                    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                        &lt;span class=&quot;s&quot;&gt;&amp;quot;is_pick&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                        &lt;span class=&quot;s&quot;&gt;&amp;quot;hero_id&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;75&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                        &lt;span class=&quot;s&quot;&gt;&amp;quot;team&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 0: radiant, 1: dire&lt;/span&gt;
+                        &lt;span class=&quot;s&quot;&gt;&amp;quot;order&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+                    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+                    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                        &lt;span class=&quot;s&quot;&gt;&amp;quot;is_pick&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                        &lt;span class=&quot;s&quot;&gt;&amp;quot;hero_id&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;85&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                        &lt;span class=&quot;s&quot;&gt;&amp;quot;team&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                        &lt;span class=&quot;s&quot;&gt;&amp;quot;order&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+                    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+                    &lt;span class=&quot;c1&quot;&gt;// etc. for the rest of the pick/ban records&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+                
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// ... and so on for 99 more matches&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Since we only want to index captain’s mode matches, it suffices to check if the &lt;code&gt;picks_bans&lt;/code&gt; key exists, and parse the serialized JSON into a csv for future use if it is.&lt;/p&gt;
+
+&lt;h2 id=&quot;basic-observation-hero-popularity&quot;&gt;Basic observation: Hero popularity&lt;/h2&gt;
+
+&lt;p&gt;One simple question we can address right now is popularity: which heroes are the most frequently banned or picked? Even better, the ordered nature of the records allows us to distinguish which heroes are frequent first bans or picks. There are two teams, each getting five picks and five bans in some sequence (i.e. there are ten picks and ten bans total per game). After trimming the column headings from the csv, a simple Hadoop MapReduce task accumulates the frequencies for all hero picks and bans by when they occur.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/personal/dota2drafts/figure_1.png&quot; width=&quot;800&quot; height=&quot;600&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Parsing the MapReduce results into a pandas dataframe, I chose to graph the heroes that were most frequently banned/picked in total, with a stacked bar plot showing which phase the bans/picks come in on. This communicates which heroes are popular first picks or bans, i.e. heroes crucial to a team’s strategy succeeding (in the case of bans) or heroes that are particularly strong in the metagame (in the case of picks). Similarly, the timing of a pick or ban has implications; without diving too deep into the strategy of the game, hero drafting revolves around two primary goals:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Identify an opponents strategy and curtail its effectiveness with the correct selection of one’s own picks and bans.&lt;/li&gt;
+  &lt;li&gt;Implementing your own strategy based on picks while limiting the opponent’s ability to address it with proper bans.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Of course, the strategy is much deeper and as of this writing still mostly unexplored space. Part of this project is to discern what features lead to a successful drafting phase.&lt;/p&gt;
+
+&lt;h2 id=&quot;future-plans&quot;&gt;Future plans&lt;/h2&gt;
+
+&lt;p&gt;At this point, I have indexed 80 million Dota 2 matches, roughly 500,000 of which are captain’s mode matches. This is a sufficiently large data set to begin mining for insights; there are many possible directions we can go. Currently I have a cluster of Amazon EC2 instances with Hadoop setup and ready to go, and I’ll be poking around the data set for the more ‘obvious’ statistical features while I wait for more data points to accumulate.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/personal/dota2drafts/capmodedata.csv&quot;&gt;The data set.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/larryfenn/dota2drafts&quot;&gt;https://github.com/larryfenn/dota2drafts&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 13 Nov 2015 18:55:02 -0500</pubDate>
+        <link>http://larryfenn.com/personal/2015/11/13/dota2drafts.html</link>
+        <guid isPermaLink="true">http://larryfenn.com/personal/2015/11/13/dota2drafts.html</guid>
+        
+        <category>python</category>
+        
+        <category>pandas</category>
+        
+        <category>hadoop</category>
+        
+        <category>statistics</category>
+        
+        <category>dota2</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>Centrality &amp; Maximal Entropy Random Walks</title>
