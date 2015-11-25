@@ -6,8 +6,8 @@
 </description>
     <link>http://larryfenn.com/</link>
     <atom:link href="http://larryfenn.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 24 Nov 2015 22:25:09 -0500</pubDate>
-    <lastBuildDate>Tue, 24 Nov 2015 22:25:09 -0500</lastBuildDate>
+    <pubDate>Tue, 24 Nov 2015 23:51:05 -0500</pubDate>
+    <lastBuildDate>Tue, 24 Nov 2015 23:51:05 -0500</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
     
       <item>
@@ -271,6 +271,11 @@ A series of notes I typed up for the benefit of a student over the course of a f
 &lt;p&gt;Some of the notes created during the research process for both deterministic and stochastic cases: &lt;a href=&quot;/research/stopt2notes1.pdf&quot;&gt;PDF1&lt;/a&gt;, &lt;a href=&quot;/research/stopt2notes2.pdf&quot;&gt;PDF2&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The experimental results from the presentation were generated and processed in Python before using Mathematica to render the graphs.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;/research/epsilonalphasample.png&quot; width=&quot;576&quot; height=&quot;367&quot; /&gt;
+	&lt;figcaption&gt;Figure 1: Samples required as a function of both confidence level (\\(\alpha\\)) and tolerance.&lt;/figcaption&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;/research/noisy.py&quot;&gt;Code&lt;/a&gt;&lt;/p&gt;
 
