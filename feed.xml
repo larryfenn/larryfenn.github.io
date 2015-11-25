@@ -6,8 +6,8 @@
 </description>
     <link>http://larryfenn.com/</link>
     <atom:link href="http://larryfenn.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 24 Nov 2015 23:51:05 -0500</pubDate>
-    <lastBuildDate>Tue, 24 Nov 2015 23:51:05 -0500</lastBuildDate>
+    <pubDate>Wed, 25 Nov 2015 00:12:42 -0500</pubDate>
+    <lastBuildDate>Wed, 25 Nov 2015 00:12:42 -0500</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
     
       <item>
@@ -93,7 +93,7 @@
 &lt;p&gt;At this point, I have indexed 80 million Dota 2 matches, roughly 500,000 of which are captain’s mode matches. This is a sufficiently large data set to begin mining for insights; there are many possible directions we can go. Currently I have a cluster of Amazon EC2 instances with Hadoop setup and ready to go, and I’ll be poking around the data set for the more ‘obvious’ statistical features while I wait for more data points to accumulate.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/personal/dota2drafts/capmodedata.csv&quot;&gt;The data set (csv, 131 MB, 461,050 games)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/personal/dota2drafts/capmodedata.zip&quot;&gt;The data set (csv (zipped), 131 MB, 461,050 games)&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/larryfenn/dota2drafts&quot;&gt;https://github.com/larryfenn/dota2drafts&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
