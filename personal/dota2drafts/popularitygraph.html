@@ -67,7 +67,11 @@
 
   <div class="post-content">
     <h3>Click & drag to reposition nodes. Double-click to release.</h3>
-<div id="chart" align="center"></div>
+  <div class="ui-widget">
+    <input id="search">
+    <button type="button" onclick="searchNode()">Search</button>
+  </div>
+  <div id="chart" align="center"></div>
 <html>
   <body>
   <style>    
@@ -93,10 +97,6 @@
 	<form>
       <h3> Show hero pairs with more than 500 <input type="range" id="thresholdSlider" name="points" min="500" value="11000" step="10" max="13000" onchange="threshold(this.value)"> 13000 picks </h3>
     </form>
-    <div class="ui-widget">
-      <input id="search">
-      <button type="button" onclick="searchNode()">Search</button>
-    </div>
 
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
@@ -239,12 +239,20 @@
       node.each(collide(0.5));
 	});
 
-
     //adjust threshold
     function threshold(thresh) {
       graph.links.splice(0, graph.links.length);
+	  for (var i = 0; i < graphRec.nodes.length; i++) {
+	  	  graph.nodes[i].weight = 0;
+	  }
       for (var i = 0; i < graphRec.links.length; i++) {
-                if (graphRec.links[i].weight > thresh) {graph.links.push(graphRec.links[i]);}
+        if (graphRec.links[i].weight > thresh) {
+	      graph.links.push(graphRec.links[i]);
+		  if (graph.nodes[graphRec.links[i].source.index] != undefined) {
+			 graph.nodes[graphRec.links[i].source.index].weight++;
+			 graph.nodes[graphRec.links[i].target.index].weight++;
+		  }
+	    }
       }
 
       //Create an array logging what is connected to what
@@ -265,7 +273,7 @@
 
 
       node = node.data(graph.nodes);
-      node.enter().insert("circle", ".cursor").attr("class", "node").attr("r", 5).call(node_drag);
+      node.enter().insert("circle", ".cursor").attr("class", "node").attr("r", node.weight).call(node_drag);
 
       force.start();
     }
