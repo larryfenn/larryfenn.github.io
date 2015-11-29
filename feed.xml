@@ -6,8 +6,8 @@
 </description>
     <link>http://larryfenn.com/</link>
     <atom:link href="http://larryfenn.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 29 Nov 2015 13:55:40 -0500</pubDate>
-    <lastBuildDate>Sun, 29 Nov 2015 13:55:40 -0500</lastBuildDate>
+    <pubDate>Sun, 29 Nov 2015 14:01:04 -0500</pubDate>
+    <lastBuildDate>Sun, 29 Nov 2015 14:01:04 -0500</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
     
       <item>
@@ -41,7 +41,9 @@
 
 &lt;h2 id=&quot;the-graphs&quot;&gt;The Graphs&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;/personal/dota2drafts/winrategraph.html&quot;&gt;&lt;img src=&quot;/personal/dota2drafts/winrateexample1.png&quot; hspace=&quot;20&quot; vspace=&quot;20&quot; align=&quot;left&quot; /&gt;&lt;/a&gt; Winrates necessitate special treatment. Each hero, indexed as \(i\), has their own, winrate (indexed over all heroes):&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/personal/dota2drafts/winrategraph.html&quot;&gt;&lt;img src=&quot;/personal/dota2drafts/winrateexample1.png&quot; hspace=&quot;20&quot; vspace=&quot;20&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Winrates necessitate special treatment. Each hero, indexed as \(i\), has their own, winrate (indexed over all heroes):&lt;/p&gt;
 
 &lt;p&gt;\[\dfrac{W_i}{N_i} = \dfrac{\displaystyle\sum_j w_{ij}}{\displaystyle\sum_j n_{ij}}\]&lt;/p&gt;
 
