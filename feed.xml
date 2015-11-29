@@ -6,9 +6,82 @@
 </description>
     <link>http://larryfenn.com/</link>
     <atom:link href="http://larryfenn.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 25 Nov 2015 00:12:42 -0500</pubDate>
-    <lastBuildDate>Wed, 25 Nov 2015 00:12:42 -0500</lastBuildDate>
+    <pubDate>Sat, 28 Nov 2015 22:41:43 -0500</pubDate>
+    <lastBuildDate>Sat, 28 Nov 2015 22:41:43 -0500</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
+    
+      <item>
+        <title>Dota 2 Drafting Part 2: Hero Pairings</title>
+        <description>&lt;p&gt;&lt;a href=&quot;/personal/dota2drafts/popularitygraph.html&quot;&gt;&lt;img src=&quot;/personal/dota2drafts/popularityexample1.png&quot; hspace=&quot;20&quot; /&gt;&lt;/a&gt;&lt;a href=&quot;/personal/dota2drafts/popularitygraph.html&quot;&gt;&lt;img src=&quot;/personal/dota2drafts/popularityexample2.png&quot; hspace=&quot;20&quot; /&gt;&lt;/a&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Using captain’s mode data we can construct graphs to represent hero pick and win rates. This has a twofold purpose:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;To assess the integrity of the collected data. If the graphs that come out don’t line up with the common strategic thinking about the heroes then additional stratification is necessary (most likely by game skill bracket).&lt;/li&gt;
+  &lt;li&gt;To explore the data set to see what hero combinations are popular and which work well and which don’t.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;data-processing&quot;&gt;Data Processing&lt;/h2&gt;
+
+&lt;p&gt;Since the record for each match contains information as to which team won, and what the picks were, it’s just a matter of another MapReduce job to pull out the relationships between heroes, picks, and win rates. In particular, each game record gives us 5 heroes that won together, and 5 heroes that lost together. Thus our mapper step looks like this (after we get the picks by team):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;radiantcliq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;itertools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;combinations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;radiantpicks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;direcliq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;itertools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;combinations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;direpicks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# one can edit the combinations argument to pull out arbitrary n-cliques&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;radiantcliq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%s&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%s&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%s&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\t&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%s&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;team_win&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;True&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;direcliq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%s&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%s&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%s&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\t&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%s&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;team_win&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;False&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The result of the MapReduce step is essentially a list of edges and weights. Python has the &lt;code&gt;networkx&lt;/code&gt; library which allows us to create the graph structure without much fuss; even better, it supports JSON output which allows us to use D3.js to render the graphs and play around with them.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-graphs&quot;&gt;The Graphs&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;/personal/dota2drafts/winrategraph.html&quot;&gt;&lt;img src=&quot;/personal/dota2drafts/winrateexample1.png&quot; hspace=&quot;20&quot; vspace=&quot;20&quot; align=&quot;left&quot; /&gt;&lt;/a&gt; Winrates necessitate special treatment. Each hero, indexed as \(i\), has their own, winrate (indexed over all heroes):&lt;/p&gt;
+
+&lt;p&gt;\[\dfrac{W_i}{N_i} = \dfrac{\displaystyle\sum_j w_{ij}}{\displaystyle\sum_j n_{ij}}\]&lt;/p&gt;
+
+&lt;p&gt;For a hero pair \((i, j)\) the hero pair popularity is \(n_{ij}\) and the hero pair winrate is \(\frac{w_{ij}}{n_{ij}}\). However, this hero pair winrate does not have an obvious relationship with the “absolute” winrates for the heroes, \(\frac{W_i}{N_i}\) and \(\frac{W_j}{N_j}\). The pair winrate alone is not very informative; what would be informative is a determination of &lt;i&gt;how much better&lt;/i&gt; the pair is. The simplest (although coarsest) measure is the difference between the pair winrate and the maximum of the individual winrates:&lt;/p&gt;
+
+&lt;p&gt;\[r_{ij} = \dfrac{w_{ij}}{n_{ij}} - \max\left(\dfrac{W_i}{N_i}, \dfrac{W_j}{N_j}\right)\]&lt;/p&gt;
+
+&lt;p&gt;This is a measure of the “improvement” the pair has to working individually.&lt;/p&gt;
+
+&lt;h2 id=&quot;graph-topology&quot;&gt;Graph Topology&lt;/h2&gt;
+
+&lt;p&gt;By selecting a threshold parameter and removing edges if their weights fall below the threshold, the graphs for winrates and popularity can be endowed with more interesting topology. Both of the graphs could have a quite different topology depending on the skill level of the population being drawn from. Additionally, different measures of popularity and winrate can easily give rise to different topologies depending on what is being measured. For example, a similar procedure to the winrate improvement measure could be employed on popularity to filter out the existing effect of a hero being popular; it is no surprise that Earthshaker is at the apparent center of the popularity graph since (as we saw in the previous post) he is far and away the most picked hero by himself in the data set.&lt;/p&gt;
+
+&lt;p&gt;Ideally, we would prefer measures that give us graph topologies that give rise to many disjoint parts with as few isolated nodes as possible. These disjoint parts would line up with distinct strategies or combinations; for example, the Tiny-Io combination shows up as a disjoint element in the popularity graph already for any threshold below 4800.&lt;/p&gt;
+
+&lt;h2 id=&quot;further-plans&quot;&gt;Further Plans&lt;/h2&gt;
+
+&lt;p&gt;Alternative graphs and measures could be used to determine more information. In particular, I can see an “anti-pair” graph working to distinguish which heroes fulfill a similar role: if we count up how many times a hero is &lt;i&gt;not&lt;/i&gt; picked when another hero is picked. However, there will be a significant amount of noise since any particular game only allows for 5 picks, leaving 95% of the hero pool unpicked as a matter of course.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/personal/dota2drafts/popularitygraph.html&quot;&gt;Hero pair popularity graph&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/personal/dota2drafts/winrategraph.html&quot;&gt;Hero pair winrate graph&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 13 Nov 2015 18:55:02 -0500</pubDate>
+        <link>http://larryfenn.com/personal/2015/11/13/dota2drafts2.html</link>
+        <guid isPermaLink="true">http://larryfenn.com/personal/2015/11/13/dota2drafts2.html</guid>
+        
+        <category>python</category>
+        
+        <category>hadoop</category>
+        
+        <category>d3js</category>
+        
+        <category>dota2</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>Dota 2 Drafting Part 1: Data Collection</title>

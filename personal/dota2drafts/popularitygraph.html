@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Dota 2 Hero Pair Popularity Graph</title>
+  <meta name="description" content="some of my research, thoughts, and projects.
+">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://larryfenn.com/personal/dota2drafts/popularitygraph.html">
+  <link rel="alternate" type="application/rss+xml" title="fenn, larry" href="http://larryfenn.com/feed.xml">
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    jQuery(function($){
+      $( '.site-nav' ).click(function() {
+        $( '.trigger').toggleClass('expand')
+      })
+    })
+  </script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">fenn, larry</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        <a class="page-link" href="/about">About</a>
+        <a class="page-link" href="/personal/">Personal</a>
+        <a class="page-link" href="/research/">Research</a>
+        <a class="page-link" href="/classes/">Classes</a>
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Dota 2 Hero Pair Popularity Graph</h1>
+  </header>
+
+  <div class="post-content">
+    <h3>Click & drag to reposition nodes. Double-click to release.</h3>
+<div id="chart" align="center"></div>
+<html>
+  <body>
+  <style>    
+    .node {
+      stroke: #fff;
+      stroke-width: 1.5px;
+    }
+	.node text {
+      font: 14px helvetica;
+    }
+    .link {
+      stroke: #999;
+      stroke-width: 6;
+	  stroke-opacity: .6;
+    }
+
+    d3-tip {
+      line-height: 1;
+      color: black;
+    }
+  </style>
+  <body>
+	<form>
+      <h3> Show hero pairs with more than 500 <input type="range" id="thresholdSlider" name="points" min="500" value="11000" step="10" max="13000" onchange="threshold(this.value)"> 13000 picks </h3>
+    </form>
+    <div class="ui-widget">
+      <input id="search">
+      <button type="button" onclick="searchNode()">Search</button>
+    </div>
+
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+  <script>
+    var width = 800,
+    height = 600;
+
+    var color = d3.scale.category20();
+
+	function edgecolor(d) {
+	  var threshlevel = document.getElementById('thresholdSlider').value;
+      return Math.atan((d.weight)/100)*2/3.14159;
+	}
+	
+    var force = d3.layout.force()
+    .charge(-300)
+    .linkDistance(10)
+	.linkStrength(.1)
+	.gravity(.15)
+    .size([width, height]);
+
+    // Append the SVG to the body
+    var svg = d3.select("#chart").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+	var dragflag = 0;
+	var node_drag = d3.behavior.drag()
+        .on("dragstart", dragstart)
+        .on("drag", dragmove)
+        .on("dragend", dragend);
+    function dragstart(d, i) {
+	  d3.event.sourceEvent.stopPropagation();
+	  force.start();
+	  d.fixed = true;
+	  dragflag = 1;
+    }
+    function dragmove(d, i) {
+        d.px += d3.event.dx;
+        d.py += d3.event.dy;
+        d.x += d3.event.dx;
+        d.y += d3.event.dy;
+    }
+    function dragend(d, i) {
+	  dragflag = 0;
+    }
+    function releasenode(d) {
+        d.fixed = false; // of course set the node to fixed so the force doesn't include the node in its auto positioning stuff
+        //force.resume();
+    }
+
+    var graph;
+    $.ajax({
+    url: "http://larryfenn.com/personal/dota2drafts/popularitygraph.json",
+    async: false,
+    success: function(json) {
+    graph = json;
+    }});
+
+    graphRec=JSON.parse(JSON.stringify(graph));
+
+    //Creates the graph data structure out of the json data
+    force.nodes(graph.nodes)
+    .links(graph.links)
+    .start();
+
+    //Set up tooltip
+    var edgetip = d3.tip()
+    .attr('class', 'd3-tip')
+	.style("color", "red")
+	.style("font-weight", "bold")
+    .offset(function(d) {
+	  return [Math.abs(d.source.y - d.target.y)/2,0]
+	})
+    .html(function (d) {
+	  if (dragflag == 0) {
+        return  d.weight + " games";
+    }})
+    svg.call(edgetip);	
+	
+    //Create all the line svgs but without locations yet
+    var link = svg.selectAll(".link")
+    .data(graph.links)
+    .enter().append("line")
+    .attr("class", "link")
+    .style("opacity", 1)
+	.on('mouseover', edgetip.show)
+	.on('mouseout', edgetip.hide);
+
+	var node = svg.selectAll(".node")
+    .data(graph.nodes)
+    .enter().append("g")
+    .attr("class", "node")
+	.call(node_drag)
+    .on('dblclick', releasenode)
+	.on('mouseenter', connectedNodes)
+	.on('mouseleave', connectedNodes);
+
+    node.append("circle")
+    .attr("r", 8)
+    .style("fill", function (d) {
+      return color(d.group);
+    });	
+
+    node.append("text")
+      .attr("dx", 10)
+      .attr("dy", ".35em")
+      .text(function(d) { return d.id })
+    .style("stroke", "black");
+    
+
+    //Now we are giving the SVGs co-ordinates - the force layout is generating the co-ordinates which this code is using to update the attributes of the SVG elements
+    force.on("tick", function () {
+      link.attr("x1", function (d) {
+        return d.source.x;
+      })
+      .attr("y1", function (d) {
+        return d.source.y;
+      })
+        .attr("x2", function (d) {
+      return d.target.x;
+      })
+        .attr("y2", function (d) {
+      return d.target.y;
+      });
+      d3.selectAll("circle").attr("cx", function (d) {
+        return d.x;
+      })
+      .attr("cy", function (d) {
+        return d.y;
+      });
+      d3.selectAll("text").attr("x", function (d) {
+        return d.x;
+      })
+        .attr("y", function (d) {
+      return d.y;
+      });
+	
+      node.each(collide(0.5));
+	});
+
+
+    //adjust threshold
+    function threshold(thresh) {
+      graph.links.splice(0, graph.links.length);
+      for (var i = 0; i < graphRec.links.length; i++) {
+                if (graphRec.links[i].weight > thresh) {graph.links.push(graphRec.links[i]);}
+      }
+
+      //Create an array logging what is connected to what
+      linkedByIndex = {};
+      for (i = 0; i < graphRec.nodes.length; i++) {
+        linkedByIndex[i + "," + i] = 1;
+      };
+      graph.links.forEach(function (d) {
+        linkedByIndex[d.source.index + "," + d.target.index] = 1;
+      });
+      restart();
+    }
+    //Restart the visualisation after any node and link changes
+    function restart() {
+      link = link.data(graph.links);
+      link.exit().remove();
+      link.enter().insert("line", ".node").attr("class", "link").style("opacity", 1).on('mouseover', edgetip.show).on('mouseout', edgetip.hide);
+
+
+      node = node.data(graph.nodes);
+      node.enter().insert("circle", ".cursor").attr("class", "node").attr("r", 5).call(node_drag);
+
+      force.start();
+    }
+    threshold(13000);
+    threshold(500);
+    threshold(11000);
+
+    var padding = 10, // separation between circles
+    radius=8;
+    function collide(alpha) {
+      var quadtree = d3.geom.quadtree(graph.nodes);
+      return function(d) {
+        var rb = 2*radius + padding,
+        nx1 = d.x - rb,
+        nx2 = d.x + rb,
+        ny1 = d.y - rb,
+        ny2 = d.y + rb;
+        quadtree.visit(function(quad, x1, y1, x2, y2) {
+          if (quad.point && (quad.point !== d)) {
+            var x = d.x - quad.point.x,
+            y = d.y - quad.point.y,
+            l = Math.sqrt(x * x + y * y);
+            if (l < rb) {
+              l = (l - rb) / l * alpha;
+              d.x -= x *= l;
+              d.y -= y *= l;
+              quad.point.x += x;
+              quad.point.y += y;
+            }
+          }
+          return x1 > nx2 || x2 < nx1 || y1 > ny2 || y2 < ny1;
+        });
+      };
+    }
+
+    //Toggle stores whether the highlighting is on
+    var toggle = 0;
+    var linkedByIndex;
+    //This function looks up whether a pair are neighbours
+    function neighboring(a, b) {
+      return linkedByIndex[a.index + "," + b.index];
+    }
+    function connectedNodes() {
+      if (toggle == 0) {
+        //Reduce the opacity of all but the neighbouring nodes
+        d = d3.select(this).node().__data__;
+	    node.style("opacity", function (o) {
+          return neighboring(d, o) | neighboring(o, d) ? 1 : .1;
+        });
+        link.style("opacity", function (o) {
+            return d.index==o.source.index | d.index==o.target.index ? 1 : 0.1;
+        });
+        //Reduce the op
+        toggle = 1;
+      } else if (dragflag == 0) {
+        //Put them back to opacity=1
+        node.style("opacity", 1);
+        link.style("opacity", 1);
+        toggle = 0;
+      }
+    }
+
+    var optArray = [];
+    for (var i = 0; i < graph.nodes.length - 1; i++) {
+      optArray.push(graph.nodes[i].id);
+    }
+    optArray = optArray.sort();
+    $(function () {
+      $("#search").autocomplete({
+        source: optArray
+      });
+    });
+    function searchNode() {
+      //find the node
+      var selectedVal = document.getElementById('search').value;
+      var node = svg.selectAll(".node");
+      if (selectedVal == "none") {
+        node.style("stroke", "white").style("stroke-width", "1");
+      } else {
+        var selected = node.filter(function (d, i) {
+            return d.id != selectedVal;
+        });
+        selected.style("opacity", "0");
+        var link = svg.selectAll(".link")
+        link.style("opacity", "0");
+        d3.selectAll(".node, .link").transition()
+            .duration(5000)
+            .style("opacity", 1);
+      }
+    }
+
+
+  </script>
+  </body>
+</html>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li><a href="mailto:larry@larryfenn.com">larry@larryfenn.com</a></li>
+		  <li><a href="https://github.com/larryfenn"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">larryfenn</span></a>
+</li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>some of my research, thoughts, and projects.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
