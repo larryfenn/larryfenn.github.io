@@ -6,8 +6,8 @@
 </description>
     <link>http://larryfenn.com/</link>
     <atom:link href="http://larryfenn.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 28 Nov 2015 23:13:15 -0500</pubDate>
-    <lastBuildDate>Sat, 28 Nov 2015 23:13:15 -0500</lastBuildDate>
+    <pubDate>Sat, 28 Nov 2015 23:42:10 -0500</pubDate>
+    <lastBuildDate>Sat, 28 Nov 2015 23:42:10 -0500</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
     
       <item>
@@ -59,7 +59,9 @@
 
 &lt;h2 id=&quot;further-plans&quot;&gt;Further Plans&lt;/h2&gt;
 
-&lt;p&gt;Alternative graphs and measures could be used to determine more information. In particular, I can see an “anti-pair” graph working to distinguish which heroes fulfill a similar role: if we count up how many times a hero is &lt;i&gt;not&lt;/i&gt; picked when another hero is picked. However, there will be a significant amount of noise since any particular game only allows for 5 picks, leaving 95% of the hero pool unpicked as a matter of course.&lt;/p&gt;
+&lt;p&gt;The analysis up to now has assumed that heroes perform equally well on radiant and dire side- not necessarily true. Additionally, it has made no distinction in skill groups; all of the analysis has been done on the total data from all the public matches.&lt;/p&gt;
+
+&lt;p&gt;Alternative graphs and measures could be used to determine more information. One relationship that may be worth exploring is a “counter-pick” graph that tracks how many times two heroes faced off against each other on separate teams. Another graph worth looking into could be the “anti-pair” graph working to distinguish which heroes fulfill a similar role: if we count up how many times a hero is &lt;i&gt;not&lt;/i&gt; picked when another hero is picked. However, there will be a significant amount of noise since any particular game only allows for 5 picks, leaving 95% of the hero pool unpicked as a matter of course.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;/personal/dota2drafts/popularitygraph.html&quot;&gt;Hero pair popularity graph&lt;/a&gt;&lt;/li&gt;
