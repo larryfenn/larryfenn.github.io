@@ -6,14 +6,19 @@
 </description>
     <link>http://larryfenn.com/</link>
     <atom:link href="http://larryfenn.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 30 Nov 2015 01:10:00 -0500</pubDate>
-    <lastBuildDate>Mon, 30 Nov 2015 01:10:00 -0500</lastBuildDate>
+    <pubDate>Mon, 30 Nov 2015 01:16:35 -0500</pubDate>
+    <lastBuildDate>Mon, 30 Nov 2015 01:16:35 -0500</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
     
       <item>
         <title>Dota 2 Drafting Part 2: Hero Pairings</title>
         <description>&lt;p&gt;&lt;a href=&quot;/personal/dota2drafts/popularitygraph.html&quot;&gt;&lt;img src=&quot;/personal/dota2drafts/popularityexample1.png&quot; hspace=&quot;20&quot; /&gt;&lt;/a&gt;&lt;a href=&quot;/personal/dota2drafts/popularitygraph.html&quot;&gt;&lt;img src=&quot;/personal/dota2drafts/popularityexample2.png&quot; hspace=&quot;20&quot; /&gt;&lt;/a&gt;
 &lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/personal/dota2drafts/popularitygraph.html&quot;&gt;Interactive graph: Hero pair popularity.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/personal/dota2drafts/winrategraph.html&quot;&gt;Interactive graph: Hero pair winrate.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Using captain’s mode data we can construct graphs to represent hero pick and win rates. This has a twofold purpose:&lt;/p&gt;
 
