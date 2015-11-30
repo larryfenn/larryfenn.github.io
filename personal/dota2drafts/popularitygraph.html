@@ -84,7 +84,6 @@
     }
     .link {
       stroke-width: 6;
-	  stroke-opacity: .9;
     }
 
     d3-tip {
@@ -332,7 +331,7 @@
 	    node.style("opacity", function (o) {
           return neighboring(d, o) | neighboring(o, d) ? 1 : .1;
         });
-        link.style("opacity", function (o) {
+        link.style("stroke-opacity", function (o) {
             return d.index==o.source.index | d.index==o.target.index ? (.1+.9*o.weight/13000) : 0.1;
         });
         toggle = 1;

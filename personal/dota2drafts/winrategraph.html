@@ -84,7 +84,6 @@
     }
     .link {
       stroke-width: 6;
-	  stroke-opacity: .9;
     }
 
     d3-tip {
@@ -274,7 +273,7 @@
       link.enter().insert("line", ".node").attr("class", "link").on('mouseover', edgetip.show).on('mouseout', edgetip.hide);
 	  var linkindex = 0;
 	  link[0].forEach(function(d) {
-	  	d.setAttribute("style", "stroke: rgb(10," + Math.round(10+ (255-10)*5*graph.links[linkindex].weight) + ",10);opacity: " + (.1+4.5*graph.links[linkindex].weight));
+	  	d.setAttribute("style", "stroke: rgb(10," + Math.round(10+ (255-10)*5*graph.links[linkindex].weight) + ",10);stroke-opacity: " + (.1+4.5*graph.links[linkindex].weight));
 		linkindex++;
 	  })
 
@@ -332,7 +331,7 @@
 	    node.style("opacity", function (o) {
           return neighboring(d, o) | neighboring(o, d) ? 1 : .1;
         });
-        link.style("opacity", function (o) {
+        link.style("stroke-opacity", function (o) {
             return d.index==o.source.index | d.index==o.target.index ? (.1+4.5*o.weight) : 0.1;
         });
         toggle = 1;
