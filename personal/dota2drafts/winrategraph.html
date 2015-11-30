@@ -193,6 +193,7 @@
     .attr("class", "node")
 	.call(node_drag)
 	.on('dblclick', releasenode)
+	.on('mouseover', function(o) { toggle = 0 })
 	.on('mouseenter', connectedNodes)
 	.on('mouseleave', connectedNodes);
 

@@ -193,6 +193,7 @@
     .attr("class", "node")
 	.call(node_drag)
 	.on('dblclick', releasenode)
+	.on('mouseover', function(o) { toggle = 0})
 	.on('mouseenter', connectedNodes)
 	.on('mouseleave', connectedNodes);
 
@@ -377,6 +378,7 @@
   </script>
   </body>
 </html>
+
 <br>
 See also: <a href="/personal/dota2drafts/winrategraph.html">Hero pair winrate graph</a>
 
