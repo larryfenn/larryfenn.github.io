@@ -274,7 +274,7 @@
       link.enter().insert("line", ".node").attr("class", "link").on('mouseover', edgetip.show).on('mouseout', edgetip.hide);
 	  var linkindex = 0;
 	  link[0].forEach(function(d) {
-	  	d.setAttribute("style", "stroke: rgb(10," + Math.round(10+ (255-10)*graph.links[linkindex].weight/12000) + ",10);opacity: " + (.1+.9*graph.links[linkindex].weight/12000));
+	  	d.setAttribute("style", "stroke: rgb(10," + Math.round(10+ (255-10)*graph.links[linkindex].weight/12000) + ",10);stroke-opacity: " + (.1+.9*graph.links[linkindex].weight/12000));
 		linkindex++;
 	  })
 
