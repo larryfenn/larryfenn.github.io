@@ -6,8 +6,8 @@
 </description>
     <link>http://larryfenn.com/</link>
     <atom:link href="http://larryfenn.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 01 Dec 2015 03:20:32 -0500</pubDate>
-    <lastBuildDate>Tue, 01 Dec 2015 03:20:32 -0500</lastBuildDate>
+    <pubDate>Wed, 02 Dec 2015 18:57:21 -0500</pubDate>
+    <lastBuildDate>Wed, 02 Dec 2015 18:57:21 -0500</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
     
       <item>
@@ -20,11 +20,11 @@
   &lt;li&gt;&lt;a href=&quot;/personal/dota2drafts/winrategraph.html&quot;&gt;Interactive graph: Hero pair winrate.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Using captain’s mode data we can construct graphs to represent hero pick and win rates. This has a twofold purpose:&lt;/p&gt;
+&lt;p&gt;The data collected from Valve’s API contains a plethora of information about relationships between heroes, teams, and winrates. This data lends itself to the construction of graphs depicting the relationships. This has a twofold purpose:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;To assess the integrity of the collected data. If the graphs that come out don’t line up with the common strategic thinking about the heroes then additional stratification is necessary (most likely by game skill bracket).&lt;/li&gt;
-  &lt;li&gt;To explore the data set to see what hero combinations are popular and which work well and which don’t.&lt;/li&gt;
+  &lt;li&gt;To explore the data set to see what hero combinations are popular along with showing which combinations work well and which don’t.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;!--more--&gt;
