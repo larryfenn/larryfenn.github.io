@@ -13,12 +13,13 @@
 	left: 5;
 	width: 600px;
 	margin: 0 auto;
-	height: 45px;
+	height: 60px;
 	overflow: scroll;
 	border: 1px solid #000;
 	padding: 2px;
 	text-align: left;
 	background: transparent;
+	margin-bottom: 5px;
 }
 
 .q0-9 { fill:rgb(247,251,255);}
@@ -75,11 +76,11 @@ var casualtytype = "InjuredKilled";
 var incidenttype = "accident";
 var stateincidents = [];
 
-var chartscale = .4;
+var chartscale = .6;
 
 var curState = 0;
 
-var width = 1500*chartscale,
+var width = 1200*chartscale,
     height = 600*chartscale;
 
 var svg = d3.select("body").append("svg")
@@ -95,58 +96,7 @@ var projection = d3.geo.albersUsa()
 var path = d3.geo.path()
     .projection(projection);
 
-var quantize = d3.scale.quantize()
-	.domain([0, quantizeMax])
-	.range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
-
-svg = d3.select("svg");
-
-svg.append("g")
-  .attr("class", "legendQuant")
-  .attr("transform", "translate(" + (.85*width).toString() + ",70)");
-
-var legend = d3.legend.color()
-  .labelFormat(d3.format(".0f"))
-  .useClass(true)
-  .shapeWidth(10*chartscale)
-  .orient('vertical')
-  .cells(9)
-  .scale(quantize);
-
-svg.select(".legendQuant")
-  .call(legend);
-
 updateData();
-
-function ready(error, us) {
-  if (error) throw error;
-	console.log(quantizeMax);
-	quantize = d3.scale.quantize()
-		.domain([0, quantizeMax])
-		.range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
-
-	svg.append("g")
-		.attr("class", "states")
-		.selectAll("path")
-		.data(topojson.feature(us, us.objects.states).features)
-		.enter().append("path")
-		.attr("class", function(d) { return quantize(rateById.get(d.id)); })
-		.attr("d", path)
-		.on('click', clicked);
-
-	svg.append("g")
-		.attr("class", "legendQuant")
-		.attr("transform", "translate(" + (.85*width).toString() + ",70)");
-	legend = d3.legend.color()
-		.labelFormat(d3.format(".0f"))
-		.useClass(true)
-		.shapeWidth(10*chartscale)
-		.orient('vertical')
-		.cells(9)
-		.scale(quantize);
-	svg.select(".legendQuant")
-		.call(legend);
-}
 
 
 function clicked(d) {
@@ -264,7 +214,7 @@ function updateData() {
 			if (displayedchart == "histogram") {
 				var chart = c3.generate({
 					size:{
-						height: height,
+						height: height/2,
 						width: width
 					},
 					bindto: '#chart',
@@ -284,7 +234,7 @@ function updateData() {
 			} else {
 				var chart = c3.generate({
 					size:{
-						height: height,
+						height: height/2,
 						width: width
 					},
 					bindto: '#chart',
@@ -310,10 +260,11 @@ function updateData() {
 				titlestr = statearray[curState] + ": " + statecounts[curState];
 			}
 			d3.select("#chart svg").append("text")
-				.attr("x",.7*width)
+				.attr("x",.75*width)
 				.attr("y",30)
 				.style("font-size", "300%")
 				.text(titlestr);
+			console.log(statecounts);
 			if (Math.max(...statecounts) != 0)
 				quantizeMax = Math.max(...statecounts);
 		});
@@ -323,6 +274,34 @@ function updateData() {
 		.await(ready);
 }
 
+function ready(error, us) {
+  if (error) throw error;
+	quantize = d3.scale.quantize()
+		.domain([0, quantizeMax])
+		.range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
+
+	svg.append("g")
+		.attr("class", "states")
+		.selectAll("path")
+		.data(topojson.feature(us, us.objects.states).features)
+		.enter().append("path")
+		.attr("class", function(d) { return quantize(rateById.get(d.id)); })
+		.attr("d", path)
+		.on('click', clicked);
+
+	svg.append("g")
+		.attr("class", "legendQuant")
+		.attr("transform", "translate(" + (.85*width).toString() + "," + height/2 + ")");
+	legend = d3.legend.color()
+		.labelFormat(d3.format(".0f"))
+		.useClass(true)
+		.shapeWidth(10*chartscale)
+		.orient('vertical')
+		.cells(9)
+		.scale(quantize);
+	svg.select(".legendQuant")
+		.call(legend);
+}
 
 d3.select(self.frameElement).style("height", height + "px");
 
@@ -335,8 +314,6 @@ Chart: <select id="chartType" onchange="chartSelect()">
 </select>
 <br>
 Click on a state for local information.
-<h2>Notes:</h2>
-	Male + Female count will not line up with the state's count, as many records do not list gender or age.
 <div id="src-container">
 <h2>Sources:</h2>
 <div id="sources"></div>
