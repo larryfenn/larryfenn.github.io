@@ -134,13 +134,13 @@ function clicked(d) {
 function dropSelect() {
 	// reselect the data set based on the current request
 	incidenttype = document.getElementById("incidentType").value;
-	if (document.getElementById("injured").checked)
-		casualtytype = "Injured";
-	if (document.getElementById("killed").checked)
-		casualtytype = "Killed";
-	if (document.getElementById("injured").checked && document.getElementById("killed").checked)
+	if (document.getElementById("injured").checked && document.getElementById("killed").checked) {
 		casualtytype = "InjuredKilled";
-	if (!document.getElementById("injured").checked && !document.getElementById("killed").checked) {
+	} else if (document.getElementById("injured").checked) {
+		casualtytype = "Injured";
+	} else if (document.getElementById("killed").checked) {
+		casualtytype = "Killed";
+	} else {
 		casualtytype = "";
 		incidenttype = "";
 	}
