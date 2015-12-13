@@ -267,6 +267,7 @@ function updateData() {
 			console.log(statecounts);
 			if (Math.max(...statecounts) != 0)
 				quantizeMax = Math.max(...statecounts);
+			console.log(quantizeMax);
 		});
 	queue()
 		.defer(d3.json, "us.json")
