@@ -213,7 +213,7 @@ function updateData() {
 			sourcelist = flattenArrays(sourcelist);
 			sourcelist = sourcelist.filter(function(item, i, ar) {return ar.indexOf(item) === i; });
 			for (var i = 0; i < sourcelist.length; i++) {
-				if(sourcelist[i].startsWith("http://")) {
+				if(sourcelist[i].startsWith("http")) { // pray there isn't a town out there called httpton
 					var url = sourcelist[i];
 					sourcelist[i] = "<a href = \"".concat(url).concat("\">").concat(url).concat("</a>");
 				}
