@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
 <style>
 
 .states {
@@ -37,6 +36,24 @@
 .q8-9 { fill:rgb(8,48,107);}
 
 </style>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Gun Violence Choropleth</title>
+	<meta name="description" content="some of my research, thoughts, and projects.">
+
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<link href="./c3/c3.css" rel="stylesheet" type="text/css">
+	<script src="//d3js.org/queue.v1.min.js"></script>
+	<script src="//d3js.org/topojson.v1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/1.7.0/d3-legend.js"></script>
+	<script src="./c3/c3.min.js"></script>
+</head>
+<header class="site-header">
+	<h2>Gun violence choropleth, histogram, and time series for national and state-level data</h2>
+</header>
 <body>
 
 <div id="controls">
@@ -52,12 +69,7 @@
 	</select>
 </div>
 
-<link href="./c3/c3.css" rel="stylesheet" type="text/css">
-<script src="//d3js.org/d3.v3.min.js"></script>
-<script src="//d3js.org/queue.v1.min.js"></script>
-<script src="//d3js.org/topojson.v1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/1.7.0/d3-legend.js"></script>
-<script src="./c3/c3.min.js"></script>
+
 <script>
 
 var statearray = ['','AL','AK','','AZ','AR','CA','','CO','CT','DE','DC','FL','GA','','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','','RI','SC','SD','TN','TX','UT','VT','VA','','WA','WV','WI','WY'];
@@ -331,3 +343,4 @@ Click on a state for local information.
 <div id="sources"></div>
 </div>
 </body>
+</html>
