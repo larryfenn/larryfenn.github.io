@@ -73,6 +73,9 @@
 <script>
 
 var statearray = ['','AL','AK','','AZ','AR','CA','','CO','CT','DE','DC','FL','GA','','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','','RI','SC','SD','TN','TX','UT','VT','VA','','WA','WV','WI','WY'];
+var statecounts;
+var us;
+
 
 function flattenArrays(a, r) {
 	if(!r){ r = []}
@@ -116,9 +119,11 @@ var projection = d3.geo.albersUsa()
 
 var path = d3.geo.path()
     .projection(projection);
-
-updateData();
-
+d3.json("us.json", function(error, json) {
+	if (error) return console.warn(error);
+	us = json;
+	updateData();
+});
 
 function clicked(d) {
 	curStated3p = this
@@ -172,13 +177,10 @@ function updateData() {
 			};
 		}, function(error, rows) {
 			curdata = rows;
-			var statecounts = Array.apply(null, Array(79)).map(Number.prototype.valueOf,0);
+			statecounts = Array.apply(null, Array(79)).map(Number.prototype.valueOf,0);
 			// compute max of state violence incidents
 			for (var i = 0; i < curdata.length; i++) {
 				statecounts[curdata[i].state]++;
-			}
-			for (var i = 0; i < statecounts.length; i++) {
-				rateById.set(i, statecounts[i]);
 			}
 			quantizeMax = Math.max(...statecounts);
 			console.log(statecounts);
@@ -299,14 +301,15 @@ function updateData() {
 				.attr("y",30)
 				.style("font-size", "300%")
 				.text(titlestr);
+			ready();
 		});
-	queue()
-		.defer(d3.json, "us.json")
+//	queue()
+//		.defer(d3.json, "us.json")
 //		.defer(d3.tsv, casualtytype + "-" + incidenttype + "-statetotals.tsv", function(d) { rateById.set(d.id, +d.count); })
-		.await(ready);
+//		.await(ready);
 }
 
-function ready(error, us) {
+function ready(error) {
   if (error) throw error;
 
 	console.log("Now in ready");
@@ -317,7 +320,7 @@ function ready(error, us) {
 		.selectAll("path")
 		.data(topojson.feature(us, us.objects.states).features)
 		.enter().append("path")
-		.attr("class", function(d) { return quantize(rateById.get(d.id)); })
+		.attr("class", function(d) { return quantize(statecounts[d.id]); })
 		.attr("d", path)
 		.on('click', clicked);
 
