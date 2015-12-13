@@ -1,0 +1,18 @@
+date,city,state,age,gender,status,source,accident,defense,defense3,mass
+12-9-2015,Detroit,26,,Female,Injured,"http://www.wxyz.com/news/region/detroit/pizza-delivery-man-shot-in-what-may-be-a-botched-robbery-in-detroit
+http://www.freep.com/story/news/local/michigan/detroit/2015/12/09/detroit-police-gunfire-exchanged-during-pizza-delivery/77074552/",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+12-8-2015,West Palm Beach,12,32,Female,Killed,"http://www.wpbf.com/news/woman-shot-in-driveby-shooting-driver-flees-crashes-car-in-west-palm-beach/36858130
+http://www.sun-sentinel.com/local/palm-beach/fl-west-palm-shooting-suspect-id-20151210-story.html",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+12-6-2015,Tucson,4,46,Male,Killed,http://www.azcentral.com/story/news/arizona/2015/12/07/tucson-police-witness-shoots-shoplifting-suspect-near-store/76914216/,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+12-6-2015,Houston,48,,Male,Killed,"http://www.khou.com/story/news/crime/2015/12/06/alleged-attempted-robbery-suspect-found-shot-to-death-in-street/76880000/
+http://abc13.com/news/man-found-shot-dead-on-north-harris-county-road/1111681/",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+12-3-2015,Carrollton,13,,Male,Injured,"http://www.wsbtv.com/news/news/local/two-shot-near-university-west-georgia/npb7F/
+http://www.ajc.com/news/news/crime-law/shooting-wounds-two-near-university-of-west-georgi/npcFZ/",FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE
+12-3-2015,Carrollton,13,,Male,Injured,"http://www.wsbtv.com/news/news/local/two-shot-near-university-west-georgia/npb7F/
+http://www.ajc.com/news/news/crime-law/shooting-wounds-two-near-university-of-west-georgi/npcFZ/",FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE
+10-10-2015,Louisville,21,,Male,Injured,http://www.wave3.com/story/30660354/police-arrest-suspect-accused-of-shooting-robbing-man,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+12-1-2015,North Las Vegas,32,,Male,Injured,"http://www.ktnv.com/news/person-critically-shot-after-robbery-in-north-las-vegas
+http://www.fox5vegas.com/story/30645829/person-shot-injured-during-north-las-vegas-robbery",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+11-12-2015,Los Angeles,6,,Female,Killed,http://www.nbclosangeles.com/news/local/3-Injured-Following-Shooting-in-South-LA-347041992.html,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+11-12-2015,Los Angeles,6,,Female,Injured,http://www.nbclosangeles.com/news/local/3-Injured-Following-Shooting-in-South-LA-347041992.html,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+11-12-2015,Los Angeles,6,,Male,Killed,http://www.nbclosangeles.com/news/local/3-Injured-Following-Shooting-in-South-LA-347041992.html,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE

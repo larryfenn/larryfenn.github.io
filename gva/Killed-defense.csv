@@ -1,0 +1,848 @@
+date,city,state,age,gender,status,source,accident,defense,defense3,mass
+12-7-2015,Lumberton,37,41,Male,Killed,http://www.fayobserver.com/news/crime_courts/robeson-county-man-dies-after-being-shot-by-brother-in/article_1953344d-a66d-5841-a7ae-e051515fe0bb.html,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+12-7-2015,Baltimore,24,25,Male,Killed,http://www.baltimoresun.com/news/maryland/bs-md-co-towson-shooting-20151207-story.html,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+12-7-2015,Corona (Queens),36,,Male,Killed,"http://www.nytimes.com/2015/12/08/nyregion/man-is-fatally-shot-by-police-after-a-robbery-attempt-in-queens.html?ref=nyregion
+http://nypost.com/2/08/off-duty-cop-fatally-shot-man-who-tried-to-rob-him/2015/1
+http://www.nbcnewyork.com/news/local/Off-Duty-Police-Officer-Fatally-Shoots-Armed-Robber-NYPD-360909691.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+12-8-2015,West Palm Beach,12,32,Female,Killed,"http://www.wpbf.com/news/woman-shot-in-driveby-shooting-driver-flees-crashes-car-in-west-palm-beach/36858130
+http://www.sun-sentinel.com/local/palm-beach/fl-west-palm-shooting-suspect-id-20151210-story.html",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+12-6-2015,Tucson,4,46,Male,Killed,http://www.azcentral.com/story/news/arizona/2015/12/07/tucson-police-witness-shoots-shoplifting-suspect-near-store/76914216/,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+12-6-2015,Vale,41,,Male,Killed,http://www.argusobserver.com/breaking_news/home-invader-shot-and-killed-by-vale-homeowner/article_90fc4f64-9c4f-11e5-ad6b-ff3161c31e55.html,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+12-6-2015,San Antonio,48,27,Male,Killed,"http://www.mysanantonio.com/news/local/crime/article/Gun-fight-at-a-West-Side-bar-ends-in-one-dead-6679360.php
+http://www.woai.com/articles/woai-local-news-sponsored-by-five-119078/guard-kills-gunman-in-parking-lot-14178956/
+http://www.ksat.com/news/security-guard-shoots-kills-man-at-west-side-bar
+http://www.ksat.com/news/family-wants-loved-one-fatally-shot-by-security-guard-remembered-as-family-man-1",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+12-6-2015,Houston,48,,Male,Killed,"http://www.khou.com/story/news/crime/2015/12/06/alleged-attempted-robbery-suspect-found-shot-to-death-in-street/76880000/
+http://abc13.com/news/man-found-shot-dead-on-north-harris-county-road/1111681/",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+12-3-2015,Savannah,13,23,Male,Killed,"http://www.wtoc.com/story/30664202/two-people-shot-on-the-2500-block-of-oak-forest-drive-police-on-scene
+http://scmpd.org/robbery-attempt-leads-to-shooting-on-oak-forest-drive/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+11-30-2015,Peoria,17,29,Male,Killed,"http://www.pjstar.com/article/20151130/NEWS/151139945
+http://www.pjstar.com/article/20151202/NEWS/151209842",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+11-29-2015,Wilmington,37,36,Male,Killed,"http://www.starnewsonline.com/article/20151130/ARTICLES/151139997/1177?Title=Disturbance-preceded-fatal-shooting-witnesses-say
+http://www.starnewsonline.com/article/20151207/NEWS/151209756/1037?Title=No-charges-filed-in-fatal-shooting-at-hotel",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+11-29-2015,Saint Louis,29,13,Male,Killed,http://fox2now.com/2015/11/30/14-year-old-feels-responsible-over-death-of-teen-shot-by-man-protecting-vehicle/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+11-30-2015,Onslow (county),37,,Male,Killed,"http://www.jdnews.com/article/20151130/NEWS/151139967
+http://www.jdnews.com/article/20151201/NEWS/151209959",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+11-30-2015,Mcdonough,13,,Male,Killed,"http://www.wsbtv.com/news/news/local/police-investigate-attempted-robbery-homicide-stab/npYgX/
+http://www.ajc.com/news/news/crime-law/henry-county-offers-reward-for-fugitives-who-survi/npd3x/",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+11-30-2015,Mcdonough,13,,Male,Killed,"http://www.wsbtv.com/news/news/local/police-investigate-attempted-robbery-homicide-stab/npYgX/
+http://www.ajc.com/news/news/crime-law/henry-county-offers-reward-for-fugitives-who-survi/npd3x/",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+11-30-2015,Stone Mountain,13,28,Male,Killed,http://www.11alive.com/story/news/local/stone-mountain/2015/11/30/intruder-shot-and-killed-during-apartment-invasion/76557702/,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+11-27-2015,Humble (Atascocita),48,,Male,Killed,http://www.chron.com/news/houston-texas/article/One-dead-two-arrested-after-Humble-home-invasion-6661787.php,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+11-28-2015,Cleveland (Parma),39,50,Male,Killed,"http://www.cleveland.com/parma/index.ssf/2015/11/friends_remember_slain_parma_g.html#incart_2box_news
+http://www.newsnet5.com/news/local-news/oh-cuyahoga/man-arrested-in-connection-to-fatal-shooting-of-sunoco-owner-robert-sposit",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+11-28-2015,Belle,54,33,Male,Killed,"http://www.wvva.com/story/30620182/police-west-virginia-homeowner-shoots-kills-intruder
+http://www.wowktv.com/story/30620277/homeowner-shoots-kills-burglary-suspect-in-belle-wv
+http://www.wvgazettemail.com/article/20151129/GZ01/151129500",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+11-24-2015,Dallas,48,22,Male,Killed,"http://thepolicenews.net/default.aspx?act=Newsletter.aspx&category=News+1-2&newsletterid=57702&menugroup=Home
+http://dfw.cbslocal.com/2015/11/25/suspect-reportedly-shot-killed-by-homeowner-identified/",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+11-25-2015,Aiken,45,23,Male,Killed,"http://www.wltx.com/story/news/2015/11/25/suspect-killed-trying-rob-couple/76393620/
+http://www.wfxg.com/story/30605899/aiken-co-sheriffs-office-investigating-fatal-shooting",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+3-15-2015,Brooklyn,36,57,Male,Killed,http://www.nydailynews.com/new-york/brooklyn/brooklyn-man-convicted-shooting-death-homeless-man-article-1.2446081,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+11-21-2015,Knoxville,47,19,Male,Killed,"http://wate.com/2015/11/21/2-people-shot-near-downtown-knoxville/
+http://www.wbir.com/story/news/2015/11/21/two-shot-on-summit-hill-drive/76179042/?utm_source=feedblitz&utm_medium=FeedBlitzRss&utm_campaign=wbir/local-news
+http://wate.com/2015/11/21/2-people-shot-near-downtown-knoxville/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+11-15-2015,Cheyenne,56,23,Male,Killed,"http://www.wyomingnews.com/articles/2015/11/20/news/17local_11-20-15.txt#.Vk_khXarTIU
+http://www.kgwn.tv/home/headlines/Two-dead-after-gunfire-on-14th-Street-350573581.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+11-15-2015,Cheyenne,56,23,Male,Killed,"http://www.wyomingnews.com/articles/2015/11/20/news/17local_11-20-15.txt#.Vk_khXarTIU
+http://www.kgwn.tv/home/headlines/Two-dead-after-gunfire-on-14th-Street-350573581.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+11-19-2015,Jacksonville,12,24,Male,Killed,"http://jacksonville.com/news/crime/2015-11-20/story/victim-shooting-jacksonville-busines-suffers-minor-injuries-thursday
+http://www.news4jax.com/news/police-clerk-shot-in-jewelry-store-robbery/36569698",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+11-16-2015,Saint Louis (county),29,17,Male,Killed,http://www.stltoday.com/news/local/crime-and-courts/utility-worker-grabs-own-gun-to-kill-armed-man-who/article_ff1fbec1-fcd8-5d16-8fb7-2cf81779f75a.html,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+11-13-2015,San Antonio,48,19,Female,Killed,http://www.ksat.com/news/1-teen-killed-1-injured-in-home-invasion,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+11-9-2015,Menominee,26,19,Male,Killed,http://www.greenbaypressgazette.com/story/news/local/2014/11/13/green-bay-men-charged-michigan-home-invasion-left-one-dead/18968609/,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+11-14-2015,Philadelphia,42,16,Male,Killed,"http://6abc.com/news/man-injured-in-police-involved-shooting-in-germantown-/1085987/
+http://6abc.com/news/police-off-duty-pha-officer-shot-killed-robbery-suspect-/1085987/
+http://www.philly.com/philly/blogs/dncrime/Source-Teen-gunman-tried-to-rob-PHA-officer.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+11-12-2015,Los Angeles,6,,Female,Killed,http://www.nbclosangeles.com/news/local/3-Injured-Following-Shooting-in-South-LA-347041992.html,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+11-12-2015,Los Angeles,6,,Male,Killed,http://www.nbclosangeles.com/news/local/3-Injured-Following-Shooting-in-South-LA-347041992.html,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+11-11-2015,Dacula,13,24,Male,Killed,"http://m.wsbtv.com/news/ap/georgia/roadway-dispute-ends-in-fatal-shooting-outside-dri/npLy8/
+http://www.cbs46.com/story/30498119/apparent-road-rage-incident-turns-fatal",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+11-10-2015,Ladson,45,31,Male,Killed,"http://www.postandcourier.com/article/20151110/PC16/151119940/13-year-old-charleston-county-boy-shoots-at-burglar-with-mother-x2019-s-gun
+http://kxan.com/ap/authorities-teen-uses-mothers-gun-to-shoot-kill-burglar/",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+11-10-2015,Columbia,45,19,Male,Killed,"http://wsav.com/ap/man-confronts-shoots-car-burglary-suspect-near-columbia/
+http://www.walb.com/story/30493434/coroner-identifies-man-killed-by-homeowner-in-car-break-in-case",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+11-8-2015,Macon,13,20,Male,Killed,http://www.13wmaz.com/story/news/local/macon/2015/11/10/second-arrest-made-in-macon-fatal-robbery-attempt/75516576/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+11-7-2015,Lake Elsinore,6,,NULL,Killed,"http://www.pe.com/articles/release-785817-news-home.html
+http://www.nbclosangeles.com/news/local/Lake-Elsinore-Homeowner-Guns-Down-Burglar-Gets-Arrested-on-Felony-Warrant-344146432.html",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+11-8-2015,Tulsa,40,44,Male,Killed,"http://www.krmg.com/ap/ap/oklahoma/police-say-resident-fatally-shot-intruder-in-home-/npJjp/
+http://www.tulsaworld.com/homepagelatest/tulsa-police-resident-fatally-shoots-intruder-in-apparent-home-invasion/article_35f49f74-17ad-584a-a3a4-27f5c95d61e3.html
+http://www.fox23.com/news/news/local/tulsa-police-investigating-possible-home-invasion-/npJWq/",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+11-6-2015,Denver,8,32,Male,Killed,"http://denver.cbslocal.com/2015/11/06/man-who-shot-killed-intruder-is-a-former-police-officer/
+http://www.denverpost.com/news/ci_29092734/suspected-prowler-denver-died-from-multiple-gunshot-wounds",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+11-7-2015,Birmingham,1,22,Male,Killed,"http://www.al.com/news/birmingham/index.ssf/2015/11/intruder_fatally_shot_during_p.html
+http://www.al.com/news/birmingham/index.ssf/2015/11/men_22_and_27_idd_as_victims_i.html",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+11-8-2015,Atlanta,13,,Male,Killed,"http://www.11alive.com/story/news/crime/2015/11/07/man-found-shot-dead-southeast-atlanta/75375318/
+http://m.wsbtv.com/news/news/local/police-investigate-homicide-holly-drive/npJFb/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+11-5-2015,Green Sea,45,29,Male,Killed,"http://www.wbtv.com/story/30455626/police-investigate-after-man-killed-in-horry-county
+http://www.wmbfnews.com/story/30451659/coroner-identifies-29-year-old-man-shot-and-killed-in-green-sea
+http://www.myrtlebeachonline.com/news/local/crime/article43728525.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+11-5-2015,Apopka,12,46,Male,Killed,http://www.wesh.com/news/man-shoots-kills-roommate-in-apopka-police-say/36294908,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+11-3-2015,Glendale,4,,Male,Killed,http://www.kpho.com/story/30438928/glendale-police-id-hammer-wielding-man-shot-and-killed-during-assault?autostart=true,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+11-3-2015,Birmingham (Forestdale),1,25,Male,Killed,http://www.wbrc.com/story/30435936/coroner-ids-man-killed-after-possibly-abducting-woman,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+11-2-2015,Winston-Salem,37,30,Male,Killed,http://myfox8.com/2015/11/03/no-charges-after-suspect-shot-while-trying-to-rob-winston-salem-jewelry-store/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+11-2-2015,Tomball,48,,Male,Killed,http://www.wfaa.com/story/news/local/2015/11/02/two-dead-after-shooting-stabbing-at-cypress-home/75064800/,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+11-1-2015,Thornton,8,,Male,Killed,"http://www.denverpost.com/news/ci_29059873/thornton-police-arrest-man-after-he-shoots-and
+http://www.9news.com/story/news/crime/2015/11/01/man-killed-after-fight-at-thornton-apartment/75023952/",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+11-2-2015,Palmetto,12,27,Male,Killed,http://www.bradenton.com/news/local/crime/article42187986.html,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+10-31-2015,Chicago,17,55,Male,Killed,"http://www.chicagotribune.com/news/local/breaking/ct-1-dead-in-shooting-at-gage-park-business-20151031-story.html
+http://news.yahoo.com/police-concealed-carry-license-holder-kills-armed-gunman-161526329.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+10-31-2015,Reading,42,,Male,Killed,http://www.readingeagle.com/news/article/2-shot-in-attempted-robbery-of-reading-convenience-store,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+10-31-2015,Reading,42,,Male,Killed,http://www.readingeagle.com/news/article/2-shot-in-attempted-robbery-of-reading-convenience-store,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+10-30-2015,Smith (county),48,67,Female,Killed,"http://www.kltv.com/story/30394941/sheriff-man-fatally-shoots-ex-wife-after-being-shot-multiple-times
+http://www.kltv.com/story/30400493/sheriff-names-released-in-fatal-smith-county-shooting",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+10-29-2015,Salt Lake City (Millcreek),49,47,Male,Killed,"http://www.deseretnews.com/article/865640168/Millcreek-homeowner-accused-home-invader-both-dead-in-shootout.html
+http://www.sltrib.com/news/3113953-155/father-would-be-home-invader-die-in?fullpage=1
+http://kutv.com/news/local/new-information-released-in-deadly-millcreek-double-shooting
+http://www.ksl.com/?sid=37164364&nid=148&s_cid=rss-extlink",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+10-29-2015,Salt Lake City (Millcreek),49,34,Male,Killed,"http://www.deseretnews.com/article/865640168/Millcreek-homeowner-accused-home-invader-both-dead-in-shootout.html
+http://www.sltrib.com/news/3113953-155/father-would-be-home-invader-die-in?fullpage=1
+http://kutv.com/news/local/new-information-released-in-deadly-millcreek-double-shooting
+http://www.ksl.com/?sid=37164364&nid=148&s_cid=rss-extlink",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+10-28-2015,Farmington (Farmington Hills),26,24,Male,Killed,"http://www.theoaklandpress.com/20151028/man-killed-in-farmington-hills-domestic-shooting
+http://www.freep.com/story/news/local/michigan/oakland/2015/10/28/farmington-hills-shooting/74727806/",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+10-24-2015,Guymon,40,39,Male,Killed,http://abc7amarillo.com/news/local/man-shot-and-killed-near-guymon-no-charges-filed,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+10-26-2015,Phoenix,4,,Male,Killed,http://www.12news.com/story/news/local/valley/2015/10/26/security-guard-shoots-kills-alleged-robber-auto-parts-store/74656108/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+10-25-2015,Charlotte,37,26,Male,Killed,"http://www.charlotteobserver.com/news/local/crime/article41389572.html
+http://www.wcnc.com/story/news/crime/2015/10/25/cmpd-domestic-struggle-leads-to-deadly-shooting/74589708/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+10-19-2015,Rock Spring,13,,Male,Killed,http://www.wrcbtv.com/story/30303336/breaking-one-dead-in-apparent-overnight-homicide-in-walker-county,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+10-21-2015,Belding,26,35,Male,Killed,"http://www.mlive.com/news/grand-rapids/index.ssf/2015/10/shooting_1.html#incart_m-rpt-2
+http://www.mlive.com/news/grand-rapids/index.ssf/2015/11/he_hit_me_and_i_shot_him_frant.html#incart_river_home",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+10-17-2015,Lebanon,21,39,Male,Killed,"http://www.lex18.com/story/30295756/police-find-man-dead-after-responding-to-a-domestic-violence-report
+http://www.wave3.com/story/30299887/police-woman-shot-killed-husband-during-domestic-violence-incident
+http://www.lebanonenterprise.com/content/wife-shoots-kills-husband-during-domestic-dispute",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+10-18-2015,Meridian,28,,Male,Killed,http://www.wtok.com/home/headlines/Man-Killed-During-Alleged-Burglary-333937771.html,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+10-18-2015,Detroit,26,26,Male,Killed,"http://abc11.com/news/police-pastor-fatally-shot-attacker-during-service/1040079/
+http://www.detroitnews.com/story/news/local/detroit-city/2015/10/18/pastor-kills-brick-wielding-man-during-church-service/74190782/
+http://www.detroitnews.com/story/news/local/detroit-city/2015/10/29/detroit-pastor-fatal-shooting-church/74812742/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+10-17-2015,Canadian (county),40,,Male,Killed,"http://kfor.com/2015/10/17/two-dead-one-injured-in-el-reno-shooting/
+http://www.news9.com/story/30287261/two-dead-after-altercation-at-canadian-county-home",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+10-17-2015,Canadian (county),40,,Male,Killed,"http://kfor.com/2015/10/17/two-dead-one-injured-in-el-reno-shooting/
+http://www.news9.com/story/30287261/two-dead-after-altercation-at-canadian-county-home",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+10-14-2015,Covina,6,,Male,Killed,http://www.pasadenastarnews.com/general-news/20151014/covina-man-shoots-kills-son-who-was-breaking-into-home,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+10-12-2015,Pittsburgh (Mount Washington),42,35,Male,Killed,http://www.post-gazette.com/local/city/2015/10/12/Police-investigate-shooting-in-Mount-Washington/stories/201510120174,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+10-10-2015,Pamlico (county),37,35,Male,Killed,http://www.witn.com/home/headlines/Pamlico-County-Sheriff-One-killed-in-overnight-home-invasion--331880851.html,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+10-11-2015,Salinas,6,25,Male,Killed,http://www.thecalifornian.com/story/news/2015/10/11/police-salinas-logs-th-st-homicides-year/73777554/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+10-9-2015,Catawba (county),37,,Male,Killed,http://www.wbtv.com/story/30226108/sheriff-man-shot-killed-would-be-robber-after-being-lured-to-home,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+10-10-2015,Saint Louis,29,35,Male,Killed,http://www.kmov.com/story/30232182/man-shot-killed-near-st-marys-catholic-high-school,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+10-10-2015,Waterbury,9,26,Male,Killed,"http://www.nbcconnecticut.com/news/local/1-Shot-Dead-at-Waterbury-Cafe-331886291.html
+http://www.wfsb.com/story/30240225/police-identify-shooter-suspect-in-attempted-robbery-at-waterbury-cafe",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+10-10-2015,Charleston,45,19,Male,Killed,"http://m.walb.com/walb/db/330714/content/NhqeAtka
+http://www.postandcourier.com/article/20151010/PC16/151019902/1180/would-be-waffle-house-robber-dies-after-being-shot-by-customer
+http://m.walb.com/walb/db/330714/content/NhqeAtka",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+10-9-2015,Harris (county),48,,NULL,Killed,"http://www.khou.com/story/news/crime/2015/10/09/would--robbery-victim-shoots-kills-suspect-nw-harris-county/73639268/
+http://abc13.com/news/deputies-would-be-robber-shot-killed-by-victim/1024588/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+10-9-2015,Houston,48,,Male,Killed,http://abc13.com/news/deputies-would-be-robber-shot-killed-by-victim/1024588/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+10-2-2015,Corpus Christi,48,22,Female,Killed,"http://www.kiiitv.com/story/30179199/man-arrested-in-connection-with-fatal-shooting-investigation
+http://www.kiiitv.com/story/30177524/update-on-saratoga-fatal-shooting-woman-not-arrested
+http://www.kiiitv.com/story/30211301/witness-to-fatal-shooting-at-summit-apartments-speaks-out",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+10-1-2015,Toledo,39,21,Male,Killed,"http://www.toledoblade.com/Police-Fire/2015/10/02/Man-dies-from-shots-fired-at-S-Toledo-bar.html
+http://www.toledoblade.com/Police-Fire/2015/10/13/Police-identify-man-who-shot-bar-gunman.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+9-29-2015,Folkston,13,40,Male,Killed,http://www.news4jax.com/news/georgia-news/man-shot-in-home-invasion-had-attacked-before/35602580,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+9-30-2015,Spirit Lake (Edgemere),16,55,Male,Killed,"http://www.spokesman.com/stories/2015/sep/30/bonner-county-man-dead-after-domestic-incident/
+http://www.bonnercountydailybee.com/news/local/article_5c7805ce-68cb-11e5-9ae4-dfe27df84c12.html
+http://www.ktvb.com/story/news/crime/2015/10/05/bonner-county-shooting-ruled-self-defense/73384216/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+9-30-2015,Greeley,8,30,Male,Killed,"http://www.thedenverchannel.com/news/front-range/greeley/greeley-residents-say-they-shot-and-killed-home-intruder
+http://www.greeleytribune.com/news/crime/18459662-113/breaking-greeley-shooting-suspects-identified
+http://www.greeleytribune.com/news/crime/18524265-113/greeley-police-reports-reveal-brothers-were-targeted-for",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+9-29-2015,Jacksonville,12,40,Male,Killed,http://jacksonville.com/news/crime/2015-09-30/story/suspect-shot-death-during-folkston-home-invasion-sheriff-says,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+9-28-2015,Nashville,47,36,Female,Killed,"http://www.tennessean.com/story/news/crime/2015/09/28/woman-shot-south-nashville-apartment-complex/72967236/
+http://wkrn.com/2015/09/28/metro-police-respond-to-shooting-call-in-antioch/",FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+9-27-2015,Oklahoma City (Moore),40,36,Male,Killed,"http://kfor.com/2015/09/27/husband-shoots-wife-then-shot-and-killed-by-neighbor/
+http://www.okcfox.com/story/30127487/moore-police-are-responding-to-a-shooting",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+9-26-2015,Saint Louis,29,37,Male,Killed,http://stlouis.cbslocal.com/2015/09/26/fatal-shooting-in-carondolet-park/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+9-25-2015,Louisville,21,41,NULL,Killed,"http://www.wave3.com/story/30120721/man-shot-multiple-times-in-bon-air-neighborhood
+http://www.khou.com/story/news/local/2015/09/25/one-dead-1-injured-in-shooting-in-southeast-houston/72844368/
+http://www.lex18.com/story/30126578/louisville-store-clerk-kills-armed-robber",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+9-25-2015,Houston,48,,NULL,Killed,"http://abc13.com/news/homeowner-fatally-shoots-suspect-reportedly-during-home-invasion-attempt-in-nw-harris-co/1001806/
+http://www.khou.com/story/news/2015/09/25/man-fatally-shoots-one-suspect-injures-two-in-home-invasion/72811860/",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+9-23-2015,Cleveland,39,28,Male,Killed,http://www.cleveland.com/metro/index.ssf/2015/09/cleveland_man_shot_dead_after.html#incart_story_package,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+9-20-2015,Phoenix,4,,Male,Killed,http://www.azcentral.com/story/news/local/phoenix/breaking/2015/09/21/phoenix-police1-dead-shooting-during-domestic-dispute/72555768/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+9-20-2015,Reynoldsburg,39,18,Male,Killed,"http://www.newsnet5.com/news/state/reynoldsburg-ohio-man-shoots-kills-accused-home-intruder-in-ohio
+http://www.10tv.com/content/stories/2015/09/20/reynoldsburg-priestley-drive-shooting.html
+http://nbc4i.com/2015/09/21/police-continue-to-search-for-second-suspect-in-reynoldsburg-deadly-home-invasion/
+http://www.dispatch.com/content/stories/local/2015/11/17/Teen-to-stand-trial-as-adult-on-murder-charge.html
+http://www.dispatch.com/content/stories/local/2015/12/09/second-man-charged-in-home-invasion.html",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+9-18-2015,Rockford,17,13,Male,Killed,"http://www.wifr.com/home/headlines/Police-Teen-Shot-to-Death-During-Attempted-Burglary-328295511.html
+http://www.rrstar.com/article/20150918/NEWS/150919455
+http://www.rrstar.com/article/20150919/NEWS/150919416/10447/NEWS",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+9-18-2015,San Pedro,6,,Male,Killed,"http://abc7.com/news/suspected-intruder-shot-to-death-by-san-pedro-resident/990474/
+http://www.nbclosangeles.com/news/local/Suspected-Home-Intruder-Shot-Critically-Wounded-in-San-Pedro-328172771.html",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+9-16-2015,Placitas,35,31,Male,Killed,"http://www.abqjournal.com/645222/abqnewsseeker/placitas-homeowner-shoots-kills-intruder-sheriffs-office-says.html
+http://krqe.com/2015/09/18/deputies-find-more-than-200-marijuana-plants-during-homicide-investigation/",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+9-16-2015,Decatur,47,52,Male,Killed,"http://www.wrcbtv.com/story/30047964/shooting-in-meigs-co-leaves-one-person-dead-and-one-person-in-critical-condition
+http://www.wrcbtv.com/story/30055213/man-killed-in-gun-battle-over-a-stolen-fighting-rooster
+http://columbiadailyherald.com/news/local-news/one-killed-gunbattle-over-stolen-fighting-gamecock",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+9-13-2015,Houston,48,26,Male,Killed,"http://www.chron.com/news/houston-texas/houston/article/2-shot-dead-in-North-Houston-parking-lot-6502423.php
+http://www.chron.com/news/houston-texas/houston/article/Two-dead-after-North-Houston-parking-lot-shootout-6503086.php
+http://www.khou.com/story/news/local/2015/09/13/hpd-two-found-shot-to-death-in-parking-lot-in-north-houston/72226998/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+9-13-2015,Houston,48,,Male,Killed,"http://www.chron.com/news/houston-texas/houston/article/2-shot-dead-in-North-Houston-parking-lot-6502423.php
+http://www.chron.com/news/houston-texas/houston/article/Two-dead-after-North-Houston-parking-lot-shootout-6503086.php
+http://www.khou.com/story/news/local/2015/09/13/hpd-two-found-shot-to-death-in-parking-lot-in-north-houston/72226998/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+9-12-2015,Pembroke Pines,12,23,Male,Killed,http://www.sun-sentinel.com/local/broward/pembroke-pines/fl-pines-fatal-shooting-20150911-story.html,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+9-8-2015,Saint Petersburg,12,46,Male,Killed,"http://wfla.com/2015/09/08/st-pete-teen-kills-masked-intruder-who-turns-out-to-be-his-dad/
+http://www.washingtonpost.com/news/morning-mix/wp/2015/09/10/florida-teen-fatally-shoots-masked-intruder-who-turned-out-to-be-his-father/?tid=sm_fb
+http://www.pcsoweb.com/15-214-detectives-investigate-home-invasion-homicide-in-st-petersburg",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+9-9-2015,Chester,42,,Male,Killed,http://www.nbcphiladelphia.com/news/local/Chester-Robber-Armed-Shooting-Victim-Gun-License--326154671.html,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+9-9-2015,Dayton,39,22,Male,Killed,"http://wdtn.com/2015/09/09/coroner-identifies-burglary-suspect-shot-by-homeowner/
+http://www.whio.com/news/news/crime-law/police-respond-to-reported-shooting-in-dayton/nnbLw/",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+9-7-2015,Albuquerque,35,,Male,Killed,"http://www.abqjournal.com/640803/news/officer-one-dead-one-injured-in-se-abq-shooting.html
+http://www.kob.com/article/stories/s3901459.shtml
+http://www.kob.com/article/stories/S3915462.shtml?cat=504",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+9-7-2015,Albuquerque,35,,Male,Killed,"http://www.abqjournal.com/640803/news/officer-one-dead-one-injured-in-se-abq-shooting.html
+http://www.kob.com/article/stories/s3901459.shtml
+http://www.kob.com/article/stories/S3915462.shtml?cat=504",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+9-7-2015,Albuquerque,35,,Male,Killed,"http://www.abqjournal.com/640803/news/officer-one-dead-one-injured-in-se-abq-shooting.html
+http://www.kob.com/article/stories/s3901459.shtml
+http://www.kob.com/article/stories/S3915462.shtml?cat=504",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+9-5-2015,Putnam (county),12,29,Male,Killed,"http://jacksonville.com/news/crime/2015-09-06/story/man-shot-killed-putnam-county-saturday-night
+http://www.news4jax.com/news/man-who-killed-neighbor-wont-be-charged/36078094",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+9-5-2015,Gresham,41,25,Male,Killed,"http://www.katu.com/news/local/Resident-fights-back-in-Gresham-attack-fatally-shoots-1-man-325065711.html
+https://www.flashalert.net/news.html?id=1278
+http://www.oregonlive.com/portland/index.ssf/2015/09/police_file_charges_in_botched.html",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+9-3-2015,Clairton,42,19,Male,Killed,"http://www.wtae.com/news/homicide-detectives-investigating-shooting-in-clairton/35077344
+http://triblive.com/neighborhoods/yourmckeesport/yourmckeesportmore/9593176-74/charges-police-defendants#axzz3thdWlfk9",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+9-5-2015,Macon,13,53,Male,Killed,"http://www.13wmaz.com/story/news/local/macon/2015/09/05/man-shot--chest/71763236/
+http://www.macon.com/news/local/crime/article34163697.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+9-4-2015,Chattanooga,47,28,Male,Killed,"http://www.wrcbtv.com/story/29959302/deputies-investigating-morning-shooting-at-east-brainerd-apartments
+http://www.wdef.com/news/story/One-person-shot-in-Hamilton-County-apartment/386xYflXh02bselVH9iE8Q.cspx?rss=3457",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+9-1-2015,Oklahoma City,40,,Male,Killed,http://www.krmg.com/news/news/local/suspect-fatally-shot-while-allegedly-breaking-home/nnWxr/,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+9-1-2015,Columbus,39,23,Male,Killed,"http://nbc4i.com/2015/09/01/home-invasion-death-leaves-police-family-members-searching-for-answers/
+http://www.dispatch.com/content/stories/local/2015/09/01/east-side-homicide.html
+http://www.dispatch.com/content/stories/local/2015/11/10/Man-charged-in-death-of-robbery-accomplice.html",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+8-30-2015,Brandon,28,34,Male,Killed,"http://www.msnewsnow.com/story/29918171/brandon-sheriff-says-no-charges-yet-for-woman-who-fatally-shoots-boyfriend
+http://www.msnewsnow.com/story/29918171/rankin-county-releases-identity-of-domestic-disturbance-shooting-victim",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+8-29-2015,Cleveland,39,27,Male,Killed,"http://www.cleveland.com/metro/index.ssf/2015/08/cleveland_man_killed_in_shooto.html#incart_river
+http://www.cleveland.com/metro/index.ssf/2015/08/armed_bicyclist_charged_in_fat.html
+http://www.cleveland.com/metro/index.ssf/2015/08/armed_bicyclist_charged_in_fat.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+8-28-2015,Phoenix,4,43,Male,Killed,http://www.azcentral.com/story/news/local/phoenix/breaking/2015/08/29/man-killed-phoenix-parking-lot-shooting/71378238/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+8-26-2015,Albany,13,35,Male,Killed,http://m.walb.com/walb/db/330714/content/mx0Dt0Ep,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+8-25-2015,Timmonsville,45,22,Male,Killed,"http://www.walb.com/story/29872377/coroner-identifies-man-who-died-in-timmonsville-shooting-tuesday
+http://www.wmbfnews.com/story/29872377/resident-charged-after-killing-home-invasion-suspect-with-stolen-gun-officials-say?utm_source=site&utm_medium=meganav&utm_campaign=meganav",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+8-24-2015,Houston,48,,Male,Killed,http://www.chron.com/news/houston-texas/houston/article/Gunfight-at-pawn-shop-turns-deadly-for-robber-6463097.php,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+8-25-2015,Fort Worth,48,36,Male,Killed,"http://www.star-telegram.com/news/local/community/fort-worth/article32348076.html
+http://www.star-telegram.com/news/local/community/fort-worth/article32348076.html
+http://www.star-telegram.com/news/local/community/fort-worth/article32457210.html
+http://www.star-telegram.com/news/local/community/fort-worth/article32457210.html",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+8-23-2015,Nashville,47,22,Male,Killed,"http://www.wsmv.com/story/29862967/police-would-be-robber-shot-killed-by-victim
+http://www.wmcactionnews5.com/story/29864450/police-carjacking-suspect-killed-by-victim-in-nashville",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+8-23-2015,Wauconda,17,,Male,Killed,http://chicago.suntimes.com/crime/7/71/902348/police-clerk-fatally-shot-armed-robber-wauconda-convenience-store,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+8-22-2015,Milwaukee,55,35,Male,Killed,"http://www.cbs58.com/story/29858147/police-investigate-three-separate-shootings-friday-night-two-killed
+http://fox6now.com/2015/08/24/developing-man-in-his-early-20s-shot-killed-near-22nd-hadley/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+8-21-2015,Chicago,17,23,Female,Killed,http://www.dnainfo.com/chicago/20150821/austin/austin-shooting-kills-woman-injures-2-others-police-say,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+8-19-2015,Stone Mountain,13,,Male,Killed,http://m.ajc.com/news/news/crime-law/dekalb-cops-alleged-home-invasion-suspect-dies-fro/nnNXh/,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+8-19-2015,Rochester,36,17,Male,Killed,"http://www.wkbw.com/news/7-shot-2-dead-at-rochester-boys-and-girls-club
+http://www.nbcnews.com/news/us-news/seven-shot-drive-near-boys-girls-club-rochester-new-york-n412886
+http://www.dailymail.co.uk/news/article-3204444/Three-people-dead-drive-shooting-upstate-New-York-gunman-opened-fire-crowd-following-basketball-game.html
+http://www.democratandchronicle.com/story/news/2015/08/22/live-blog-rochester-police-press-conference-genesee-street-shooting/32205715/
+http://13wham.com//news/features/local-news/stories/criminal-history-quartermaine-titus-4518.shtml
+http://www.democratandchronicle.com/story/news/2015/09/15/parolee-suspect-mass-shooting-boys-girls-club/72304134/
+http://www.whec.com/news/stories/S3919496.shtml?cat=565
+http://www.democratandchronicle.com/story/news/2015/10/03/killer-ak-47-traced-burglary-genesee-homicides/73223548/
+http://www.buffalonews.com/city-region/suspect-in-rochester-mass-shooting-was-arrested-at-airport-20151006
+http://www.whec.com/news/stories/S3962799.shtml?cat=565",FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE
+8-19-2015,Rochester,36,19,Male,Killed,"http://www.wkbw.com/news/7-shot-2-dead-at-rochester-boys-and-girls-club
+http://www.nbcnews.com/news/us-news/seven-shot-drive-near-boys-girls-club-rochester-new-york-n412886
+http://www.dailymail.co.uk/news/article-3204444/Three-people-dead-drive-shooting-upstate-New-York-gunman-opened-fire-crowd-following-basketball-game.html
+http://www.democratandchronicle.com/story/news/2015/08/22/live-blog-rochester-police-press-conference-genesee-street-shooting/32205715/
+http://13wham.com//news/features/local-news/stories/criminal-history-quartermaine-titus-4518.shtml
+http://www.democratandchronicle.com/story/news/2015/09/15/parolee-suspect-mass-shooting-boys-girls-club/72304134/
+http://www.whec.com/news/stories/S3919496.shtml?cat=565
+http://www.democratandchronicle.com/story/news/2015/10/03/killer-ak-47-traced-burglary-genesee-homicides/73223548/
+http://www.buffalonews.com/city-region/suspect-in-rochester-mass-shooting-was-arrested-at-airport-20151006
+http://www.whec.com/news/stories/S3962799.shtml?cat=565",FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE
+8-19-2015,Rochester,36,25,Male,Killed,"http://www.wkbw.com/news/7-shot-2-dead-at-rochester-boys-and-girls-club
+http://www.nbcnews.com/news/us-news/seven-shot-drive-near-boys-girls-club-rochester-new-york-n412886
+http://www.dailymail.co.uk/news/article-3204444/Three-people-dead-drive-shooting-upstate-New-York-gunman-opened-fire-crowd-following-basketball-game.html
+http://www.democratandchronicle.com/story/news/2015/08/22/live-blog-rochester-police-press-conference-genesee-street-shooting/32205715/
+http://13wham.com//news/features/local-news/stories/criminal-history-quartermaine-titus-4518.shtml
+http://www.democratandchronicle.com/story/news/2015/09/15/parolee-suspect-mass-shooting-boys-girls-club/72304134/
+http://www.whec.com/news/stories/S3919496.shtml?cat=565
+http://www.democratandchronicle.com/story/news/2015/10/03/killer-ak-47-traced-burglary-genesee-homicides/73223548/
+http://www.buffalonews.com/city-region/suspect-in-rochester-mass-shooting-was-arrested-at-airport-20151006
+http://www.whec.com/news/stories/S3962799.shtml?cat=565",FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE
+8-16-2015,Worcester,25,24,Male,Killed,"http://m.telegram.com/article/20150817/NEWS/150819330/13406/NEWS
+http://www.masslive.com/news/worcester/index.ssf/2015/08/victim_of_fatal_shooting_in_wo.html#incart_2box_news_worcester_index.ssf
+http://www.masslive.com/news/worcester/index.ssf/2015/08/court_records_shooting_victim.html#incart_2box_news_worcester_index.ssf
+http://www.masslive.com/news/worcester/index.ssf/2015/08/man_who_allegedly_fired_shots.html#incart_2box_news_worcester_index.ssf
+http://www.masslive.com/news/worcester/index.ssf/2015/08/worcester_man_charged_with_arm.html#incart_2box_news_worcester_index.ssf",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+8-10-2015,Wichita,20,42,Male,Killed,"http://www.kwch.com/news/local-news/one-person-killed-in-northeast-wichita-shooting/34638436
+http://ksnt.com/2015/08/21/man-arrested-in-fatal-shooting-of-42-year-old-man-in-wichita/
+http://www.kansas.com/news/local/crime/article31642328.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+8-17-2015,Hamshire,48,16,Male,Killed,"http://www.chron.com/news/houston-texas/texas/article/Masked-intruder-ends-up-dead-after-kitchen-6448325.php
+http://www.beaumontenterprise.com/news/article/Hamshire-homeowner-reportedly-kills-intruder-6448574.php
+http://www.beaumontenterprise.com/news/article/Hamshire-homeowner-reportedly-kills-intruder-6448574.php
+http://www.beaumontenterprise.com/news/article/Grand-jury-no-bills-Hamshire-homeowner-in-shooting-6467471.php",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+8-14-2015,South Whitley,18,29,Male,Killed,http://wane.com/2015/08/15/police-man-killed-in-shooting-in-south-whitley/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+8-13-2015,Lake Worth (Lantana),12,,Male,Killed,"http://www.sun-sentinel.com/local/palm-beach/fl-homeowner-fatal-shooting-lantana-20150814-story.html
+http://www.guns.com/2015/08/20/fl-man-shoots-2-intruders-after-finding-dead-dogs-in-his-home/",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+8-11-2015,Lorain,39,34,Male,Killed,http://www.whio.com/ap/ap/ohio/police-ohio-man-killed-by-resident-during-home-inv/nnJGp/,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+8-11-2015,Houston,48,,Male,Killed,"http://www.chron.com/news/houston-texas/houston/article/HPD-investigating-shooting-6438388.php
+http://thepolicenews.net/default.aspx?act=Newsletter.aspx&category=News+1-2&newsletterid=55329&menugroup=Home",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+8-8-2015,Glendale,4,27,Male,Killed,http://www.kpho.com/story/29744846/glendale-police-id-victim-in-deadly-bar-shooting,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+8-7-2015,Montgomery,1,,Male,Killed,"http://www.myfoxal.com/story/29741339/man-killed-in-montgomery-shooting
+http://www.wsfa.com/story/29739032/mpdrobbery-victim-shoots-kills-suspect-at-montgomery-apartments",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+8-8-2015,Louisville,21,,Male,Killed,"http://www.wave3.com/story/29739776/lmpd-investigating-shooting-in-iroquois-neighborhood
+http://www.wave3.com/story/29740717/police-man-charged-with-murder-for-chasing-shooting-home-invasion-suspect
+http://www.wdrb.com/story/29740083/update-lmpd-arrests-suspect-in-deadly-shooting-in-south-louisville",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+8-7-2015,Harris (county),48,35,Male,Killed,"http://www.khou.com/story/news/crime/2015/08/07/hcso-suspected-burglar-fatally-shot-homeowner-n-harris-co/31321267/
+http://www.chron.com/news/houston-texas/article/Homeowner-shoots-and-kills-suspect-burglar-6432199.php",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+8-5-2015,Tacoma,53,40,Male,Killed,"http://www.komonews.com/news/local/Police-Off-duty-Tacoma-officer-shoots-armed-robbery-suspect-320844331.html
+http://www.kirotv.com/news/news/police-duty-officer-shoots-robbery-suspect-tacoma/nnDjs/
+http://www.nwcn.com/story/news/local/2015/08/06/tacoma-officer-involved-shooting/31263033/
+http://www.kirotv.com/news/news/police-duty-officer-shoots-robbery-suspect-tacoma/nnDjs/
+http://www.kxly.com/news/northwest/offduty-tacoma-officer-shoots-kills-robbery-suspect/34572486",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+8-5-2015,Las Vegas,32,19,Male,Killed,"http://www.scrippsmedia.com/ktnv/news/Man-killed-during-attempted-robbery-on-Wednesday-night-320937821.html
+http://www.fox5vegas.com/story/29725500/police-robber-shot-killed-during-east-vegas-holdup-attempt
+http://www.scrippsmedia.com/ktnv/news/Man-killed-during-attempted-robbery-on-Wednesday-night-320937821.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+7-31-2015,Saint Paul,27,16,Male,Killed,"http://minnesota.cbslocal.com/2015/08/03/3-teens-behind-bars-after-robbery-turned-fatal-shooting/
+http://www.startribune.com/alleged-robber-shot-dead-in-st-paul-by-victim-was-w-st-paul-teen-mom-says/320481982/
+http://kstp.com/news/stories/s3871356.shtml?cat=1",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+7-28-2015,South Bend,18,45,Male,Killed,http://www.southbendtribune.com/news/publicsafety/homeowner-on-fatal-struggle-with-burglar-maybe-the-gun-went/article_62f286f3-8fc7-5889-b15e-94d1482ca259.html,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+7-29-2015,Atlanta,13,71,Male,Killed,http://m.wsbtv.com/news/news/local/man-says-he-killed-71-year-old-self-defense/nm8NC/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+7-29-2015,Little Mountain,45,32,Male,Killed,"http://www.foxcarolina.com/story/29662079/newberry-co-deputies-searching-for-suspects-after-deadly-home-invasion
+http://www.wltx.com/story/news/crime/crime-stoppers/2015/07/29/man-killed-during-home-invasion-little-mountain/30842271/
+http://www.thestate.com/news/local/crime/article30325380.html",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+7-28-2015,Damascus,41,29,Male,Killed,"http://www.kgw.com/story/news/2015/07/28/shooting-at-damascus-mobile-home-park/30814115/
+https://www.flashalert.net/news.html?id=624",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+7-28-2015,Elizabethtown,21,20,Male,Killed,"http://www.lex18.com/story/29647260/one-dead-one-wounded-in-elizabethtown-shootings
+http://www.wave3.com/story/29646509/1-dead-1-injured-in-elizabethtown-shooting
+http://www.wdrb.com/story/29646648/two-men-shot-one-dead-following-early-morning-shooting-in-elizabethtown
+http://www.wave3.com/story/29662459/men-shot-in-apparent-home-invasion-robbery-in-elizabethtown-idd",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+7-24-2015,Wichita,20,42,Male,Killed,"http://www.kansas.com/news/local/article28685350.html
+http://www.kansas.com/news/local/article28894717.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+7-25-2015,Houston,48,,Male,Killed,http://abc13.com/news/would-be-robber-shot-killed-by-jewelry-store-clerk/881756/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+7-25-2015,House Springs,29,34,Male,Killed,"http://fox2now.com/2015/07/26/fatal-shooting-at-jefferson-county-park-suspect-in-custody/
+http://stlouis.cbslocal.com/2015/07/26/shooting-death-at-jefferson-county-park/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+7-26-2015,Franklinton,37,,Female,Killed,"http://www.wral.com/gunman-remains-at-large-after-killing-woman-in-franklinton/14795814/
+http://www.witn.com/news/crime/headlines/Suspect-on-the-run-following-fatal-shooting-at-Franklin-County-grocery-store-318591821.html
+http://abc11.com/news/franklin-co-murder-suspect-has-been-arrested-89-times/884032/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+7-21-2015,New Orleans,22,17,Male,Killed,"http://www.nola.com/crime/index.ssf/2015/07/eastern_new_orleans_teen_ident.html#incart_m-rpt-2
+http://www.wwltv.com/story/news/local/orleans/2015/07/21/nopd-investigating-no-east-shooting/30478705/
+http://www.fox8live.com/story/29601933/nopd-chief-pledges-to-reduce-crime-on-day-teen-killed-child-wounded-in-shooting
+http://www.wdsu.com/news/local-news/new-orleans/2-arrested-in-shooting-that-killed-teen-injured-boy/35598108",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+7-18-2015,Charleston,54,45,Male,Killed,"http://www.wowktv.com/story/29579271/1-person-dead-after-shooting-on-charlestons-west-side
+http://www.kgw.com/story/news/crime/2015/07/22/police-attacker-killed-by-woman-may-have-had-other-victims/30518415/",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+7-16-2015,Springfield,51,25,Male,Killed,"http://www.wusa9.com/story/news/local/2015/07/17/deadly-springfield-shooting-on-curving-creek-ct/30289935/
+http://www.wusa9.com/story/news/2015/07/24/man-charged-with-2nd-degree-murder-in-springfield-shooting/30635145/",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+7-18-2015,Montebello,6,,Male,Killed,http://www.pasadenastarnews.com/general-news/20150718/police-montebello-business-owner-shot-during-robbery-shoots-kills-2-suspects,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+7-18-2015,Montebello,6,,Male,Killed,http://www.pasadenastarnews.com/general-news/20150718/police-montebello-business-owner-shot-during-robbery-shoots-kills-2-suspects,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+7-15-2015,Tallahassee,12,,Male,Killed,http://www.nbcmiami.com/news/local/Man-High-on-Drugs-Flees-Ambulance-Shot-by-Homeowner--315445101.html,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+7-15-2015,White Plains,21,54,Male,Killed,"http://www.wsmv.com/story/29561668/ksp-man-shot-killed-after-making-threats-to-neighbor
+http://www.14news.com/story/29561781/ksp-white-plains-man-shot-dead-after-threatening-to-kill-neighbor-breaking-down-door
+http://www.wpsdlocal6.com/story/29561771/police-investigating-fatal-overnight-shooting-in-white-plains-kentucky",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+7-14-2015,Grants Pass,41,32,Male,Killed,"http://www.mailtribune.com/article/20150715/NEWS/150719744/101033/NEWS?rssfeed=true
+http://www.mailtribune.com/article/20150716/NEWS/150719712/101034/NEWS?rssfeed=true
+http://www.mailtribune.com/article/20150811/NEWS/150819922/101033/NEWS?rssfeed=true",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+7-15-2015,New Orleans,22,26,Male,Killed,"http://www.wwltv.com/story/news/crime/2015/07/15/gas-station-customer/30190935/
+http://www.nola.com/crime/index.ssf/2015/07/suspected_gas_station_robber_f.html#incart_river
+http://www.nola.com/crime/index.ssf/2015/07/suspected_gas_station_robber_s.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+7-14-2015,Houston,48,,Male,Killed,http://www.ksla.com/story/29550800/suspected-robber-killed-in-struggle-with-houston-store-clerk,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+7-14-2015,Houston,48,,NULL,Killed,http://abc13.com/news/one-dead-in-shooting-at-north-houston-liquor-store/851293/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+7-13-2015,Houston,48,57,Male,Killed,"http://www.ksat.com/content/pns/ksat/news/2015/07/14/tx-houston-suspects-killed.html
+http://www.khou.com/story/news/crime/2015/07/14/hpd-store-clerk-shoots-kills-two-suspected-robbers/30119457/
+http://thepolicenews.net/default.aspx?act=Newsletter.aspx&category=News+1-2&newsletterid=54599&menugroup=Home",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+7-13-2015,Houston,48,,Male,Killed,"http://www.ksat.com/content/pns/ksat/news/2015/07/14/tx-houston-suspects-killed.html
+http://www.khou.com/story/news/crime/2015/07/14/hpd-store-clerk-shoots-kills-two-suspected-robbers/30119457/
+http://thepolicenews.net/default.aspx?act=Newsletter.aspx&category=News+1-2&newsletterid=54599&menugroup=Home",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+7-12-2015,Detroit,26,,Male,Killed,http://www.myfoxdetroit.com/story/29529509/shootout-leads-to-1-dead-on-detroits-west-side,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+7-11-2015,Dallas,48,27,Male,Killed,http://dfw.cbslocal.com/2015/07/11/robbery-suspect-shot-killed-by-intended-victim/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+7-10-2015,Eldorado,39,22,Male,Killed,"http://www.whio.com/news/news/crime-law/police-tape-surrounds-preble-co-home-careflight-ca/nmw93/
+http://wdtn.com/2015/07/10/man-shot-in-small-preble-county-village/
+http://www.whio.com/news/news/crime-law/police-tape-surrounds-preble-co-home-careflight-ca/nmw93/
+http://www.pal-item.com/story/news/local/2015/07/11/man-dies-eldorado-shooting/30013517/",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+7-5-2015,Norman Park,13,68,Male,Killed,"http://www.moultrieobserver.com/news/local_news/norman-park-man-shot-to-death/article_8f1cc10e-242e-11e5-88aa-dbbd23777b52.html?mode=jqm
+http://www.moultrieobserver.com/news/local_news/teens-arrested-in-connection-with-slaying/article_70411f6a-2c16-11e5-9e05-47fbeb5c6dcc.html?mode=jqm
+http://www.moultrieobserver.com/news/local_news/glover-tagged-as-triggerman/article_5142730e-460e-11e5-8c22-4f1f873c085e.html?mode=jqm",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+6-5-2015,Guilford (Parkman),23,37,Female,Killed,"http://bangordailynews.com/2015/07/10/news/piscataquis/report-parkman-murder-suspect-took-womans-gun-shot-her/
+http://bangordailynews.com/2015/08/11/news/piscataquis/parkman-murder-suspect-robert-burton-turns-himself-in/",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+7-8-2015,Dallas,48,,Male,Killed,http://www.nbcdfw.com/news/local/Deadly-Shooting-in-Southeast-Dallas-312663301.html,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+6-21-2015,Youngstown,39,21,Male,Killed,http://www.vindy.com/news/2015/jun/23/employee-who-killed-man-at-bar-has-valid/?print,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+7-8-2015,Arlington,48,24,Male,Killed,"http://www.wfaa.com/story/news/local/tarrant-county/2015/07/09/arlington-intruder-heart-attack-shot-dead/29904807/
+http://www.star-telegram.com/news/local/community/arlington/article26852782.html
+http://www.star-telegram.com/news/local/community/arlington/article27013195.html
+http://www.star-telegram.com/news/local/community/arlington/article27013195.html",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+7-7-2015,San Antonio,48,,Male,Killed,"http://www.ksat.com/content/pns/ksat/news/2015/07/07/sapd--auto-shop-manager-shoots--kills-armed-robbery-suspect.html
+http://www.woai.com/articles/woai-local-news-sponsored-by-five-119078/would-be-robber-shot-at-southwest-13741839/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+7-5-2015,Visalia,6,20,Male,Killed,http://www.fresnobee.com/news/local/crime/article26615515.html,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+7-7-2015,Houston,48,,Male,Killed,http://www.click2houston.com/news/police-gun-shop-owner-fatally-shoots-burglar/34029574,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+7-5-2015,Richland (county),45,18,Male,Killed,http://www.wistv.com/story/29483443/deputies-rule-fatal-shooting-self-defense,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+7-6-2015,Upper Marlboro,24,,Male,Killed,"http://www.nbcwashington.com/news/local/Resident-Fatally-Shoots-Intruder-in-Upper-Marlboro-311743721.html
+http://www.washingtonpost.com/local/crime/md-homeowner-fatally-shoots-suspected-burglar-police-say/2015/07/06/b1aaa676-23d6-11e5-b72c-2b7d516e1e0e_story.html",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+7-2-2015,Columbia,45,49,Male,Killed,http://www.thestate.com/news/local/crime/article26245129.html,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+6-29-2015,Tuscaloosa,1,,Male,Killed,http://www.myfoxal.com/story/29431856/burglary-suspect-shot-killed-at-tuscaloosa-apartment-complex,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+7-1-2015,Birmingham,1,15,Male,Killed,http://www.myfoxal.com/story/29457757/police-15-year-old-shot-killed-while-attempting-a-carjacking,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+6-30-2015,Roebuck,45,56,Male,Killed,http://www.postandcourier.com/article/20150701/PC1610/150709939,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+6-30-2015,Albuquerque,35,27,Male,Killed,"http://www.nbcnews.com/news/us-news/gunman-killed-trying-rob-ex-reporters-lynne-russell-chuck-de-n385416
+http://www.kob.com/article/stories/S3840237.shtml?cat=500",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+6-30-2015,Charlotte,37,31,Male,Killed,"http://www.wmcactionnews5.com/story/29441603/attorney-former-prosecutor-fatally-shoots-man-who-shot-grandmother
+http://www.wsoctv.com/news/news/local/cmpd-2-injured-shooting-belmont-neighborhood/nmpJh/
+http://www.wsoctv.com/news/news/local/woman-recounts-argument-leading-grandsons-shooting/nmqF2/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+6-30-2015,Las Vegas,32,,Male,Killed,"http://www.scrippsmedia.com/ktnv/news/Police-investigating-shooting-in-northeast-part-of-Vegas-310968141.html
+http://www.news3lv.com/content/news/local/story/metro-las-vegas-fatal-shooting-alexander-walnut/dgjHEB-85Uytj1VhA2fmTg.cspx?rss=3269
+http://www.scrippsmedia.com/ktnv/news/Police-investigating-shooting-in-northeast-part-of-Vegas-310968141.html",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+6-29-2015,Baton Rouge,22,22,Male,Killed,"http://www.wafb.com/story/29432883/deputies-say-victim-shoots-and-kills-would-be-armed-robber
+http://www.batonrougecrime.com/2015/06/baton-rouge-crime-news/victim-shoots-kills-man-trying-to-rob-him-on-azalea-park/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+6-27-2015,Plattekill,36,25,Male,Killed,"http://www.dailyfreeman.com/general-news/20150628/highland-man-shot-dead-after-stabbing-3-people-in-plattekill
+http://www.dailyfreeman.com/general-news/20150703/highland-man-fatally-shot-after-stabbing-3-was-a-friend-of-the-victims-police-say",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+2-26-2015,Franklin (county),29,60,Male,Killed,http://www.kmov.com/story/29392574/ax-wielding-man-attacks-homeowner-in-franklin-county,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+6-25-2015,Greer,45,30,Male,Killed,http://www.foxcarolina.com/story/29421366/police-greer-man-shoots-son-in-defense-after-knife-attack,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+6-24-2015,Hollywood,12,,Male,Killed,http://www.nbcmiami.com/news/local/Hollywood-Dominos-Pizza-Delivery-Worker-Shoots-Kills-Attempted-Robber-Police-309483001.html,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+6-21-2015,Saint Louis,29,57,Male,Killed,"http://www.stltoday.com/news/local/crime-and-courts/man-fatally-shot-inside-home-in-st-louis/article_1221ba18-4d42-59e3-801f-7551b79930e6.html
+http://www.stltoday.com/news/local/crime-and-courts/woman-fatally-shot-man-in-self-defense-inside-st-louis/article_e9150e1f-76cd-5384-99bd-9fa4dd805e54.html
+http://www.kmov.com/story/29370660/man-fatally-shot-early-sunday",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+6-20-2015,Ames,19,23,Male,Killed,http://www.desmoinesregister.com/story/news/crime-and-courts/2015/06/20/man-dead-ames-shooting/29029907/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+6-21-2015,Dallas,48,28,Male,Killed,"http://www.wfaa.com/story/news/crime/2015/06/22/1-dead-1-injured-in-shootout-outside-benihana-restaurant/29097359/
+http://dfw.cbslocal.com/2015/06/22/dallas-robbery-turns-into-fatal-shootout/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+6-21-2015,Philadelphia,42,29,Male,Killed,http://www.nbcphiladelphia.com/news/local/Shooting-Security-Guard-Philadelphia-Police-Olney-Old-Madrid-308807891.html,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+6-21-2015,Philadelphia,42,25,Male,Killed,"http://www.nbcphiladelphia.com/video/#!/news/local/North-Philadelphia-Car-Shooting-Under-Investigation/308798341
+http://www.mbtc.com/siteplugins/full_portal/story.asp?idstr=17545368&category=Top+United+States",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+6-21-2015,Dallas,48,,Female,Killed,"http://www.wfaa.com/story/news/local/dallas-county/2015/06/21/three-shot-one-dead-at-dallas-apartments/29067151/
+http://www.wfaa.com/story/news/local/dallas-county/2015/06/21/three-shot-one-dead-at-dallas-apartments/29067151/",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+6-21-2015,Dallas,48,35,Male,Killed,"http://www.wfaa.com/story/news/local/dallas-county/2015/06/21/three-shot-one-dead-at-dallas-apartments/29067151/
+http://www.wfaa.com/story/news/local/dallas-county/2015/06/21/three-shot-one-dead-at-dallas-apartments/29067151/",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+6-21-2015,Detroit,26,,Male,Killed,http://www.wxyz.com/news/region/detroit/cook-shoots-and-kills-robber-at-detroit-restaurant,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+6-17-2015,Fort Worth,48,18,Male,Killed,"http://www.nbcdfw.com/news/local/Deadly-Shooting-at-Fort-Worth-Grocery-Store-307956631.html
+http://www.star-telegram.com/news/local/community/fort-worth/article24810868.html
+http://www.star-telegram.com/news/local/article24832096.html
+http://www.star-telegram.com/news/local/community/fort-worth/article32352351.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+6-16-2015,San Antonio,48,36,Male,Killed,"http://www.ksat.com/content/pns/ksat/news/2015/06/16/1-person-dead-in-shooting-on-southeast-side.html
+http://www.mysanantonio.com/news/local/article/Man-found-dead-after-attempted-robbery-6331333.php
+http://www.mysanantonio.com/news/local/article/Man-found-dead-after-attempted-robbery-6331333.php",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+6-15-2015,Knoxville,47,18,Male,Killed,"http://wate.com/2015/06/15/1-person-killed-in-shooting-at-knoxville-convenience-store/
+http://www.local8now.com/news/headlines/Knoxville-police-investigate-robberies-at-two-Bread-Box-locations-307340031.html
+https://www.facebook.com/KnoxvillePD/posts/846999632051434",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+6-14-2015,Atlanta,13,,Male,Killed,http://www.ajc.com/news/news/local/report-sw-atlanta-homeowner-shoots-kills-suspected/nmckq/,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+6-13-2015,Arverne (Queens),36,26,Male,Killed,"http://nypost.com/2015/06/14/corrections-officer-shoots-would-be-thief-in-head/
+http://newyork.cbslocal.com/2015/06/14/jamaica-armed-robbery-fatal-shooting/
+http://www.nytimes.com/2015/06/15/nyregion/corrections-officer-kills-man-during-attempted-robbery-in-queens.html?ref=nyregion",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+6-7-2015,Cooper (county),29,,NULL,Killed,http://www.columbiatribune.com/news/crime/cooper-county-sheriff-s-office-investigating-fatal-home-invasion/article_b22fcec9-0b00-5c87-afd3-4b146d82c690.html,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+6-9-2015,Lynchburg,47,65,Male,Killed,"http://www.wrcbtv.com/story/29286839/tbi-investigating-fatal-shooting-involving-man-wanted-out-of-marion-co
+http://www.wsmv.com/story/29291068/midstate-musician-shot-to-death-by-bounty-hunter",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+6-8-2015,Paden City,54,26,Male,Killed,"http://www.theintelligencer.net/page/content.detail/id/634831.html
+http://www.wtrf.com/story/29280183/community-members-speak-out-after-man-shot-and-killed-in-paden-city
+http://www.obitsforlife.com/obituary/1118040/Thompson-Kevin-KC.php",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+6-8-2015,Columbia (county),12,34,Male,Killed,http://www.gainesville.com/article/20150608/ARTICLES/150609690/1182?Title=In-Columbia-homicide-suspected-shooter-arrested-on-weapons-charge,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+6-8-2015,Reidland,21,30,Male,Killed,"http://www.wpsdlocal6.com/story/29264145/shooting-at-storage-unit-in-reidland-ky
+http://www.wmcactionnews5.com/story/29264063/1-dead-after-shooting-manhunt-in-reidland",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+6-7-2015,Deltona,12,36,Male,Killed,http://www.mynews13.com/content/news/cfnews13/news/article.html/content/news/articles/cfn/2015/6/8/deltona_deadly_shoot.html,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+6-6-2015,Tucson,4,25,Male,Killed,http://www.scrippsmedia.com/kgun9/news/TPD-investigating-shooting-306413641.html,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+6-5-2015,Montgomery,1,,Male,Killed,http://www.alabamanews.net/home/top-stories/Early-Morning-Shooting-Leaves-One--in-Criti-306267741.html,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+6-6-2015,Caseyville,17,24,Male,Killed,http://www.bnd.com/news/local/article23276931.html,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+6-5-2015,Orlando,12,17,Male,Killed,"http://www.mynews13.com/content/news/cfnews13/news/article.html/content/news/articles/bn9/2015/6/6/deputies_teen_mistak.html
+http://www.orlandosentinel.com/news/breaking-news/os-man-shoots-brother-high-lake-drive-20150606-story.html
+http://www.orlandosentinel.com/news/breaking-news/os-leo-stay-memorial-service-20150610-story.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+6-2-2015,Jack (county),48,29,Male,Killed,http://www.kltv.com/story/29239256/angelina-cowanted-man-shot-dead-in-jack-co,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+6-1-2015,Burke (county),37,,Male,Killed,"http://www.wsoctv.com/news/news/local/man-not-guilty-self-defense-murder-shot-dead/nmS8J/
+http://www.wbtv.com/story/29219784/one-person-dead-after-shooting-in-burke-county",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+6-1-2015,Harris (county),48,,Male,Killed,"http://www.chron.com/houston/article/Deadly-shooting-at-smoke-shop-in-NW-Houston-6301192.php
+http://www.khou.com/videos/news/crime/2015/06/02/28343613/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+5-31-2015,Conyers,13,44,Male,Killed,"http://www.11alive.com/story/news/local/conyers/2015/05/31/conyers-gunman-shoots-multiple-victims-at-two-locations/28276861/
+http://www.nydailynews.com/news/crime/killed-ga-shooting-id-dispute-liquor-store-article-1.2242114
+http://www.ajc.com/news/news/crime-law/rockdale-sheriff-calls-store-patron-hero-for-firin/nmSbG/
+http://www.covnews.com/section/1/article/59620/",FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE
+5-31-2015,Conyers,13,39,Male,Killed,"http://www.11alive.com/story/news/local/conyers/2015/05/31/conyers-gunman-shoots-multiple-victims-at-two-locations/28276861/
+http://www.nydailynews.com/news/crime/killed-ga-shooting-id-dispute-liquor-store-article-1.2242114
+http://www.ajc.com/news/news/crime-law/rockdale-sheriff-calls-store-patron-hero-for-firin/nmSbG/
+http://www.covnews.com/section/1/article/59620/",FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE
+5-31-2015,Conyers,13,36,Male,Killed,"http://www.11alive.com/story/news/local/conyers/2015/05/31/conyers-gunman-shoots-multiple-victims-at-two-locations/28276861/
+http://www.nydailynews.com/news/crime/killed-ga-shooting-id-dispute-liquor-store-article-1.2242114
+http://www.ajc.com/news/news/crime-law/rockdale-sheriff-calls-store-patron-hero-for-firin/nmSbG/
+http://www.covnews.com/section/1/article/59620/",FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE
+5-29-2015,Aurora,8,15,Male,Killed,"http://www.9news.com/story/news/local/2015/05/30/-least-2-shot--aurora/28219459/
+http://denver.cbslocal.com/2015/06/02/aurora-police-investigating-shooting-during-alleged-robbery/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+5-23-2015,Annada,29,38,Male,Killed,http://www.stltoday.com/news/local/crime-and-courts/homeowner-fatally-shoots-man-in-pike-county/article_758d8365-6d2c-599b-b20d-44321068caae.html,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+5-26-2015,Saint Louis,29,18,Male,Killed,"http://www.kmov.com/story/29174489/suspect-sought-in-shooting-of-north-county-teen
+http://www.stltoday.com/news/local/crime-and-courts/for-second-night-in-a-row-a-teen-is-shot/article_5854985e-1e0b-5654-a594-d9ab88f6d973.html
+http://www.stltoday.com/news/local/crime-and-courts/florissant-man-charged-in-fatal-shooting/article_cd81e8e1-0d4d-59ec-b5f4-2db4b0bfb779.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+5-26-2015,Bullhead City,4,37,Male,Killed,http://www.fox10phoenix.com/story/29158073/police-bullhead-city-man-fatally-shot-after-fight,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+5-25-2015,Piedmont,45,39,Male,Killed,"http://www.walb.com/story/29150223/coroner-called-to-reported-anderson-co-shooting
+http://www.wspa.com/story/29150317/one-person-dead-after-shooting-in-anderson-co
+http://www.foxcarolina.com/story/29150223/coroner-called-to-reported-anderson-co-shooting",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+5-24-2015,Oakland,6,19,Male,Killed,"http://www.insidebayarea.com/breaking-news/ci_28185036/oakland-shooter-flees-after-killing-one-man-wounding
+http://www.insidebayarea.com/breaking-news/ci_28191896/police-fatal-east-oakland-shooting-linked-marijuana-grow",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+5-22-2015,Houston,48,,Male,Killed,http://www.chron.com/news/houston-texas/article/Wife-questioned-in-husband-s-fatal-shooting-6282401.php,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+5-16-2015,Jackson,28,23,Male,Killed,http://www.msnewsnow.com/story/29081882/police-kidnapper-at-large-possibly-armed-and-should-be-considered-dangerous,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+5-18-2015,Miami-Dade,12,,Male,Killed,http://www.local10.com/news/burglary-suspects-shot-in-southwest-miamidade-county/33084390,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+5-17-2015,Billings,30,15,Male,Killed,"http://www.khq.com/story/29095769/billings-police-friend-fired-through-window-in-fatal-shooting
+http://www.kxly.com/news/northwest/15yearold-boy-dead-in-early-morning-shooting-in-billings/33070330
+http://www.ktvq.com/story/29094509/officials-release-name-of-teen-shot-and-killed-billings-police-continue-investigation
+http://billingsgazette.com/news/local/senior-high-student-killed-after-throwing-pebbles-at-friend-s/article_489e8398-f4a4-53a7-ba9f-11038971a453.html
+http://www.kxly.com/news/northwest/jury-finds-teen-who-shot-friend-to-be-justified-in-killing/34574548",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+5-14-2015,Gary,18,59,Male,Killed,"http://www.chicagotribune.com/suburbs/post-tribune/crime/ct-ptb-father-son-shooting-st-0516-20150515-story.html
+http://chicago.suntimes.com/news/7/71/611002/son-fatally-shoots-father-gary",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+5-13-2015,Chicago,17,19,Male,Killed,"http://www.dnainfo.com/chicago/20150514/logan-square/logan-square-shooting-leaves-one-dead-one-wounded-police-say
+http://www.dnainfo.com/chicago/20150521/logan-square/man-charged-fatal-logan-square-grocery-store-shooting",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+5-13-2015,Parkland,53,19,Male,Killed,"http://www.thenewstribune.com/2015/05/13/3790572/sheriffs-department-parkland-apartment.html#emlnl=Crime_Newsletter
+http://www.kirotv.com/ap/ap/washington/sheriff-man-19-killed-in-dispute-at-tacoma-area-ap/nmGMN/
+http://www.king5.com/story/news/crime/2015/05/14/man-killed-parkland-apartment-shooting/27287751/
+http://www.thenewstribune.com/2015/05/14/3791364/officials-identify-man-shot-to.html",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+5-11-2015,Memphis,47,25,Male,Killed,"http://www.wmcactionnews5.com/story/29037248/police-investigate-reports-of-shooting-near-lamar-avenue-shopping-center
+http://www.localmemphis.com/story/d/story/tops-bbq-carjacking-shooting/42101/6BJCm7B5XkWWYRjqT5EH8g
+http://wreg.com/2015/05/11/mpd-investigating-a-shooting-at-tops-bbq/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+5-11-2015,Norcross,13,20,Male,Killed,"http://www.wsbtv.com/news/news/local/police-victim-shoots-5-robbery-suspects-1-killed/nmDzf/
+http://www.cbs46.com/story/29039778/man-shoots-two-would-be-robbers-injures-a-third
+http://www.ajc.com/news/news/gwinnett-police-id-robbery-suspect-killed-by-victi/nmGBG/",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+5-5-2015,Riviera Beach,12,22,Male,Killed,http://www.wptv.com/news/region-c-palm-beach-county/riviera-beach/man-fatally-shot-at-riviera-beach-apartments-following-domestic-incident,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+5-9-2015,Minerva,39,,Male,Killed,http://fox8.com/2015/05/09/alleged-home-invasion-shooting-under-investigation-in-minerva/,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+5-9-2015,Corpus Christi,48,34,Male,Killed,"http://www.kiiitv.com/story/29021091/overnight-shooting-results-in-citys-latest-homicide
+http://www.kiiitv.com/story/29022509/arrest-made-in-overnight-shooting
+http://www.kiiitv.com/story/29022509/arrest-made-in-overnight-shooting",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+5-8-2015,Winterville,37,43,Male,Killed,"http://www.wnct.com/story/29020311/police-investigating-report-of-shooting-in-winterville
+http://www.witn.com/home/headlines/PITT-911-Winterville-Police-respond-to-report-of-person-shot-303153551.html
+http://www.reflector.com/crimerescue/police-no-charges-shooting-2873073",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+5-9-2015,Carmel,36,47,Male,Killed,"http://www.lohud.com/story/news/crime/2015/05/09/two-shot-one-dead-mahopac/27037561/
+http://www.lohud.com/story/news/crime/2015/05/11/philip-miraglia-identified-man-killed-mahopac/27116757/",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+5-7-2015,Escambia (county),1,,Male,Killed,http://www.weartv.com//news/features/top-stories/stories/man-shot-killed-during-argument-brother-57298.shtml#.VU43NPldWLE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+5-7-2015,Baltimore,24,26,Male,Killed,"http://www.wbaltv.com/news/three-dead-several-injured-in-baltimore-shootings/32877026
+http://www.baltimoresun.com/news/maryland/crime/blog/bs-md-ci-justified-homicide-20150604-story.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+5-7-2015,Lithonia,13,,Male,Killed,"http://www.wsbtv.com/news/news/local/store-employee-shoots-and-kills-robber/nmBf8/
+http://www.11alive.com/story/news/crime/2015/05/07/lithonia-suspect-dead-theft/70955622/
+http://www.cbs46.com/story/29012172/alleged-robber-who-survived-clerks-gunfire-could-face-murder-charge",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+5-3-2015,Elko,32,,Male,Killed,"http://www.ktvn.com/story/28974584/elko-police-investigate-shooting-that-killed-man
+http://www.ktvn.com/story/29081832/elko-homicide-ruled-self-defense",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+5-4-2015,Boulder,8,,Male,Killed,http://www.thedenverchannel.com/news/local-news/suspected-home-intruder-shot-dead-in-boulder-monday-night,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+5-3-2015,Pleasant Grove,49,24,Male,Killed,"http://www.ksl.com/?sid=34497236&nid=968&s_cid=rec1
+http://www.heraldextra.com/news/local/crime-and-courts/pleasant-grove-man-shot-killed-during-home-invasion/article_887acafd-4f6a-5f4f-8c7c-14fb5fff2805.html
+http://www.sltrib.com/news/2482176-155/intruder-fatally-shot-breaking-into-pleasant",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+5-4-2015,Detroit,26,46,Male,Killed,"http://www.detroitnews.com/story/news/local/detroit-city/2015/05/04/police-homeowner-fatally-shoots-home-invasion-suspect/26860035/
+http://www.myfoxdetroit.com/story/28974036/1-dead-1-wounded-after-homeowner-shootout-with-break-in-suspect",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+5-1-2015,Pittsburg,6,,NULL,Killed,http://www.sfgate.com/crime/article/Two-burglary-suspects-shot-dead-by-Pittsburg-6237739.php,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+5-1-2015,Pittsburg,6,,NULL,Killed,http://www.sfgate.com/crime/article/Two-burglary-suspects-shot-dead-by-Pittsburg-6237739.php,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+5-4-2015,Albuquerque,35,37,Male,Killed,"http://www.kob.com/article/stories/S3784473.shtml?cat=504#.VUb7bCFViko
+http://www.koat.com/news/2-injured-in-overnight-shooting/32769342",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+5-2-2015,Orem,49,26,Female,Killed,"http://www.heraldextra.com/news/local/central/orem/one-man-killed-in-shooting-in-orem-macey-s-parking/article_74e89629-009b-558b-9ffd-2fd667c964ba.html
+http://www.wdtimes.com/news/national/article_ee30a675-3d7c-5406-9668-25ff67fac3fb.html
+http://www.ksl.com/?nid=148&sid=34485401
+http://www.heraldextra.com/news/local/central/orem-police-identify-man-fatally-shot-in-saturday-incident/article_78b0d74b-dbb6-5765-bc8d-77b1672ac712.html
+http://www.foxnews.com/us/2015/05/04/utah-man-killed-by-bystander-during-carjacking-attempt-had-convictions-for/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+foxnews%2Fnational+%28Internal+-+US+Latest+-+Text%29
+http://www.ksl.com/index.php?sid=34649432&nid=148&title=concealed-weapon-carrier-involved-in-maceys-shooting-will-not-be-charged",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+4-30-2015,Houston,48,,Male,Killed,http://abc13.com/news/robbery-suspect-dies-after-shooting-at-east-houston-business/688630/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+4-29-2015,Houston,48,30,Male,Killed,"http://www.chron.com/houston/article/Carjacking-victim-shoots-kills-suspect-6232931.php
+http://thepolicenews.net/default.aspx?act=Newsletter.aspx&category=News+1-2&newsletterid=53060&menugroup=Home",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+4-29-2015,Knox (county),47,40,Male,Killed,http://www.local8now.com/news/headlines/Deputies-respond-to-shooting-in-east-Knox-County-301694401.html,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+4-29-2015,Beaumont,48,52,Male,Killed,"http://www.star-telegram.com/news/state/texas/article19857393.html
+http://www.beaumontenterprise.com/news/article/Clerk-killed-during-robbery-suspects-at-large-6230962.php
+http://www.kcbd.com/story/28992093/1-arrested-1-sought-in-slaying-of-beaumont-store-clerk
+http://www.beaumontenterprise.com/news/article/Pair-indicted-for-capital-murder-in-Beaumont-6305095.php",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+4-22-2015,Arlington,48,18,Male,Killed,"http://dfw.cbslocal.com/2015/04/23/arlington-homeowner-shoots-intruder-during-attempted-burglary/
+http://www.wfaa.com/story/news/local/tarrant-county/2015/04/23/arlington-home-invasion-burglar-shot-to-death/26283599/
+http://dfw.cbslocal.com/2015/04/24/police-search-home-in-fatal-arlington-shooting/",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+4-23-2015,Wilmington,37,34,Male,Killed,"http://www.nbc12.com/story/28882447/wpd-one-person-killed-in-castle-street-shooting-one-person-detained
+http://www.wave3.com/story/28882447/update-victim-identified-in-deadly-barber-shop-shooting
+http://www.wave3.com/story/28882447/update-victim-identified-in-deadly-barber-shop-shooting",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+4-19-2015,Gulfport,28,,Male,Killed,http://blog.gulflive.com/mississippi-press-news/2015/04/20-year-old_gulfport_man_arres_1.html#incart_river,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+4-16-2015,Surry County,37,37,Male,Killed,http://www.wxii12.com/news/man-shot-killed-in-surry-co-domestic-dispute/32422958,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+4-13-2015,Gadsden,1,17,Male,Killed,http://www.myfoxal.com/story/28798881/teen-shot-dead-after-involvement-in-home-invasion,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+4-11-2015,Ada,40,,Male,Killed,http://www.newson6.com/story/28781941/ada-man-shot-and-killed-during-a-fight,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+4-14-2015,Clay County,47,61,Female,Killed,"http://www.wsmv.com/story/28796985/2-killed-1-injured-in-clay-county-shooting
+http://www.scrippsmedia.com/newschannel5/news/Two-Killed-One-Injured-In-Clay-County-Shooting-299713621.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+4-14-2015,Clay County,47,63,Male,Killed,"http://www.wsmv.com/story/28796985/2-killed-1-injured-in-clay-county-shooting
+http://www.scrippsmedia.com/newschannel5/news/Two-Killed-One-Injured-In-Clay-County-Shooting-299713621.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+4-12-2015,Taneytown,24,68,Female,Killed,http://www.wbaltv.com/news/officials-woman-fatally-shot-at-carroll-county-home/32339000,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+4-4-2015,Williamston,37,22,Male,Killed,"http://www.witn.com/home/headlines/Police-respond-to-shots-fired-call-in-Williamston-298726951.html
+http://www.wnct.com/story/28802945/two-arrested-one-wanted-in-williamston-shooting",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+4-4-2015,Rush,21,45,Male,Killed,http://www.lex18.com/story/28728986/boyd-county-homeowner-fatally-shoots-intruder,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+4-5-2015,Rhodesdale,24,59,Male,Killed,http://www.wbaltv.com/news/police-believe-dorchester-county-domestic-incident-ends-in-homicide/32202072,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+4-5-2015,Devol,40,34,Male,Killed,http://m.news9.com/story.aspx?story=28724716&catId=112032,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+4-4-2015,Louisville,21,44,Male,Killed,"http://www.whas11.com/story/news/crime/2015/04/04/lmpd-working-homicide-in-portland-neighborhood/25316255/
+http://www.wave3.com/story/28722989/man-shot-dead-in-portland-saturday",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+4-2-2015,Saint Louis,29,42,Male,Killed,"http://www.kmov.com/story/28711830/police-investigating-3-north-st-louis-double-shootings
+http://www.stltoday.com/news/local/crime-and-courts/police-identify-man-fatally-shot-in-st-louis/article_1f96f144-c812-5131-9105-a81d20bae085.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+4-3-2015,Covington,13,30,Male,Killed,"http://www.ajc.com/news/news/man-killed-at-newton-county-apartment/nkmK9/
+http://www.wsbtv.com/news/news/local/one-shot-newton-county-home-invasion/nkmJk/
+http://www.covnews.com/section/13/article/58872/",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+3-31-2015,Harris County,48,,Male,Killed,http://www.chron.com/news/houston-texas/article/Fatal-shooting-appears-self-defense-in-Tomball-6172244.php,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+3-30-2015,La Vergne,47,35,Male,Killed,http://www.wsmv.com/story/28658547/police-business-owner-shoots-kills-would-be-robber,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+3-30-2015,Okatie,45,45,Male,Killed,"http://www.islandpacket.com/2015/03/30/3674030/fatal-shooting-reported-in-sun.html?rh=1
+http://www.wsav.com/story/28647383/fatal-shooting-in-sun-city-under-investigation
+http://www.abcnews4.com/story/28653702/1-dead-1-in-custody-in-shooting-at-sun-city-hilton-head
+http://www.islandpacket.com/2015/03/31/3675621_update-in-fatal-sun-city-shooting.html?rh=1",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+3-26-2015,Philadelphia,42,,Male,Killed,http://philadelphia.cbslocal.com/2015/03/27/police-investigate-triple-shooting-in-west-philadelphia/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+3-26-2015,Philadelphia,42,,Male,Killed,http://philadelphia.cbslocal.com/2015/03/27/police-investigate-triple-shooting-in-west-philadelphia/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+3-26-2015,Clinton Township,26,50,Male,Killed,"http://www.detroitnews.com/story/news/local/macomb-county/2015/03/27/clinton-twp-party-store-owner-killed-shootout/70531542/
+http://www.myfoxdetroit.com/story/28638637/police-arrest-2-in-fatal-shooting-of-clinton-twp-party-store-owner
+http://www.macombdaily.com/general-news/20150331/warrants-issued-in-slaying-of-clinton-township-party-store-owner
+http://www.theoaklandpress.com/general-news/20150421/accused-party-store-shooter-ordered-to-stand-trial
+http://www.theoaklandpress.com/general-news/20150421/accused-party-store-shooter-ordered-to-stand-trial",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+3-27-2015,Richmond,51,16,Male,Killed,"http://www.nbc12.com/story/28629224/family-mourning-16-year-old-shot-to-death-in-richmond-overnight
+http://www.nbc12.com/story/28934319/fatal-shooting-of-richmond-teen-ruled-self-defense",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+3-26-2015,Chattanooga,47,,Male,Killed,http://www.wrcbtv.com/story/28624021/robbery-suspect-shot-by-victim-on-rossville-blvd,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+3-26-2015,Macon,13,49,Male,Killed,http://www.macon.com/2015/03/26/3661146_authorities-investigating-macon.html?rh=1,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+3-26-2015,Houston,48,20,Male,Killed,"http://www.chron.com/houston/article/Argument-turns-deadly-in-SE-Houston-6160161.php
+http://www.khou.com/story/news/local/2015/03/26/man-fatally-shot-during-fight-at-friends-se-houston-apartment/70474304/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+3-25-2015,Houston,48,,Male,Killed,http://www.chron.com/houston/article/Argument-sparked-fatal-shooting-6160234.php,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+3-24-2015,Cleveland,39,19,Male,Killed,http://www.cleveland.com/metro/index.ssf/2015/03/cleveland_man_fatally_shoots_i.html,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+3-23-2015,Albuquerque,35,43,Male,Killed,"http://krqe.com/2015/03/23/albuquerque-homeowner-shoots-kills-suspected-burglar/
+http://www.abqjournal.com/558872/abqnewsseeker/police-investigate-shooting-in-southwest-albuquerque.html
+http://www.kob.com/article/stories/s3743396.shtml#.VRDkgfnF8kM",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+3-22-2015,Phoenix,4,,Male,Killed,http://www.azcentral.com/story/news/local/phoenix/2015/03/23/man-shot-after-stabbing-mother/25214731/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+3-22-2015,Albuquerque,35,17,Male,Killed,"http://www.koat.com/news/multiple-people-shot-at-los-altos-skate-park/31958272
+http://www.kob.com/article/stories/s3745281.shtml#.VRL19-GBByw
+http://www.koat.com/news/apd-victim-possibly-fired-in-skate-park-shooting/32014502
+http://krqe.com/2015/03/30/albuquerque-police-4-opened-fire-at-skate-park/
+http://www.abqjournal.com/581724/news/fatal-shooting-of-17-year-old-at-skate-park-was-self-defense-police-say.html",FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE
+3-20-2015,Houston,48,30,Male,Killed,"http://www.chron.com/news/houston-texas/article/Man-fatally-shot-in-northeast-Houston-6149335.php
+http://www.ksla.com/story/29559216/man-charged-in-burglary-that-left-associate-resident-dead",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+3-20-2015,Houston,48,20,Male,Killed,"http://www.chron.com/news/houston-texas/article/Man-fatally-shot-in-northeast-Houston-6149335.php
+http://www.ksla.com/story/29559216/man-charged-in-burglary-that-left-associate-resident-dead",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+3-22-2015,Philadelphia,42,40,Male,Killed,http://www.nbcphiladelphia.com/news/local/Man-Shot-in-the-Chest-Inside-West-Philly-Barbershop-297176271.html,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+3-21-2015,Milwaukee,55,29,Male,Killed,"http://fox6now.com/2015/03/21/man-fatally-shot-near-37th-and-villard-in-milwaukee/
+http://fox6now.com/2015/09/24/fatal-shooting-outside-c-notes-sports-lounge-ruled-justified-self-defense/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+3-21-2015,Indianapolis,18,,Male,Killed,"http://wishtv.com/2015/03/21/fatal-shooting-on-near-west-side/
+http://www.indystar.com/story/news/crime/2015/03/22/man-fatally-shoots-brother-northwestside-home-invasion/25183077/?utm_source=feedblitz&utm_medium=FeedBlitzRss&utm_campaign=FeedBlitzRss&utm_content=Man+fatally+shoots+brother+during+Northwestside+home+in",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+3-18-2015,Gainesville,12,36,Male,Killed,http://www.news4jax.com/news/man-found-dead-outside-gainesville-motel/31864270,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+3-19-2015,Munroe Falls,39,29,Male,Killed,"http://www.cleveland.com/akron/index.ssf/2015/03/kent_police_officer_fatally_sh.html#incart_m-rpt-1
+http://www.newsnet5.com/news/local-news/oh-summit/officer-who-shot-man-in-her-home-has-satisfactory-reviews-two-commendations-from-kent-pd-chief",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+3-18-2015,Memphis,47,49,Male,Killed,"http://www.wmcactionnews5.com/story/28548811/memphis-man-critically-injured-in-early-morning-shooting
+http://www.localmemphis.com/story/d/story/woman-charged-in-shooting-death-of-boyfriend/34578/sAbGtN163kaw0ADJ299w1Q
+http://www.wmcactionnews5.com/story/28568245/woman-not-charged-with-shooting-death-of-boyfriend-family-outraged",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+3-16-2015,Joplin,29,32,Male,Killed,"http://www.joplinglobe.com/news/local_news/deceased-suspect-in-home-invasion-identified/article_309038ec-1de5-51a6-a6c6-20336898d526.html
+http://www.joplinglobe.com/news/three-arrested-in-joplin-home-invasions/article_290ccd38-ccb2-11e4-b602-77c3957b1ca6.html",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+3-17-2015,Indianapolis,18,,Male,Killed,http://www.indystar.com/story/news/crime/2015/03/17/impd-investigating-fatal-shooting-eastside/24888671/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+3-14-2015,Tarrant,1,26,Male,Killed,"http://www.myfoxal.com/story/28524495/man-shot-during-tarrant-home-invasion-dies
+http://www.abc3340.com/story/28525301/suspected-burglar-dies-after-being-shot-by-homeowners-son
+http://www.myfoxal.com/story/28566358/coroner-ids-burglary-suspect-fatally-shot-during-tarrant-home-invasion",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+3-14-2015,Bath County,21,36,Male,Killed,http://www.lex18.com/story/28521267/police-argument-over-dog-led-to-deadly-bath-county-shooting,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+3-9-2015,Freestone County,48,45,Male,Killed,http://www.kwtx.com/home/headlines/Niece-Nephew-Of-Man-Wounded-In-Rural-Home-Invasion-Arrested-296089441.html,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+3-9-2015,Freestone County,48,19,Male,Killed,http://www.kwtx.com/home/headlines/Niece-Nephew-Of-Man-Wounded-In-Rural-Home-Invasion-Arrested-296089441.html,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+3-11-2015,Saginaw Township,26,25,Male,Killed,"http://www.mlive.com/news/saginaw/index.ssf/2015/03/man_killed_in_saginaw_township_1.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+saginaw_news+%28Saginaw+News+-+MLive.com%29
+http://www.mlive.com/news/saginaw/index.ssf/2015/03/suspected_robber_shot_to_death.html
+http://www.mlive.com/news/saginaw/index.ssf/2015/03/2_arraigned_1_still_in_hospita.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+michigan-news+%28Michigan+News%2C+Updates%2C+Photos%2C+Videos+and+Opinions+-+MLive.com%29",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+3-11-2015,Tulsa,40,22,Male,Killed,"http://www.tulsaworld.com/news/tulsa-apartment-dweller-kills-two-men-during-early-morning-home/article_67a43114-9077-5138-ad46-8f3cd37a5480.html
+http://www.newson6.com/story/28568565/tpd-arrest-third-in-fatal-home-invasion-say-shooter-lied",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+3-11-2015,Tulsa,40,33,Male,Killed,"http://www.tulsaworld.com/news/tulsa-apartment-dweller-kills-two-men-during-early-morning-home/article_67a43114-9077-5138-ad46-8f3cd37a5480.html
+http://www.newson6.com/story/28568565/tpd-arrest-third-in-fatal-home-invasion-say-shooter-lied",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+3-11-2015,Saint Louis,29,6,Male,Killed,"http://www.kmov.com/news/crime/Child-adult-shot-in-north-St-Louis-296002241.html
+http://www.stltoday.com/news/local/crime-and-courts/year-old-is-fatally-shot-in-st-louis-gunbattle/article_4c0a7015-e591-5c8b-8ec0-9781e2472c30.html
+http://stlouis.cbslocal.com/2015/03/12/5-year-old-dead-after-north-side-shooting/
+http://www.seattletimes.com/nation-world/6-year-old-heart-patients-shooting-death-rattles-st-louis/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+3-10-2015,Camp Hill,1,25,Male,Killed,"http://www.wsfa.com/story/28355845/neighbors-camp-hill-man-killed-1-injured-another-in-self-defense
+http://www.al.com/news/birmingham/index.ssf/2015/03/victim_in_fatal_camp_hill_shoo.html#incart_river",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+3-9-2015,Teague,48,19,Male,Killed,http://www.kxxv.com/story/28299052/area-home-invasion-leaves-suspected-robber-dead-resident-injured,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+3-7-2015,Temple Terrace,12,32,Male,Killed,http://tbo.com/news/crime/one-dead-one-wounded-after-shootout-in-temple-terrace-20150307/?page=1,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+3-5-2015,Oklahoma City,40,41,Male,Killed,http://kfor.com/2015/03/05/reports-officers-responding-to-possible-shooting-in-southwest-oklahoma-city/,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+3-3-2015,Baton Rouge,22,31,Male,Killed,"http://www.wafb.com/story/28249586/deputies-identify-man-shot-by-homeowner-during-home-invasion
+http://www.wafb.com/story/28262187/wife-charged-with-murder-after-homeowner-kills-husband-during-alleged-burglary",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+3-3-2015,Shreveport,22,27,Male,Killed,http://www.ksla.com/story/28265861/victim-identified-in-deadly-home-invasion-shooting,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+3-4-2015,Bokeelia,12,65,Male,Killed,"http://fox8.com/2015/03/05/man-drives-neighbors-dead-body-to-lawyers-office/
+http://www.nbc-2.com/story/28264342/death-investigation-on-virginia-avenue#.VPj0n-GvxM0",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+3-4-2015,Speedway,18,34,Male,Killed,"http://fox59.com/2015/03/04/person-shot-in-speedway/
+http://www.wthr.com/story/28273571/new-details-emerge-about-speedway-intrusion-suspect",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+2-26-2015,Atascosa County,48,,Male,Killed,http://www.bigcountryhomepage.com/story/d/story/clyde-man-involved-in-deadly-shooting-over-salary/18518/xDY1mFST6UWra2VmWUaITQ,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+2-28-2015,Tampa,12,22,Male,Killed,http://tbo.com/news/crime/deputies-man-shot-by-bouncer-during-dispute-at-tampa-bar-20150228/?page=1,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+2-27-2015,Eagle Mountain,49,33,Male,Killed,"http://www.ksl.com/?nid=148&sid=33645163
+http://www.sltrib.com/news/2567280-155/court-case-father-of-utah-man",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+2-27-2015,North Lauderdale,12,22,Male,Killed,"http://www.nbcmiami.com/news/local/Homeowner-Fatally-Shoots-Attempted-Burglar-in-North-Lauderdale-294344391.html
+http://www.nbcmiami.com/news/local/Man-Who-Said-He-Shot-Intruder-Lied-to-Detectives-BSO-294506681.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+2-27-2015,Columbus,39,31,Male,Killed,"http://www.nbc4i.com/story/28221325/police-homeowner-shoots-kills-apparent-intruder
+http://www.daytondailynews.com/ap/ap/ohio/police-respond-to-break-in-find-man-mortally-wound/nkLMF/#__federated=1",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+2-26-2015,Albuquerque,35,,Male,Killed,"http://www.abqjournal.com/546804/abqnewsseeker/police-investigating-ne-albuquerque-homicide.html
+http://krqe.com/2015/02/26/apd-homeowner-shoots-kills-foothills-burglar/
+http://www.koat.com/news/apd-investigating-possible-shooting/31498618",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+2-23-2015,Catawba County,37,,Male,Killed,"http://www.wsoctv.com/news/news/local/deputies-man-shoots-intruder-after-home-invasion/nkG8L/
+http://www.wave3.com/story/28176150/deputies-homeowner-shoots-intruder-at-catawba-co-home
+http://www.wcnc.com/story/news/crime/2015/02/23/authorities-homeowner-shoot-intruder-in-catawba-county/23879563/",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+2-21-2015,Columbia,45,33,Male,Killed,"http://www.wbtw.com/story/28174467/man-shot-to-death-in-columbia
+http://www.wltx.com/story/news/crime/2015/02/23/columbia-police-investigate-sunday-night-shooting/23880931/
+http://www.thestate.com/2015/02/22/4004354/man-fatally-shot-after-physical.html
+http://www.wistv.com/story/28171051/columbia-police-investigate-deadly-shooting
+http://www.thestate.com/2015/02/27/4015173_womans-fatal-shooting-of-her-ex.html?rh=1",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+2-23-2015,Santa Rosa,6,,Male,Killed,http://www.insidebayarea.com/california/ci_27582232/santa-rosa-gun-battle-leaves-one-dead-and,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+2-21-2015,Phoenix,4,31,Male,Killed,"http://www.azcentral.com/story/news/local/phoenix/2015/02/21/home-invasion-phoenix-police-fatality-brk/23798309/
+http://www.fox10phoenix.com/clip/11162004/man-killed-in-home-invasion
+http://www.fox10phoenix.com/story/28178152/police-identify-man-fatally-shot-after-making-forced-entry",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+2-19-2015,Columbus,39,28,Male,Killed,"http://www.toledoblade.com/State/2015/02/19/Ohio-woman-sleeping-on-couch-with-gun-wakes-up-and-kills-intruder-who-came-through-window.html
+http://www.10tv.com/content/stories/2015/02/19/columbus-guilford-avenue-shooting.html",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+2-18-2015,Pinch,54,25,Male,Killed,"http://www.wowktv.com/story/28138151/employee-shoots-suspect-at-goods-pharmacy-in-pinch-wv
+http://www.wchstv.com/news/features/eyewitness-news/stories/Pinch-Pharmacist-Shoots-Suspect-During-Robbery-86281.shtml#.VOYUji6BByy
+http://www.wdtv.com/wdtv.cfm?func=view&section=5-News&item=Man-Shot-During-Alleged-Robbery-Identified-21329",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+2-17-2015,San Bernardino,6,25,Male,Killed,http://ktla.com/2015/02/17/security-guard-fatally-shot-in-attempted-robbery-of-san-bernardino-pot-dispensary/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+2-14-2015,Memphis,47,,Male,Killed,http://www.wmcactionnews5.com/story/28114420/1-person-killed-1-injured-in-valentines-day-shooting,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+2-15-2015,Myrtle Beach,45,23,Male,Killed,"http://www.myrtlebeachonline.com/2015/02/15/4789617_man-shot-to-death-in-myrtle-beach.html?rh=1
+http://www.wbtw.com/story/28113296/man-shot-to-death-in-myrtle-beach
+http://www.myrtlebeachonline.com/2015/02/15/4789617_man-shot-to-death-in-myrtle-beach.html?rh=1
+http://www.carolinalive.com/news/story.aspx?list=196418&id=1165297#.VOP8ES6iQk5
+http://www.carolinalive.com/news/story.aspx?id=1184409#.VRmzROGBByw",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+2-14-2015,Middleburg,51,,Male,Killed,http://www.washingtonpost.com/local/crime/police-investigating-domestic-shooting-incident-in-loudoun-county/2015/02/14/5b7cff32-b492-11e4-827f-93f454140e2b_story.html?wprss=rss_local,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+2-12-2015,Hillsdale County,26,47,Male,Killed,"http://www.mlive.com/news/jackson/index.ssf/2015/02/hillsdale_county_man_found_sho.html
+http://www.mlive.com/news/jackson/index.ssf/2015/02/hillsdale_county_man_found_sho.html
+http://www.mlive.com/news/jackson/index.ssf/2015/02/no_one_arrested_in_hillsdale_c.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+2-12-2015,Anderson,45,53,Male,Killed,"http://www.greenvilleonline.com/story/news/crime/2015/02/12/early-morning-shooting-leaves-one-dead/23291453/
+http://www.foxcarolina.com/story/28090180/deputies-one-killed-in-anderson-co-shooting
+http://www.independentmail.com/news/castle-doctrine-cited-in-six-recent-fatal-shootings-in-anderson-county_92575995",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+2-8-2015,Homewood,1,,Male,Killed,http://www.myfoxal.com/story/28056342/homewood-pd-woman-shoots-kills-man-after-he-robbed-her-at-gunpoint,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+2-9-2015,Owens Cross Roads,1,39,Male,Killed,"http://www.waff.com/story/28066665/man-killed-during-shooting-near-owens-cross-roads
+http://www.al.com/news/huntsville/index.ssf/2015/02/1_killed_in_owens_cross_roads.html#incart_river
+http://www.al.com/news/huntsville/index.ssf/2015/02/owens_cross_roads_homicide_upd.html",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+2-10-2015,Van Zandt County,48,37,Male,Killed,http://www.kltv.com/story/28076188/east-texan-fatally-shoots-man-she-says-forced-entry-into-her-home,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+2-9-2015,Chavies,21,59,Male,Killed,http://www.lex18.com/story/28071246/domestic-dispute-leaves-perry-county-man-dead,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+2-7-2015,Yoakum,48,46,Male,Killed,https://www.victoriaadvocate.com/news/2015/feb/08/son-shoots-kills-father-in-yoakum/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+2-8-2015,Houston,48,,Male,Killed,"http://www.wafb.com/story/28054243/1-dead-after-brothers-pursue-suspected-truck-thief
+http://www.chron.com/news/houston-texas/houston/article/Sheriffs-investigate-brothers-who-killed-6070279.php
+http://gunssavelives.net/blog/video-truck-thief-shot-dead-by-owner/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+2-7-2015,Louisville,21,19,Male,Killed,"http://www.lex18.com/story/28054027/multiple-weekend-shootings-in-louisville-leave-4-dead-2-injured
+http://www.lex18.com/story/28058064/four-people-shot-to-death-in-louisville-over-the-weekend
+http://www.courier-journal.com/story/news/crime/2015/02/08/multiple-shootings-louisville-weekend/23081833/
+http://www.whas11.com/story/news/crime/2015/02/11/adrienne-way-shooting/23234219/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+2-7-2015,Bermuda Dunes,6,,Male,Killed,http://www.kesq.com/news/bermuda-dunes-homeowner-kills-intruder/31149842,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+2-3-2015,Denham Springs,22,46,Male,Killed,"http://www.wafb.com/story/28044899/lsp-autopsy-reveals-man-killed-himself-after-shootout-with-off-duty-deputy
+http://www.wafb.com/story/28020519/neighbors-provide-possible-insight-into-deadly-off-duty-deputy-involved-shooting
+http://www.wafb.com/story/28044899/lsp-autopsy-reveals-man-killed-himself-after-shootout-with-off-duty-deputy
+http://theadvocate.com/news/weeklies/11514006-123/state-police-identify-victim-in",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+2-3-2015,Jonesboro,5,24,Male,Killed,http://www.kait8.com/story/28018487/jonesboro-police-release-more-information-about-deadly-shooting,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+2-2-2015,New Hanover County,37,34,Male,Killed,"http://www.wect.com/story/28030639/nhcso-investigating-shooting-death-on-myrtle-grove-rd
+http://www.starnewsonline.com/article/20150313/articles/150319844",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+2-4-2015,Dallas,48,,Male,Killed,http://www.wfaa.com/story/news/local/dallas-county/2015/02/05/tow-truck-driver-shoots-man-who-jumped-into-cab/22913087/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+2-3-2015,Dover,39,44,Male,Killed,http://www.timesreporter.com/article/20150204/NEWS/150209749/10970/NEWS/?Start=2,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+2-3-2015,Waco,48,20,Male,Killed,"http://www.kiiitv.com/story/28023986/waco-police-say-2-dead-1-wounded-in-drug-related-shootings
+http://kdhnews.com/news/crime/temple-teen-charged-in-waco-murder/article_6c018560-acd3-11e4-a406-8304b0ae48cb.html",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+2-3-2015,Waco,48,,Male,Killed,"http://www.kiiitv.com/story/28023986/waco-police-say-2-dead-1-wounded-in-drug-related-shootings
+http://kdhnews.com/news/crime/temple-teen-charged-in-waco-murder/article_6c018560-acd3-11e4-a406-8304b0ae48cb.html",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+2-2-2015,Anderson,45,24,Male,Killed,"http://www.postandcourier.com/article/20150203/PC1610/150209805/1177
+http://www.greenvilleonline.com/story/news/local/2015/02/03/authorities-identify-anderson-man-fatally-shot/22794491/
+http://www.independentmail.com/news/castle-doctrine-cited-in-six-recent-fatal-shootings-in-anderson-county_92575995",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-31-2015,Wilmington,37,38,Male,Killed,"http://www.wect.com/story/27995188/police-identify-man-found-dead-on-raleigh-street
+http://www.wave3.com/story/27995188/no-charges-against-nc-man-who-killed-man-trying-to-rob-him
+http://www.wave3.com/story/28118256/police-accomplice-charged-in-deadly-robbery-incident
+http://www.wave3.com/story/28564842/wpd-woman-arrested-in-connection-to-raleigh-street-homicide",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-30-2015,Dekalb County,13,,Male,Killed,http://www.cbs46.com/story/27981313/police-sale-of-dog-on-craigslist-leads-to-mans-death?autostart=true,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-29-2015,Southgate,26,19,Male,Killed,"http://www.theoaklandpress.com/general-news/20150129/police-southgate-homeowner-shoots-kills-home-invasion-suspect
+http://www.detroitnews.com/story/news/local/wayne-county/2015/01/30/police-alleged-home-invader-killed-southgate/22584149/",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+1-28-2015,Charlotte,37,19,Male,Killed,"http://www.wbtv.com/story/27967793/police-one-shot-killed-at-charlotte-gas-station
+http://www.reflector.com/ap/staten/suspect-arrested-fatal-shooting-charlotte-gas-station-2782027",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-26-2015,Miami-dade,12,,NULL,Killed,"http://www.local10.com/news/1-dead-1-injured-in-shooting-at-venetian-gardens/30921032
+http://www.nbcmiami.com/news/local/Two-People-Shot-One-Dead-in-Miami-Dade-289788121.html",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+1-24-2015,Knott County,21,38,Male,Killed,http://www.lex18.com/story/27943347/police-homeowner-shoots-kills-alleged-intruder,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+1-25-2015,Tyler,48,,Male,Killed,http://dfw.cbslocal.com/2015/01/26/masked-robber-killed-in-shootout-with-store-clerk/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-25-2015,Raleigh,37,36,Male,Killed,http://www.wral.com/man-shot-to-death-at-raleigh-hotel/14387432/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-22-2015,Houston,48,,Male,Killed,http://www.khou.com/story/news/crime/2015/01/22/hpd-1-suspect-dead-after-apparent-home-invasion/22190133/,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+1-22-2015,Omaha,31,29,Male,Killed,"http://siouxcityjournal.com/ap/state/omaha-police-investigate-separate-fatal-shootings-of-men/article_de9d36eb-6666-5fa9-ae4b-974170c9f794.html
+http://www.ketv.com/news/1-killed-in-thursday-morning-shooting/30856532
+http://journalstar.com/news/local/911/wahoo-man-won-t-be-prosecuted-fatal-shooting-justified/article_6ccf07e0-bd4a-5db9-b079-99a34c490f69.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-21-2015,Dallas,48,19,Male,Killed,"http://www.wfaa.com/story/news/crime/2015/01/22/pedestrian-robbed-shoots-kills-suspect/22151717/
+http://www.ksat.com/content/pns/ksat/news/2015/01/23/tx-robbery-suspect.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-20-2015,Houston,48,,Male,Killed,"http://www.chron.com/houston/article/Robbery-turns-deadly-in-Heights-area-6029922.php
+http://www.khou.com/story/news/crime/2015/01/21/police-one-dead-in-possible-home-invasion-suspect-in-custody/22091923/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-19-2015,Joliet,17,24,Male,Killed,"http://abc7chicago.com/news/2-questioned-in-connection-with-joliet-food-mart-shooting/482685/
+http://abc7chicago.com/news/2-killed-in-deadly-shootout-at-joliet-convenience-store/482382/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-19-2015,Joliet,17,,Male,Killed,"http://abc7chicago.com/news/2-questioned-in-connection-with-joliet-food-mart-shooting/482685/
+http://abc7chicago.com/news/2-killed-in-deadly-shootout-at-joliet-convenience-store/482382/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-18-2015,Lower Township,34,21,Male,Killed,http://www.pressofatlanticcity.com/news/breaking/alleged-intruder-shot-killed-in-lower-township/article_7653a174-9f31-11e4-bc73-8ff58ce80453.html,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+1-19-2015,Decatur,13,19,Male,Killed,"http://www.wsbtv.com/videos/news/police-investigate-drive-thru-shooting-in-dekalb/vDBdnm/
+http://www.wsbtv.com/ap/ap/georgia/man-shot-at-sonic-drive-in-dies-teen-charged-with-/njsNd/
+http://www.ajc.com/news/news/one-dekalb-sonic-robber-dead-one-charged-with-murd/njrtW/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-18-2015,Columbus,39,28,Male,Killed,http://www.nbc4i.com/story/27878211/1-killed-in-overnight-franklinton-shooting,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-16-2015,Oklahoma City,40,21,Male,Killed,"http://www.koco.com/news/police-responding-to-attempted-robbery-turned-shooting/30768012
+http://www.news9.com/story/27893349/okc-police-identify-alleged-robber-shot-killed-by-victim",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-17-2015,Columbia,47,67,Female,Killed,"http://www.walb.com/story/27876474/spring-hill-elementary-principal-fatally-shot
+http://www.jrn.com/newschannel5/news/2-Killed-In-Columbia-Shooting--288929361.html
+http://wate.com/2015/01/17/elementary-school-principal-shot-and-killed-in-family-dispute/
+http://www.local8now.com/news/headlines/Principal-shot-and-killed-in-Middle-Tennessee-288970321.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-17-2015,Columbia,47,63,Male,Killed,"http://www.walb.com/story/27876474/spring-hill-elementary-principal-fatally-shot
+http://www.jrn.com/newschannel5/news/2-Killed-In-Columbia-Shooting--288929361.html
+http://wate.com/2015/01/17/elementary-school-principal-shot-and-killed-in-family-dispute/
+http://www.local8now.com/news/headlines/Principal-shot-and-killed-in-Middle-Tennessee-288970321.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-17-2015,Nashville,47,40,Male,Killed,http://www.wsmv.com/story/27874847/1-dead-5-injured-in-rash-of-nashville-shootings,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-15-2015,Cottage Grove,41,49,Male,Killed,"http://www.katu.com/news/local/Lane-Co-Sheriff-Mans-shooting-death-investigated-as-homicide-288852901.html
+http://registerguard.com/rg/news/local/32675180-75/man-shot-near-cottage-grove-identified.html.csp
+http://www.kxly.com/news/northwest/no-charges-in-shooting-death-of-man-who-was-strangling-woman/32844242",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-15-2015,Lenzburg,17,31,Male,Killed,"http://www.kmov.com/news/crime/Homeowner-shoots-intruder-in-rural-St-Clair-County-288767231.html
+http://www.bnd.com/2015/01/16/3613643_alleged-home-invader-knew-homeowner.html?sp=/99/100/&rh=1
+http://www.stltoday.com/news/local/crime-and-courts/metro-east-homeowner-said-he-heard-burglar-fired-police-find/article_0500466e-9c9e-5638-ba85-97caed67660b.html
+http://www.bnd.com/2015/02/04/3646072/lenzburg-homeowner-wont-be-charged.html",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+1-14-2015,Newport News,51,38,Male,Killed,"http://wtkr.com/2015/01/15/two-dead-in-newport-news-shooting/
+http://www.13newsnow.com/story/news/local/mycity/newport-news/2015/01/15/police-home-invaders-shot-killed-in-newport-news/21794861/",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+1-14-2015,Newport News,51,29,Male,Killed,"http://wtkr.com/2015/01/15/two-dead-in-newport-news-shooting/
+http://www.13newsnow.com/story/news/local/mycity/newport-news/2015/01/15/police-home-invaders-shot-killed-in-newport-news/21794861/",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+1-14-2015,Gainesville,12,23,Male,Killed,"http://www.news4jax.com/news/gainesville-shooting-under-investigation/30710728
+http://www.gainesville.com/article/20150116/ARTICLES/150119717",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+1-9-2015,Houston,48,36,Male,Killed,"http://www.chron.com/houston/article/Police-search-for-suspects-in-smoke-shop-shooting-6017745.php
+http://www.chron.com/houston/article/Man-accused-in-deadly-smoke-shop-shooting-6089774.php",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-13-2015,Newark,34,46,Male,Killed,http://www.nbcphiladelphia.com/news/local/New-Jersey-Bodega-Deli-Robbery-Shooting-NJ-288580061.html,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-13-2015,Tulsa,40,27,Male,Killed,"http://www.newson6.com/story/27845800/police-store-clerk-shoots-at-tulsa-robbers-killing-two
+http://www.tulsaworld.com/homepage2/police-identify-one-man-killed-in-convenience-store-robbery-attempt/article_5f3d9ace-0097-59ef-87ac-12b8ddac24cb.html
+http://www.tulsaworld.com/news/crimewatch/convenience-store-clerk-doing-pretty-good-after-fatally-shooting-armed/article_5873d4a1-5fc3-5562-82a2-213a04ad7b5b.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-13-2015,Tulsa,40,16,Male,Killed,"http://www.newson6.com/story/27845800/police-store-clerk-shoots-at-tulsa-robbers-killing-two
+http://www.tulsaworld.com/homepage2/police-identify-one-man-killed-in-convenience-store-robbery-attempt/article_5f3d9ace-0097-59ef-87ac-12b8ddac24cb.html
+http://www.tulsaworld.com/news/crimewatch/convenience-store-clerk-doing-pretty-good-after-fatally-shooting-armed/article_5873d4a1-5fc3-5562-82a2-213a04ad7b5b.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-14-2015,Pompano Beach,12,21,NULL,Killed,http://www.nbcmiami.com/news/local/1-Shot-at-Taco-Bell-in-Broward-County-288485661.html,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-9-2015,New Orleans,22,31,Male,Killed,http://www.nola.com/crime/index.ssf/2015/01/man_fatally_shot_by_apartment.html#incart_river,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-11-2015,Fort Lauderdale (Tamarac),12,30,Male,Killed,http://www.nbcmiami.com/news/local/Police-Investigating-Fatal-Fight-in-Tamarac-288242261.html,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-10-2015,Jarupa Valley,6,32,Male,Killed,http://www.pe.com/articles/facility-757980-guard-philadelphia.html,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-11-2015,Moulton,1,,Male,Killed,http://whnt.com/2015/01/11/breaking-news-shooting-in-lawrence-county/,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+1-9-2015,Jackson,28,23,Male,Killed,"http://www.msnewsnow.com/story/27816069/jackson-police-working-west-jackson-shooting
+http://www.msnewsnow.com/story/27820156/jacksonians-concerned-about-recent-shootings",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-8-2015,Hurst,48,20,Male,Killed,"http://www.wfaa.com/story/news/crime/2015/01/08/hurst-double-shooting/21481625/
+http://www.star-telegram.com/news/local/community/fort-worth/article6030366.html
+http://www.star-telegram.com/news/local/crime/article6093417.html
+http://www.star-telegram.com/news/local/crime/article6093417.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-9-2015,Milwaukee,55,,Male,Killed,"http://fox6now.com/2015/01/09/man-fatally-shot-at-business-on-milwaukees-north-side/
+http://www.wisn.com/news/customer-kills-armed-robber-at-barbershop/30621188",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-9-2015,Shawnee,20,44,Male,Killed,"http://www.kctv5.com/story/27804128/police-3-people-shot-in-shawnee
+http://fox4kc.com/2015/01/11/police-identify-suspect-charged-in-shooting-death-of-shawnee-gun-store-owner/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-7-2015,Las Vegas,32,41,Male,Killed,http://www.8newsnow.com/story/27796876/police-resident-kills-gunman-during-vegas-home-break-in,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+1-7-2015,Las Vegas,32,,Male,Killed,http://www.fox5vegas.com/story/27790971/pd-homeowner-opens-fire-at-kills-burglar-in-west-vegas,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+1-7-2015,Rosemont,17,31,Male,Killed,"http://www.myfoxchicago.com/story/27784889/shooting-reported-in-rosemont
+http://www.chicagotribune.com/news/local/breaking/ct-rosemont-police-shooting-no-charges-met-20150402-story.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-6-2015,Wayne County,54,25,Male,Killed,"http://www.wowktv.com/story/27769279/shooting-on-shoals-branch-road-in-wayne-county-wv
+http://www.wsaz.com/home/headlines/Man-Seriously-Injured-in-Wayne-County-Shooting-287615661.html
+http://www.wvgazette.com/article/20150106/GZ01/150109620/1101
+http://www.herald-dispatch.com/x45919104/Wayne-man-cleared-in-January-shooting",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-5-2015,Austin,48,24,Male,Killed,"http://www.kvue.com/story/news/local/2015/01/05/police-respond-to-shooting-in-south-austin/21278223/
+http://www.myfoxaustin.com/story/27767474/new-details-emerge-in-fatal-south-austin-home-intruder-case
+http://www.statesman.com/news/news/crime-law/police-identify-man-killed-in-south-austin-shootin/njhJy/
+http://www.kvue.com/story/news/local/2015/06/02/jury-no-bills-man-who-shot-killed-autistic-intruder/28357935/",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+1-3-2015,Tyler,48,31,Male,Killed,"http://www.news-journal.com/news/police/one-dead-in-morning-shooting-in-tyler/article_35202042-9388-11e4-8e20-bf8a5a5a0aa1.html
+http://www.kltv.com/story/27761859/tyler-police-id-gunman-in-weekend-shooting
+http://www.kltv.com/story/27761859/tyler-pd-stand-your-ground-laws-may-be-raised-in-walgreens-shooting-case
+http://www.kltv.com/story/29379593/tyler-pd-no-indictment-for-walgreens-shooting",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-1-2015,Lacey,53,37,Male,Killed,http://www.thenewstribune.com/2015/01/01/3567398/early-morning-fight-leads-to-fatal.html?sp=/99/296/331/311/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-3-2015,Detroit,26,23,Male,Killed,http://www.detroitnews.com/story/news/local/wayne-county/2015/01/02/armed-robbery-suspect-fatally-shot-new-years-eve-detroit/21195537/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-1-2015,Fleming Island,12,22,Male,Killed,http://www.firstcoastnews.com/story/news/crime/2015/01/01/drive-thru-shooting-investigation/21151585/,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-2-2015,Vidor,48,38,Male,Killed,http://www.ksla.com/story/27742712/vidor-man-shot-dead-after-breaking-into-home,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-1-2015,Renton,53,50,Male,Killed,"http://www.spokesman.com/stories/2015/jan/01/two-dead-renton-new-years-eve-party-shooting/
+http://www.kirotv.com/news/news/detectives-double-fatal-nye-party-shooting-was-sel/njfKj/
+http://www.rentonreporter.com/news/288070181.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+1-1-2015,Renton,53,18,Male,Killed,"http://www.spokesman.com/stories/2015/jan/01/two-dead-renton-new-years-eve-party-shooting/
+http://www.kirotv.com/news/news/detectives-double-fatal-nye-party-shooting-was-sel/njfKj/
+http://www.rentonreporter.com/news/288070181.html",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+12-29-2014,Jacksonville,5,25,Male,Killed,http://www.katv.com/story/27737095/man-shot-killed-during-alleged-home-intrusion,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+12-31-2014,Louisville,21,25,Male,Killed,"http://www.walb.com/story/27736252/newburg-neighborhood-shooting-under-investigation
+http://www.whas11.com/story/news/2014/12/31/rangoon-way-shooting/21096895/
+http://www.wdrb.com/story/27736249/one-person-dies-in-newburg-shooting",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+7-20-2014,Philadelphia,42,40,Male,Killed,"http://guncrisis.org/2014/07/19/weekend-report-07-19-14-07-20-14-shootings-leave-two-dead-and-four-wounded-in-philadelphia/
+http://6abc.com/news/police-paraplegic-man-shoots-brother-to-stop-attack/202483/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+12-29-2014,Haysville,20,27,Male,Killed,"http://www.kctv5.com/story/27727698/man-shot-to-death-during-attempted-break-in
+http://www.kwch.com/news/local-news/investigation-continues-on-fatal-shooting-near-haysville/30468170
+http://www.kctv5.com/story/27793204/sheriff-homeowner-shot-man-during-haysville-break-in",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+12-30-2014,Sampson County,37,49,Male,Killed,http://abc11.com/news/body-found-in-sampson-county-ditch/455848/,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+12-30-2014,Drexel Hill,42,52,Male,Killed,"http://6abc.com/news/sources-suspect-shot-killed-by-police-in-drexel-hill/455767/
+http://www.wmbfnews.com/story/27733032/man-tries-to-run-down-police-they-shoot-kill-him",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+12-28-2014,Youngsville,22,19,Male,Killed,"http://klfy.com/2014/12/29/youngsville-deadly-shooting/
+http://www.ksla.com/story/29518050/grand-jury-fails-to-indict-businessman-in-death-of-burglar
+http://theadvocate.com/news/12868865-123/lafayette-grand-jury-declines-to",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+12-29-2014,Indianapolis,18,,Male,Killed,"http://www.wthr.com/story/27719234/person-shot-near-10th-and-rural-on-citys-east-side
+http://www.theindychannel.com/news/local-news/impd-robbery-attempt-results-in-fatal-shooting
+http://www.wthr.com/category/288592/indianapolis-homicides",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+12-28-2014,Daisytown,42,42,Male,Killed,http://www.ajc.com/news/news/national/homeowner-beaten-ax-handle-shoots-kills-man-trying/njcTw/,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+12-28-2014,Stansbury Park,49,28,Male,Killed,http://www.sltrib.com/news/1995966-155/one-dead-in-stansbury-park-police,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+12-27-2014,Holly Pond,1,,Male,Killed,http://www.sfgate.com/news/crime/article/Man-fatally-shot-by-Cullman-County-deputy-5982098.php,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+12-28-2014,Jacksonville,12,28,Male,Killed,http://jacksonville.com/news/crime/2014-12-28/story/jacksonville-police-shoot-kill-man-during-homicide-investigation,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+12-27-2014,California,42,,Male,Killed,"http://www.wtae.com/news/intruder-fatally-shot-during-washington-county-home-invasion/30423876?absolute=true
+http://triblive.com/news/adminpage/7454461-74/california-homeowner-county?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+tribunereviewnews+%28News%29#axzz3NAap1COG",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+12-27-2014,Memphis,47,,NULL,Killed,"http://www.wmcactionnews5.com/story/27714893/two-people-shot-during-reported-home-invasion
+http://www.walb.com/story/27714893/two-people-shot-during-reported-home-invasion",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+12-27-2014,Memphis,47,18,Male,Killed,"http://www.wmcactionnews5.com/story/27714893/two-people-shot-during-reported-home-invasion
+http://www.walb.com/story/27714893/two-people-shot-during-reported-home-invasion",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+12-27-2014,Cincinnati,39,21,Male,Killed,"http://www.wcpo.com/news/local-news/hamilton-county/cincinnati/tommy-powell-man-dies-after-shooting-in-roll-hill
+http://www.local12.com//news/features/top-stories/stories/police-deadly-shooting-self-defense-22769.shtml",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+12-26-2014,Wise County,48,31,Male,Killed,"http://www.wfaa.com/story/news/crime/2014/12/26/wise-county-fatal-shooting-home-invasion/20910051/
+http://www.wfaa.com/story/news/local/2014/12/30/shot-by-neighbor-wise-county-sleepwalker-intruder/21088579/",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+12-24-2014,Houston,48,,Male,Killed,"http://www.khou.com/story/news/crime/2014/12/25/homeowner-shoots-kills-suspect-during-home-invasion-in-sw-houston/20890387/
+http://thepolicenews.net/default.aspx?act=Newsletter.aspx&category=News+1-2&newsletterid=50329&menugroup=Home",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+12-23-2014,Memphis,47,22,Male,Killed,"http://www.walb.com/story/27698936/police-respond-to-two-separate-shootings-at-least-one-person-injured
+http://www.commercialappeal.com/news/local-news/crime/attempted-robber-identified-in-fatal-home-invasion-second-suspect-sought_57819840
+http://wreg.com/2014/12/24/homeowner-kills-suspect-during-attempted-home-invasion/",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE
+12-23-2014,Berkeley,29,18,Male,Killed,"http://www.wbtw.com/story/27700955/police-officer-in-missouri-shot-killed-man-who-pulled-gun
+http://www.aikenstandard.com/article/20141224/AIK0106/141229734",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE

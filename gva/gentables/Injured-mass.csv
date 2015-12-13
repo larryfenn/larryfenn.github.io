@@ -1,0 +1,556 @@
+date,state,age,gender,status,source,accident,defense,defense3,mass
+12-8-2015,Cincinnati (Fairmount),39,,Male,Injured,"http://local12.com/news/local/five-people-shot-in-north-fairmount
+http://www.wcpo.com/news/local-news/hamilton-county/cincinnati/east-westwood/cpd-5-hurt-in-west-side-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-8-2015,Cincinnati (Fairmount),39,,Male,Injured,"http://local12.com/news/local/five-people-shot-in-north-fairmount
+http://www.wcpo.com/news/local-news/hamilton-county/cincinnati/east-westwood/cpd-5-hurt-in-west-side-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-8-2015,Cincinnati (Fairmount),39,,Male,Injured,"http://local12.com/news/local/five-people-shot-in-north-fairmount
+http://www.wcpo.com/news/local-news/hamilton-county/cincinnati/east-westwood/cpd-5-hurt-in-west-side-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+1-5-2013,Lorain,39,,Male,Injured,"http://www.wkyc.com/news/article/276177/3/Lorain-Arrest-made-in-gas-station-shooting
+http://www.cleveland19.com/story/20494559/31-year-old-man-charged-with-new-years-day-murder-at-lorain-gas-station
+http://chronicle.northcoastnow.com/2013/02/14/2-men-indicted-in-new-years-day-lorain-murder/
+http://www.morningjournal.com/general-news/20130222/lorain-man-pleads-innocent-to-new-years-murder",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+1-5-2013,Lorain,39,,Male,Injured,"http://www.wkyc.com/news/article/276177/3/Lorain-Arrest-made-in-gas-station-shooting
+http://www.cleveland19.com/story/20494559/31-year-old-man-charged-with-new-years-day-murder-at-lorain-gas-station
+http://chronicle.northcoastnow.com/2013/02/14/2-men-indicted-in-new-years-day-lorain-murder/
+http://www.morningjournal.com/general-news/20130222/lorain-man-pleads-innocent-to-new-years-murder",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+1-5-2013,Lorain,39,,Male,Injured,"http://www.wkyc.com/news/article/276177/3/Lorain-Arrest-made-in-gas-station-shooting
+http://www.cleveland19.com/story/20494559/31-year-old-man-charged-with-new-years-day-murder-at-lorain-gas-station
+http://chronicle.northcoastnow.com/2013/02/14/2-men-indicted-in-new-years-day-lorain-murder/
+http://www.morningjournal.com/general-news/20130222/lorain-man-pleads-innocent-to-new-years-murder",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-6-2015,Omaha,31,18,Female,Injured,"http://www.wowt.com/home/headlines/2-Dead-3-Hurt-in-Shooting-360755901.html
+http://www.wowt.com/home/headlines/360839371.html
+http://www.ketv.com/news/man-wanted-in-double-homicide-turns-himself-in/36852730",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-6-2015,Omaha,31,21,Female,Injured,"http://www.wowt.com/home/headlines/2-Dead-3-Hurt-in-Shooting-360755901.html
+http://www.wowt.com/home/headlines/360839371.html
+http://www.ketv.com/news/man-wanted-in-double-homicide-turns-himself-in/36852730",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-6-2015,Omaha,31,22,Female,Injured,"http://www.wowt.com/home/headlines/2-Dead-3-Hurt-in-Shooting-360755901.html
+http://www.wowt.com/home/headlines/360839371.html
+http://www.ketv.com/news/man-wanted-in-double-homicide-turns-himself-in/36852730",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-6-2015,Raceland,22,23,Male,Injured,http://www.wdsu.com/news/local-news/new-orleans/1-man-dead-3-others-injured-after-raceland-house-party-ends-in-shooting/36827490,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-6-2015,Raceland,22,20,Male,Injured,http://www.wdsu.com/news/local-news/new-orleans/1-man-dead-3-others-injured-after-raceland-house-party-ends-in-shooting/36827490,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-6-2015,Raceland,22,24,Male,Injured,http://www.wdsu.com/news/local-news/new-orleans/1-man-dead-3-others-injured-after-raceland-house-party-ends-in-shooting/36827490,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-2-2015,Savannah,13,17,Male,Injured,"http://wsav.com/2015/12/02/several-injured-1-dead-in-overnight-savannah-shooting/
+http://scmpd.org/metro-investigates-fatal-w-33rd-street-shooting/",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-2-2015,Savannah,13,40,Male,Injured,"http://wsav.com/2015/12/02/several-injured-1-dead-in-overnight-savannah-shooting/
+http://scmpd.org/metro-investigates-fatal-w-33rd-street-shooting/",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-2-2015,Savannah,13,52,Male,Injured,"http://wsav.com/2015/12/02/several-injured-1-dead-in-overnight-savannah-shooting/
+http://scmpd.org/metro-investigates-fatal-w-33rd-street-shooting/",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-2-2015,San Bernardino,6,,NULL,Injured,"http://www.sbsun.com/general-news/20151202/14-dead-21-injured-in-san-bernardino-mass-shooting-2-suspects-killed?source=most_viewed
+http://www.latimes.com/local/lanow/la-me-ln-san-bernardino-shooting-victims-htmlstory.html",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-2-2015,San Bernardino,6,,NULL,Injured,"http://www.sbsun.com/general-news/20151202/14-dead-21-injured-in-san-bernardino-mass-shooting-2-suspects-killed?source=most_viewed
+http://www.latimes.com/local/lanow/la-me-ln-san-bernardino-shooting-victims-htmlstory.html",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-2-2015,San Bernardino,6,,NULL,Injured,"http://www.sbsun.com/general-news/20151202/14-dead-21-injured-in-san-bernardino-mass-shooting-2-suspects-killed?source=most_viewed
+http://www.latimes.com/local/lanow/la-me-ln-san-bernardino-shooting-victims-htmlstory.html",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-2-2015,San Bernardino,6,,NULL,Injured,"http://www.sbsun.com/general-news/20151202/14-dead-21-injured-in-san-bernardino-mass-shooting-2-suspects-killed?source=most_viewed
+http://www.latimes.com/local/lanow/la-me-ln-san-bernardino-shooting-victims-htmlstory.html",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-2-2015,San Bernardino,6,,NULL,Injured,"http://www.sbsun.com/general-news/20151202/14-dead-21-injured-in-san-bernardino-mass-shooting-2-suspects-killed?source=most_viewed
+http://www.latimes.com/local/lanow/la-me-ln-san-bernardino-shooting-victims-htmlstory.html",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-2-2015,San Bernardino,6,,NULL,Injured,"http://www.sbsun.com/general-news/20151202/14-dead-21-injured-in-san-bernardino-mass-shooting-2-suspects-killed?source=most_viewed
+http://www.latimes.com/local/lanow/la-me-ln-san-bernardino-shooting-victims-htmlstory.html",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-2-2015,San Bernardino,6,,NULL,Injured,"http://www.sbsun.com/general-news/20151202/14-dead-21-injured-in-san-bernardino-mass-shooting-2-suspects-killed?source=most_viewed
+http://www.latimes.com/local/lanow/la-me-ln-san-bernardino-shooting-victims-htmlstory.html",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-2-2015,San Bernardino,6,,NULL,Injured,"http://www.sbsun.com/general-news/20151202/14-dead-21-injured-in-san-bernardino-mass-shooting-2-suspects-killed?source=most_viewed
+http://www.latimes.com/local/lanow/la-me-ln-san-bernardino-shooting-victims-htmlstory.html",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-2-2015,San Bernardino,6,,NULL,Injured,"http://www.sbsun.com/general-news/20151202/14-dead-21-injured-in-san-bernardino-mass-shooting-2-suspects-killed?source=most_viewed
+http://www.latimes.com/local/lanow/la-me-ln-san-bernardino-shooting-victims-htmlstory.html",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-2-2015,San Bernardino,6,,NULL,Injured,"http://www.sbsun.com/general-news/20151202/14-dead-21-injured-in-san-bernardino-mass-shooting-2-suspects-killed?source=most_viewed
+http://www.latimes.com/local/lanow/la-me-ln-san-bernardino-shooting-victims-htmlstory.html",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-2-2015,San Bernardino,6,,NULL,Injured,"http://www.sbsun.com/general-news/20151202/14-dead-21-injured-in-san-bernardino-mass-shooting-2-suspects-killed?source=most_viewed
+http://www.latimes.com/local/lanow/la-me-ln-san-bernardino-shooting-victims-htmlstory.html",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-2-2015,San Bernardino,6,,NULL,Injured,"http://www.sbsun.com/general-news/20151202/14-dead-21-injured-in-san-bernardino-mass-shooting-2-suspects-killed?source=most_viewed
+http://www.latimes.com/local/lanow/la-me-ln-san-bernardino-shooting-victims-htmlstory.html",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-2-2015,San Bernardino,6,,Female,Injured,"http://www.sbsun.com/general-news/20151202/14-dead-21-injured-in-san-bernardino-mass-shooting-2-suspects-killed?source=most_viewed
+http://www.latimes.com/local/lanow/la-me-ln-san-bernardino-shooting-victims-htmlstory.html",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-2-2015,San Bernardino,6,22,Female,Injured,"http://www.sbsun.com/general-news/20151202/14-dead-21-injured-in-san-bernardino-mass-shooting-2-suspects-killed?source=most_viewed
+http://www.latimes.com/local/lanow/la-me-ln-san-bernardino-shooting-victims-htmlstory.html",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-2-2015,San Bernardino,6,24,Male,Injured,"http://www.sbsun.com/general-news/20151202/14-dead-21-injured-in-san-bernardino-mass-shooting-2-suspects-killed?source=most_viewed
+http://www.latimes.com/local/lanow/la-me-ln-san-bernardino-shooting-victims-htmlstory.html",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-2-2015,San Bernardino,6,55,Male,Injured,"http://www.sbsun.com/general-news/20151202/14-dead-21-injured-in-san-bernardino-mass-shooting-2-suspects-killed?source=most_viewed
+http://www.latimes.com/local/lanow/la-me-ln-san-bernardino-shooting-victims-htmlstory.html",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-2-2015,San Bernardino,6,27,Female,Injured,"http://www.sbsun.com/general-news/20151202/14-dead-21-injured-in-san-bernardino-mass-shooting-2-suspects-killed?source=most_viewed
+http://www.latimes.com/local/lanow/la-me-ln-san-bernardino-shooting-victims-htmlstory.html",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-2-2015,San Bernardino,6,,NULL,Injured,"http://www.sbsun.com/general-news/20151202/14-dead-21-injured-in-san-bernardino-mass-shooting-2-suspects-killed?source=most_viewed
+http://www.latimes.com/local/lanow/la-me-ln-san-bernardino-shooting-victims-htmlstory.html",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-2-2015,San Bernardino,6,,NULL,Injured,"http://www.sbsun.com/general-news/20151202/14-dead-21-injured-in-san-bernardino-mass-shooting-2-suspects-killed?source=most_viewed
+http://www.latimes.com/local/lanow/la-me-ln-san-bernardino-shooting-victims-htmlstory.html",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-2-2015,San Bernardino,6,31,Female,Injured,"http://www.sbsun.com/general-news/20151202/14-dead-21-injured-in-san-bernardino-mass-shooting-2-suspects-killed?source=most_viewed
+http://www.latimes.com/local/lanow/la-me-ln-san-bernardino-shooting-victims-htmlstory.html",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+12-2-2015,San Bernardino,6,,Male,Injured,"http://www.sbsun.com/general-news/20151202/14-dead-21-injured-in-san-bernardino-mass-shooting-2-suspects-killed?source=most_viewed
+http://www.latimes.com/local/lanow/la-me-ln-san-bernardino-shooting-victims-htmlstory.html",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-29-2015,Kankakee,17,,NULL,Injured,http://chicago.cbslocal.com/2015/11/29/five-shot-during-party-at-kankakee-banquet-hall/,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-29-2015,Kankakee,17,,NULL,Injured,http://chicago.cbslocal.com/2015/11/29/five-shot-during-party-at-kankakee-banquet-hall/,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-29-2015,Kankakee,17,,NULL,Injured,http://chicago.cbslocal.com/2015/11/29/five-shot-during-party-at-kankakee-banquet-hall/,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-29-2015,Kankakee,17,,NULL,Injured,http://chicago.cbslocal.com/2015/11/29/five-shot-during-party-at-kankakee-banquet-hall/,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-29-2015,Kankakee,17,,NULL,Injured,http://chicago.cbslocal.com/2015/11/29/five-shot-during-party-at-kankakee-banquet-hall/,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-24-2015,Horry (county),45,,Male,Injured,http://wpde.com/news/local/overnight-shooting-in-conway-11-25-2015,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-24-2015,Horry (county),45,,Male,Injured,http://wpde.com/news/local/overnight-shooting-in-conway-11-25-2015,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-24-2015,Horry (county),45,,Female,Injured,http://wpde.com/news/local/overnight-shooting-in-conway-11-25-2015,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-24-2015,Horry (county),45,,Female,Injured,http://wpde.com/news/local/overnight-shooting-in-conway-11-25-2015,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-27-2015,Colorado Springs,8,,NULL,Injured,"http://www.kktv.com/home/headlines/Active-Shooter-Situation-At-Planned-Parenthood-356013081.html
+http://gazette.com/active-shooter-contained-near-planned-parenthood-in-colorado-springs-multiple-victims-reported/article/1564419
+https://twitter.com/gazette_robj/status/670362248632664064
+http://gazette.com/live-coverage-police-engaged-with-gunman-in-planned-parenthood-in-colorado-springs-multiple-victims-reported/article/1564419
+http://www.koaa.com/story/30624860/family-members-identify-female-civilian-victim-of-planned-parenthood-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-27-2015,Colorado Springs,8,,NULL,Injured,"http://www.kktv.com/home/headlines/Active-Shooter-Situation-At-Planned-Parenthood-356013081.html
+http://gazette.com/active-shooter-contained-near-planned-parenthood-in-colorado-springs-multiple-victims-reported/article/1564419
+https://twitter.com/gazette_robj/status/670362248632664064
+http://gazette.com/live-coverage-police-engaged-with-gunman-in-planned-parenthood-in-colorado-springs-multiple-victims-reported/article/1564419
+http://www.koaa.com/story/30624860/family-members-identify-female-civilian-victim-of-planned-parenthood-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-27-2015,Colorado Springs,8,,NULL,Injured,"http://www.kktv.com/home/headlines/Active-Shooter-Situation-At-Planned-Parenthood-356013081.html
+http://gazette.com/active-shooter-contained-near-planned-parenthood-in-colorado-springs-multiple-victims-reported/article/1564419
+https://twitter.com/gazette_robj/status/670362248632664064
+http://gazette.com/live-coverage-police-engaged-with-gunman-in-planned-parenthood-in-colorado-springs-multiple-victims-reported/article/1564419
+http://www.koaa.com/story/30624860/family-members-identify-female-civilian-victim-of-planned-parenthood-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-27-2015,Colorado Springs,8,,NULL,Injured,"http://www.kktv.com/home/headlines/Active-Shooter-Situation-At-Planned-Parenthood-356013081.html
+http://gazette.com/active-shooter-contained-near-planned-parenthood-in-colorado-springs-multiple-victims-reported/article/1564419
+https://twitter.com/gazette_robj/status/670362248632664064
+http://gazette.com/live-coverage-police-engaged-with-gunman-in-planned-parenthood-in-colorado-springs-multiple-victims-reported/article/1564419
+http://www.koaa.com/story/30624860/family-members-identify-female-civilian-victim-of-planned-parenthood-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-27-2015,Colorado Springs,8,,NULL,Injured,"http://www.kktv.com/home/headlines/Active-Shooter-Situation-At-Planned-Parenthood-356013081.html
+http://gazette.com/active-shooter-contained-near-planned-parenthood-in-colorado-springs-multiple-victims-reported/article/1564419
+https://twitter.com/gazette_robj/status/670362248632664064
+http://gazette.com/live-coverage-police-engaged-with-gunman-in-planned-parenthood-in-colorado-springs-multiple-victims-reported/article/1564419
+http://www.koaa.com/story/30624860/family-members-identify-female-civilian-victim-of-planned-parenthood-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-27-2015,Colorado Springs,8,,NULL,Injured,"http://www.kktv.com/home/headlines/Active-Shooter-Situation-At-Planned-Parenthood-356013081.html
+http://gazette.com/active-shooter-contained-near-planned-parenthood-in-colorado-springs-multiple-victims-reported/article/1564419
+https://twitter.com/gazette_robj/status/670362248632664064
+http://gazette.com/live-coverage-police-engaged-with-gunman-in-planned-parenthood-in-colorado-springs-multiple-victims-reported/article/1564419
+http://www.koaa.com/story/30624860/family-members-identify-female-civilian-victim-of-planned-parenthood-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-27-2015,Colorado Springs,8,,NULL,Injured,"http://www.kktv.com/home/headlines/Active-Shooter-Situation-At-Planned-Parenthood-356013081.html
+http://gazette.com/active-shooter-contained-near-planned-parenthood-in-colorado-springs-multiple-victims-reported/article/1564419
+https://twitter.com/gazette_robj/status/670362248632664064
+http://gazette.com/live-coverage-police-engaged-with-gunman-in-planned-parenthood-in-colorado-springs-multiple-victims-reported/article/1564419
+http://www.koaa.com/story/30624860/family-members-identify-female-civilian-victim-of-planned-parenthood-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-27-2015,Colorado Springs,8,,NULL,Injured,"http://www.kktv.com/home/headlines/Active-Shooter-Situation-At-Planned-Parenthood-356013081.html
+http://gazette.com/active-shooter-contained-near-planned-parenthood-in-colorado-springs-multiple-victims-reported/article/1564419
+https://twitter.com/gazette_robj/status/670362248632664064
+http://gazette.com/live-coverage-police-engaged-with-gunman-in-planned-parenthood-in-colorado-springs-multiple-victims-reported/article/1564419
+http://www.koaa.com/story/30624860/family-members-identify-female-civilian-victim-of-planned-parenthood-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-27-2015,Colorado Springs,8,,NULL,Injured,"http://www.kktv.com/home/headlines/Active-Shooter-Situation-At-Planned-Parenthood-356013081.html
+http://gazette.com/active-shooter-contained-near-planned-parenthood-in-colorado-springs-multiple-victims-reported/article/1564419
+https://twitter.com/gazette_robj/status/670362248632664064
+http://gazette.com/live-coverage-police-engaged-with-gunman-in-planned-parenthood-in-colorado-springs-multiple-victims-reported/article/1564419
+http://www.koaa.com/story/30624860/family-members-identify-female-civilian-victim-of-planned-parenthood-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,Brownsville,48,,NULL,Injured,"http://www.brownsvilleherald.com/news/local/article_e470a184-9323-11e5-9071-4fed529e7723.html
+http://www.brownsvilleherald.com/news/local/article_e7877df0-99dd-11e5-b6af-ef64bf2b9431.html",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,Brownsville,48,,NULL,Injured,"http://www.brownsvilleherald.com/news/local/article_e470a184-9323-11e5-9071-4fed529e7723.html
+http://www.brownsvilleherald.com/news/local/article_e7877df0-99dd-11e5-b6af-ef64bf2b9431.html",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,Brownsville,48,,NULL,Injured,"http://www.brownsvilleherald.com/news/local/article_e470a184-9323-11e5-9071-4fed529e7723.html
+http://www.brownsvilleherald.com/news/local/article_e7877df0-99dd-11e5-b6af-ef64bf2b9431.html",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,Brownsville,48,,NULL,Injured,"http://www.brownsvilleherald.com/news/local/article_e470a184-9323-11e5-9071-4fed529e7723.html
+http://www.brownsvilleherald.com/news/local/article_e7877df0-99dd-11e5-b6af-ef64bf2b9431.html",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,North Charleston,45,25,Male,Injured,http://www.postandcourier.com/article/20151124/PC16/151129652/deadly-north-charleston-shootout-was-act-of-x2018-retaliation-x2019-documents-say,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,North Charleston,45,24,Male,Injured,http://www.postandcourier.com/article/20151124/PC16/151129652/deadly-north-charleston-shootout-was-act-of-x2018-retaliation-x2019-documents-say,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,North Charleston,45,,Male,Injured,http://www.postandcourier.com/article/20151124/PC16/151129652/deadly-north-charleston-shootout-was-act-of-x2018-retaliation-x2019-documents-say,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-23-2015,Minneapolis,27,43,Male,Injured,"http://www.startribune.com/several-people-were-shot-near-black-lives-matter-protest-site/353121881/
+http://www.startribune.com/police-searching-for-suspects-who-fired-into-crowd-at-blm-protest-outside-4th-precinct/353154811/
+http://www.startribune.com/latest-police-say-5-shot-near-minneapolis-protest-site/353127901/
+http://kstp.com/news/stories/s3974371.shtml?cat=1",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-23-2015,Minneapolis,27,19,Male,Injured,"http://www.startribune.com/several-people-were-shot-near-black-lives-matter-protest-site/353121881/
+http://www.startribune.com/police-searching-for-suspects-who-fired-into-crowd-at-blm-protest-outside-4th-precinct/353154811/
+http://www.startribune.com/latest-police-say-5-shot-near-minneapolis-protest-site/353127901/
+http://kstp.com/news/stories/s3974371.shtml?cat=1",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-23-2015,Minneapolis,27,24,Male,Injured,"http://www.startribune.com/several-people-were-shot-near-black-lives-matter-protest-site/353121881/
+http://www.startribune.com/police-searching-for-suspects-who-fired-into-crowd-at-blm-protest-outside-4th-precinct/353154811/
+http://www.startribune.com/latest-police-say-5-shot-near-minneapolis-protest-site/353127901/
+http://kstp.com/news/stories/s3974371.shtml?cat=1",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-23-2015,Minneapolis,27,38,Male,Injured,"http://www.startribune.com/several-people-were-shot-near-black-lives-matter-protest-site/353121881/
+http://www.startribune.com/police-searching-for-suspects-who-fired-into-crowd-at-blm-protest-outside-4th-precinct/353154811/
+http://www.startribune.com/latest-police-say-5-shot-near-minneapolis-protest-site/353127901/
+http://kstp.com/news/stories/s3974371.shtml?cat=1",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-23-2015,Minneapolis,27,,Male,Injured,"http://www.startribune.com/several-people-were-shot-near-black-lives-matter-protest-site/353121881/
+http://www.startribune.com/police-searching-for-suspects-who-fired-into-crowd-at-blm-protest-outside-4th-precinct/353154811/
+http://www.startribune.com/latest-police-say-5-shot-near-minneapolis-protest-site/353127901/
+http://kstp.com/news/stories/s3974371.shtml?cat=1",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-23-2015,Columbus,39,12,Female,Injured,"http://www.dispatch.com/content/stories/local/2015/11/23/Three-killed-in-police-shooting.html
+http://www.wtol.com/story/30589945/3-killed-child-injured-in-ohio-police-involved-shooting
+http://www.dispatch.com/content/stories/local/2015/11/24/Hilltop-shooting-witness.html",FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,New Orleans,22,14,Female,Injured,"http://www.nola.com/politics/index.ssf/2015/11/more_details_gunfire_erupts_at.html?utm_source=dlvr.it&utm_medium=twitter
+http://www.wwltv.com/story/news/crime/2015/11/22/several-shot-ninth-ward-playground/76237528/
+http://www.wdsu.com/news/local-news/new-orleans/several-people-injured-in-st-claude-shooting-nopd-says/36604972
+http://www.nola.com/crime/index.ssf/2015/11/at_least_10_victims_of_bunny_f.html#incart_river_index
+http://www.fox8live.com/story/30588162/10-women-7-men-wounded-in-9th-ward-playground-shooting-crimestoppers-reward-increased
+http://www.ksla.com/story/30591354/bunnyfriend-shootings-investigation-gets-little-cooperation-from-witnesses
+http://www.independenttribune.com/news/us/ap/police-id-suspect-in-new-orleans-shooting-that-wounded/article_e5f6dbd3-a0fe-5853-b41e-2223b5c9cb5b.html
+http://www.fox8live.com/story/30633115/bunny-friend-shooting-suspect-has-lengthy-criminal-history
+http://www.ksla.com/story/30671877/10000-reward-offered-for-tips-on-4-new-suspects-in-bunny-friend-shooting
+http://www.wdsu.com/news/local-news/new-orleans/nopd-identifies-4-more-suspects-in-bunny-friend-playground-shooting/36802264
+http://www.nola.com/crime/index.ssf/2015/12/bunny_friend_wheelchair_shooti.html
+http://www.theeagle.com/news/texas/charges-dropped-against-man-arrested-in-playground-shooting/article_04e83862-5aa7-59d3-8a9e-d2d63a3675a5.html
+http://www.ksla.com/story/30701037/2-more-named-as-suspects-in-bunny-friend-shooting
+http://www.wwltv.com/story/news/crime/2015/12/08/another-suspect-surrenders-playground-shooting/77011298/
+http://www.wwltv.com/story/news/crime/2015/12/10/6th-suspect-arrested-in-bunny-friend-shooting/77092520/
+http://www.ksla.com/story/30726236/another-suspected-bunny-friend-gunman-booked-thursday
+http://www.ksla.com/story/30726638/8th-suspect-arrested-in-bunny-friend-playground-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,New Orleans,22,16,Female,Injured,"http://www.nola.com/politics/index.ssf/2015/11/more_details_gunfire_erupts_at.html?utm_source=dlvr.it&utm_medium=twitter
+http://www.wwltv.com/story/news/crime/2015/11/22/several-shot-ninth-ward-playground/76237528/
+http://www.wdsu.com/news/local-news/new-orleans/several-people-injured-in-st-claude-shooting-nopd-says/36604972
+http://www.nola.com/crime/index.ssf/2015/11/at_least_10_victims_of_bunny_f.html#incart_river_index
+http://www.fox8live.com/story/30588162/10-women-7-men-wounded-in-9th-ward-playground-shooting-crimestoppers-reward-increased
+http://www.ksla.com/story/30591354/bunnyfriend-shootings-investigation-gets-little-cooperation-from-witnesses
+http://www.independenttribune.com/news/us/ap/police-id-suspect-in-new-orleans-shooting-that-wounded/article_e5f6dbd3-a0fe-5853-b41e-2223b5c9cb5b.html
+http://www.fox8live.com/story/30633115/bunny-friend-shooting-suspect-has-lengthy-criminal-history
+http://www.ksla.com/story/30671877/10000-reward-offered-for-tips-on-4-new-suspects-in-bunny-friend-shooting
+http://www.wdsu.com/news/local-news/new-orleans/nopd-identifies-4-more-suspects-in-bunny-friend-playground-shooting/36802264
+http://www.nola.com/crime/index.ssf/2015/12/bunny_friend_wheelchair_shooti.html
+http://www.theeagle.com/news/texas/charges-dropped-against-man-arrested-in-playground-shooting/article_04e83862-5aa7-59d3-8a9e-d2d63a3675a5.html
+http://www.ksla.com/story/30701037/2-more-named-as-suspects-in-bunny-friend-shooting
+http://www.wwltv.com/story/news/crime/2015/12/08/another-suspect-surrenders-playground-shooting/77011298/
+http://www.wwltv.com/story/news/crime/2015/12/10/6th-suspect-arrested-in-bunny-friend-shooting/77092520/
+http://www.ksla.com/story/30726236/another-suspected-bunny-friend-gunman-booked-thursday
+http://www.ksla.com/story/30726638/8th-suspect-arrested-in-bunny-friend-playground-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,New Orleans,22,17,Female,Injured,"http://www.nola.com/politics/index.ssf/2015/11/more_details_gunfire_erupts_at.html?utm_source=dlvr.it&utm_medium=twitter
+http://www.wwltv.com/story/news/crime/2015/11/22/several-shot-ninth-ward-playground/76237528/
+http://www.wdsu.com/news/local-news/new-orleans/several-people-injured-in-st-claude-shooting-nopd-says/36604972
+http://www.nola.com/crime/index.ssf/2015/11/at_least_10_victims_of_bunny_f.html#incart_river_index
+http://www.fox8live.com/story/30588162/10-women-7-men-wounded-in-9th-ward-playground-shooting-crimestoppers-reward-increased
+http://www.ksla.com/story/30591354/bunnyfriend-shootings-investigation-gets-little-cooperation-from-witnesses
+http://www.independenttribune.com/news/us/ap/police-id-suspect-in-new-orleans-shooting-that-wounded/article_e5f6dbd3-a0fe-5853-b41e-2223b5c9cb5b.html
+http://www.fox8live.com/story/30633115/bunny-friend-shooting-suspect-has-lengthy-criminal-history
+http://www.ksla.com/story/30671877/10000-reward-offered-for-tips-on-4-new-suspects-in-bunny-friend-shooting
+http://www.wdsu.com/news/local-news/new-orleans/nopd-identifies-4-more-suspects-in-bunny-friend-playground-shooting/36802264
+http://www.nola.com/crime/index.ssf/2015/12/bunny_friend_wheelchair_shooti.html
+http://www.theeagle.com/news/texas/charges-dropped-against-man-arrested-in-playground-shooting/article_04e83862-5aa7-59d3-8a9e-d2d63a3675a5.html
+http://www.ksla.com/story/30701037/2-more-named-as-suspects-in-bunny-friend-shooting
+http://www.wwltv.com/story/news/crime/2015/12/08/another-suspect-surrenders-playground-shooting/77011298/
+http://www.wwltv.com/story/news/crime/2015/12/10/6th-suspect-arrested-in-bunny-friend-shooting/77092520/
+http://www.ksla.com/story/30726236/another-suspected-bunny-friend-gunman-booked-thursday
+http://www.ksla.com/story/30726638/8th-suspect-arrested-in-bunny-friend-playground-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,New Orleans,22,19,Female,Injured,"http://www.nola.com/politics/index.ssf/2015/11/more_details_gunfire_erupts_at.html?utm_source=dlvr.it&utm_medium=twitter
+http://www.wwltv.com/story/news/crime/2015/11/22/several-shot-ninth-ward-playground/76237528/
+http://www.wdsu.com/news/local-news/new-orleans/several-people-injured-in-st-claude-shooting-nopd-says/36604972
+http://www.nola.com/crime/index.ssf/2015/11/at_least_10_victims_of_bunny_f.html#incart_river_index
+http://www.fox8live.com/story/30588162/10-women-7-men-wounded-in-9th-ward-playground-shooting-crimestoppers-reward-increased
+http://www.ksla.com/story/30591354/bunnyfriend-shootings-investigation-gets-little-cooperation-from-witnesses
+http://www.independenttribune.com/news/us/ap/police-id-suspect-in-new-orleans-shooting-that-wounded/article_e5f6dbd3-a0fe-5853-b41e-2223b5c9cb5b.html
+http://www.fox8live.com/story/30633115/bunny-friend-shooting-suspect-has-lengthy-criminal-history
+http://www.ksla.com/story/30671877/10000-reward-offered-for-tips-on-4-new-suspects-in-bunny-friend-shooting
+http://www.wdsu.com/news/local-news/new-orleans/nopd-identifies-4-more-suspects-in-bunny-friend-playground-shooting/36802264
+http://www.nola.com/crime/index.ssf/2015/12/bunny_friend_wheelchair_shooti.html
+http://www.theeagle.com/news/texas/charges-dropped-against-man-arrested-in-playground-shooting/article_04e83862-5aa7-59d3-8a9e-d2d63a3675a5.html
+http://www.ksla.com/story/30701037/2-more-named-as-suspects-in-bunny-friend-shooting
+http://www.wwltv.com/story/news/crime/2015/12/08/another-suspect-surrenders-playground-shooting/77011298/
+http://www.wwltv.com/story/news/crime/2015/12/10/6th-suspect-arrested-in-bunny-friend-shooting/77092520/
+http://www.ksla.com/story/30726236/another-suspected-bunny-friend-gunman-booked-thursday
+http://www.ksla.com/story/30726638/8th-suspect-arrested-in-bunny-friend-playground-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,New Orleans,22,21,Female,Injured,"http://www.nola.com/politics/index.ssf/2015/11/more_details_gunfire_erupts_at.html?utm_source=dlvr.it&utm_medium=twitter
+http://www.wwltv.com/story/news/crime/2015/11/22/several-shot-ninth-ward-playground/76237528/
+http://www.wdsu.com/news/local-news/new-orleans/several-people-injured-in-st-claude-shooting-nopd-says/36604972
+http://www.nola.com/crime/index.ssf/2015/11/at_least_10_victims_of_bunny_f.html#incart_river_index
+http://www.fox8live.com/story/30588162/10-women-7-men-wounded-in-9th-ward-playground-shooting-crimestoppers-reward-increased
+http://www.ksla.com/story/30591354/bunnyfriend-shootings-investigation-gets-little-cooperation-from-witnesses
+http://www.independenttribune.com/news/us/ap/police-id-suspect-in-new-orleans-shooting-that-wounded/article_e5f6dbd3-a0fe-5853-b41e-2223b5c9cb5b.html
+http://www.fox8live.com/story/30633115/bunny-friend-shooting-suspect-has-lengthy-criminal-history
+http://www.ksla.com/story/30671877/10000-reward-offered-for-tips-on-4-new-suspects-in-bunny-friend-shooting
+http://www.wdsu.com/news/local-news/new-orleans/nopd-identifies-4-more-suspects-in-bunny-friend-playground-shooting/36802264
+http://www.nola.com/crime/index.ssf/2015/12/bunny_friend_wheelchair_shooti.html
+http://www.theeagle.com/news/texas/charges-dropped-against-man-arrested-in-playground-shooting/article_04e83862-5aa7-59d3-8a9e-d2d63a3675a5.html
+http://www.ksla.com/story/30701037/2-more-named-as-suspects-in-bunny-friend-shooting
+http://www.wwltv.com/story/news/crime/2015/12/08/another-suspect-surrenders-playground-shooting/77011298/
+http://www.wwltv.com/story/news/crime/2015/12/10/6th-suspect-arrested-in-bunny-friend-shooting/77092520/
+http://www.ksla.com/story/30726236/another-suspected-bunny-friend-gunman-booked-thursday
+http://www.ksla.com/story/30726638/8th-suspect-arrested-in-bunny-friend-playground-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,New Orleans,22,21,Female,Injured,"http://www.nola.com/politics/index.ssf/2015/11/more_details_gunfire_erupts_at.html?utm_source=dlvr.it&utm_medium=twitter
+http://www.wwltv.com/story/news/crime/2015/11/22/several-shot-ninth-ward-playground/76237528/
+http://www.wdsu.com/news/local-news/new-orleans/several-people-injured-in-st-claude-shooting-nopd-says/36604972
+http://www.nola.com/crime/index.ssf/2015/11/at_least_10_victims_of_bunny_f.html#incart_river_index
+http://www.fox8live.com/story/30588162/10-women-7-men-wounded-in-9th-ward-playground-shooting-crimestoppers-reward-increased
+http://www.ksla.com/story/30591354/bunnyfriend-shootings-investigation-gets-little-cooperation-from-witnesses
+http://www.independenttribune.com/news/us/ap/police-id-suspect-in-new-orleans-shooting-that-wounded/article_e5f6dbd3-a0fe-5853-b41e-2223b5c9cb5b.html
+http://www.fox8live.com/story/30633115/bunny-friend-shooting-suspect-has-lengthy-criminal-history
+http://www.ksla.com/story/30671877/10000-reward-offered-for-tips-on-4-new-suspects-in-bunny-friend-shooting
+http://www.wdsu.com/news/local-news/new-orleans/nopd-identifies-4-more-suspects-in-bunny-friend-playground-shooting/36802264
+http://www.nola.com/crime/index.ssf/2015/12/bunny_friend_wheelchair_shooti.html
+http://www.theeagle.com/news/texas/charges-dropped-against-man-arrested-in-playground-shooting/article_04e83862-5aa7-59d3-8a9e-d2d63a3675a5.html
+http://www.ksla.com/story/30701037/2-more-named-as-suspects-in-bunny-friend-shooting
+http://www.wwltv.com/story/news/crime/2015/12/08/another-suspect-surrenders-playground-shooting/77011298/
+http://www.wwltv.com/story/news/crime/2015/12/10/6th-suspect-arrested-in-bunny-friend-shooting/77092520/
+http://www.ksla.com/story/30726236/another-suspected-bunny-friend-gunman-booked-thursday
+http://www.ksla.com/story/30726638/8th-suspect-arrested-in-bunny-friend-playground-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,New Orleans,22,21,Female,Injured,"http://www.nola.com/politics/index.ssf/2015/11/more_details_gunfire_erupts_at.html?utm_source=dlvr.it&utm_medium=twitter
+http://www.wwltv.com/story/news/crime/2015/11/22/several-shot-ninth-ward-playground/76237528/
+http://www.wdsu.com/news/local-news/new-orleans/several-people-injured-in-st-claude-shooting-nopd-says/36604972
+http://www.nola.com/crime/index.ssf/2015/11/at_least_10_victims_of_bunny_f.html#incart_river_index
+http://www.fox8live.com/story/30588162/10-women-7-men-wounded-in-9th-ward-playground-shooting-crimestoppers-reward-increased
+http://www.ksla.com/story/30591354/bunnyfriend-shootings-investigation-gets-little-cooperation-from-witnesses
+http://www.independenttribune.com/news/us/ap/police-id-suspect-in-new-orleans-shooting-that-wounded/article_e5f6dbd3-a0fe-5853-b41e-2223b5c9cb5b.html
+http://www.fox8live.com/story/30633115/bunny-friend-shooting-suspect-has-lengthy-criminal-history
+http://www.ksla.com/story/30671877/10000-reward-offered-for-tips-on-4-new-suspects-in-bunny-friend-shooting
+http://www.wdsu.com/news/local-news/new-orleans/nopd-identifies-4-more-suspects-in-bunny-friend-playground-shooting/36802264
+http://www.nola.com/crime/index.ssf/2015/12/bunny_friend_wheelchair_shooti.html
+http://www.theeagle.com/news/texas/charges-dropped-against-man-arrested-in-playground-shooting/article_04e83862-5aa7-59d3-8a9e-d2d63a3675a5.html
+http://www.ksla.com/story/30701037/2-more-named-as-suspects-in-bunny-friend-shooting
+http://www.wwltv.com/story/news/crime/2015/12/08/another-suspect-surrenders-playground-shooting/77011298/
+http://www.wwltv.com/story/news/crime/2015/12/10/6th-suspect-arrested-in-bunny-friend-shooting/77092520/
+http://www.ksla.com/story/30726236/another-suspected-bunny-friend-gunman-booked-thursday
+http://www.ksla.com/story/30726638/8th-suspect-arrested-in-bunny-friend-playground-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,New Orleans,22,22,Female,Injured,"http://www.nola.com/politics/index.ssf/2015/11/more_details_gunfire_erupts_at.html?utm_source=dlvr.it&utm_medium=twitter
+http://www.wwltv.com/story/news/crime/2015/11/22/several-shot-ninth-ward-playground/76237528/
+http://www.wdsu.com/news/local-news/new-orleans/several-people-injured-in-st-claude-shooting-nopd-says/36604972
+http://www.nola.com/crime/index.ssf/2015/11/at_least_10_victims_of_bunny_f.html#incart_river_index
+http://www.fox8live.com/story/30588162/10-women-7-men-wounded-in-9th-ward-playground-shooting-crimestoppers-reward-increased
+http://www.ksla.com/story/30591354/bunnyfriend-shootings-investigation-gets-little-cooperation-from-witnesses
+http://www.independenttribune.com/news/us/ap/police-id-suspect-in-new-orleans-shooting-that-wounded/article_e5f6dbd3-a0fe-5853-b41e-2223b5c9cb5b.html
+http://www.fox8live.com/story/30633115/bunny-friend-shooting-suspect-has-lengthy-criminal-history
+http://www.ksla.com/story/30671877/10000-reward-offered-for-tips-on-4-new-suspects-in-bunny-friend-shooting
+http://www.wdsu.com/news/local-news/new-orleans/nopd-identifies-4-more-suspects-in-bunny-friend-playground-shooting/36802264
+http://www.nola.com/crime/index.ssf/2015/12/bunny_friend_wheelchair_shooti.html
+http://www.theeagle.com/news/texas/charges-dropped-against-man-arrested-in-playground-shooting/article_04e83862-5aa7-59d3-8a9e-d2d63a3675a5.html
+http://www.ksla.com/story/30701037/2-more-named-as-suspects-in-bunny-friend-shooting
+http://www.wwltv.com/story/news/crime/2015/12/08/another-suspect-surrenders-playground-shooting/77011298/
+http://www.wwltv.com/story/news/crime/2015/12/10/6th-suspect-arrested-in-bunny-friend-shooting/77092520/
+http://www.ksla.com/story/30726236/another-suspected-bunny-friend-gunman-booked-thursday
+http://www.ksla.com/story/30726638/8th-suspect-arrested-in-bunny-friend-playground-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,New Orleans,22,22,Female,Injured,"http://www.nola.com/politics/index.ssf/2015/11/more_details_gunfire_erupts_at.html?utm_source=dlvr.it&utm_medium=twitter
+http://www.wwltv.com/story/news/crime/2015/11/22/several-shot-ninth-ward-playground/76237528/
+http://www.wdsu.com/news/local-news/new-orleans/several-people-injured-in-st-claude-shooting-nopd-says/36604972
+http://www.nola.com/crime/index.ssf/2015/11/at_least_10_victims_of_bunny_f.html#incart_river_index
+http://www.fox8live.com/story/30588162/10-women-7-men-wounded-in-9th-ward-playground-shooting-crimestoppers-reward-increased
+http://www.ksla.com/story/30591354/bunnyfriend-shootings-investigation-gets-little-cooperation-from-witnesses
+http://www.independenttribune.com/news/us/ap/police-id-suspect-in-new-orleans-shooting-that-wounded/article_e5f6dbd3-a0fe-5853-b41e-2223b5c9cb5b.html
+http://www.fox8live.com/story/30633115/bunny-friend-shooting-suspect-has-lengthy-criminal-history
+http://www.ksla.com/story/30671877/10000-reward-offered-for-tips-on-4-new-suspects-in-bunny-friend-shooting
+http://www.wdsu.com/news/local-news/new-orleans/nopd-identifies-4-more-suspects-in-bunny-friend-playground-shooting/36802264
+http://www.nola.com/crime/index.ssf/2015/12/bunny_friend_wheelchair_shooti.html
+http://www.theeagle.com/news/texas/charges-dropped-against-man-arrested-in-playground-shooting/article_04e83862-5aa7-59d3-8a9e-d2d63a3675a5.html
+http://www.ksla.com/story/30701037/2-more-named-as-suspects-in-bunny-friend-shooting
+http://www.wwltv.com/story/news/crime/2015/12/08/another-suspect-surrenders-playground-shooting/77011298/
+http://www.wwltv.com/story/news/crime/2015/12/10/6th-suspect-arrested-in-bunny-friend-shooting/77092520/
+http://www.ksla.com/story/30726236/another-suspected-bunny-friend-gunman-booked-thursday
+http://www.ksla.com/story/30726638/8th-suspect-arrested-in-bunny-friend-playground-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,New Orleans,22,29,Female,Injured,"http://www.nola.com/politics/index.ssf/2015/11/more_details_gunfire_erupts_at.html?utm_source=dlvr.it&utm_medium=twitter
+http://www.wwltv.com/story/news/crime/2015/11/22/several-shot-ninth-ward-playground/76237528/
+http://www.wdsu.com/news/local-news/new-orleans/several-people-injured-in-st-claude-shooting-nopd-says/36604972
+http://www.nola.com/crime/index.ssf/2015/11/at_least_10_victims_of_bunny_f.html#incart_river_index
+http://www.fox8live.com/story/30588162/10-women-7-men-wounded-in-9th-ward-playground-shooting-crimestoppers-reward-increased
+http://www.ksla.com/story/30591354/bunnyfriend-shootings-investigation-gets-little-cooperation-from-witnesses
+http://www.independenttribune.com/news/us/ap/police-id-suspect-in-new-orleans-shooting-that-wounded/article_e5f6dbd3-a0fe-5853-b41e-2223b5c9cb5b.html
+http://www.fox8live.com/story/30633115/bunny-friend-shooting-suspect-has-lengthy-criminal-history
+http://www.ksla.com/story/30671877/10000-reward-offered-for-tips-on-4-new-suspects-in-bunny-friend-shooting
+http://www.wdsu.com/news/local-news/new-orleans/nopd-identifies-4-more-suspects-in-bunny-friend-playground-shooting/36802264
+http://www.nola.com/crime/index.ssf/2015/12/bunny_friend_wheelchair_shooti.html
+http://www.theeagle.com/news/texas/charges-dropped-against-man-arrested-in-playground-shooting/article_04e83862-5aa7-59d3-8a9e-d2d63a3675a5.html
+http://www.ksla.com/story/30701037/2-more-named-as-suspects-in-bunny-friend-shooting
+http://www.wwltv.com/story/news/crime/2015/12/08/another-suspect-surrenders-playground-shooting/77011298/
+http://www.wwltv.com/story/news/crime/2015/12/10/6th-suspect-arrested-in-bunny-friend-shooting/77092520/
+http://www.ksla.com/story/30726236/another-suspected-bunny-friend-gunman-booked-thursday
+http://www.ksla.com/story/30726638/8th-suspect-arrested-in-bunny-friend-playground-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,New Orleans,22,10,Male,Injured,"http://www.nola.com/politics/index.ssf/2015/11/more_details_gunfire_erupts_at.html?utm_source=dlvr.it&utm_medium=twitter
+http://www.wwltv.com/story/news/crime/2015/11/22/several-shot-ninth-ward-playground/76237528/
+http://www.wdsu.com/news/local-news/new-orleans/several-people-injured-in-st-claude-shooting-nopd-says/36604972
+http://www.nola.com/crime/index.ssf/2015/11/at_least_10_victims_of_bunny_f.html#incart_river_index
+http://www.fox8live.com/story/30588162/10-women-7-men-wounded-in-9th-ward-playground-shooting-crimestoppers-reward-increased
+http://www.ksla.com/story/30591354/bunnyfriend-shootings-investigation-gets-little-cooperation-from-witnesses
+http://www.independenttribune.com/news/us/ap/police-id-suspect-in-new-orleans-shooting-that-wounded/article_e5f6dbd3-a0fe-5853-b41e-2223b5c9cb5b.html
+http://www.fox8live.com/story/30633115/bunny-friend-shooting-suspect-has-lengthy-criminal-history
+http://www.ksla.com/story/30671877/10000-reward-offered-for-tips-on-4-new-suspects-in-bunny-friend-shooting
+http://www.wdsu.com/news/local-news/new-orleans/nopd-identifies-4-more-suspects-in-bunny-friend-playground-shooting/36802264
+http://www.nola.com/crime/index.ssf/2015/12/bunny_friend_wheelchair_shooti.html
+http://www.theeagle.com/news/texas/charges-dropped-against-man-arrested-in-playground-shooting/article_04e83862-5aa7-59d3-8a9e-d2d63a3675a5.html
+http://www.ksla.com/story/30701037/2-more-named-as-suspects-in-bunny-friend-shooting
+http://www.wwltv.com/story/news/crime/2015/12/08/another-suspect-surrenders-playground-shooting/77011298/
+http://www.wwltv.com/story/news/crime/2015/12/10/6th-suspect-arrested-in-bunny-friend-shooting/77092520/
+http://www.ksla.com/story/30726236/another-suspected-bunny-friend-gunman-booked-thursday
+http://www.ksla.com/story/30726638/8th-suspect-arrested-in-bunny-friend-playground-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,New Orleans,22,21,Male,Injured,"http://www.nola.com/politics/index.ssf/2015/11/more_details_gunfire_erupts_at.html?utm_source=dlvr.it&utm_medium=twitter
+http://www.wwltv.com/story/news/crime/2015/11/22/several-shot-ninth-ward-playground/76237528/
+http://www.wdsu.com/news/local-news/new-orleans/several-people-injured-in-st-claude-shooting-nopd-says/36604972
+http://www.nola.com/crime/index.ssf/2015/11/at_least_10_victims_of_bunny_f.html#incart_river_index
+http://www.fox8live.com/story/30588162/10-women-7-men-wounded-in-9th-ward-playground-shooting-crimestoppers-reward-increased
+http://www.ksla.com/story/30591354/bunnyfriend-shootings-investigation-gets-little-cooperation-from-witnesses
+http://www.independenttribune.com/news/us/ap/police-id-suspect-in-new-orleans-shooting-that-wounded/article_e5f6dbd3-a0fe-5853-b41e-2223b5c9cb5b.html
+http://www.fox8live.com/story/30633115/bunny-friend-shooting-suspect-has-lengthy-criminal-history
+http://www.ksla.com/story/30671877/10000-reward-offered-for-tips-on-4-new-suspects-in-bunny-friend-shooting
+http://www.wdsu.com/news/local-news/new-orleans/nopd-identifies-4-more-suspects-in-bunny-friend-playground-shooting/36802264
+http://www.nola.com/crime/index.ssf/2015/12/bunny_friend_wheelchair_shooti.html
+http://www.theeagle.com/news/texas/charges-dropped-against-man-arrested-in-playground-shooting/article_04e83862-5aa7-59d3-8a9e-d2d63a3675a5.html
+http://www.ksla.com/story/30701037/2-more-named-as-suspects-in-bunny-friend-shooting
+http://www.wwltv.com/story/news/crime/2015/12/08/another-suspect-surrenders-playground-shooting/77011298/
+http://www.wwltv.com/story/news/crime/2015/12/10/6th-suspect-arrested-in-bunny-friend-shooting/77092520/
+http://www.ksla.com/story/30726236/another-suspected-bunny-friend-gunman-booked-thursday
+http://www.ksla.com/story/30726638/8th-suspect-arrested-in-bunny-friend-playground-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,New Orleans,22,22,Male,Injured,"http://www.nola.com/politics/index.ssf/2015/11/more_details_gunfire_erupts_at.html?utm_source=dlvr.it&utm_medium=twitter
+http://www.wwltv.com/story/news/crime/2015/11/22/several-shot-ninth-ward-playground/76237528/
+http://www.wdsu.com/news/local-news/new-orleans/several-people-injured-in-st-claude-shooting-nopd-says/36604972
+http://www.nola.com/crime/index.ssf/2015/11/at_least_10_victims_of_bunny_f.html#incart_river_index
+http://www.fox8live.com/story/30588162/10-women-7-men-wounded-in-9th-ward-playground-shooting-crimestoppers-reward-increased
+http://www.ksla.com/story/30591354/bunnyfriend-shootings-investigation-gets-little-cooperation-from-witnesses
+http://www.independenttribune.com/news/us/ap/police-id-suspect-in-new-orleans-shooting-that-wounded/article_e5f6dbd3-a0fe-5853-b41e-2223b5c9cb5b.html
+http://www.fox8live.com/story/30633115/bunny-friend-shooting-suspect-has-lengthy-criminal-history
+http://www.ksla.com/story/30671877/10000-reward-offered-for-tips-on-4-new-suspects-in-bunny-friend-shooting
+http://www.wdsu.com/news/local-news/new-orleans/nopd-identifies-4-more-suspects-in-bunny-friend-playground-shooting/36802264
+http://www.nola.com/crime/index.ssf/2015/12/bunny_friend_wheelchair_shooti.html
+http://www.theeagle.com/news/texas/charges-dropped-against-man-arrested-in-playground-shooting/article_04e83862-5aa7-59d3-8a9e-d2d63a3675a5.html
+http://www.ksla.com/story/30701037/2-more-named-as-suspects-in-bunny-friend-shooting
+http://www.wwltv.com/story/news/crime/2015/12/08/another-suspect-surrenders-playground-shooting/77011298/
+http://www.wwltv.com/story/news/crime/2015/12/10/6th-suspect-arrested-in-bunny-friend-shooting/77092520/
+http://www.ksla.com/story/30726236/another-suspected-bunny-friend-gunman-booked-thursday
+http://www.ksla.com/story/30726638/8th-suspect-arrested-in-bunny-friend-playground-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,New Orleans,22,22,Male,Injured,"http://www.nola.com/politics/index.ssf/2015/11/more_details_gunfire_erupts_at.html?utm_source=dlvr.it&utm_medium=twitter
+http://www.wwltv.com/story/news/crime/2015/11/22/several-shot-ninth-ward-playground/76237528/
+http://www.wdsu.com/news/local-news/new-orleans/several-people-injured-in-st-claude-shooting-nopd-says/36604972
+http://www.nola.com/crime/index.ssf/2015/11/at_least_10_victims_of_bunny_f.html#incart_river_index
+http://www.fox8live.com/story/30588162/10-women-7-men-wounded-in-9th-ward-playground-shooting-crimestoppers-reward-increased
+http://www.ksla.com/story/30591354/bunnyfriend-shootings-investigation-gets-little-cooperation-from-witnesses
+http://www.independenttribune.com/news/us/ap/police-id-suspect-in-new-orleans-shooting-that-wounded/article_e5f6dbd3-a0fe-5853-b41e-2223b5c9cb5b.html
+http://www.fox8live.com/story/30633115/bunny-friend-shooting-suspect-has-lengthy-criminal-history
+http://www.ksla.com/story/30671877/10000-reward-offered-for-tips-on-4-new-suspects-in-bunny-friend-shooting
+http://www.wdsu.com/news/local-news/new-orleans/nopd-identifies-4-more-suspects-in-bunny-friend-playground-shooting/36802264
+http://www.nola.com/crime/index.ssf/2015/12/bunny_friend_wheelchair_shooti.html
+http://www.theeagle.com/news/texas/charges-dropped-against-man-arrested-in-playground-shooting/article_04e83862-5aa7-59d3-8a9e-d2d63a3675a5.html
+http://www.ksla.com/story/30701037/2-more-named-as-suspects-in-bunny-friend-shooting
+http://www.wwltv.com/story/news/crime/2015/12/08/another-suspect-surrenders-playground-shooting/77011298/
+http://www.wwltv.com/story/news/crime/2015/12/10/6th-suspect-arrested-in-bunny-friend-shooting/77092520/
+http://www.ksla.com/story/30726236/another-suspected-bunny-friend-gunman-booked-thursday
+http://www.ksla.com/story/30726638/8th-suspect-arrested-in-bunny-friend-playground-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,New Orleans,22,29,Male,Injured,"http://www.nola.com/politics/index.ssf/2015/11/more_details_gunfire_erupts_at.html?utm_source=dlvr.it&utm_medium=twitter
+http://www.wwltv.com/story/news/crime/2015/11/22/several-shot-ninth-ward-playground/76237528/
+http://www.wdsu.com/news/local-news/new-orleans/several-people-injured-in-st-claude-shooting-nopd-says/36604972
+http://www.nola.com/crime/index.ssf/2015/11/at_least_10_victims_of_bunny_f.html#incart_river_index
+http://www.fox8live.com/story/30588162/10-women-7-men-wounded-in-9th-ward-playground-shooting-crimestoppers-reward-increased
+http://www.ksla.com/story/30591354/bunnyfriend-shootings-investigation-gets-little-cooperation-from-witnesses
+http://www.independenttribune.com/news/us/ap/police-id-suspect-in-new-orleans-shooting-that-wounded/article_e5f6dbd3-a0fe-5853-b41e-2223b5c9cb5b.html
+http://www.fox8live.com/story/30633115/bunny-friend-shooting-suspect-has-lengthy-criminal-history
+http://www.ksla.com/story/30671877/10000-reward-offered-for-tips-on-4-new-suspects-in-bunny-friend-shooting
+http://www.wdsu.com/news/local-news/new-orleans/nopd-identifies-4-more-suspects-in-bunny-friend-playground-shooting/36802264
+http://www.nola.com/crime/index.ssf/2015/12/bunny_friend_wheelchair_shooti.html
+http://www.theeagle.com/news/texas/charges-dropped-against-man-arrested-in-playground-shooting/article_04e83862-5aa7-59d3-8a9e-d2d63a3675a5.html
+http://www.ksla.com/story/30701037/2-more-named-as-suspects-in-bunny-friend-shooting
+http://www.wwltv.com/story/news/crime/2015/12/08/another-suspect-surrenders-playground-shooting/77011298/
+http://www.wwltv.com/story/news/crime/2015/12/10/6th-suspect-arrested-in-bunny-friend-shooting/77092520/
+http://www.ksla.com/story/30726236/another-suspected-bunny-friend-gunman-booked-thursday
+http://www.ksla.com/story/30726638/8th-suspect-arrested-in-bunny-friend-playground-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,New Orleans,22,37,Male,Injured,"http://www.nola.com/politics/index.ssf/2015/11/more_details_gunfire_erupts_at.html?utm_source=dlvr.it&utm_medium=twitter
+http://www.wwltv.com/story/news/crime/2015/11/22/several-shot-ninth-ward-playground/76237528/
+http://www.wdsu.com/news/local-news/new-orleans/several-people-injured-in-st-claude-shooting-nopd-says/36604972
+http://www.nola.com/crime/index.ssf/2015/11/at_least_10_victims_of_bunny_f.html#incart_river_index
+http://www.fox8live.com/story/30588162/10-women-7-men-wounded-in-9th-ward-playground-shooting-crimestoppers-reward-increased
+http://www.ksla.com/story/30591354/bunnyfriend-shootings-investigation-gets-little-cooperation-from-witnesses
+http://www.independenttribune.com/news/us/ap/police-id-suspect-in-new-orleans-shooting-that-wounded/article_e5f6dbd3-a0fe-5853-b41e-2223b5c9cb5b.html
+http://www.fox8live.com/story/30633115/bunny-friend-shooting-suspect-has-lengthy-criminal-history
+http://www.ksla.com/story/30671877/10000-reward-offered-for-tips-on-4-new-suspects-in-bunny-friend-shooting
+http://www.wdsu.com/news/local-news/new-orleans/nopd-identifies-4-more-suspects-in-bunny-friend-playground-shooting/36802264
+http://www.nola.com/crime/index.ssf/2015/12/bunny_friend_wheelchair_shooti.html
+http://www.theeagle.com/news/texas/charges-dropped-against-man-arrested-in-playground-shooting/article_04e83862-5aa7-59d3-8a9e-d2d63a3675a5.html
+http://www.ksla.com/story/30701037/2-more-named-as-suspects-in-bunny-friend-shooting
+http://www.wwltv.com/story/news/crime/2015/12/08/another-suspect-surrenders-playground-shooting/77011298/
+http://www.wwltv.com/story/news/crime/2015/12/10/6th-suspect-arrested-in-bunny-friend-shooting/77092520/
+http://www.ksla.com/story/30726236/another-suspected-bunny-friend-gunman-booked-thursday
+http://www.ksla.com/story/30726638/8th-suspect-arrested-in-bunny-friend-playground-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,Chicago,17,22,Male,Injured,http://chicago.suntimes.com/crime/7/71/1122687/four-shot-north-lawndale,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,Chicago,17,21,Male,Injured,http://chicago.suntimes.com/crime/7/71/1122687/four-shot-north-lawndale,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,Chicago,17,24,Male,Injured,http://chicago.suntimes.com/crime/7/71/1122687/four-shot-north-lawndale,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,Chicago,17,25,Female,Injured,http://chicago.suntimes.com/crime/7/71/1122687/four-shot-north-lawndale,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,Seattle,53,,Female,Injured,"http://www.seattlepi.com/local/komo/article/5-injured-after-drive-by-shooting-on-Capitol-Hill-6650198.php
+http://www.capitolhillseattle.com/2015/11/three-shot-at-harvard-and-pike/?utm_source=CapitolHillSeattle.com+List&utm_campaign=612b20c8e3-CHS_Daily_Subscriber_Mail_Morning10_19_2014&utm_medium=email&utm_term=0_caa1513de4-612b20c8e3-432482293
+https://twitter.com/SeattleFire
+http://www.seattletimes.com/seattle-news/crime/3-victims-of-capitol-hill-shooting-released-from-hospital/?utm_source=RSS&utm_medium=Referral&utm_campaign=RSS_seattle-news
+http://www.capitolhillseattle.com/2015/12/spd-report-on-broadwaypike-shooting-released/?utm_source=CapitolHillSeattle.com+List&utm_campaign=54a876ace8-CHS_Daily_Subscriber_Mail_Morning10_19_2014&utm_medium=email&utm_term=0_caa1513de4-54a876ace8-432482293",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,Seattle,53,,Female,Injured,"http://www.seattlepi.com/local/komo/article/5-injured-after-drive-by-shooting-on-Capitol-Hill-6650198.php
+http://www.capitolhillseattle.com/2015/11/three-shot-at-harvard-and-pike/?utm_source=CapitolHillSeattle.com+List&utm_campaign=612b20c8e3-CHS_Daily_Subscriber_Mail_Morning10_19_2014&utm_medium=email&utm_term=0_caa1513de4-612b20c8e3-432482293
+https://twitter.com/SeattleFire
+http://www.seattletimes.com/seattle-news/crime/3-victims-of-capitol-hill-shooting-released-from-hospital/?utm_source=RSS&utm_medium=Referral&utm_campaign=RSS_seattle-news
+http://www.capitolhillseattle.com/2015/12/spd-report-on-broadwaypike-shooting-released/?utm_source=CapitolHillSeattle.com+List&utm_campaign=54a876ace8-CHS_Daily_Subscriber_Mail_Morning10_19_2014&utm_medium=email&utm_term=0_caa1513de4-54a876ace8-432482293",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,Seattle,53,,Female,Injured,"http://www.seattlepi.com/local/komo/article/5-injured-after-drive-by-shooting-on-Capitol-Hill-6650198.php
+http://www.capitolhillseattle.com/2015/11/three-shot-at-harvard-and-pike/?utm_source=CapitolHillSeattle.com+List&utm_campaign=612b20c8e3-CHS_Daily_Subscriber_Mail_Morning10_19_2014&utm_medium=email&utm_term=0_caa1513de4-612b20c8e3-432482293
+https://twitter.com/SeattleFire
+http://www.seattletimes.com/seattle-news/crime/3-victims-of-capitol-hill-shooting-released-from-hospital/?utm_source=RSS&utm_medium=Referral&utm_campaign=RSS_seattle-news
+http://www.capitolhillseattle.com/2015/12/spd-report-on-broadwaypike-shooting-released/?utm_source=CapitolHillSeattle.com+List&utm_campaign=54a876ace8-CHS_Daily_Subscriber_Mail_Morning10_19_2014&utm_medium=email&utm_term=0_caa1513de4-54a876ace8-432482293",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,Seattle,53,,Male,Injured,"http://www.seattlepi.com/local/komo/article/5-injured-after-drive-by-shooting-on-Capitol-Hill-6650198.php
+http://www.capitolhillseattle.com/2015/11/three-shot-at-harvard-and-pike/?utm_source=CapitolHillSeattle.com+List&utm_campaign=612b20c8e3-CHS_Daily_Subscriber_Mail_Morning10_19_2014&utm_medium=email&utm_term=0_caa1513de4-612b20c8e3-432482293
+https://twitter.com/SeattleFire
+http://www.seattletimes.com/seattle-news/crime/3-victims-of-capitol-hill-shooting-released-from-hospital/?utm_source=RSS&utm_medium=Referral&utm_campaign=RSS_seattle-news
+http://www.capitolhillseattle.com/2015/12/spd-report-on-broadwaypike-shooting-released/?utm_source=CapitolHillSeattle.com+List&utm_campaign=54a876ace8-CHS_Daily_Subscriber_Mail_Morning10_19_2014&utm_medium=email&utm_term=0_caa1513de4-54a876ace8-432482293",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,Newburgh,36,,NULL,Injured,http://www.midhudsonnews.com/News/2015/November/22/Nb_shooting-22Nov15.htm,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,Newburgh,36,,NULL,Injured,http://www.midhudsonnews.com/News/2015/November/22/Nb_shooting-22Nov15.htm,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,Newburgh,36,,NULL,Injured,http://www.midhudsonnews.com/News/2015/November/22/Nb_shooting-22Nov15.htm,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-22-2015,Newburgh,36,,NULL,Injured,http://www.midhudsonnews.com/News/2015/November/22/Nb_shooting-22Nov15.htm,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-21-2015,Baltimore,24,26,Male,Injured,http://baltimore.cbslocal.com/2015/11/21/multiple-people-reportedly-shot-in-baltimore/,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-21-2015,Baltimore,24,14,NULL,Injured,http://baltimore.cbslocal.com/2015/11/21/multiple-people-reportedly-shot-in-baltimore/,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-21-2015,Baltimore,24,15,NULL,Injured,http://baltimore.cbslocal.com/2015/11/21/multiple-people-reportedly-shot-in-baltimore/,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-20-2015,Pittsburgh,42,,Male,Injured,"http://triblive.com/news/allegheny/9479922-74/shortly-east-least?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+alltribstories+%28TribLIVE+News%29#axzz3ryZTKKp2
+http://www.wtae.com/news/at-least-three-people-shot-in-east-pittsburgh/36564352
+http://www.wpxi.com/news/news/local/least-3-people-shot-east-pittsburgh/npRfP/",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-20-2015,Pittsburgh,42,,Male,Injured,"http://triblive.com/news/allegheny/9479922-74/shortly-east-least?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+alltribstories+%28TribLIVE+News%29#axzz3ryZTKKp2
+http://www.wtae.com/news/at-least-three-people-shot-in-east-pittsburgh/36564352
+http://www.wpxi.com/news/news/local/least-3-people-shot-east-pittsburgh/npRfP/",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-20-2015,Pittsburgh,42,,Male,Injured,"http://triblive.com/news/allegheny/9479922-74/shortly-east-least?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+alltribstories+%28TribLIVE+News%29#axzz3ryZTKKp2
+http://www.wtae.com/news/at-least-three-people-shot-in-east-pittsburgh/36564352
+http://www.wpxi.com/news/news/local/least-3-people-shot-east-pittsburgh/npRfP/",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-18-2015,Fresno,6,,Male,Injured,http://www.fresnobee.com/news/local/crime/article45430338.html,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-18-2015,Fresno,6,,Male,Injured,http://www.fresnobee.com/news/local/crime/article45430338.html,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-18-2015,Fresno,6,,Male,Injured,http://www.fresnobee.com/news/local/crime/article45430338.html,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-18-2015,Fresno,6,,Male,Injured,http://www.fresnobee.com/news/local/crime/article45430338.html,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-18-2015,Fresno,6,,Female,Injured,http://www.fresnobee.com/news/local/crime/article45430338.html,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-16-2015,Cherokee (county),1,,Male,Injured,http://www.wmcactionnews5.com/story/30527937/3-women-killed-man-shot-woman-kidnapped-in-cherokee-co,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE
+11-15-2015,Philadelphia,42,,NULL,Injured,http://www.nbcphiladelphia.com/news/local/Philadelphia-Chinese-Restaurant-Shooting-Gunman-350246221.html,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-15-2015,Philadelphia,42,,NULL,Injured,http://www.nbcphiladelphia.com/news/local/Philadelphia-Chinese-Restaurant-Shooting-Gunman-350246221.html,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-15-2015,Philadelphia,42,,NULL,Injured,http://www.nbcphiladelphia.com/news/local/Philadelphia-Chinese-Restaurant-Shooting-Gunman-350246221.html,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-15-2015,Philadelphia,42,,NULL,Injured,http://www.nbcphiladelphia.com/news/local/Philadelphia-Chinese-Restaurant-Shooting-Gunman-350246221.html,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-14-2015,Johnstown,42,29,Male,Injured,"http://www.wjactv.com/news/features/top-stories/stories/5-injured-overnight-shootings-johnstown-7599.shtml
+http://myinforms.com/en/a/19170726-5-injured-in-overnight-shootings-in-johnstown/
+http://www.wjactv.com/news/features/top-stories/stories/details-released-johnstown-shooting-7607.shtml
+http://www.wjactv.com/news/features/top-stories/stories/da-no-suspect-shootings-owner-building-not-known-7616.shtml",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-14-2015,Johnstown,42,34,Male,Injured,"http://www.wjactv.com/news/features/top-stories/stories/5-injured-overnight-shootings-johnstown-7599.shtml
+http://myinforms.com/en/a/19170726-5-injured-in-overnight-shootings-in-johnstown/
+http://www.wjactv.com/news/features/top-stories/stories/details-released-johnstown-shooting-7607.shtml
+http://www.wjactv.com/news/features/top-stories/stories/da-no-suspect-shootings-owner-building-not-known-7616.shtml",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-14-2015,Johnstown,42,31,Female,Injured,"http://www.wjactv.com/news/features/top-stories/stories/5-injured-overnight-shootings-johnstown-7599.shtml
+http://myinforms.com/en/a/19170726-5-injured-in-overnight-shootings-in-johnstown/
+http://www.wjactv.com/news/features/top-stories/stories/details-released-johnstown-shooting-7607.shtml
+http://www.wjactv.com/news/features/top-stories/stories/da-no-suspect-shootings-owner-building-not-known-7616.shtml",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-14-2015,Johnstown,42,39,Male,Injured,"http://www.wjactv.com/news/features/top-stories/stories/5-injured-overnight-shootings-johnstown-7599.shtml
+http://myinforms.com/en/a/19170726-5-injured-in-overnight-shootings-in-johnstown/
+http://www.wjactv.com/news/features/top-stories/stories/details-released-johnstown-shooting-7607.shtml
+http://www.wjactv.com/news/features/top-stories/stories/da-no-suspect-shootings-owner-building-not-known-7616.shtml",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-13-2015,Jacksonville,12,22,Female,Injured,http://www.firstcoastnews.com/story/news/2015/11/13/jso-conducting-death-investigation-on-northside/75728982/,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-9-2015,Indianapolis,18,,Male,Injured,"http://fox59.com/2015/11/09/multiple-people-shot-on-near-east-side-early-monday-morning/
+http://wishtv.com/2015/11/09/4-people-shot-in-indy-police-search-for-shooter/
+http://www.tribtown.com/view/story/0fdd7c35d7574862885b60cc195a13fb/IN--Dice-Game-Shooting
+http://fox59.com/2015/11/17/three-men-face-murder-charges-police-say-they-killed-two-men-during-illegal-dice-game/",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-9-2015,Indianapolis,18,,Male,Injured,"http://fox59.com/2015/11/09/multiple-people-shot-on-near-east-side-early-monday-morning/
+http://wishtv.com/2015/11/09/4-people-shot-in-indy-police-search-for-shooter/
+http://www.tribtown.com/view/story/0fdd7c35d7574862885b60cc195a13fb/IN--Dice-Game-Shooting
+http://fox59.com/2015/11/17/three-men-face-murder-charges-police-say-they-killed-two-men-during-illegal-dice-game/",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-6-2015,Bakersfield,6,21,Female,Injured,http://www.turnto23.com/news/local-news/3-adults-15-year-old-girl-injured-in-se-bakersfield-shooting,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-6-2015,Bakersfield,6,,NULL,Injured,http://www.turnto23.com/news/local-news/3-adults-15-year-old-girl-injured-in-se-bakersfield-shooting,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-6-2015,Bakersfield,6,,NULL,Injured,http://www.turnto23.com/news/local-news/3-adults-15-year-old-girl-injured-in-se-bakersfield-shooting,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-6-2015,Bakersfield,6,,NULL,Injured,http://www.turnto23.com/news/local-news/3-adults-15-year-old-girl-injured-in-se-bakersfield-shooting,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-8-2015,Warren,26,,NULL,Injured,"http://www.freep.com/story/news/local/michigan/macomb/2015/11/08/shooting-warren/75412698/
+http://www.wxyz.com/news/region/macomb-county/four-shot-two-critically-injured-in-shooting-at-detroits-finsest-hall-in-warren",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-8-2015,Warren,26,,NULL,Injured,"http://www.freep.com/story/news/local/michigan/macomb/2015/11/08/shooting-warren/75412698/
+http://www.wxyz.com/news/region/macomb-county/four-shot-two-critically-injured-in-shooting-at-detroits-finsest-hall-in-warren",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-8-2015,Warren,26,,NULL,Injured,"http://www.freep.com/story/news/local/michigan/macomb/2015/11/08/shooting-warren/75412698/
+http://www.wxyz.com/news/region/macomb-county/four-shot-two-critically-injured-in-shooting-at-detroits-finsest-hall-in-warren",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-8-2015,Warren,26,,NULL,Injured,"http://www.freep.com/story/news/local/michigan/macomb/2015/11/08/shooting-warren/75412698/
+http://www.wxyz.com/news/region/macomb-county/four-shot-two-critically-injured-in-shooting-at-detroits-finsest-hall-in-warren",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-8-2015,Des Moines,19,25,Female,Injured,"http://www.kwwl.com/story/30465355/2015/11/08/fight-outside-des-moines-nightclub-leads-to-fatal-shooting
+http://www.kcci.com/news/names-of-victims-in-nightclub-shooting-released/36366850",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-8-2015,Des Moines,19,19,Male,Injured,"http://www.kwwl.com/story/30465355/2015/11/08/fight-outside-des-moines-nightclub-leads-to-fatal-shooting
+http://www.kcci.com/news/names-of-victims-in-nightclub-shooting-released/36366850",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-8-2015,Des Moines,19,33,Male,Injured,"http://www.kwwl.com/story/30465355/2015/11/08/fight-outside-des-moines-nightclub-leads-to-fatal-shooting
+http://www.kcci.com/news/names-of-victims-in-nightclub-shooting-released/36366850",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-7-2015,Denver,8,,NULL,Injured,"http://gazette.com/shooting-in-denver-leaves-1-dead-3-wounded/article/1562812
+http://www.denverpost.com/news/ci_29085984/one-dead-three-wounded-after-denver-shooting?source=most_viewed
+http://www.9news.com/story/news/crime/2015/11/09/bayaud-bannock-victim-identified/75459690/",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-7-2015,Denver,8,,NULL,Injured,"http://gazette.com/shooting-in-denver-leaves-1-dead-3-wounded/article/1562812
+http://www.denverpost.com/news/ci_29085984/one-dead-three-wounded-after-denver-shooting?source=most_viewed
+http://www.9news.com/story/news/crime/2015/11/09/bayaud-bannock-victim-identified/75459690/",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-7-2015,Denver,8,,NULL,Injured,"http://gazette.com/shooting-in-denver-leaves-1-dead-3-wounded/article/1562812
+http://www.denverpost.com/news/ci_29085984/one-dead-three-wounded-after-denver-shooting?source=most_viewed
+http://www.9news.com/story/news/crime/2015/11/09/bayaud-bannock-victim-identified/75459690/",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-3-2015,Jacksonville,12,,Male,Injured,"http://www.news4jax.com/news/1-dead-in-northwest-jacksonville/36241146
+http://jacksonville.com/news/crime/2015-11-04/story/jacksonville-police-locate-second-body-after-drive-shooting-near-edward
+http://www.news4jax.com/news/police-identify-man-killed-in-driveby-in-nw-jax/36253734",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-3-2015,Jacksonville,12,,Male,Injured,"http://www.news4jax.com/news/1-dead-in-northwest-jacksonville/36241146
+http://jacksonville.com/news/crime/2015-11-04/story/jacksonville-police-locate-second-body-after-drive-shooting-near-edward
+http://www.news4jax.com/news/police-identify-man-killed-in-driveby-in-nw-jax/36253734",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+11-3-2015,Jacksonville,12,,Male,Injured,"http://www.news4jax.com/news/1-dead-in-northwest-jacksonville/36241146
+http://jacksonville.com/news/crime/2015-11-04/story/jacksonville-police-locate-second-body-after-drive-shooting-near-edward
+http://www.news4jax.com/news/police-identify-man-killed-in-driveby-in-nw-jax/36253734",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+10-28-2015,Houma,22,19,Male,Injured,"http://www.ksla.com/story/30378520/houma-pd-one-dead-one-injured-in-shooting
+http://www.fox8live.com/story/30386078/arrest-warrants-issued-for-suspects-in-houma-quadruple-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+10-28-2015,Houma,22,25,Male,Injured,"http://www.ksla.com/story/30378520/houma-pd-one-dead-one-injured-in-shooting
+http://www.fox8live.com/story/30386078/arrest-warrants-issued-for-suspects-in-houma-quadruple-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+10-28-2015,Houma,22,24,Male,Injured,"http://www.ksla.com/story/30378520/houma-pd-one-dead-one-injured-in-shooting
+http://www.fox8live.com/story/30386078/arrest-warrants-issued-for-suspects-in-houma-quadruple-shooting",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE

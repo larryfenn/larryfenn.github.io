@@ -1,0 +1,11 @@
+date,city,state,age,gender,status,source,accident,defense,defense3,mass
+12-9-2015,Detroit,26,,Female,Injured,"http://www.wxyz.com/news/region/detroit/pizza-delivery-man-shot-in-what-may-be-a-botched-robbery-in-detroit
+http://www.freep.com/story/news/local/michigan/detroit/2015/12/09/detroit-police-gunfire-exchanged-during-pizza-delivery/77074552/",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+12-3-2015,Carrollton,13,,Male,Injured,"http://www.wsbtv.com/news/news/local/two-shot-near-university-west-georgia/npb7F/
+http://www.ajc.com/news/news/crime-law/shooting-wounds-two-near-university-of-west-georgi/npcFZ/",FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE
+12-3-2015,Carrollton,13,,Male,Injured,"http://www.wsbtv.com/news/news/local/two-shot-near-university-west-georgia/npb7F/
+http://www.ajc.com/news/news/crime-law/shooting-wounds-two-near-university-of-west-georgi/npcFZ/",FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE
+10-10-2015,Louisville,21,,Male,Injured,http://www.wave3.com/story/30660354/police-arrest-suspect-accused-of-shooting-robbing-man,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+12-1-2015,North Las Vegas,32,,Male,Injured,"http://www.ktnv.com/news/person-critically-shot-after-robbery-in-north-las-vegas
+http://www.fox5vegas.com/story/30645829/person-shot-injured-during-north-las-vegas-robbery",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+11-12-2015,Los Angeles,6,,Female,Injured,http://www.nbclosangeles.com/news/local/3-Injured-Following-Shooting-in-South-LA-347041992.html,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE

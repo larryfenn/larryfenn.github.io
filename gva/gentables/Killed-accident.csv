@@ -1,0 +1,103 @@
+date,state,age,gender,status,source,accident,defense,defense3,mass
+12-11-2015,Terrebonne (county),22,23,Male,Killed,"http://www.katc.com/story/30726233/morgan-city-man-dies-after-shooting-in-terrebonne-parish
+http://www.houmatoday.com/article/20151211/HURBLOG/151219952/1223?Title=Man-charged-in-fatal-Jennings-Lane-shooting",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+12-9-2015,Hoffman Estates,17,31,Male,Killed,https://theoldreader.com/folders/558e4ad9fea0e7b60c000518,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+12-10-2015,Universal City,48,17,Male,Killed,"http://www.kvue.com/story/news/local/2015/12/10/teen-critically-injured-after-accidentally-shooting-himself-head/77083292/
+http://www.khou.com/story/news/2015/12/10/teen-dies-self-inflicted-gunshot-wound/77127842/",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+12-9-2015,Dallas,48,11,Male,Killed,http://www.star-telegram.com/news/state/texas/article48971175.html,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+12-9-2015,Dallas,48,11,Male,Killed,http://dfw.cbslocal.com/2015/12/09/child-accidentally-shoots-kills-himself-say-dallas-police/,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+12-7-2015,Kingston,5,42,Male,Killed,http://www.thv11.com/story/news/2015/12/05/newton-county-deer-hunter-dies-in-accidental-shooting/76831748/,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+12-5-2015,Englewood,8,18,Male,Killed,http://denver.cbslocal.com/2015/12/06/deadly-shooting-of-18-year-old-may-have-been-accident/,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+12-4-2015,Baton Rouge,22,16,Male,Killed,"http://www.ksla.com/story/30670349/brpd-investigating-fatal-shooting-on-spain-st
+http://theadvocate.com/news/14188822-123/police-say-juvenile-shot-killed",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+12-3-2015,Webb (county),48,16,Male,Killed,http://www.kltv.com/story/30668662/whitehouse-teen-who-died-in-hunting-accident-touched-many-peoples-lives,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-21-2015,Denver,8,,Male,Killed,http://www.9news.com/story/news/crime/2015/12/01/denver-russian-roulette-shooting/76634362/,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-29-2015,Spencer,55,50,Male,Killed,http://www.wausaudailyherald.com/story/news/2015/11/30/hunter-dies-town-brighton-marathon-county/76552980/,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-28-2015,Jonesboro,5,15,Male,Killed,"http://www.arkansasonline.com/news/2015/nov/30/boy-15-killed-after-accidentally-shooting-himself-/?news-arkansas
+http://katv.com/news/local/jonesboro-police-15-year-old-killed-in-accidental-shooting",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-29-2015,Wayne (county),37,19,Male,Killed,http://www.wral.com/19-year-old-killed-while-hunting-in-wayne-county/15145283/,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-29-2015,Itasca (county),27,17,Male,Killed,"http://www.fox21online.com/news/local-news/teen-accidentally-shot-and-killed-in-itasca-county/36718084
+http://www.startribune.com/911-caller-says-18-year-old-accidentally-shot-to-death-friend-in-itasca-co/359573841/",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-27-2015,Palm Beach Gardens (Riviera Beach),12,16,Male,Killed,http://www.wpbf.com/news/1-dead-in-riviera-beach-shooting/36694672,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-28-2015,Rome,36,0,Male,Killed,"http://m.uticaod.com/article/20151128/NEWS/151129426/13406/NEWS
+http://www.wktv.com/news/Mothers_boyfriend_charged_in_connection_with_babys_death_in_Rome.html
+http://www.uticaod.com/article/20151201/NEWS/151209988/1998/NEWS",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-28-2015,Gary,18,16,Male,Killed,"http://chicago.suntimes.com/news/7/71/1136173/boy-15-shot-death-gary
+http://www.nwitimes.com/news/local/lake/shooting-that-left-gary-teen-dead-might-have-been-accidental/article_e4e0c983-adad-5cd4-b0ae-148d2311150c.html",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-28-2015,Atlanta,13,6,Female,Killed,"http://www.ledger-enquirer.com/news/state/georgia/article46921810.html
+http://www.ajc.com/news/news/crime-law/cops-6-year-old-girl-accidentally-shot-in-atlanta-/npXxZ/
+http://www.ajc.com/news/news/crime-law/cops-6-year-old-atlanta-girl-shot-herself-dad-char/npYJf/",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-23-2015,Mount Morris,55,56,Male,Killed,"http://fox11online.com/sports/deer-hunt-2015/authorities-asking-for-information-in-accidental-hunting-shooting
+http://www.channel3000.com/news/authorities-find-person-in-hunters-fatal-shooting/36660964",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-22-2015,Caledonia,55,39,Male,Killed,http://www.channel3000.com/news/hunter-killed-in-accidental-shooting/36611392,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-21-2015,Goodlettsville,47,5,Male,Killed,"http://www.wsmv.com/story/30577879/5-year-old-shot-and-killed-in-goodlettsville
+http://wkrn.com/2015/11/21/police-investigating-fatal-shooting-in-goodlettsville/
+http://wjhl.com/2015/11/23/goodlettsville-tenn-police-say-5-year-old-boy-was-shot-by-older-sibling/",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-20-2015,Overland Park,20,23,Male,Killed,"http://www.kctv5.com/story/30575830/1-dead-after-accidental-shooting-at-overland-park-apartment#ixzz3s9HrymVd
+http://www.kmbc.com/news/1-dies-in-accidental-shooting-in-overland-park/36588690",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-19-2015,Port Saint Lucie,12,47,Female,Killed,http://cbs12.com/news/top-stories/stories/man-says-he-accidentally-shot-his-fiance-st-lucie-county-31358.shtml,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-19-2015,Saint Gabriel (Iberville),22,15,Male,Killed,http://www.ksla.com/story/30570039/accidental-shooting-leaves-shooters-15-year-old-cousin-dead#.Vk_8ZR1pymw.twitter,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-19-2015,Bohannon,51,13,Male,Killed,"http://wavy.com/2015/11/20/mathews-county-teen-dies-in-hunting-accident/
+http://wtkr.com/2015/11/20/teen-killed-in-mathews-co-hunting-accident/",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-19-2015,Saint Lucie (county),12,47,Female,Killed,http://www.wptv.com/news/region-st-lucie-county/st-lucie-county-man-says-he-accidentally-killed-fiance,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+10-15-2015,Las Vegas,32,16,Female,Killed,"http://www.ktnv.com/news/grand-jury-indicts-teen-for-murder-of-16-year-old-girl
+http://www.reviewjournal.com/news/las-vegas/teen-indicted-execution-16-year-old-girlfriend
+http://www.ktnv.com/news/grand-jury-indicts-teen-for-murder-of-16-year-old-girl",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-14-2015,Rosebud (Yankton Indian Reservation),46,54,Male,Killed,http://siouxcityjournal.com/ap/state/yankton-man-dies-in-weekend-hunting-accident-on-reservation/article_fd6693c7-1e7e-5233-8f8e-983f671a355e.html,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-18-2015,Little Rock,5,6,Male,Killed,"http://www.arkansasonline.com/news/2015/nov/18/child-shot-little-rock-police-investigating/
+http://www.arkansasonline.com/news/2015/nov/19/lr-boy-6-fatally-shot-aunt-charged-with/?news
+http://www.scpr.org/programs/airtalk/2015/12/01/45403/on-prosecuting-gun-owning-parents-when-children-ac/",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-17-2015,Benton,5,2,Male,Killed,"http://www.thv11.com/story/news/local/2015/11/17/benton-police-investigating-shooting-death-of-2-year-old/75960050/
+http://www.arkansasmatters.com/news/local-news/police-benton-child-dead-after-being-shot
+http://katv.com/news/local/bond-set-at-100000-for-parents-of-2-year-old-who-shot-self",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-16-2015,Bath,23,22,Female,Killed,"http://www.wcsh6.com/story/news/local/2015/11/16/bath-police-woman-shot-head-shaws-parking-lot/75896888/
+https://bangordailynews.com/2015/11/16/news/midcoast/one-hurt-in-accidental-shooting-at-shaws-in-bath/?ref=topStories5
+http://www.wcvb.com/news/woman-shot-while-sitting-in-car-at-shaws-supermarket-in-bath/36495746
+http://www.centralmaine.com/2015/11/19/woman-shot-in-bath-supermarket-parking-lot-dies-in-hospital/",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-15-2015,Rock Hill,45,3,Male,Killed,"http://www.mynews13.com/content/news/cfnews13/news/article.html/content/news/articles/ap/2015/11/16/Police_Toddler_shoots_and_kills_himself_after_getting_gun.html?cid=rss&utm_source=twitterfeed&utm_medium=twitter
+http://www.heraldonline.com/news/local/crime/article45046719.html",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-14-2015,Sevier (county),5,16,Male,Killed,"http://www.arkansasonline.com/news/2015/nov/16/boy-16-dead-after-accidentally-shot-brother-12/
+http://www.fox16.com/news/local-news/de-queen-student-dies-after-hunting-accident",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-16-2015,Millersburg,41,57,Male,Killed,"https://www.flashalert.net/news.html?id=2993
+http://democratherald.com/news/local/one-dead-in-millersburg-shooting/article_fe24c3c8-471e-5a92-90c8-9d5fbf6a62c2.html
+http://democratherald.com/news/local/millersburg-woman-charged-with-husband-s-monday-morning-death/article_1f420cd5-e407-5c21-a7ed-1a378b800f30.html",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-15-2015,York,42,12,Male,Killed,"http://www.ydr.com/story/news/local/2015/11/15/12-year-old-accidentally-shot-york/75822722/
+http://www.yorkdispatch.com/breaking/ci_29120530/police-12-year-old-boy-accidentally-shot-york
+http://www.local21news.com/news/features/top-stories/stories/A-12-year-old-is-dead-after-being-shot-in-residence-on-Richland-Ave-in-York-232078.shtml
+http://fox43.com/2015/11/15/12-year-old-boy-dies-following-sunday-morning-shooting-in-york/
+http://www.pennlive.com/news/2015/11/12_year_old_boy_fatal_shooting.html
+http://www.local21news.com/news/features/top-stories/stories/12-year-old-accidentally-shoots-and-kills-himself-with-older-brother-39-s-gun-232578.shtml",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-12-2015,Bronx,36,16,Female,Killed,"http://www.sfgate.com/news/article/NYPD-16-year-old-girl-shot-to-death-in-Bronx-6628778.php
+http://www.nbcnewyork.com/news/local/Teenage-Girl-Shot-Dead-Bronx-Identified-Zion-Willis-Brooklyn-347809081.html
+http://www.nydailynews.com/new-york/bronx/bronx-teen-fatally-shot-apartment-examining-pistol-article-1.2433837",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-7-2015,Tampa,12,,Female,Killed,http://www.wtsp.com/story/news/crime/2015/11/12/man-arrested-accidentally-shooting-woman-during-sex/75646104/,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+10-9-2015,Ashdown,5,,Male,Killed,http://www.kait8.com/story/30485993/father-speaks-out-after-2-arrested-in-death-of-son,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-11-2015,Jackson,13,2,Male,Killed,"http://www.wsbtv.com/news/news/local/2-year-old-killed-accidental-shooting/npLfh/
+http://www.wfsb.com/story/30496646/toddler-shoots-kills-himself-after-finding-loaded-gun
+http://m.wsbtv.com/news/news/local/man-turns-himself-after-2-year-old-killed-accident/npMjj/",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-7-2015,De Pere,55,21,Male,Killed,http://www.greenbaypressgazette.com/story/news/local/2015/11/09/de-pere-fatality-gunshot/75481772/,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-9-2015,Detroit,26,9,Male,Killed,"http://www.freep.com/story/news/local/michigan/detroit/2015/11/09/young-boy-shot-killed-detroits-west-side/75464476/
+http://www.freep.com/story/news/local/michigan/detroit/2015/11/12/detroit-boy-shot-father/75643966/",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-7-2015,Los Angeles,6,14,Male,Killed,http://ktla.com/2015/11/08/teen-boy-fatally-shot-in-east-los-angeles-prompting-investigation/,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-4-2015,Imperial,31,65,Male,Killed,http://www.chadrad.com/newsstory.cfm?story=38531,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-2-2015,Clarksville,47,21,Female,Killed,"http://www.wsmv.com/story/30435735/woman-shot-in-head-killed-in-clarksville
+http://www.theleafchronicle.com/story/news/crime/2015/11/03/woman-accidentally-shot-head-georgetown/75109004/",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-4-2015,Cypress,48,73,Female,Killed,"http://www.khou.com/story/news/crime/2015/11/04/constable-cancer-patient-shoots-3-before-killing-himself/75170766/
+http://www.fox7austin.com/news/texas/44501977-story
+http://www.chron.com/neighborhood/cyfair-news/article/2-dead-2-injured-in-home-shooting-in-Cypress-6610911.php
+http://www.khou.com/story/news/crime/2015/11/04/constable-cancer-patient-shoots-3-before-killing-himself/75170766/",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-4-2015,Cypress,48,77,Male,Killed,"http://www.khou.com/story/news/crime/2015/11/04/constable-cancer-patient-shoots-3-before-killing-himself/75170766/
+http://www.fox7austin.com/news/texas/44501977-story
+http://www.chron.com/neighborhood/cyfair-news/article/2-dead-2-injured-in-home-shooting-in-Cypress-6610911.php
+http://www.khou.com/story/news/crime/2015/11/04/constable-cancer-patient-shoots-3-before-killing-himself/75170766/",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-2-2015,Stamford,9,43,Female,Killed,"http://abc7ny.com/news/woman-fatally-shot-in-front-of-family-members-at-park-in-stamford/1066105/
+http://www.stamfordadvocate.com/news/article/Homicide-reported-in-Stamford-s-Leone-Park-6607137.php
+http://www.stamfordadvocate.com/news/article/Hidden-gun-found-in-Stamford-s-Lione-Park-murder-6665240.php",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+11-1-2015,Talladega,1,41,Male,Killed,http://www.annistonstar.com/the_daily_home/dh_news/talladega-police-family-member-fatally-shooting-relative-appears-accidental/article_b9fff458-81b3-11e5-800a-4bb429c0140e.html,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+10-31-2015,Aurora,17,25,Male,Killed,"http://www.chicagotribune.com/suburbs/aurora-beacon-news/crime/ct-abn-aurora-shooting-st-1103-20151102-story.html
+http://chicago.cbslocal.com/2015/11/02/police-bolingbrook-man-dead-after-accidentally-shooting-self-while-driving/",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+10-31-2015,Decatur,18,29,Male,Killed,http://www.decaturdailydemocrat.com/content/gunshot-death-ruled-accidental,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+10-30-2015,Houston,48,,Male,Killed,http://www.click2houston.com/news/veteran-dies-in-accidental-shooting-in-north-harris-county/36166884,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+10-26-2015,Pitt (county),37,57,Male,Killed,http://www.witn.com/home/headlines/Missing-hunter-found-dead-in-Pitt-County-337435141.html,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+10-27-2015,Acworth,13,2,Male,Killed,"http://www.cbs46.com/story/30368559/toddler-dead-in-accidental-shooting
+http://mdjonline.com/view/full_story/26934577/article-Police-ID-father-of-boy-killed-in-Acworth?",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE

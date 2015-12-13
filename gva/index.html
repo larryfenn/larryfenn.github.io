@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.states {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+}
+
+#sources {
+	position: absolute;
+	left: 5;
+	width: 600px;
+	margin: 0 auto;
+	height: 45px;
+	overflow: scroll;
+	border: 1px solid #000;
+	padding: 2px;
+	text-align: left;
+	background: transparent;
+}
+
+.q0-9 { fill:rgb(247,251,255);}
+.q1-9 { fill:rgb(222,235,247);}
+.q2-9 { fill:rgb(198,219,239);}
+.q3-9 { fill:rgb(158,202,225);}
+.q4-9 { fill:rgb(107,174,214);}
+.q5-9 { fill:rgb(66,146,198);}
+.q6-9 { fill:rgb(33,113,181);}
+.q7-9 { fill:rgb(8,81,156);}
+.q8-9 { fill:rgb(8,48,107);}
+
+</style>
+<body>
+
+<div id="controls">
+    <input type="checkbox" id="injured" checked="True" onchange="dropSelect()"/>
+    <span style="width:100px;display:inline-block;">Injured</span>
+    <input type="checkbox" id="killed" checked="True" onchange="dropSelect()"/>
+    <span style="width:100px;display:inline-block;">Killed</span>
+	Cause: <select id="incidentType" onchange="dropSelect()">
+	<option value="accident">Accidental</option>
+	<option value="defense">Defense</option>
+	<option value="defense3">Third Party</option>
+	<option value="mass">Mass Shooting</option>
+	</select>
+</div>
+
+<link href="./c3/c3.css" rel="stylesheet" type="text/css">
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="//d3js.org/queue.v1.min.js"></script>
+<script src="//d3js.org/topojson.v1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/1.7.0/d3-legend.js"></script>
+<script src="./c3/c3.min.js"></script>
+<script>
+
+var statearray = ['','AL','AK','','AZ','AR','CA','','CO','CT','DE','DC','FL','GA','','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','','RI','SC','SD','TN','TX','UT','VT','VA','','WA','WV','WI','WY'];
+
+function flattenArrays(a, r) {
+	if(!r){ r = []}
+	for(var i=0; i < a.length; i++) {
+		if(a[i].constructor == Array){
+			flattenArrays(a[i], r);
+			}else{
+				r.push(a[i]);
+				}
+		}
+	return r;
+}
+
+
+var quantizeMax = 146;
+var casualtytype = "InjuredKilled";
+var incidenttype = "accident";
+var stateincidents = [];
+
+var chartscale = .4;
+
+var curState = 0;
+
+var width = 1500*chartscale,
+    height = 600*chartscale;
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var rateById = d3.map();
+
+var projection = d3.geo.albersUsa()
+    .scale(1280*chartscale)
+    .translate([width / 2, height / 2]);
+
+var path = d3.geo.path()
+    .projection(projection);
+
+var quantize = d3.scale.quantize()
+	.domain([0, quantizeMax])
+	.range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
+
+svg = d3.select("svg");
+
+svg.append("g")
+  .attr("class", "legendQuant")
+  .attr("transform", "translate(" + (.85*width).toString() + ",70)");
+
+var legend = d3.legend.color()
+  .labelFormat(d3.format(".0f"))
+  .useClass(true)
+  .shapeWidth(10*chartscale)
+  .orient('vertical')
+  .cells(9)
+  .scale(quantize);
+
+svg.select(".legendQuant")
+  .call(legend);
+
+updateData();
+
+function ready(error, us) {
+  if (error) throw error;
+	console.log(quantizeMax);
+	quantize = d3.scale.quantize()
+		.domain([0, quantizeMax])
+		.range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
+
+	svg.append("g")
+		.attr("class", "states")
+		.selectAll("path")
+		.data(topojson.feature(us, us.objects.states).features)
+		.enter().append("path")
+		.attr("class", function(d) { return quantize(rateById.get(d.id)); })
+		.attr("d", path)
+		.on('click', clicked);
+
+	svg.append("g")
+		.attr("class", "legendQuant")
+		.attr("transform", "translate(" + (.85*width).toString() + ",70)");
+	legend = d3.legend.color()
+		.labelFormat(d3.format(".0f"))
+		.useClass(true)
+		.shapeWidth(10*chartscale)
+		.orient('vertical')
+		.cells(9)
+		.scale(quantize);
+	svg.select(".legendQuant")
+		.call(legend);
+}
+
+
+function clicked(d) {
+	curStated3p = this
+	if (d.id == curState) {
+		curState = 0;
+		document.getElementById("sources").innerHTML = "";
+	} else {
+		curState = d.id;
+	}
+	updateData();
+}
+
+function dropSelect() {
+	// reselect the data set based on the current request
+	incidenttype = document.getElementById("incidentType").value;
+	if (document.getElementById("injured").checked)
+		casualtytype = "Injured";
+	if (document.getElementById("killed").checked)
+		casualtytype = "Killed";
+	if (document.getElementById("injured").checked && document.getElementById("killed").checked)
+		casualtytype = "InjuredKilled";
+	if (!document.getElementById("injured").checked && !document.getElementById("killed").checked) {
+		casualtytype = "";
+		incidenttype = "";
+	}
+	updateData();
+}
+
+var displayedchart = "histogram"
+function chartSelect() {
+	displayedchart = document.getElementById("chartType").value;
+	updateData();
+}
+
+var curdata;
+var curmale;
+var curfemale;
+function updateData() {
+	var linedata = {};
+	curmale = Array.apply(null, Array(100)).map(Number.prototype.valueOf,0);
+	curfemale = Array.apply(null, Array(100)).map(Number.prototype.valueOf,0);
+
+	d3.csv(casualtytype + "-" + incidenttype + ".csv", function(d) {
+			return {
+				date: d.date,
+				age: +d.age,
+				city: d.city,
+				state: +d.state,
+				gender: d.gender,
+				source: d.source
+			};
+		}, function(error, rows) {
+			curdata = rows;
+			var statecounts = Array.apply(null, Array(79)).map(Number.prototype.valueOf,0);
+			// compute max of state violence incidents
+			for (var i = 0; i < curdata.length; i++) {
+				statecounts[curdata[i].state]++;
+			}
+
+			// now populate regional data set
+			var sourcelist = [];
+			for (var i = 0; i < curdata.length; i++) {
+				if (curdata[i].state == curState || curState == 0) {
+					if (curdata[i].gender == "Male") {
+						curmale[curdata[i].age]++;
+					} else if (curdata[i].gender == "Female") {
+						curfemale[curdata[i].age]++;
+					}
+
+					curmonth = curdata[i].date.split("-")[0] + "-" + curdata[i].date.split("-")[2];
+					if (curmonth in linedata) {
+						linedata[curmonth]++;
+					} else {
+						linedata[curmonth] = 0;
+					}
+					sourcelist.push("<b>"+ curdata[i].city + ":</b>");
+					sourcelist.push(curdata[i].source.split("\n"));
+					stateincidents.push(curdata[i]);
+				}
+			}
+			sourcelist = flattenArrays(sourcelist);
+			sourcelist = sourcelist.filter(function(item, i, ar) {return ar.indexOf(item) === i; });
+			for (var i = 0; i < sourcelist.length; i++) {
+				if(sourcelist[i].startsWith("http://")) {
+					var url = sourcelist[i];
+					sourcelist[i] = "<a href = \"".concat(url).concat("\">").concat(url).concat("</a>");
+				}
+			}
+			document.getElementById("sources").innerHTML = sourcelist.toString().replace(/,/g, "<br>");
+
+			var oldest = 0;
+			for (var i = 0; i < 100; i++) {
+				if (curmale[i] != 0 || curfemale[i] != 0)
+					oldest = i;
+			}
+
+			curmale = curmale.slice(0, oldest + 1);
+			curfemale = curfemale.slice(0, oldest + 1);
+			curmale[0] = 0;
+			curfemale[0] = 0;
+			curmale.unshift("Males");
+			curfemale.unshift("Females");
+
+			var curdates = [];
+			var curincidents = [];
+			for (var i = 0; i < Object.keys(linedata).length; i++) {
+				curdates.push(Object.keys(linedata)[i]);
+				curincidents.push(linedata[Object.keys(linedata)[i]]);
+			}
+
+			curdates.unshift('x');
+			curincidents.unshift("People involved");
+
+			if (displayedchart == "histogram") {
+				var chart = c3.generate({
+					size:{
+						height: height,
+						width: width
+					},
+					bindto: '#chart',
+					data: {
+						columns:[curmale, curfemale],
+						type: 'bar'
+					},
+					axis: {
+						x: {
+							label: "Age"
+						},
+						y: {
+							label: "Frequency"
+						}
+					}
+				});
+			} else {
+				var chart = c3.generate({
+					size:{
+						height: height,
+						width: width
+					},
+					bindto: '#chart',
+					data: {
+						x: 'x',
+						xFormat: '%m-%Y',
+						columns: [
+							curdates,
+							curincidents]
+						},
+					axis: {
+						x: {
+							type: 'timeseries',
+							tick: {
+								format: '%m-%Y'
+							}
+						}
+					}
+				});
+			}
+			var titlestr = "USA: " + statecounts.reduce(function(pv, cv) { return pv + cv; }, 0);
+			if (curState != 0) {
+				titlestr = statearray[curState] + ": " + statecounts[curState];
+			}
+			d3.select("#chart svg").append("text")
+				.attr("x",.7*width)
+				.attr("y",30)
+				.style("font-size", "300%")
+				.text(titlestr);
+			if (Math.max(...statecounts) != 0)
+				quantizeMax = Math.max(...statecounts);
+		});
+	queue()
+		.defer(d3.json, "us.json")
+		.defer(d3.tsv, casualtytype + "-" + incidenttype + "-statetotals.tsv", function(d) { rateById.set(d.id, +d.count); })
+		.await(ready);
+}
+
+
+d3.select(self.frameElement).style("height", height + "px");
+
+</script>
+
+<div id="chart"></div>
+Chart: <select id="chartType" onchange="chartSelect()">
+	<option value="histogram">Histogram</option>
+	<option value="line">Monthly Time Series</option>
+</select>
+<br>
+Click on a state for local information.
+<h2>Notes:</h2>
+	Male + Female count will not line up with the state's count, as many records do not list gender or age.
+<div id="src-container">
+<h2>Sources:</h2>
+<div id="sources"></div>
+</div>
+</body>

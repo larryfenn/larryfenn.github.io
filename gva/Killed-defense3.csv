@@ -1,0 +1,8 @@
+date,city,state,age,gender,status,source,accident,defense,defense3,mass
+12-8-2015,West Palm Beach,12,32,Female,Killed,"http://www.wpbf.com/news/woman-shot-in-driveby-shooting-driver-flees-crashes-car-in-west-palm-beach/36858130
+http://www.sun-sentinel.com/local/palm-beach/fl-west-palm-shooting-suspect-id-20151210-story.html",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+12-6-2015,Tucson,4,46,Male,Killed,http://www.azcentral.com/story/news/arizona/2015/12/07/tucson-police-witness-shoots-shoplifting-suspect-near-store/76914216/,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+12-6-2015,Houston,48,,Male,Killed,"http://www.khou.com/story/news/crime/2015/12/06/alleged-attempted-robbery-suspect-found-shot-to-death-in-street/76880000/
+http://abc13.com/news/man-found-shot-dead-on-north-harris-county-road/1111681/",FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+11-12-2015,Los Angeles,6,,Female,Killed,http://www.nbclosangeles.com/news/local/3-Injured-Following-Shooting-in-South-LA-347041992.html,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+11-12-2015,Los Angeles,6,,Male,Killed,http://www.nbclosangeles.com/news/local/3-Injured-Following-Shooting-in-South-LA-347041992.html,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
