@@ -76,7 +76,10 @@ function flattenArrays(a, r) {
 
 
 var quantizeMax = 146;
-var quantize;
+var quantize = d3.scale.quantize()
+	.domain([0, quantizeMax])
+	.range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
+
 var casualtytype = "InjuredKilled";
 var incidenttype = "accident";
 var stateincidents = [];
