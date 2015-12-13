@@ -16,7 +16,7 @@
 	left: 5;
 	width: 600px;
 	margin: 0 auto;
-	height: 60px;
+	height: 15em;
 	overflow: scroll;
 	border: 1px solid #000;
 	padding: 2px;
@@ -309,6 +309,7 @@ function ready(error, us) {
 
 	console.log("Now in ready");
 	console.log(quantize);
+	svg.selectAll("g.states").remove();
 	svg.append("g")
 		.attr("class", "states")
 		.selectAll("path")
