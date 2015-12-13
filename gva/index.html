@@ -80,6 +80,8 @@ var casualtytype = "InjuredKilled";
 var incidenttype = "accident";
 var stateincidents = [];
 
+
+
 var chartscale = .6;
 
 var curState = 0;
@@ -128,6 +130,7 @@ function dropSelect() {
 		incidenttype = "";
 	}
 	updateData();
+	updateData(); // laziest hack ever
 }
 
 var displayedchart = "histogram"
@@ -183,8 +186,10 @@ function updateData() {
 					} else {
 						linedata[curmonth] = 0;
 					}
-					sourcelist.push("<b>"+ curdata[i].city + ":</b>");
-					sourcelist.push(curdata[i].source.split("\n"));
+					if (curState != 0) {
+						sourcelist.push("<b>"+ curdata[i].city + ":</b>");
+						sourcelist.push(curdata[i].source.split("\n"));
+					}
 					stateincidents.push(curdata[i]);
 				}
 			}
