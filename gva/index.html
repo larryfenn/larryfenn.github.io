@@ -179,11 +179,14 @@ function updateData() {
 				statecounts[curdata[i].state]++;
 			}
 			quantizeMax = Math.max(...statecounts);
+			console.log(statecounts);
+			console.log(quantizeMax);
 			if (quantizeMax == 0)
 				quantizeMax = 1;
 			quantize = d3.scale.quantize()
 				.domain([0, quantizeMax])
 				.range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
+			console.log(quantize);
 
 			// now populate regional data set
 			var sourcelist = [];
@@ -304,6 +307,8 @@ function updateData() {
 function ready(error, us) {
   if (error) throw error;
 
+	console.log("Now in ready");
+	console.log(quantize);
 	svg.append("g")
 		.attr("class", "states")
 		.selectAll("path")
