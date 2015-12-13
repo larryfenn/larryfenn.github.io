@@ -177,6 +177,9 @@ function updateData() {
 			for (var i = 0; i < curdata.length; i++) {
 				statecounts[curdata[i].state]++;
 			}
+			for (var i = 0; i < statecounts.length; i++) {
+				rateById.set(i, statecounts[i]);
+			}
 			quantizeMax = Math.max(...statecounts);
 			console.log(statecounts);
 			console.log(quantizeMax);
@@ -299,7 +302,7 @@ function updateData() {
 		});
 	queue()
 		.defer(d3.json, "us.json")
-		.defer(d3.tsv, casualtytype + "-" + incidenttype + "-statetotals.tsv", function(d) { rateById.set(d.id, +d.count); })
+//		.defer(d3.tsv, casualtytype + "-" + incidenttype + "-statetotals.tsv", function(d) { rateById.set(d.id, +d.count); })
 		.await(ready);
 }
 
