@@ -8,6 +8,10 @@
   stroke-linejoin: round;
 }
 
+.label {
+	font-size:smaller;
+}
+
 #sources {
 	position: absolute;
 	left: 5;
@@ -156,6 +160,12 @@ function updateData() {
 			for (var i = 0; i < curdata.length; i++) {
 				statecounts[curdata[i].state]++;
 			}
+			quantizeMax = Math.max(...statecounts);
+			if (quantizeMax == 0)
+				quantizeMax = 1;
+			quantize = d3.scale.quantize()
+				.domain([0, quantizeMax])
+				.range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
 
 			// now populate regional data set
 			var sourcelist = [];
@@ -264,12 +274,6 @@ function updateData() {
 				.attr("y",30)
 				.style("font-size", "300%")
 				.text(titlestr);
-			console.log(statecounts);
-			if (Math.max(...statecounts) != 0)
-				quantizeMax = Math.max(...statecounts);
-			quantize = d3.scale.quantize()
-				.domain([0, quantizeMax])
-				.range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
 		});
 	queue()
 		.defer(d3.json, "us.json")
