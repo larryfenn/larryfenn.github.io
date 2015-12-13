@@ -319,6 +319,7 @@ function ready(error, us) {
 		.attr("d", path)
 		.on('click', clicked);
 
+	svg.selectAll("g.legendQuant").remove();
 	svg.append("g")
 		.attr("class", "legendQuant")
 		.attr("transform", "translate(" + (.85*width).toString() + "," + height/2 + ")");
