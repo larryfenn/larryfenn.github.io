@@ -267,7 +267,9 @@ function updateData() {
 			console.log(statecounts);
 			if (Math.max(...statecounts) != 0)
 				quantizeMax = Math.max(...statecounts);
-			console.log(quantizeMax);
+			quantize = d3.scale.quantize()
+				.domain([0, quantizeMax])
+				.range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
 		});
 	queue()
 		.defer(d3.json, "us.json")
@@ -277,9 +279,6 @@ function updateData() {
 
 function ready(error, us) {
   if (error) throw error;
-	quantize = d3.scale.quantize()
-		.domain([0, quantizeMax])
-		.range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
 
 	svg.append("g")
 		.attr("class", "states")
