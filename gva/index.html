@@ -75,18 +75,6 @@ Per-capita (rate per 1,000,000 people)<input type="checkbox" id="percapita" chec
 
 <script>
 
-var statearray = ['','AL','AK','','AZ','AR','CA','','CO','CT','DE','DC','FL','GA','','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','','RI','SC','SD','TN','TX','UT','VT','VA','','WA','WV','WI','WY'];
-var statepops = Array.apply(null, Array(79)).map(Number.prototype.valueOf,0);
-d3.tsv("statepops.tsv", function(d) {
-	for (var i=0; i < d.length; i++) {
-		statepops[d[i].id] = d[i].pop;
-	}
-});
-
-var statecounts;
-var us;
-
-
 function flattenArrays(a, r) {
 	if(!r){ r = []}
 	for(var i=0; i < a.length; i++) {
@@ -99,34 +87,38 @@ function flattenArrays(a, r) {
 	return r;
 }
 
-
+var statearray = ['','AL','AK','','AZ','AR','CA','','CO','CT','DE','DC','FL','GA','','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','','RI','SC','SD','TN','TX','UT','VT','VA','','WA','WV','WI','WY'];
+var statepops = Array.apply(null, Array(79)).map(Number.prototype.valueOf,0);
+d3.tsv("statepops.tsv", function(d) {
+	for (var i=0; i < d.length; i++) {
+		statepops[d[i].id] = d[i].pop;
+	}
+});
+var statecounts;
+var us;
+var redraw = true;
 var quantizeMax = 146;
 var quantize = d3.scale.quantize()
 	.domain([0, quantizeMax])
 	.range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
-
 var casualtytype = "InjuredKilled";
 var incidenttype = "accident";
 var stateincidents = [];
-
-
+var displayedchart = "histogram"
 var chartscale = .6;
-
 var curState = 0;
-
+var curdata;
+var curmale;
+var curfemale;
 var width = 1200*chartscale,
     height = 600*chartscale;
-
 var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height);
-
 var rateById = d3.map();
-
 var projection = d3.geo.albersUsa()
     .scale(1280*chartscale)
     .translate([width / 2, height / 2]);
-
 var path = d3.geo.path()
     .projection(projection);
 d3.json("us.json", function(error, json) {
@@ -145,9 +137,8 @@ function clicked(d) {
 	}
 	updateData();
 }
-var redraw = true;
+
 function dropSelect() {
-	// reselect the data set based on the current request
 	incidenttype = document.getElementById("incidentType").value;
 	if (document.getElementById("injured").checked && document.getElementById("killed").checked) {
 		casualtytype = "InjuredKilled";
@@ -163,15 +154,11 @@ function dropSelect() {
 	updateData();
 }
 
-var displayedchart = "histogram"
 function chartSelect() {
 	displayedchart = document.getElementById("chartType").value;
 	updateData();
 }
 
-var curdata;
-var curmale;
-var curfemale;
 function updateData() {
 	var linedata = {};
 	curmale = Array.apply(null, Array(100)).map(Number.prototype.valueOf,0);
@@ -189,7 +176,6 @@ function updateData() {
 		}, function(error, rows) {
 			curdata = rows;
 			statecounts = Array.apply(null, Array(79)).map(Number.prototype.valueOf,0);
-			// compute max of state violence incidents
 			for (var i = 0; i < curdata.length; i++) {
 				statecounts[curdata[i].state]++;
 			}
@@ -210,7 +196,6 @@ function updateData() {
 				.domain([0, quantizeMax])
 				.range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
 
-			// now populate regional data set
 			var sourcelist = "";
 			var sameevent = false;
 			var lastsrc;
@@ -239,20 +224,10 @@ function updateData() {
 							}
 						}
 						lastsrc = curdata[i].source;
-//						sourcelist.push(curdata[i].source.split("\n"));
 					}
 					stateincidents.push(curdata[i]);
 				}
 			}
-//			sourcelist = flattenArrays(sourcelist);
-//			sourcelist = sourcelist.filter(function(item, i, ar) {return ar.indexOf(item) === i; });
-//			for (var i = 0; i < sourcelist.length; i++) {
-//				if(sourcelist[i].startsWith("http")) { // pray there isn't a town out there called httpton
-//					var url = sourcelist[i];
-//					sourcelist[i] = "<a href = \"".concat(url).concat("\">").concat(url).concat("</a>");
-//				}
-//			}
-//			document.getElementById("sources").innerHTML = sourcelist.toString().replace(/,h/g, "<br>");
 			document.getElementById("sources").innerHTML = sourcelist;
 
 			var oldest = 0;
@@ -336,12 +311,7 @@ function updateData() {
 				ready();
 			}
 		});
-//	queue()
-//		.defer(d3.json, "us.json")
-//		.defer(d3.tsv, casualtytype + "-" + incidenttype + "-statetotals.tsv", function(d) { rateById.set(d.id, +d.count); })
-//		.await(ready);
 }
-
 
 function ready(error) {
   if (error) throw error;
