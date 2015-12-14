@@ -212,6 +212,8 @@ function updateData() {
 
 			// now populate regional data set
 			var sourcelist = "";
+			var sameevent = false;
+			var lastsrc;
 			for (var i = 0; i < curdata.length; i++) {
 				if (curdata[i].state == curState || curState == 0) {
 					if (curdata[i].gender == "Male") {
@@ -219,7 +221,6 @@ function updateData() {
 					} else if (curdata[i].gender == "Female") {
 						curfemale[curdata[i].age]++;
 					}
-
 					curmonth = curdata[i].date.split("-")[0] + "-" + curdata[i].date.split("-")[2];
 					if (curmonth in linedata) {
 						linedata[curmonth]++;
@@ -227,11 +228,17 @@ function updateData() {
 						linedata[curmonth] = 0;
 					}
 					if (curState != 0) {
-						sourcelist += "<b>".concat(curdata[i].date).concat(" ").concat(curdata[i].city).concat(":</b><br>");
-						var cursources = curdata[i].source.split("\n");
-						for (var k = 0; k < cursources.length; k++) {
-							sourcelist += "<a href = \"".concat(cursources[k]).concat("\">").concat(cursources[k]).concat("</a><br>");
+						if (curdata[i].source == lastsrc) {
+							sameevent = true;
 						}
+						if (!sameevent) {
+							sourcelist += "<b>".concat(curdata[i].date).concat(" ").concat(curdata[i].city).concat(":</b><br>");
+							var cursources = curdata[i].source.split("\n");
+							for (var k = 0; k < cursources.length; k++) {
+								sourcelist += "<a href = \"".concat(cursources[k]).concat("\">").concat(cursources[k]).concat("</a><br>");
+							}
+						}
+						lastsrc = curdata[i].source;
 //						sourcelist.push(curdata[i].source.split("\n"));
 					}
 					stateincidents.push(curdata[i]);
@@ -269,7 +276,7 @@ function updateData() {
 			}
 
 			curdates.unshift('x');
-			curincidents.unshift("People involved");
+			curincidents.unshift("Victims");
 
 			if (displayedchart == "histogram") {
 				var chart = c3.generate({
