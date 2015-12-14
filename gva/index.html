@@ -359,7 +359,7 @@ function ready(error) {
 	svg.selectAll("g.legendQuant").remove();
 	svg.append("g")
 		.attr("class", "legendQuant")
-		.attr("transform", "translate(" + (.85*width).toString() + "," + height/2 + ")");
+		.attr("transform", "translate(" + (.82*width).toString() + "," + height/2 + ")");
 	if (document.getElementById("percapita").checked) {
 		legend = d3.legend.color()
 			.labelFormat(d3.format(".01f"))
