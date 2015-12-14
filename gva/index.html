@@ -40,7 +40,8 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="canonical" href="http://larryfenn.com/gva/index.html">
 	<title>Gun Violence Choropleth</title>
 	<meta name="description" content="Gun violence in the US visualized with D3.js and rigorously sourced.">
 
@@ -51,11 +52,10 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/1.7.0/d3-legend.js"></script>
 	<script src="./c3/c3.min.js"></script>
 </head>
+<body style="margin:10px ! important;">
 <header class="site-header">
 	<h2>Gun violence choropleth, histogram, and time series for national and state-level data</h2>
 </header>
-<body>
-
 <div id="controls">
     Victim Status: <input type="checkbox" id="injured" checked="True" onchange="dropSelect()"/>
     <span style="width:100px;display:inline-block;">Injured</span>
