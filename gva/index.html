@@ -227,7 +227,7 @@ function updateData() {
 						linedata[curmonth] = 0;
 					}
 					if (curState != 0) {
-						sourcelist += "<b>".concat(curdata[i].date).concat(curdata[i].city).concat(":</b><br>");
+						sourcelist += "<b>".concat(curdata[i].date).concat(" ").concat(curdata[i].city).concat(":</b><br>");
 						var cursources = curdata[i].source.split("\n");
 						for (var k = 0; k < cursources.length; k++) {
 							sourcelist += "<a href = \"".concat(cursources[k]).concat("\">").concat(cursources[k]).concat("</a><br>");
