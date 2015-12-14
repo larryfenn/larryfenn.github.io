@@ -6,9 +6,211 @@
 </description>
     <link>http://larryfenn.com/</link>
     <atom:link href="http://larryfenn.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 14 Dec 2015 02:31:25 -0500</pubDate>
-    <lastBuildDate>Mon, 14 Dec 2015 02:31:25 -0500</lastBuildDate>
+    <pubDate>Mon, 14 Dec 2015 05:17:35 -0500</pubDate>
+    <lastBuildDate>Mon, 14 Dec 2015 05:17:35 -0500</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
+    
+      <item>
+        <title>Gun Violence Statistics</title>
+        <description>&lt;p&gt;&lt;a href=&quot;/gva&quot;&gt;&lt;img src=&quot;/gva/post_assets/preview.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;http://www.gunviolencearchive.org/&quot;&gt;Gun Violence Archive&lt;/a&gt; (GVA) is a database of gun violence and gun crime in general aggregated from a diverse array of sources. The specific details of their methodology for tagging incidents is listed under their &lt;a href=&quot;http://www.gunviolencearchive.org/methodology&quot;&gt;Methodology&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;div id=&quot;toc&quot;&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Getting the Data&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#2&quot;&gt;Analysis&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#3&quot;&gt;Visualization&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#4&quot;&gt;Conclusions&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#A1&quot;&gt;Appendix&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div id=&quot;1&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;getting-the-data&quot;&gt;Getting the Data&lt;/h2&gt;
+&lt;p&gt;After notifying them by e-mail of my intentions, I proceeded to build a small crawler that would index all of the incidents they have on file and dump the relevant block of HTML into a text file for later processing.&lt;/p&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+  .gist-file
+  .gist-data {max-height: 10em;}
+&lt;/style&gt;
+
+&lt;script src=&quot;https://gist.github.com/larryfenn/fccc5e675525ea6ebcc3.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;The &lt;code&gt;results.txt&lt;/code&gt; file stores all of the GVA URL indices and their respective HTML &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; elements containing incident reports. The next step is to create a parser that will read through the HTML and populate a SQLite database of incidents.&lt;/p&gt;
+
+&lt;p&gt;Since incidents have only one location and time but potentially no limit on how many people are involved, I decided to make each entry of the database tie to an individual. Thus the parser will create entries for each person who has been involved in a gun-related incident.&lt;/p&gt;
+
+&lt;p&gt;Of course, additional fields can be defined but the relevant lines of code have to be changed to accommodate them. This particular block of code can take a long time to run because I’m using the html5lib parser, which reads the whole document in. However, this is only a one-time cost (as future updates to the database will be only those events that have happened since we last indexed).&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/larryfenn/6db23e81328910ae8e28.js&quot;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#toc&quot;&gt;Back to top&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+
+&lt;div id=&quot;2&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;analysis&quot;&gt;Analysis&lt;/h2&gt;
+&lt;p&gt;Now we have a SQLite database called &lt;code&gt;gva.db&lt;/code&gt; with the table GVA in it. We can now ask it some basic questions:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gva/post_assets/gvadb.png&quot; width=&quot;769&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;With a database in hand, the door is open to all sorts of investigation. In particular, let’s explore the relationship between the individuals in the database, the event (as defined and used by the GVA), and the “outcomes”; here, I will define an outcome as the status of the individual (either perpetrator or victim) at the end of the event. The two contrasts to look at are victim/perpetrator, and male/female. The definition of “perpetrator” in this situation is not always the person using the gun; for example, someone who is shot at during an attempted home invasion will be called a “perpetrator”. Using the GVA’s notation, the possible outcomes are:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Unharmed.&lt;/li&gt;
+  &lt;li&gt;Injured.&lt;/li&gt;
+  &lt;li&gt;Killed.&lt;/li&gt;
+  &lt;li&gt;Arrested.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;A simple python script can automate the access, storage, and plotting of the data:
+&lt;script src=&quot;https://gist.github.com/larryfenn/df194b702fb72812347b.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;With my treatment of the data, these are tags attached to  gun related incidents; it is not quite a direct count of factors, since a single event frequently has many tags attached to it in the GVA. However, the relative frequency of the different tags can still communicate what the nature of gun incidents and gun violence in America looks like:&lt;/p&gt;
+
+&lt;h3 id=&quot;top-event-characteristics-for-all-perpetrators-in-the-gva&quot;&gt;Top event characteristics for all perpetrators in the GVA&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pt.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/ptl.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;top-event-characteristics-for-all-victims-in-the-gva&quot;&gt;Top event characteristics for all victims in the GVA&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/gva/post_assets/vt.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/vtl.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;DGU stands for “Defensive Gun Use”. Looking at the data for all perpetrators and victims, &lt;strong&gt;Armed robbery&lt;/strong&gt; is the number one tag in use for both. On the victim side, it turns out &lt;strong&gt;Mass Shooting&lt;/strong&gt; sits just below &lt;strong&gt;Accidental Shooting&lt;/strong&gt; in terms of frequency in the GVA database.&lt;/p&gt;
+
+&lt;p&gt;Now let’s examine the gender differences, if any (for those records where gender is filled in):&lt;/p&gt;
+
+&lt;h3 id=&quot;top-event-characteristics-for-male-perpetrators-in-the-gva&quot;&gt;Top event characteristics for male perpetrators in the GVA&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pm.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/pml.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;top-event-characteristics-for-female-perpetrators-in-the-gva&quot;&gt;Top event characteristics for female perpetrators in the GVA&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pf.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/pfl.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Armed robbery&lt;/strong&gt; is at roughly the same frequency for male perpetrators as for the whole database, but for female perpetrators it has fallen down from 1st to 4th most used tag, with &lt;strong&gt;Non-Shooting Incident&lt;/strong&gt; rising from 3rd to 1st most used. &lt;strong&gt;Domestic Violence&lt;/strong&gt; for male perpetrators sits between &lt;strong&gt;Defensive Use&lt;/strong&gt; and &lt;strong&gt;Car-jacking&lt;/strong&gt; at 2.16%, while for female perpetrators it sits between &lt;strong&gt;Brandishing&lt;/strong&gt; and &lt;strong&gt;ATF/LE Confiscation&lt;/strong&gt; at 5.00%. Now let’s flip the relationship and look at victims:&lt;/p&gt;
+
+&lt;h3 id=&quot;top-event-characteristics-for-male-victims-in-the-gva&quot;&gt;Top event characteristics for male victims in the GVA&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/gva/post_assets/vm.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/vml.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;top-event-characteristics-for-female-victims-in-the-gva&quot;&gt;Top event characteristics for female victims in the GVA&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/gva/post_assets/vf.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/vfl.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Flipping from perpetrator to victim we see a dramatic change: &lt;strong&gt;Domestic Violence&lt;/strong&gt; for female victims is top of the list, at 9.24% (compare to 3.89% when we looked at all victims, and 2.74% for male victims).&lt;/p&gt;
+
+&lt;h3 id=&quot;top-event-characteristics-for-killed-perpetrators-in-the-gva&quot;&gt;Top event characteristics for killed perpetrators in the GVA&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pk.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/pkl.png&quot; width=&quot;400&quot; height=&quot;200&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;top-event-characteristics-for-killed-victims-in-the-gva&quot;&gt;Top event characteristics for killed victims in the GVA&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/gva/post_assets/vk.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/vkl.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lastly, looking at how deaths from gun incidents are distributed we see that &lt;strong&gt;Suicide&lt;/strong&gt; and &lt;strong&gt;Murder/Suicide&lt;/strong&gt; are both at the top of the list along with law enforcement related tags (evoking, among other things, the notion of “suicide by cop”). &lt;strong&gt;Suicide&lt;/strong&gt; and &lt;strong&gt;Domestic Violence&lt;/strong&gt; being at the top of the list for killed victims is both a disheartening but important fact to keep in mind about the frequency of these causes in gun casualties.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#toc&quot;&gt;Back to top&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+
+&lt;div id=&quot;3&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;visualization&quot;&gt;Visualization&lt;/h2&gt;
+
+&lt;p&gt;The final thing to be done with the data is to make it accessible. I picked four types of event tags that figure prominently in discussions of guns and gun control to highlight:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Accidental discharge.&lt;/li&gt;
+  &lt;li&gt;Use in defense.&lt;/li&gt;
+  &lt;li&gt;Use by a third party “good samaritan” in defense.&lt;/li&gt;
+  &lt;li&gt;Mass shootings.&lt;/li&gt;
+  &lt;li&gt;Suicide.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The result of this effort is a &lt;a href=&quot;http://larryfenn.com/gva&quot;&gt;gun violence choropleth, age/gender histogram, and time series&lt;/a&gt; d3.js document. The document aims to put at one’s fingertips national and state level data and sources. From playing around some qualitative observations can be made:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Accidental gun injuries and deaths skew younger in general in a bimodal manner with one spike at 3 years and the other at 15 years.&lt;/li&gt;
+  &lt;li&gt;Looking at it per-capita, there is a distinct geographic difference between states where defensive firearm injuries and deaths occur and accidental firearm injuries and deaths occur.&lt;/li&gt;
+  &lt;li&gt;The time series contains many artifacts from how police reports are filed. This is an important thing to take into account if we were to attempt any sort of time series analysis to investigate if gun violence events are correlated across time.&lt;/li&gt;
+  &lt;li&gt;Looking at it by the numbers, “good samaritan” events that lead to injury or death are very rare. This may be a blind spot in the GVA: since the GVA only tracks events that get reported to the police or otherwise make the news, we have no idea how many times a standoff was resolved peacefully without notice or report but &lt;em&gt;with&lt;/em&gt; a gun.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#toc&quot;&gt;Back to top&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+
+&lt;div id=&quot;4&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h2&gt;
+&lt;p&gt;The chief flaw with the GVA dataset is that its tagging system works well for simple events, but becomes difficult for events involving many victims and perpetrators. For example, a naive search of events where someone is “Unharmed” still turns up entries with tags such as “Shot - Wounded/Injured” and “Shot - Dead (murder, accidental, suicide)”. In this instance, the event-centric model of the GVA makes it difficult to proceed in a person-centric model.&lt;/p&gt;
+
+&lt;p&gt;Another flaw of the GVA database is the perennial issue of missing data fields:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Age: 51.10% of the entries have an age listed.&lt;/li&gt;
+  &lt;li&gt;Relationships: 3.28% have a relationship (Friends, Family, etc.) listed.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;That being said, there is still a lot of potential still in the richness of the GVA database and I have only scratched the surface:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Location tags: 95.19% of the entries (165,121 entries) have exact GPS coordinates of the event. Knowing the location this precisely opens the door to a huge amount of additional data we can use, from political to demographic content. One potential extension is to join to the database the status of CCW permits (from most permissive to most restrictive); the sky is the limit here.&lt;/li&gt;
+  &lt;li&gt;Guns involved: the GVA tracks (if possible) all the guns reported in the incidents. This is useful potentially to test the hypothesis that different guns are used for primarily different purposes.&lt;/li&gt;
+  &lt;li&gt;Event tags: the tags the GVA applies to all the events can probably be grouped together in sensible ways, providing extra signal about different kinds of gun violence events. Ultimately, this points the way towards developing some type of classifier for gun violence events; when people have conversations about policy it is important to clearly illustrate their impact by ignoring the “noise” of gun violence events that the policy isn’t targetting; for example, a law designed to reduce domestic violence gun incidents should not be judged for failing to reduce the number of drive-by shootings.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#toc&quot;&gt;Back to top&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;div id=&quot;A1&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;appendix-some-extra-graphs&quot;&gt;Appendix: Some Extra Graphs&lt;/h2&gt;
+
+&lt;h3 id=&quot;top-event-characteristics-for-unharmed-perpetrators-in-the-gva&quot;&gt;Top event characteristics for unharmed perpetrators in the GVA&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pu.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/pul.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;top-event-characteristics-for-unharmed-victims-in-the-gva&quot;&gt;Top event characteristics for unharmed victims in the GVA&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/gva/post_assets/vu.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/vul.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The notable characteristics that jump out here are &lt;strong&gt;Institution/Group/Business&lt;/strong&gt; and &lt;strong&gt;Drug involvement&lt;/strong&gt; on the perpetrator side, and &lt;strong&gt;Defensive Use&lt;/strong&gt; on the victim side- evidence that there are a substantial amount of gun incidents where the victim defensively employs a gun and walks away unharmed.&lt;/p&gt;
+
+&lt;h3 id=&quot;top-event-characteristics-for-injured-perpetrators-in-the-gva&quot;&gt;Top event characteristics for injured perpetrators in the GVA&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pi.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/pil.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;top-event-characteristics-for-injured-victims-in-the-gva&quot;&gt;Top event characteristics for injured victims in the GVA&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/gva/post_assets/vi.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/vil.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;top-event-characteristics-for-arrested-perpetrators-in-the-gva&quot;&gt;Top event characteristics for arrested perpetrators in the GVA&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pa.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/pal.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;top-event-characteristics-for-arrested-victims-in-the-gva&quot;&gt;Top event characteristics for arrested victims in the GVA&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/gva/post_assets/va.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/val.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#toc&quot;&gt;Back to top&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 14 Dec 2015 01:55:00 -0500</pubDate>
+        <link>http://larryfenn.com/personal/2015/12/14/gva.html</link>
+        <guid isPermaLink="true">http://larryfenn.com/personal/2015/12/14/gva.html</guid>
+        
+        <category>python</category>
+        
+        <category>d3js</category>
+        
+        <category>sql</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>Dota 2 Drafting Part 2: Hero Pairings</title>
