@@ -42,7 +42,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Gun Violence Choropleth</title>
-	<meta name="description" content="some of my research, thoughts, and projects.">
+	<meta name="description" content="Gun violence in the US visualized with D3.js and rigorously sourced.">
 
 	<script src="http://d3js.org/d3.v3.min.js"></script>
 	<link href="./c3/c3.css" rel="stylesheet" type="text/css">
@@ -68,11 +68,20 @@
 	<option value="mass">Mass Shooting</option>
 	</select>
 </div>
-
+<div id="pc-switch">
+Per-capita (rate per 1,000,000 people)<input type="checkbox" id="percapita" checked="true" onchange="dropSelect()"/>
+</div>
 
 <script>
 
 var statearray = ['','AL','AK','','AZ','AR','CA','','CO','CT','DE','DC','FL','GA','','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','','RI','SC','SD','TN','TX','UT','VT','VA','','WA','WV','WI','WY'];
+var statepops = Array.apply(null, Array(79)).map(Number.prototype.valueOf,0);
+d3.tsv("statepops.tsv", function(d) {
+	for (var i=0; i < d.length; i++) {
+		statepops[d[i].id] = d[i].pop;
+	}
+});
+
 var statecounts;
 var us;
 
@@ -135,7 +144,7 @@ function clicked(d) {
 	}
 	updateData();
 }
-
+var redraw = true;
 function dropSelect() {
 	// reselect the data set based on the current request
 	incidenttype = document.getElementById("incidentType").value;
@@ -149,6 +158,7 @@ function dropSelect() {
 		casualtytype = "";
 		incidenttype = "";
 	}
+	redraw = true;
 	updateData();
 }
 
@@ -182,15 +192,22 @@ function updateData() {
 			for (var i = 0; i < curdata.length; i++) {
 				statecounts[curdata[i].state]++;
 			}
+
 			quantizeMax = Math.max(...statecounts);
-			console.log(statecounts);
-			console.log(quantizeMax);
-			if (quantizeMax == 0)
-				quantizeMax = 1;
+
+			if (document.getElementById("percapita").checked) {
+				quantizeMax = 0;
+				for (var i = 0; i < statecounts.length; i++) {
+					if (statepops[i] != 0) {
+						if (1000000*statecounts[i] / statepops[i] > quantizeMax) {
+							quantizeMax = 1000000*statecounts[i] / statepops[i];
+						}
+					}
+				}
+			}
 			quantize = d3.scale.quantize()
 				.domain([0, quantizeMax])
 				.range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
-			console.log(quantize);
 
 			// now populate regional data set
 			var sourcelist = [];
@@ -301,7 +318,10 @@ function updateData() {
 				.attr("y",30)
 				.style("font-size", "300%")
 				.text(titlestr);
-			ready();
+			if (redraw) {
+				redraw = false;
+				ready();
+			}
 		});
 //	queue()
 //		.defer(d3.json, "us.json")
@@ -309,32 +329,54 @@ function updateData() {
 //		.await(ready);
 }
 
+
 function ready(error) {
   if (error) throw error;
 
 	console.log("Now in ready");
 	console.log(quantize);
 	svg.selectAll("g.states").remove();
-	svg.append("g")
-		.attr("class", "states")
-		.selectAll("path")
-		.data(topojson.feature(us, us.objects.states).features)
-		.enter().append("path")
-		.attr("class", function(d) { return quantize(statecounts[d.id]); })
-		.attr("d", path)
-		.on('click', clicked);
 
+	if (document.getElementById("percapita").checked) {
+		svg.append("g")
+			.attr("class", "states")
+			.selectAll("path")
+			.data(topojson.feature(us, us.objects.states).features)
+			.enter().append("path")
+			.attr("class", function(d) { return quantize(1000000*statecounts[d.id] / statepops[d.id]); })
+			.attr("d", path)
+			.on('click', clicked);
+	} else {
+		svg.append("g")
+			.attr("class", "states")
+			.selectAll("path")
+			.data(topojson.feature(us, us.objects.states).features)
+			.enter().append("path")
+			.attr("class", function(d) { return quantize(statecounts[d.id]); })
+			.attr("d", path)
+			.on('click', clicked);
+	}
 	svg.selectAll("g.legendQuant").remove();
 	svg.append("g")
 		.attr("class", "legendQuant")
 		.attr("transform", "translate(" + (.85*width).toString() + "," + height/2 + ")");
-	legend = d3.legend.color()
-		.labelFormat(d3.format(".0f"))
-		.useClass(true)
-		.shapeWidth(10*chartscale)
-		.orient('vertical')
-		.cells(9)
-		.scale(quantize);
+	if (document.getElementById("percapita").checked) {
+		legend = d3.legend.color()
+			.labelFormat(d3.format(".01f"))
+			.useClass(true)
+			.shapeWidth(10*chartscale)
+			.orient('vertical')
+			.cells(9)
+			.scale(quantize);
+	} else {
+		legend = d3.legend.color()
+			.labelFormat(d3.format(".0f"))
+			.useClass(true)
+			.shapeWidth(10*chartscale)
+			.orient('vertical')
+			.cells(9)
+			.scale(quantize);
+	}
 	svg.select(".legendQuant")
 		.call(legend);
 }
