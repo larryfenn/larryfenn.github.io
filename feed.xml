@@ -6,8 +6,8 @@
 </description>
     <link>http://larryfenn.com/</link>
     <atom:link href="http://larryfenn.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 17 Dec 2015 20:23:57 -0500</pubDate>
-    <lastBuildDate>Thu, 17 Dec 2015 20:23:57 -0500</lastBuildDate>
+    <pubDate>Thu, 17 Dec 2015 20:33:48 -0500</pubDate>
+    <lastBuildDate>Thu, 17 Dec 2015 20:33:48 -0500</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
     
       <item>
@@ -46,7 +46,7 @@
 
 &lt;p&gt;The way we should interpret the results is that the algorithm has generated new, higher level tags, made up of the original tags. We have to interpret the tags now as continuous numerical quantities, not as single entries of 0 or 1. This turns out to be not so difficult of a task; we can replace the notion of a tag being present or not with simply a level of belief (my words, not a rigorous term) that this tag is &lt;em&gt;appropriate&lt;/em&gt; for this particular event. For example, if I were to describe a particular event to you as recording in the &lt;strong&gt;Accidental Shooting&lt;/strong&gt; column the value “.8”, this should be taken to mean that “more likely than not this was an accidental shooting”.&lt;/p&gt;
 
-&lt;p&gt;Now each bar represents a number which represents a weight on how important the individual tag is in this new tag, positive meaning “if this individual tag is present then we should have this much belief (again, not a rigorous term but just one for this explanation) in using this new tag to describe it” and negative (which is not present here but may be) meaning “if this individual tag is not present we should have this much belief in using this new tag”.&lt;/p&gt;
+&lt;p&gt;Now each bar represents a number which represents a weight on how important the individual tag is in this new tag, positive meaning “if this individual tag is present then we should have this much belief (again, not a rigorous term but just one for this explanation) in using this new tag to describe it” and negative (which is not present here but may be) meaning “if this individual tag is not present we should have this much belief in using this new tag”. The actual numerical values are not as important as the &lt;em&gt;relative&lt;/em&gt; differences between numerical values; in other words, think of the numbers as scores attached to labels and not as actual measurements of some quantity.&lt;/p&gt;
 
 &lt;p&gt;This is the first component, the one that explains the most variance in the dataset:
 &lt;img src=&quot;/gva/post_assets/pca/0.png&quot; /&gt;&lt;/p&gt;
