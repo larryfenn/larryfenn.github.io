@@ -6,9 +6,142 @@
 </description>
     <link>http://larryfenn.com/</link>
     <atom:link href="http://larryfenn.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 14 Dec 2015 15:54:33 -0500</pubDate>
-    <lastBuildDate>Mon, 14 Dec 2015 15:54:33 -0500</lastBuildDate>
+    <pubDate>Thu, 17 Dec 2015 20:23:57 -0500</pubDate>
+    <lastBuildDate>Thu, 17 Dec 2015 20:23:57 -0500</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
+    
+      <item>
+        <title>Gun Violence Incident Grouping via PCA</title>
+        <description>&lt;p&gt;The Gun Violence Archive (GVA) has for each event a list of characteristics. There are 92 distinct tags that are used. Many of these tags are either redundant or unnecessarily specific for the kinds of questions I am interested in investigating:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What are the most frequent kinds of gun-related incidents?&lt;/li&gt;
+  &lt;li&gt;Where are they located and which demographic groups are affected by them?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;The mechanical issue with having so many tags is that if we treated each tag as a unique label then any statistical analysis using them is hopelessly high-dimensional. To that end a significant dimensionality reduction can be gained by using PCA to determine which groupings of tags appear frequently together; these groupings of tags will be our base level unit for categorizing gun violence events.&lt;/p&gt;
+
+&lt;h2 id=&quot;encoding-tags&quot;&gt;Encoding Tags&lt;/h2&gt;
+
+&lt;p&gt;First we need to encode the data using one-hot encoding: every gun violence event will record either a 0 if that tag is not present or a 1 if it is. The easiest way to do this with the current system for processing data that I established in &lt;a href=&quot;http://larryfenn.com/personal/2015/12/14/gva.html&quot;&gt;the previous post&lt;/a&gt; is:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Represent each event as a python dict, with the tags as keys and the values as 1 entries. Collect all the events in a list.&lt;/li&gt;
+  &lt;li&gt;Use &lt;code&gt;scikit-learn&lt;/code&gt;’s excellent &lt;code&gt;DictVectorizer&lt;/code&gt; to convert this list of dicts into a matrix where the columns correspond to a specific tag and the rows correspond to events.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;After doing that, the &lt;code&gt;decomposition&lt;/code&gt; component of &lt;code&gt;scikit-learn&lt;/code&gt; gives us the &lt;code&gt;SparsePCA&lt;/code&gt; function, which will be our tool of choice here. PCA determines which combinations of the original columns of the data best explain the observed variance in the data. It is these combinations which will make up our tag groupings. However, in practice normal PCA often results in every column in the original data set being used in the new description of the data. This is undesirable for our current context because we want a simple grouping of tags to jump out at us; it would do us no good if our predominant tag grouping involved in some degree all of the original tags; we would have the opposite problem where, rather than too many hyper-descriptive tags we have too few overly-general tags.&lt;/p&gt;
+
+&lt;p&gt;The way out of this is to use a sparse PCA algorithm, which constrains how many columns of the original data set can be used in generating principal components. From the sparse PCA algorithm we will (hopefully) achieve the goal of building robust groupings of tags based on, in some sense, their similarity to one another.&lt;/p&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+  .gist-file
+  .gist-data {max-height: 10em;}
+&lt;/style&gt;
+
+&lt;script src=&quot;https://gist.github.com/larryfenn/97756fe2874ebaa80a78.js&quot;&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;
+
+&lt;p&gt;The way we should interpret the results is that the algorithm has generated new, higher level tags, made up of the original tags. We have to interpret the tags now as continuous numerical quantities, not as single entries of 0 or 1. This turns out to be not so difficult of a task; we can replace the notion of a tag being present or not with simply a level of belief (my words, not a rigorous term) that this tag is &lt;em&gt;appropriate&lt;/em&gt; for this particular event. For example, if I were to describe a particular event to you as recording in the &lt;strong&gt;Accidental Shooting&lt;/strong&gt; column the value “.8”, this should be taken to mean that “more likely than not this was an accidental shooting”.&lt;/p&gt;
+
+&lt;p&gt;Now each bar represents a number which represents a weight on how important the individual tag is in this new tag, positive meaning “if this individual tag is present then we should have this much belief (again, not a rigorous term but just one for this explanation) in using this new tag to describe it” and negative (which is not present here but may be) meaning “if this individual tag is not present we should have this much belief in using this new tag”.&lt;/p&gt;
+
+&lt;p&gt;This is the first component, the one that explains the most variance in the dataset:
+&lt;img src=&quot;/gva/post_assets/pca/0.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In plain terms, this new tag grouping is predominantly governed by the presence of the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Accidental Shooting&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Accidental Shooting - Injury&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Accidental/Negligent Discharge&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;However, the presence of the following tags also make up nontrivial parts of this new tag:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Accidental Shooting - Death&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Cleaning Gun&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Thought gun was unloaded&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Hunting accident&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And so on, from largest weight to smallest. At this point it is up to us to give a simple label to this machine-generated hybrid tag; it seems clear to me that this is what we should take to be the “accidentally shot my gun” tag.&lt;/p&gt;
+
+&lt;p&gt;Here is the next component (the one that most explains the variance after we factor out the first component):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pca/1.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The negative weight here indicates that the lack of the &lt;strong&gt;Shot - Wounded/Injured&lt;/strong&gt; is used by the component; in an interpretative sense, whenever we see &lt;strong&gt;Shot - Wounded/Injured&lt;/strong&gt; we should not expect to apply our new tag and vice versa.&lt;/p&gt;
+
+&lt;p&gt;Looking at the remaining values, we can imagine what kind of label we should apply to this tag. In particular, the presence of the following tags lend some insight into what kind of events should carry this tag:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;ATF/LE Confiscation/Raid/Arrest&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Drug involvement&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Stolen/illegally owned gun{s} recovered during arrest/warrant&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Possession (gun(s) found during commission of other crimes)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This seems to imply we are looking at a description of “law enforcement gun recording”, what I will use to describe all of the times that guns are logged by law enforcement during the execution of their duties; specifically, the absence of any tags related to robbery, home invasion, murder seem to imply that the events that carry this tag are ones where guns are a secondary concern to the criminal activity going on (hence the strong presence of the &lt;strong&gt;Drug involvement&lt;/strong&gt; tag).&lt;/p&gt;
+
+&lt;p&gt;It is sometimes a fun exercise to try to interpret the principal components. Here are the remaining ones (with my idea of what they represent), down to a point where the variance explained by the component is too small to be worth talking about:&lt;/p&gt;
+
+&lt;h3 id=&quot;successful-defensive-action&quot;&gt;“Successful defensive action”:&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pca/2.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;police-shootout&quot;&gt;“Police shootout”:&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pca/3.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;child-plays-with-gun&quot;&gt;“Child plays with gun”:&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pca/4.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;premeditated-murder&quot;&gt;“Premeditated murder”:&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pca/5.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;school-safety&quot;&gt;“School safety”:&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pca/6.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;home-safety&quot;&gt;“Home safety”:&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pca/7.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;public-safety&quot;&gt;“Public safety”:&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pca/8.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;bankstore-robbery&quot;&gt;“Bank/store robbery”:&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pca/9.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;warning-shots&quot;&gt;“Warning shots”:&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pca/10.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here are some of the last components we will look at. At this level there isn’t a lot of insight to be gained about how the tags group together. In some cases, it can be hard to even determine what the component represents.
+&lt;img src=&quot;/gva/post_assets/pca/11.png&quot; /&gt;
+&lt;img src=&quot;/gva/post_assets/pca/12.png&quot; /&gt;
+&lt;img src=&quot;/gva/post_assets/pca/13.png&quot; /&gt;
+&lt;img src=&quot;/gva/post_assets/pca/14.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;PCA is a useful technique to reduce dimensions. Moving forward, rather than track the presence or absence of 92 separate tags I will use these generated components as references for the nine or fewer significant components I have observed. The boon is that PCA is best understood as a change in coordinates for the original data set; thus I will not lose anything by continuing my analysis using the principal components since all of the information has been preserved.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 17 Dec 2015 15:00:01 -0500</pubDate>
+        <link>http://larryfenn.com/personal/2015/12/17/gva2.html</link>
+        <guid isPermaLink="true">http://larryfenn.com/personal/2015/12/17/gva2.html</guid>
+        
+        <category>python</category>
+        
+        <category>scikit-learn</category>
+        
+        <category>statistics</category>
+        
+        <category>pca</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>Gun Violence Statistics</title>
@@ -624,23 +757,6 @@ A series of notes I typed up for the benefit of a student over the course of a f
         
         
         <category>research</category>
-        
-      </item>
-    
-      <item>
-        <title>Minima Finding</title>
-        <description>&lt;p&gt;These are notes, originally written for a class I gave, about two line search methods for finding a minima in the deterministic context. I’m pretty happy about how the typesetting turned out, as it was my first foray into a “real” \(\TeX\) article.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/personal/minima/minimafinding.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Thu, 19 Jun 2014 02:02:03 -0400</pubDate>
-        <link>http://larryfenn.com/personal/2014/06/19/minima.html</link>
-        <guid isPermaLink="true">http://larryfenn.com/personal/2014/06/19/minima.html</guid>
-        
-        <category>optimization</category>
-        
-        
-        <category>personal</category>
         
       </item>
     

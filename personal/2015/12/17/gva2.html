@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Gun Violence Incident Grouping via PCA</title>
+  <meta name="description" content="The Gun Violence Archive (GVA) has for each event a list of characteristics. There are 92 distinct tags that are used. Many of these tags are either redundan...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://larryfenn.com/personal/2015/12/17/gva2.html">
+  <link rel="alternate" type="application/rss+xml" title="fenn, larry" href="http://larryfenn.com/feed.xml">
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    jQuery(function($){
+      $( '.site-nav' ).click(function() {
+        $( '.trigger').toggleClass('expand')
+      })
+    })
+  </script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">fenn, larry</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        <a class="page-link" href="/about">About</a>
+        <a class="page-link" href="/personal/">Personal</a>
+        <a class="page-link" href="/research/">Research</a>
+        <a class="page-link" href="/classes/">Classes</a>
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Gun Violence Incident Grouping via PCA</h1>
+    <p class="post-meta"><time datetime="2015-12-17T15:00:01-05:00" itemprop="datePublished">Dec 17, 2015</time></p>
+  </header>
+  
+  <div class="tags">
+  <h5>Tags: 
+  <a href="/tag/python">python</a>
+  
+  <a href="/tag/scikit-learn">scikit-learn</a>
+  
+  <a href="/tag/statistics">statistics</a>
+  
+  <a href="/tag/pca">pca</a>
+  </h5>
+  </div>
+  
+  <div class="post-content" itemprop="articleBody">
+    <p>The Gun Violence Archive (GVA) has for each event a list of characteristics. There are 92 distinct tags that are used. Many of these tags are either redundant or unnecessarily specific for the kinds of questions I am interested in investigating:</p>
+
+<ul>
+  <li>What are the most frequent kinds of gun-related incidents?</li>
+  <li>Where are they located and which demographic groups are affected by them?</li>
+</ul>
+
+<!--more-->
+
+<p>The mechanical issue with having so many tags is that if we treated each tag as a unique label then any statistical analysis using them is hopelessly high-dimensional. To that end a significant dimensionality reduction can be gained by using PCA to determine which groupings of tags appear frequently together; these groupings of tags will be our base level unit for categorizing gun violence events.</p>
+
+<h2 id="encoding-tags">Encoding Tags</h2>
+
+<p>First we need to encode the data using one-hot encoding: every gun violence event will record either a 0 if that tag is not present or a 1 if it is. The easiest way to do this with the current system for processing data that I established in <a href="http://larryfenn.com/personal/2015/12/14/gva.html">the previous post</a> is:</p>
+
+<ol>
+  <li>Represent each event as a python dict, with the tags as keys and the values as 1 entries. Collect all the events in a list.</li>
+  <li>Use <code>scikit-learn</code>’s excellent <code>DictVectorizer</code> to convert this list of dicts into a matrix where the columns correspond to a specific tag and the rows correspond to events.</li>
+</ol>
+
+<p>After doing that, the <code>decomposition</code> component of <code>scikit-learn</code> gives us the <code>SparsePCA</code> function, which will be our tool of choice here. PCA determines which combinations of the original columns of the data best explain the observed variance in the data. It is these combinations which will make up our tag groupings. However, in practice normal PCA often results in every column in the original data set being used in the new description of the data. This is undesirable for our current context because we want a simple grouping of tags to jump out at us; it would do us no good if our predominant tag grouping involved in some degree all of the original tags; we would have the opposite problem where, rather than too many hyper-descriptive tags we have too few overly-general tags.</p>
+
+<p>The way out of this is to use a sparse PCA algorithm, which constrains how many columns of the original data set can be used in generating principal components. From the sparse PCA algorithm we will (hopefully) achieve the goal of building robust groupings of tags based on, in some sense, their similarity to one another.</p>
+<style type="text/css">
+  .gist-file
+  .gist-data {max-height: 10em;}
+</style>
+
+<script src="https://gist.github.com/larryfenn/97756fe2874ebaa80a78.js"></script>
+
+<h2 id="results">Results</h2>
+
+<p>The way we should interpret the results is that the algorithm has generated new, higher level tags, made up of the original tags. We have to interpret the tags now as continuous numerical quantities, not as single entries of 0 or 1. This turns out to be not so difficult of a task; we can replace the notion of a tag being present or not with simply a level of belief (my words, not a rigorous term) that this tag is <em>appropriate</em> for this particular event. For example, if I were to describe a particular event to you as recording in the <strong>Accidental Shooting</strong> column the value “.8”, this should be taken to mean that “more likely than not this was an accidental shooting”.</p>
+
+<p>Now each bar represents a number which represents a weight on how important the individual tag is in this new tag, positive meaning “if this individual tag is present then we should have this much belief (again, not a rigorous term but just one for this explanation) in using this new tag to describe it” and negative (which is not present here but may be) meaning “if this individual tag is not present we should have this much belief in using this new tag”.</p>
+
+<p>This is the first component, the one that explains the most variance in the dataset:
+<img src="/gva/post_assets/pca/0.png" /></p>
+
+<p>In plain terms, this new tag grouping is predominantly governed by the presence of the following:</p>
+
+<ul>
+  <li><strong>Accidental Shooting</strong></li>
+  <li><strong>Accidental Shooting - Injury</strong></li>
+  <li><strong>Accidental/Negligent Discharge</strong></li>
+</ul>
+
+<p>However, the presence of the following tags also make up nontrivial parts of this new tag:</p>
+
+<ul>
+  <li><strong>Accidental Shooting - Death</strong></li>
+  <li><strong>Cleaning Gun</strong></li>
+  <li><strong>Thought gun was unloaded</strong></li>
+  <li><strong>Hunting accident</strong></li>
+</ul>
+
+<p>And so on, from largest weight to smallest. At this point it is up to us to give a simple label to this machine-generated hybrid tag; it seems clear to me that this is what we should take to be the “accidentally shot my gun” tag.</p>
+
+<p>Here is the next component (the one that most explains the variance after we factor out the first component):</p>
+
+<p><img src="/gva/post_assets/pca/1.png" /></p>
+
+<p>The negative weight here indicates that the lack of the <strong>Shot - Wounded/Injured</strong> is used by the component; in an interpretative sense, whenever we see <strong>Shot - Wounded/Injured</strong> we should not expect to apply our new tag and vice versa.</p>
+
+<p>Looking at the remaining values, we can imagine what kind of label we should apply to this tag. In particular, the presence of the following tags lend some insight into what kind of events should carry this tag:</p>
+
+<ul>
+  <li><strong>ATF/LE Confiscation/Raid/Arrest</strong></li>
+  <li><strong>Drug involvement</strong></li>
+  <li><strong>Stolen/illegally owned gun{s} recovered during arrest/warrant</strong></li>
+  <li><strong>Possession (gun(s) found during commission of other crimes)</strong></li>
+</ul>
+
+<p>This seems to imply we are looking at a description of “law enforcement gun recording”, what I will use to describe all of the times that guns are logged by law enforcement during the execution of their duties; specifically, the absence of any tags related to robbery, home invasion, murder seem to imply that the events that carry this tag are ones where guns are a secondary concern to the criminal activity going on (hence the strong presence of the <strong>Drug involvement</strong> tag).</p>
+
+<p>It is sometimes a fun exercise to try to interpret the principal components. Here are the remaining ones (with my idea of what they represent), down to a point where the variance explained by the component is too small to be worth talking about:</p>
+
+<h3 id="successful-defensive-action">“Successful defensive action”:</h3>
+<p><img src="/gva/post_assets/pca/2.png" /></p>
+
+<h3 id="police-shootout">“Police shootout”:</h3>
+<p><img src="/gva/post_assets/pca/3.png" /></p>
+
+<h3 id="child-plays-with-gun">“Child plays with gun”:</h3>
+<p><img src="/gva/post_assets/pca/4.png" /></p>
+
+<h3 id="premeditated-murder">“Premeditated murder”:</h3>
+<p><img src="/gva/post_assets/pca/5.png" /></p>
+
+<h3 id="school-safety">“School safety”:</h3>
+<p><img src="/gva/post_assets/pca/6.png" /></p>
+
+<h3 id="home-safety">“Home safety”:</h3>
+<p><img src="/gva/post_assets/pca/7.png" /></p>
+
+<h3 id="public-safety">“Public safety”:</h3>
+<p><img src="/gva/post_assets/pca/8.png" /></p>
+
+<h3 id="bankstore-robbery">“Bank/store robbery”:</h3>
+<p><img src="/gva/post_assets/pca/9.png" /></p>
+
+<h3 id="warning-shots">“Warning shots”:</h3>
+<p><img src="/gva/post_assets/pca/10.png" /></p>
+
+<p>Here are some of the last components we will look at. At this level there isn’t a lot of insight to be gained about how the tags group together. In some cases, it can be hard to even determine what the component represents.
+<img src="/gva/post_assets/pca/11.png" />
+<img src="/gva/post_assets/pca/12.png" />
+<img src="/gva/post_assets/pca/13.png" />
+<img src="/gva/post_assets/pca/14.png" /></p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>PCA is a useful technique to reduce dimensions. Moving forward, rather than track the presence or absence of 92 separate tags I will use these generated components as references for the nine or fewer significant components I have observed. The boon is that PCA is best understood as a change in coordinates for the original data set; thus I will not lose anything by continuing my analysis using the principal components since all of the information has been preserved.</p>
+
+  </div>
+  <div class="previous-next">
+    
+    Previous: <a href="/personal/2015/12/14/gva.html">Gun Violence Statistics</a>
+    <br>
+    
+    
+  </div>
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li><a href="mailto:larry@larryfenn.com"><img src="/mailicon.png" width="16" height="16"> larry@larryfenn.com</a></li>
+		  <li><a href="https://github.com/larryfenn"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">larryfenn</span></a>
+</li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>some of my research, thoughts, and projects.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
