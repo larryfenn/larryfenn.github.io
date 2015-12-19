@@ -6,13 +6,15 @@
 </description>
     <link>http://larryfenn.com/</link>
     <atom:link href="http://larryfenn.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 17 Dec 2015 20:33:48 -0500</pubDate>
-    <lastBuildDate>Thu, 17 Dec 2015 20:33:48 -0500</lastBuildDate>
+    <pubDate>Sat, 19 Dec 2015 14:21:59 -0500</pubDate>
+    <lastBuildDate>Sat, 19 Dec 2015 14:21:59 -0500</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
     
       <item>
         <title>Gun Violence Incident Grouping via PCA</title>
-        <description>&lt;p&gt;The Gun Violence Archive (GVA) has for each event a list of characteristics. There are 92 distinct tags that are used. Many of these tags are either redundant or unnecessarily specific for the kinds of questions I am interested in investigating:&lt;/p&gt;
+        <description>&lt;p&gt;&lt;img src=&quot;/assets/preview/gva2.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The Gun Violence Archive (GVA) has for each event a list of characteristics. There are 92 distinct tags that are used. Many of these tags are either redundant or unnecessarily specific for the kinds of questions I am interested in investigating:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;What are the most frequent kinds of gun-related incidents?&lt;/li&gt;
