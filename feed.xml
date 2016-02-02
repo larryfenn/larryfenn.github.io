@@ -6,9 +6,38 @@
 </description>
     <link>http://larryfenn.com/</link>
     <atom:link href="http://larryfenn.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 21 Dec 2015 12:27:40 -0500</pubDate>
-    <lastBuildDate>Mon, 21 Dec 2015 12:27:40 -0500</lastBuildDate>
+    <pubDate>Mon, 01 Feb 2016 22:05:57 -0500</pubDate>
+    <lastBuildDate>Mon, 01 Feb 2016 22:05:57 -0500</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
+    
+      <item>
+        <title>Mixed Procedures For Stochastic Optimization - WODES 2016</title>
+        <description>&lt;p&gt;This is part of ongoing work with Professor Felisa Vázquez-Abad of Hunter College. This is the preliminary draft submitted for the WODES 2016 conference. The particularly tricky bit this time around was our decision to use a less trivial example scenario: instead of just a deterministic function plus a normally distributed noise term, we chose to construct a more complicated stochastic function. Crucially, since we wanted to speak to the usefulness of gradient estimation, we wanted a function where IPA derivative estimation could be used.&lt;/p&gt;
+
+&lt;p&gt;Put another way, let \(X(\theta)\) be some random variable controlled by the parameter \(\theta\) and let \(h\) be some real-valued measurable mapping where \(\mathbb{E}\left[h\left(X(\theta)\right)\right]\) is defined for any \(\theta\in\Theta\). How do we define \(\dfrac{d}{d\theta}\mathbb{E}\left[h\left(X(\theta)\right)\right]\)?&lt;/p&gt;
+
+&lt;p&gt;One way to think about it is by a kind of stretchy analogy with weak derivatives: we are looking for a measurable mapping \(\psi\) such that \(\dfrac{d}{d\theta}\mathbb{E}\left[h\left(X(\theta)\right)\right] = \mathbb{E}\left[\psi\left(h, X(\theta),\theta\right)\right]\). Put this way, if we know that the random variable \(h\left(X(\theta)\right)\) is differentiable and that swapping expectation and differentiation is permitted (ex. through some bounded convergence theorem-like result) then we have an expression for \(\dfrac{d}{d\theta}\mathbb{E}\left[h\left(X(\theta)\right)\right]\); indeed:&lt;/p&gt;
+
+&lt;p&gt;\(\dfrac{d}{d\theta}\mathbb{E}\left[h\left(X(\theta)\right)\right] = \mathbb{E}\left[\dfrac{d}{d\theta}h\left(X(\theta)\right)\right] = \mathbb{E}\left[\left(\dfrac{\partial}{\partial\theta}X(\theta)\right) h^\prime\left(X(\theta)\right)\right]\)&lt;/p&gt;
+
+&lt;p&gt;where \(h^\prime\) is just the usual derivative of \(h\). The quantity \(\left(\dfrac{\partial}{\partial\theta}X(\theta)\right)\) is called the &lt;em&gt;sample path derivative&lt;/em&gt; of \(X(\theta)\) and this approach for estimating the derivative of an expected value is called &lt;em&gt;infinitesimal perturbation analysis&lt;/em&gt; (IPA).&lt;/p&gt;
+
+&lt;p&gt;In the paper, we needed a function that not only supported IPA but still had a relatively small curvature so that the non-gradient method we were discussing would converge in reasonable time.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/research/wodes2016.pdf&quot;&gt;Conference paper&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 01 Feb 2016 21:37:14 -0500</pubDate>
+        <link>http://larryfenn.com/research/2016/02/01/wodes.html</link>
+        <guid isPermaLink="true">http://larryfenn.com/research/2016/02/01/wodes.html</guid>
+        
+        <category>stochastic-optimization</category>
+        
+        <category>optimization</category>
+        
+        
+        <category>research</category>
+        
+      </item>
     
       <item>
         <title>Gun Violence Incident Grouping via PCA</title>
@@ -726,36 +755,6 @@ A series of notes I typed up for the benefit of a student over the course of a f
         <guid isPermaLink="true">http://larryfenn.com/research/2015/07/22/decision-trees.html</guid>
         
         <category>decision-trees</category>
-        
-        
-        <category>research</category>
-        
-      </item>
-    
-      <item>
-        <title>Stochastic Optimization</title>
-        <description>&lt;p&gt;Research done through Felisa Vazquez-Abad at Hunter College on stochastic optimization algorithms to solve a particular transit problem. Based off work presented at the INFORMS 2013 Winter Simulation Conference.&lt;/p&gt;
-
-&lt;p&gt;Her original problem came by way of the Melbourne airport, which was seeking to implement a bus system to connect long-term parking lots with the airport terminals.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/research/stopt.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1&gt;Problem&lt;/h1&gt;
-&lt;p&gt;The problem is a constrained optimization problem, where the constraint is rather tricky mathematically(although standard for industry and policy): 95% of passengers should not have to wait more than 10 minutes. The problem domain is on number of buses, and a control variable dictating the headway between buses.&lt;/p&gt;
-&lt;h1&gt;Modeling&lt;/h1&gt;
-&lt;p&gt;Modeling proceeded with one unique twist: by assuming buses were not allowed to pass each other, it is possible to use a Markov process on the sample paths for separate buses (rather than on separate instances of time). This allows for simulation to be sped up enormously, since the simulation no longer needs to simulate individual timesteps. As an additional boon, it was proven that this model supports unbiased IPA estimators for derivatives, allowing an implementation of gradient search that is much more efficient than FDM gradient search.&lt;/p&gt;
-&lt;h1&gt;Further Work&lt;/h1&gt;
-&lt;p&gt;The direction I am taking this in the future is to generalize where the techniques used in solving this problem are applicable. Of particular curiosity is if it can be generalized in a way that makes it applicable to something like the bike-sharing program now seen in many cities.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 30 Dec 2014 01:02:03 -0500</pubDate>
-        <link>http://larryfenn.com/research/2014/12/30/stochastic-optimization.html</link>
-        <guid isPermaLink="true">http://larryfenn.com/research/2014/12/30/stochastic-optimization.html</guid>
-        
-        <category>stochastic-optimization</category>
-        
-        <category>optimization</category>
-        
-        <category>simulation</category>
         
         
         <category>research</category>
