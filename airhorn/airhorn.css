@@ -2,7 +2,7 @@ body {
     text-align: center;
 }
 
-#button {
+#honk {
     display: inline-block;
     margin-top: 20%;
     -webkit-border-radius: 8px;
@@ -19,7 +19,7 @@ body {
     color: #fff;
 }
 
-#button span {
+#honk span {
     display: inline-block;
     padding: 20px 30px;
     background-color: #ec528d;
@@ -42,7 +42,7 @@ body {
 }
 
 
-#button:active span {
+#honk:active span {
     -webkit-transform: translate(0, 4px);
     -moz-transform: translate(0, 4px);
     -o-transform: translate(0, 4px);
