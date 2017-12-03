@@ -7,21 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Gun Violence Incident Grouping via PCA</title>
-  <meta name="description" content="The Gun Violence Archive (GVA) has for each event a list of characteristics. There are 92 distinct tags that are used. Many of these tags are either redundan...">
+  <meta name="description" content="Note (Oct. 14, 2016): Part of this work was used in a collaboration between the AP here and USA TODAY NETWORK here.The Gun Violence Archive (GVA) has for eac...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://larryfenn.com/personal/2015/12/17/gva2.html">
-  <link rel="alternate" type="application/rss+xml" title="fenn, larry" href="http://larryfenn.com/feed.xml">
-  <script src="http://d3js.org/d3.v3.min.js"></script>
-  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script type="text/javascript">
-    jQuery(function($){
-      $( '.site-nav' ).click(function() {
-        $( '.trigger').toggleClass('expand')
-      })
-    })
-  </script>
+  <link rel="canonical" href="http://localhost:4000/personal/2015/12/17/gva2.html">
+  <link rel="alternate" type="application/rss+xml" title="fenn, larry" href="http://localhost:4000/feed.xml">
 </head>
 
 
@@ -34,13 +24,6 @@
     <a class="site-title" href="/">fenn, larry</a>
 
     <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </a>
 
       <div class="trigger">
         <a class="page-link" href="/about">About</a>
@@ -79,7 +62,9 @@
   
   <div class="post-content" itemprop="articleBody">
     <p><img src="/assets/preview/gva2.png" height="163" width="325" /></p>
-<p><i>Note (Oct. 14, 2016): In the same way that a single hose is used in the construction of a car, part of this work was used in a collaboration between the AP (<a href="https://apnews.com/a0d7f11b970f48d68f142b3650e1db36">here</a>) and USA TODAY NETWORK (<a href="http://www.usatoday.com/story/news/2016/10/14/ap-usa-today-gun-accidents-children/91906700/">here</a>).</i></p>
+
+<p><em>Note (Oct. 14, 2016): Part of this work was used in a collaboration between the AP <a href="https://apnews.com/a0d7f11b970f48d68f142b3650e1db36">here</a> and USA TODAY NETWORK <a href="http://www.usatoday.com/story/news/2016/10/14/ap-usa-today-gun-accidents-children/91906700/">here</a>.</em></p>
+
 <p>The Gun Violence Archive (GVA) has for each event a list of characteristics. There are 92 distinct tags that are used. Many of these tags are either redundant or unnecessarily specific for the kinds of questions I am interested in investigating:</p>
 
 <ul>
@@ -97,10 +82,10 @@
 
 <ol>
   <li>Represent each event as a python dict, with the tags as keys and the values as 1 entries. Collect all the events in a list.</li>
-  <li>Use <code>scikit-learn</code>’s excellent <code>DictVectorizer</code> to convert this list of dicts into a matrix where the columns correspond to a specific tag and the rows correspond to events.</li>
+  <li>Use <code class="highlighter-rouge">scikit-learn</code>’s excellent <code class="highlighter-rouge">DictVectorizer</code> to convert this list of dicts into a matrix where the columns correspond to a specific tag and the rows correspond to events.</li>
 </ol>
 
-<p>After doing that, the <code>decomposition</code> component of <code>scikit-learn</code> gives us the <code>SparsePCA</code> function, which will be our tool of choice here. PCA determines which combinations of the original columns of the data best explain the observed variance in the data. It is these combinations which will make up our tag groupings. However, in practice normal PCA often results in every column in the original data set being used in the new description of the data. This is undesirable for our current context because we want a simple grouping of tags to jump out at us; it would do us no good if our predominant tag grouping involved in some degree all of the original tags; we would have the opposite problem where, rather than too many hyper-descriptive tags we have too few overly-general tags.</p>
+<p>After doing that, the <code class="highlighter-rouge">decomposition</code> component of <code class="highlighter-rouge">scikit-learn</code> gives us the <code class="highlighter-rouge">SparsePCA</code> function, which will be our tool of choice here. PCA determines which combinations of the original columns of the data best explain the observed variance in the data. It is these combinations which will make up our tag groupings. However, in practice normal PCA often results in every column in the original data set being used in the new description of the data. This is undesirable for our current context because we want a simple grouping of tags to jump out at us; it would do us no good if our predominant tag grouping involved in some degree all of the original tags; we would have the opposite problem where, rather than too many hyper-descriptive tags we have too few overly-general tags.</p>
 
 <p>The way out of this is to use a sparse PCA algorithm, which constrains how many columns of the original data set can be used in generating principal components. From the sparse PCA algorithm we will (hopefully) achieve the goal of building robust groupings of tags based on, in some sense, their similarity to one another.</p>
 <style type="text/css">
@@ -157,32 +142,32 @@
 
 <p>It is sometimes a fun exercise to try to interpret the principal components. Here are the remaining ones (with my idea of what they represent), down to a point where the variance explained by the component is too small to be worth talking about:</p>
 
-<h3 id="successful-defensive-action">“Successful defensive action”:</h3>
-<p><img src="/gva/post_assets/pca/2.png" /></p>
+<p>###”Successful defensive action”:
+<img src="/gva/post_assets/pca/2.png" /></p>
 
-<h3 id="police-shootout">“Police shootout”:</h3>
-<p><img src="/gva/post_assets/pca/3.png" /></p>
+<p>###”Police shootout”:
+<img src="/gva/post_assets/pca/3.png" /></p>
 
-<h3 id="child-plays-with-gun">“Child plays with gun”:</h3>
-<p><img src="/gva/post_assets/pca/4.png" /></p>
+<p>###”Child plays with gun”:
+<img src="/gva/post_assets/pca/4.png" /></p>
 
-<h3 id="premeditated-murder">“Premeditated murder”:</h3>
-<p><img src="/gva/post_assets/pca/5.png" /></p>
+<p>###”Premeditated murder”:
+<img src="/gva/post_assets/pca/5.png" /></p>
 
-<h3 id="school-safety">“School safety”:</h3>
-<p><img src="/gva/post_assets/pca/6.png" /></p>
+<p>###”School safety”:
+<img src="/gva/post_assets/pca/6.png" /></p>
 
-<h3 id="home-safety">“Home safety”:</h3>
-<p><img src="/gva/post_assets/pca/7.png" /></p>
+<p>###”Home safety”:
+<img src="/gva/post_assets/pca/7.png" /></p>
 
-<h3 id="public-safety">“Public safety”:</h3>
-<p><img src="/gva/post_assets/pca/8.png" /></p>
+<p>###”Public safety”:
+<img src="/gva/post_assets/pca/8.png" /></p>
 
-<h3 id="bankstore-robbery">“Bank/store robbery”:</h3>
-<p><img src="/gva/post_assets/pca/9.png" /></p>
+<p>###”Bank/store robbery”:
+<img src="/gva/post_assets/pca/9.png" /></p>
 
-<h3 id="warning-shots">“Warning shots”:</h3>
-<p><img src="/gva/post_assets/pca/10.png" /></p>
+<p>###”Warning shots”:
+<img src="/gva/post_assets/pca/10.png" /></p>
 
 <p>Here are some of the last components we will look at. At this level there isn’t a lot of insight to be gained about how the tags group together. In some cases, it can be hard to even determine what the component represents.
 <img src="/gva/post_assets/pca/11.png" />

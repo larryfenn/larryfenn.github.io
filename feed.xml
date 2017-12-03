@@ -4,11 +4,11 @@
     <title>fenn, larry</title>
     <description>some of my research, thoughts, and projects.
 </description>
-    <link>http://larryfenn.com/</link>
-    <atom:link href="http://larryfenn.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 14 May 2016 09:31:51 -0400</pubDate>
-    <lastBuildDate>Sat, 14 May 2016 09:31:51 -0400</lastBuildDate>
-    <generator>Jekyll v3.0.0</generator>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 03 Dec 2017 17:33:41 -0500</pubDate>
+    <lastBuildDate>Sun, 03 Dec 2017 17:33:41 -0500</lastBuildDate>
+    <generator>Jekyll v3.6.2</generator>
     
       <item>
         <title>Mixed Procedures For Stochastic Optimization - WODES 2016</title>
@@ -27,8 +27,8 @@
 &lt;p&gt;&lt;a href=&quot;/research/wodes2016.pdf&quot;&gt;Conference paper&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 01 Feb 2016 21:37:14 -0500</pubDate>
-        <link>http://larryfenn.com/research/2016/02/01/wodes.html</link>
-        <guid isPermaLink="true">http://larryfenn.com/research/2016/02/01/wodes.html</guid>
+        <link>http://localhost:4000/research/2016/02/01/wodes.html</link>
+        <guid isPermaLink="true">http://localhost:4000/research/2016/02/01/wodes.html</guid>
         
         <category>stochastic-optimization</category>
         
@@ -42,6 +42,8 @@
       <item>
         <title>Gun Violence Incident Grouping via PCA</title>
         <description>&lt;p&gt;&lt;img src=&quot;/assets/preview/gva2.png&quot; height=&quot;163&quot; width=&quot;325&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note (Oct. 14, 2016): Part of this work was used in a collaboration between the AP &lt;a href=&quot;https://apnews.com/a0d7f11b970f48d68f142b3650e1db36&quot;&gt;here&lt;/a&gt; and USA TODAY NETWORK &lt;a href=&quot;http://www.usatoday.com/story/news/2016/10/14/ap-usa-today-gun-accidents-children/91906700/&quot;&gt;here&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;The Gun Violence Archive (GVA) has for each event a list of characteristics. There are 92 distinct tags that are used. Many of these tags are either redundant or unnecessarily specific for the kinds of questions I am interested in investigating:&lt;/p&gt;
 
@@ -60,10 +62,10 @@
 
 &lt;ol&gt;
   &lt;li&gt;Represent each event as a python dict, with the tags as keys and the values as 1 entries. Collect all the events in a list.&lt;/li&gt;
-  &lt;li&gt;Use &lt;code&gt;scikit-learn&lt;/code&gt;’s excellent &lt;code&gt;DictVectorizer&lt;/code&gt; to convert this list of dicts into a matrix where the columns correspond to a specific tag and the rows correspond to events.&lt;/li&gt;
+  &lt;li&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;scikit-learn&lt;/code&gt;’s excellent &lt;code class=&quot;highlighter-rouge&quot;&gt;DictVectorizer&lt;/code&gt; to convert this list of dicts into a matrix where the columns correspond to a specific tag and the rows correspond to events.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;After doing that, the &lt;code&gt;decomposition&lt;/code&gt; component of &lt;code&gt;scikit-learn&lt;/code&gt; gives us the &lt;code&gt;SparsePCA&lt;/code&gt; function, which will be our tool of choice here. PCA determines which combinations of the original columns of the data best explain the observed variance in the data. It is these combinations which will make up our tag groupings. However, in practice normal PCA often results in every column in the original data set being used in the new description of the data. This is undesirable for our current context because we want a simple grouping of tags to jump out at us; it would do us no good if our predominant tag grouping involved in some degree all of the original tags; we would have the opposite problem where, rather than too many hyper-descriptive tags we have too few overly-general tags.&lt;/p&gt;
+&lt;p&gt;After doing that, the &lt;code class=&quot;highlighter-rouge&quot;&gt;decomposition&lt;/code&gt; component of &lt;code class=&quot;highlighter-rouge&quot;&gt;scikit-learn&lt;/code&gt; gives us the &lt;code class=&quot;highlighter-rouge&quot;&gt;SparsePCA&lt;/code&gt; function, which will be our tool of choice here. PCA determines which combinations of the original columns of the data best explain the observed variance in the data. It is these combinations which will make up our tag groupings. However, in practice normal PCA often results in every column in the original data set being used in the new description of the data. This is undesirable for our current context because we want a simple grouping of tags to jump out at us; it would do us no good if our predominant tag grouping involved in some degree all of the original tags; we would have the opposite problem where, rather than too many hyper-descriptive tags we have too few overly-general tags.&lt;/p&gt;
 
 &lt;p&gt;The way out of this is to use a sparse PCA algorithm, which constrains how many columns of the original data set can be used in generating principal components. From the sparse PCA algorithm we will (hopefully) achieve the goal of building robust groupings of tags based on, in some sense, their similarity to one another.&lt;/p&gt;
 &lt;style type=&quot;text/css&quot;&gt;
@@ -120,32 +122,32 @@
 
 &lt;p&gt;It is sometimes a fun exercise to try to interpret the principal components. Here are the remaining ones (with my idea of what they represent), down to a point where the variance explained by the component is too small to be worth talking about:&lt;/p&gt;
 
-&lt;h3 id=&quot;successful-defensive-action&quot;&gt;“Successful defensive action”:&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pca/2.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;###”Successful defensive action”:
+&lt;img src=&quot;/gva/post_assets/pca/2.png&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;police-shootout&quot;&gt;“Police shootout”:&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pca/3.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;###”Police shootout”:
+&lt;img src=&quot;/gva/post_assets/pca/3.png&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;child-plays-with-gun&quot;&gt;“Child plays with gun”:&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pca/4.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;###”Child plays with gun”:
+&lt;img src=&quot;/gva/post_assets/pca/4.png&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;premeditated-murder&quot;&gt;“Premeditated murder”:&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pca/5.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;###”Premeditated murder”:
+&lt;img src=&quot;/gva/post_assets/pca/5.png&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;school-safety&quot;&gt;“School safety”:&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pca/6.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;###”School safety”:
+&lt;img src=&quot;/gva/post_assets/pca/6.png&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;home-safety&quot;&gt;“Home safety”:&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pca/7.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;###”Home safety”:
+&lt;img src=&quot;/gva/post_assets/pca/7.png&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;public-safety&quot;&gt;“Public safety”:&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pca/8.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;###”Public safety”:
+&lt;img src=&quot;/gva/post_assets/pca/8.png&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;bankstore-robbery&quot;&gt;“Bank/store robbery”:&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pca/9.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;###”Bank/store robbery”:
+&lt;img src=&quot;/gva/post_assets/pca/9.png&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;warning-shots&quot;&gt;“Warning shots”:&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pca/10.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;###”Warning shots”:
+&lt;img src=&quot;/gva/post_assets/pca/10.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Here are some of the last components we will look at. At this level there isn’t a lot of insight to be gained about how the tags group together. In some cases, it can be hard to even determine what the component represents.
 &lt;img src=&quot;/gva/post_assets/pca/11.png&quot; /&gt;
@@ -158,8 +160,8 @@
 &lt;p&gt;PCA is a useful technique to reduce dimensions. Moving forward, rather than track the presence or absence of 92 separate tags I will use these generated components as references for the nine or fewer significant components I have observed. The boon is that PCA is best understood as a change in coordinates for the original data set; thus I will not lose anything by continuing my analysis using the principal components since all of the information has been preserved.&lt;/p&gt;
 </description>
         <pubDate>Thu, 17 Dec 2015 15:00:01 -0500</pubDate>
-        <link>http://larryfenn.com/personal/2015/12/17/gva2.html</link>
-        <guid isPermaLink="true">http://larryfenn.com/personal/2015/12/17/gva2.html</guid>
+        <link>http://localhost:4000/personal/2015/12/17/gva2.html</link>
+        <guid isPermaLink="true">http://localhost:4000/personal/2015/12/17/gva2.html</guid>
         
         <category>python</category>
         
@@ -184,7 +186,7 @@
 
 &lt;div id=&quot;toc&quot;&gt;&lt;/div&gt;
 
-&lt;h1 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h1&gt;
+&lt;p&gt;#Table of Contents&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Getting the Data&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#2&quot;&gt;Analysis&lt;/a&gt;&lt;/li&gt;
@@ -204,7 +206,7 @@
 
 &lt;script src=&quot;https://gist.github.com/larryfenn/fccc5e675525ea6ebcc3.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;The &lt;code&gt;results.txt&lt;/code&gt; file stores all of the GVA URL indices and their respective HTML &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; elements containing incident reports. The next step is to create a parser that will read through the HTML and populate a SQLite database of incidents.&lt;/p&gt;
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;results.txt&lt;/code&gt; file stores all of the GVA URL indices and their respective HTML &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;div&amp;gt;&lt;/code&gt; elements containing incident reports. The next step is to create a parser that will read through the HTML and populate a SQLite database of incidents.&lt;/p&gt;
 
 &lt;p&gt;Since incidents have only one location and time but potentially no limit on how many people are involved, I decided to make each entry of the database tie to an individual. Thus the parser will create entries for each person who has been involved in a gun-related incident.&lt;/p&gt;
 
@@ -220,7 +222,7 @@
 &lt;div id=&quot;2&quot;&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;analysis&quot;&gt;Analysis&lt;/h2&gt;
-&lt;p&gt;Now we have a SQLite database called &lt;code&gt;gva.db&lt;/code&gt; with the table GVA in it. We can now ask it some basic questions:&lt;/p&gt;
+&lt;p&gt;Now we have a SQLite database called &lt;code class=&quot;highlighter-rouge&quot;&gt;gva.db&lt;/code&gt; with the table GVA in it. We can now ask it some basic questions:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/gva/post_assets/gvadb.png&quot; width=&quot;769&quot; /&gt;&lt;/p&gt;
 
@@ -238,37 +240,37 @@
 
 &lt;p&gt;With my treatment of the data, these are tags attached to  gun related incidents; it is not quite a direct count of factors, since a single event frequently has many tags attached to it in the GVA. However, the relative frequency of the different tags can still communicate what the nature of gun incidents and gun violence in America looks like:&lt;/p&gt;
 
-&lt;h3 id=&quot;top-event-characteristics-for-all-perpetrators-in-the-gva&quot;&gt;Top event characteristics for all perpetrators in the GVA&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pt.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/ptl.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;###Top event characteristics for all perpetrators in the GVA
+&lt;img src=&quot;/gva/post_assets/pt.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/ptl.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;top-event-characteristics-for-all-victims-in-the-gva&quot;&gt;Top event characteristics for all victims in the GVA&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/gva/post_assets/vt.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/vtl.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;###Top event characteristics for all victims in the GVA
+&lt;img src=&quot;/gva/post_assets/vt.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/vtl.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;DGU stands for “Defensive Gun Use”. Looking at the data for all perpetrators and victims, &lt;strong&gt;Armed robbery&lt;/strong&gt; is the number one tag in use for both. On the victim side, it turns out &lt;strong&gt;Mass Shooting&lt;/strong&gt; sits just below &lt;strong&gt;Accidental Shooting&lt;/strong&gt; in terms of frequency in the GVA database.&lt;/p&gt;
 
 &lt;p&gt;Now let’s examine the gender differences, if any (for those records where gender is filled in):&lt;/p&gt;
 
-&lt;h3 id=&quot;top-event-characteristics-for-male-perpetrators-in-the-gva&quot;&gt;Top event characteristics for male perpetrators in the GVA&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pm.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/pml.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;###Top event characteristics for male perpetrators in the GVA
+&lt;img src=&quot;/gva/post_assets/pm.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/pml.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;top-event-characteristics-for-female-perpetrators-in-the-gva&quot;&gt;Top event characteristics for female perpetrators in the GVA&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pf.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/pfl.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;###Top event characteristics for female perpetrators in the GVA
+&lt;img src=&quot;/gva/post_assets/pf.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/pfl.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Armed robbery&lt;/strong&gt; is at roughly the same frequency for male perpetrators as for the whole database, but for female perpetrators it has fallen down from 1st to 4th most used tag, with &lt;strong&gt;Non-Shooting Incident&lt;/strong&gt; rising from 3rd to 1st most used. &lt;strong&gt;Domestic Violence&lt;/strong&gt; for male perpetrators sits between &lt;strong&gt;Defensive Use&lt;/strong&gt; and &lt;strong&gt;Car-jacking&lt;/strong&gt; at 2.16%, while for female perpetrators it sits between &lt;strong&gt;Brandishing&lt;/strong&gt; and &lt;strong&gt;ATF/LE Confiscation&lt;/strong&gt; at 5.00%. Now let’s flip the relationship and look at victims:&lt;/p&gt;
 
-&lt;h3 id=&quot;top-event-characteristics-for-male-victims-in-the-gva&quot;&gt;Top event characteristics for male victims in the GVA&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/gva/post_assets/vm.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/vml.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;###Top event characteristics for male victims in the GVA
+&lt;img src=&quot;/gva/post_assets/vm.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/vml.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;top-event-characteristics-for-female-victims-in-the-gva&quot;&gt;Top event characteristics for female victims in the GVA&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/gva/post_assets/vf.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/vfl.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;###Top event characteristics for female victims in the GVA
+&lt;img src=&quot;/gva/post_assets/vf.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/vfl.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Flipping from perpetrator to victim we see a dramatic change: &lt;strong&gt;Domestic Violence&lt;/strong&gt; for female victims is top of the list, at 9.24% (compare that to 3.89% when we looked at all victims, and 2.74% for male victims).&lt;/p&gt;
 
-&lt;h3 id=&quot;top-event-characteristics-for-killed-perpetrators-in-the-gva&quot;&gt;Top event characteristics for killed perpetrators in the GVA&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pk.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/pkl.png&quot; width=&quot;400&quot; height=&quot;200&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;###Top event characteristics for killed perpetrators in the GVA
+&lt;img src=&quot;/gva/post_assets/pk.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/pkl.png&quot; width=&quot;400&quot; height=&quot;200&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;top-event-characteristics-for-killed-victims-in-the-gva&quot;&gt;Top event characteristics for killed victims in the GVA&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/gva/post_assets/vk.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/vkl.png&quot; width=&quot;400&quot; height=&quot;250&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;###Top event characteristics for killed victims in the GVA
+&lt;img src=&quot;/gva/post_assets/vk.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/vkl.png&quot; width=&quot;400&quot; height=&quot;250&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Lastly, looking at how deaths from gun incidents are distributed we see that &lt;strong&gt;Suicide&lt;/strong&gt; and &lt;strong&gt;Murder/Suicide&lt;/strong&gt; are both at the top of the list along with law enforcement related tags (evoking, among other things, the notion of “suicide by cop”). &lt;strong&gt;Suicide&lt;/strong&gt; and &lt;strong&gt;Domestic Violence&lt;/strong&gt; being at the top of the list for killed victims is both a disheartening but important fact to keep in mind about the frequency of these causes in gun casualties.&lt;/p&gt;
 
@@ -337,33 +339,33 @@
 
 &lt;h2 id=&quot;appendix-some-extra-graphs&quot;&gt;Appendix: Some Extra Graphs&lt;/h2&gt;
 
-&lt;h3 id=&quot;top-event-characteristics-for-unharmed-perpetrators-in-the-gva&quot;&gt;Top event characteristics for unharmed perpetrators in the GVA&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pu.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/pul.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;###Top event characteristics for unharmed perpetrators in the GVA
+&lt;img src=&quot;/gva/post_assets/pu.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/pul.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;top-event-characteristics-for-unharmed-victims-in-the-gva&quot;&gt;Top event characteristics for unharmed victims in the GVA&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/gva/post_assets/vu.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/vul.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;###Top event characteristics for unharmed victims in the GVA
+&lt;img src=&quot;/gva/post_assets/vu.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/vul.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The notable characteristics that jump out here are &lt;strong&gt;Institution/Group/Business&lt;/strong&gt; and &lt;strong&gt;Drug involvement&lt;/strong&gt; on the perpetrator side, and &lt;strong&gt;Defensive Use&lt;/strong&gt; on the victim side- evidence that there are a substantial amount of gun incidents where the victim defensively employs a gun and walks away unharmed.&lt;/p&gt;
 
-&lt;h3 id=&quot;top-event-characteristics-for-injured-perpetrators-in-the-gva&quot;&gt;Top event characteristics for injured perpetrators in the GVA&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pi.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/pil.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;###Top event characteristics for injured perpetrators in the GVA
+&lt;img src=&quot;/gva/post_assets/pi.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/pil.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;top-event-characteristics-for-injured-victims-in-the-gva&quot;&gt;Top event characteristics for injured victims in the GVA&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/gva/post_assets/vi.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/vil.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;###Top event characteristics for injured victims in the GVA
+&lt;img src=&quot;/gva/post_assets/vi.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/vil.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;top-event-characteristics-for-arrested-perpetrators-in-the-gva&quot;&gt;Top event characteristics for arrested perpetrators in the GVA&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pa.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/pal.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;###Top event characteristics for arrested perpetrators in the GVA
+&lt;img src=&quot;/gva/post_assets/pa.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/pal.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;top-event-characteristics-for-arrested-victims-in-the-gva&quot;&gt;Top event characteristics for arrested victims in the GVA&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/gva/post_assets/va.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/val.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;###Top event characteristics for arrested victims in the GVA
+&lt;img src=&quot;/gva/post_assets/va.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/val.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;#toc&quot;&gt;Back to top&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 14 Dec 2015 01:55:00 -0500</pubDate>
-        <link>http://larryfenn.com/personal/2015/12/14/gva.html</link>
-        <guid isPermaLink="true">http://larryfenn.com/personal/2015/12/14/gva.html</guid>
+        <link>http://localhost:4000/personal/2015/12/14/gva.html</link>
+        <guid isPermaLink="true">http://localhost:4000/personal/2015/12/14/gva.html</guid>
         
         <category>python</category>
         
@@ -404,11 +406,11 @@
 &lt;span class=&quot;c&quot;&gt;# one can edit the combinations argument to pull out arbitrary n-cliques&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;radiantcliq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%s&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%s&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%s&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\t&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%s&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;team_win&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;True&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;s,&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;s:&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\t&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;s'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;team_win&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'True'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;direcliq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%s&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%s&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%s&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\t&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%s&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;team_win&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;False&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+	&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;s,&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;s:&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\t&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;s'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;team_win&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'False'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;The result of the MapReduce step is essentially a list of edges and weights. Python has the &lt;code&gt;networkx&lt;/code&gt; library which allows us to create the graph structure without much fuss; even better, it supports JSON output which allows us to use D3.js to render the graphs and play around with them.&lt;/p&gt;
+&lt;p&gt;The result of the MapReduce step is essentially a list of edges and weights. Python has the &lt;code class=&quot;highlighter-rouge&quot;&gt;networkx&lt;/code&gt; library which allows us to create the graph structure without much fuss; even better, it supports JSON output which allows us to use D3.js to render the graphs and play around with them.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-graphs&quot;&gt;The Graphs&lt;/h2&gt;
 
@@ -442,8 +444,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 13 Nov 2015 18:55:02 -0500</pubDate>
-        <link>http://larryfenn.com/personal/2015/11/13/dota2drafts2.html</link>
-        <guid isPermaLink="true">http://larryfenn.com/personal/2015/11/13/dota2drafts2.html</guid>
+        <link>http://localhost:4000/personal/2015/11/13/dota2drafts2.html</link>
+        <guid isPermaLink="true">http://localhost:4000/personal/2015/11/13/dota2drafts2.html</guid>
         
         <category>python</category>
         
@@ -466,7 +468,7 @@
 
 &lt;h2 id=&quot;getting-the-data&quot;&gt;Getting the data&lt;/h2&gt;
 
-&lt;p&gt;The web API for Dota 2 has two functions we can use to grab match data as a JSON object from some index. The first, &lt;code&gt;GetMatchHistory&lt;/code&gt;, has a game mode argument and date argument which would make it ideal for stratifying the data by patch release. However, it has three flaws that preclude its use:&lt;/p&gt;
+&lt;p&gt;The web API for Dota 2 has two functions we can use to grab match data as a JSON object from some index. The first, &lt;code class=&quot;highlighter-rouge&quot;&gt;GetMatchHistory&lt;/code&gt;, has a game mode argument and date argument which would make it ideal for stratifying the data by patch release. However, it has three flaws that preclude its use:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;It is capped (for some reason, most likely a bug judging from all the angry dev forum posts) at grabbing the most recent 500 games.&lt;/li&gt;
@@ -474,51 +476,51 @@
   &lt;li&gt;The game mode argument currently does not work (lol Valve).&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;The second function, &lt;code&gt;GetMatchHistoryBySequenceNum&lt;/code&gt;, does return the pick/ban record and does not have any limitation on how far it can reach, but it does not support any date parameters. Thus, determining the actual patch number a match was played in will necessitate going into the records and accessing the UNIX time that the match was played at. The other complication &lt;code&gt;GetMatchHistoryBySequenceNum&lt;/code&gt; has is that the sequence numbers do not directly map to the order in which matches were played- I suspect that the sequence number is issued to a match once it has finished being indexed and processed into the Dota 2 database. In other words, it is no guarantee if the sequence number for match A is higher than the sequence number for match B that match A was played after match B.&lt;/p&gt;
+&lt;p&gt;The second function, &lt;code class=&quot;highlighter-rouge&quot;&gt;GetMatchHistoryBySequenceNum&lt;/code&gt;, does return the pick/ban record and does not have any limitation on how far it can reach, but it does not support any date parameters. Thus, determining the actual patch number a match was played in will necessitate going into the records and accessing the UNIX time that the match was played at. The other complication &lt;code class=&quot;highlighter-rouge&quot;&gt;GetMatchHistoryBySequenceNum&lt;/code&gt; has is that the sequence numbers do not directly map to the order in which matches were played- I suspect that the sequence number is issued to a match once it has finished being indexed and processed into the Dota 2 database. In other words, it is no guarantee if the sequence number for match A is higher than the sequence number for match B that match A was played after match B.&lt;/p&gt;
 
-&lt;p&gt;The typical output from the &lt;code&gt;GetMatchHistoryBySequenceNum&lt;/code&gt; call (for a captain’s mode match) looks like this:&lt;/p&gt;
+&lt;p&gt;The typical output from the &lt;code class=&quot;highlighter-rouge&quot;&gt;GetMatchHistoryBySequenceNum&lt;/code&gt; call (for a captain’s mode match) looks like this:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;quot;result&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;&amp;quot;status&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// success code&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;&amp;quot;matches&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;s&quot;&gt;&amp;quot;players&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-                    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                    &lt;span class=&quot;c1&quot;&gt;// omitted: player ids and statistics such as gold earned&lt;/span&gt;
-                    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-                &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-                &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                &lt;span class=&quot;s&quot;&gt;&amp;quot;radiant_win&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                &lt;span class=&quot;s&quot;&gt;&amp;quot;duration&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2333&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// our metric for how hard a team won the game&lt;/span&gt;
-                &lt;span class=&quot;s&quot;&gt;&amp;quot;start_time&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1447002472&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                &lt;span class=&quot;s&quot;&gt;&amp;quot;match_id&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1923658257&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                &lt;span class=&quot;s&quot;&gt;&amp;quot;match_seq_num&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1700000293&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                &lt;span class=&quot;c1&quot;&gt;// omitted: other game data not relevant to us&lt;/span&gt;
-                &lt;span class=&quot;s&quot;&gt;&amp;quot;picks_bans&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-                    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                        &lt;span class=&quot;s&quot;&gt;&amp;quot;is_pick&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                        &lt;span class=&quot;s&quot;&gt;&amp;quot;hero_id&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;75&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                        &lt;span class=&quot;s&quot;&gt;&amp;quot;team&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 0: radiant, 1: dire&lt;/span&gt;
-                        &lt;span class=&quot;s&quot;&gt;&amp;quot;order&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-                    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-                    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                        &lt;span class=&quot;s&quot;&gt;&amp;quot;is_pick&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                        &lt;span class=&quot;s&quot;&gt;&amp;quot;hero_id&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;85&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                        &lt;span class=&quot;s&quot;&gt;&amp;quot;team&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                        &lt;span class=&quot;s&quot;&gt;&amp;quot;order&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-                    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-                    &lt;span class=&quot;c1&quot;&gt;// etc. for the rest of the pick/ban records&lt;/span&gt;
-                &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-                
-            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-            &lt;span class=&quot;c1&quot;&gt;// ... and so on for 99 more matches&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;s&quot;&gt;&quot;result&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;s&quot;&gt;&quot;status&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// success code
+&lt;/span&gt;		&lt;span class=&quot;s&quot;&gt;&quot;matches&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+			&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+				&lt;span class=&quot;s&quot;&gt;&quot;players&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+					&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+					&lt;span class=&quot;c1&quot;&gt;// omitted: player ids and statistics such as gold earned
+&lt;/span&gt;					&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+				&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+				&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+				&lt;span class=&quot;s&quot;&gt;&quot;radiant_win&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+				&lt;span class=&quot;s&quot;&gt;&quot;duration&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2333&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// our metric for how hard a team won the game
+&lt;/span&gt;				&lt;span class=&quot;s&quot;&gt;&quot;start_time&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1447002472&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+				&lt;span class=&quot;s&quot;&gt;&quot;match_id&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1923658257&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+				&lt;span class=&quot;s&quot;&gt;&quot;match_seq_num&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1700000293&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+				&lt;span class=&quot;c1&quot;&gt;// omitted: other game data not relevant to us
+&lt;/span&gt;				&lt;span class=&quot;s&quot;&gt;&quot;picks_bans&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+					&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+						&lt;span class=&quot;s&quot;&gt;&quot;is_pick&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+						&lt;span class=&quot;s&quot;&gt;&quot;hero_id&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;75&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+						&lt;span class=&quot;s&quot;&gt;&quot;team&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 0: radiant, 1: dire
+&lt;/span&gt;						&lt;span class=&quot;s&quot;&gt;&quot;order&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+					&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+					&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+						&lt;span class=&quot;s&quot;&gt;&quot;is_pick&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+						&lt;span class=&quot;s&quot;&gt;&quot;hero_id&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;85&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+						&lt;span class=&quot;s&quot;&gt;&quot;team&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+						&lt;span class=&quot;s&quot;&gt;&quot;order&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+					&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+					&lt;span class=&quot;c1&quot;&gt;// etc. for the rest of the pick/ban records
+&lt;/span&gt;				&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+				
+			&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+			&lt;span class=&quot;c1&quot;&gt;// ... and so on for 99 more matches
+&lt;/span&gt;		&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+		
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Since we only want to index captain’s mode matches, it suffices to check if the &lt;code&gt;picks_bans&lt;/code&gt; key exists, and parse the serialized JSON into a csv for future use if it is.&lt;/p&gt;
+&lt;p&gt;Since we only want to index captain’s mode matches, it suffices to check if the &lt;code class=&quot;highlighter-rouge&quot;&gt;picks_bans&lt;/code&gt; key exists, and parse the serialized JSON into a csv for future use if it is.&lt;/p&gt;
 
 &lt;h2 id=&quot;basic-observation-hero-popularity&quot;&gt;Basic observation: Hero popularity&lt;/h2&gt;
 
@@ -546,8 +548,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 13 Nov 2015 18:55:02 -0500</pubDate>
-        <link>http://larryfenn.com/personal/2015/11/13/dota2drafts.html</link>
-        <guid isPermaLink="true">http://larryfenn.com/personal/2015/11/13/dota2drafts.html</guid>
+        <link>http://localhost:4000/personal/2015/11/13/dota2drafts.html</link>
+        <guid isPermaLink="true">http://localhost:4000/personal/2015/11/13/dota2drafts.html</guid>
         
         <category>python</category>
         
@@ -594,8 +596,8 @@ The implementation and diagrams are from the following Mathematica files.&lt;br 
 &lt;a href=&quot;/personal/merw/graphs.nb&quot;&gt;Notebook 1&lt;/a&gt;, &lt;a href=&quot;/personal/merw/graphs2.nb&quot;&gt;Notebook 2&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 11 Nov 2015 17:12:00 -0500</pubDate>
-        <link>http://larryfenn.com/personal/2015/11/11/merw.html</link>
-        <guid isPermaLink="true">http://larryfenn.com/personal/2015/11/11/merw.html</guid>
+        <link>http://localhost:4000/personal/2015/11/11/merw.html</link>
+        <guid isPermaLink="true">http://localhost:4000/personal/2015/11/11/merw.html</guid>
         
         <category>graph-theory</category>
         
@@ -634,20 +636,22 @@ A series of notes I typed up for the benefit of a student over the course of a f
 &lt;a href=&quot;/assets/writing/numanalysis/notes5.pdf&quot;&gt;Part 5: Elliptical PDEs, FEM&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h1&gt;Real Analysis/Measure Theory&lt;/h1&gt;
-&lt;p&gt;Proofs of the following:&lt;br /&gt;
-1. Integrability of \( f\) on \(\mathbb{R}\) does not necessarily imply the convergence of \(f(x)\) to \(0\) as \(x\to\infty\)&lt;br /&gt;
-2. If \( f\) is integrable on \(\mathbb{R}\), then \(F(x) = \displaystyle\int_{-\infty}^x f(t)\ dt\) is uniformly continuous.&lt;br /&gt;
-3. Chebyshev’s Inequality&lt;br /&gt;
-4. \(f\) real-valued and integrable on \(\mathbb{R}^d\) and \(\displaystyle\int_E f(x)\ dx\geq 0\) for every measurable \(E\) implies \(f(x) \geq 0\) a.e.&lt;br /&gt;
-5. A function can be integrable yet unbounded in any interval.&lt;br /&gt;
-&lt;a href=&quot;/assets/writing/ra.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Proofs of the following:&lt;br /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Integrability of \( f\) on \(\mathbb{R}\) does not necessarily imply the convergence of \(f(x)\) to \(0\) as \(x\to\infty\)&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;If \( f\) is integrable on \(\mathbb{R}\), then \(F(x) = \displaystyle\int_{-\infty}^x f(t)\ dt\) is uniformly continuous.&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Chebyshev’s Inequality&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;\(f\) real-valued and integrable on \(\mathbb{R}^d\) and \(\displaystyle\int_E f(x)\ dx\geq 0\) for every measurable \(E\) implies \(f(x) \geq 0\) a.e.&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;A function can be integrable yet unbounded in any interval.&lt;br /&gt;
+&lt;a href=&quot;/assets/writing/ra.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h1&gt;Quantum Mechanics&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;/assets/writing/qm.pdf&quot;&gt;Bell’s Inequality discussion.&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 10 Nov 2015 02:05:00 -0500</pubDate>
-        <link>http://larryfenn.com/personal/2015/11/10/assorted-papers.html</link>
-        <guid isPermaLink="true">http://larryfenn.com/personal/2015/11/10/assorted-papers.html</guid>
+        <link>http://localhost:4000/personal/2015/11/10/assorted-papers.html</link>
+        <guid isPermaLink="true">http://localhost:4000/personal/2015/11/10/assorted-papers.html</guid>
         
         <category>archive</category>
         
@@ -691,8 +695,8 @@ A series of notes I typed up for the benefit of a student over the course of a f
 &lt;p&gt;&lt;a href=&quot;/personal/rm/exerciseresistance.nb&quot;&gt;Fixed stepsize&lt;/a&gt;, &lt;a href=&quot;/personal/rm/exerciseresistancedynamic.nb&quot;&gt;dynamic stepsize RM optimization.&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 09 Nov 2015 16:00:00 -0500</pubDate>
-        <link>http://larryfenn.com/personal/2015/11/09/mathematica.html</link>
-        <guid isPermaLink="true">http://larryfenn.com/personal/2015/11/09/mathematica.html</guid>
+        <link>http://localhost:4000/personal/2015/11/09/mathematica.html</link>
+        <guid isPermaLink="true">http://localhost:4000/personal/2015/11/09/mathematica.html</guid>
         
         <category>archive</category>
         
@@ -730,8 +734,8 @@ A series of notes I typed up for the benefit of a student over the course of a f
 &lt;p&gt;This is an ongoing work, so expect to see another post about this before 2016!&lt;/p&gt;
 </description>
         <pubDate>Wed, 04 Nov 2015 10:02:14 -0500</pubDate>
-        <link>http://larryfenn.com/research/2015/11/04/stochastic-optimization2.html</link>
-        <guid isPermaLink="true">http://larryfenn.com/research/2015/11/04/stochastic-optimization2.html</guid>
+        <link>http://localhost:4000/research/2015/11/04/stochastic-optimization2.html</link>
+        <guid isPermaLink="true">http://localhost:4000/research/2015/11/04/stochastic-optimization2.html</guid>
         
         <category>stochastic-optimization</category>
         
@@ -751,8 +755,8 @@ A series of notes I typed up for the benefit of a student over the course of a f
 &lt;p&gt;&lt;a href=&quot;/decisiontrees.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 22 Jul 2015 02:02:03 -0400</pubDate>
-        <link>http://larryfenn.com/research/2015/07/22/decision-trees.html</link>
-        <guid isPermaLink="true">http://larryfenn.com/research/2015/07/22/decision-trees.html</guid>
+        <link>http://localhost:4000/research/2015/07/22/decision-trees.html</link>
+        <guid isPermaLink="true">http://localhost:4000/research/2015/07/22/decision-trees.html</guid>
         
         <category>decision-trees</category>
         

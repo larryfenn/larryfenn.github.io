@@ -10,18 +10,8 @@
   <meta name="description" content="Dota 2 captain’s mode entails a drafting phase where a sequence of picks and bans are issued by the team captains. As of this writing, there have been 1,933,...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://larryfenn.com/personal/2015/11/13/dota2drafts.html">
-  <link rel="alternate" type="application/rss+xml" title="fenn, larry" href="http://larryfenn.com/feed.xml">
-  <script src="http://d3js.org/d3.v3.min.js"></script>
-  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script type="text/javascript">
-    jQuery(function($){
-      $( '.site-nav' ).click(function() {
-        $( '.trigger').toggleClass('expand')
-      })
-    })
-  </script>
+  <link rel="canonical" href="http://localhost:4000/personal/2015/11/13/dota2drafts.html">
+  <link rel="alternate" type="application/rss+xml" title="fenn, larry" href="http://localhost:4000/feed.xml">
 </head>
 
 
@@ -34,13 +24,6 @@
     <a class="site-title" href="/">fenn, larry</a>
 
     <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </a>
 
       <div class="trigger">
         <a class="page-link" href="/about">About</a>
@@ -86,7 +69,7 @@
 
 <h2 id="getting-the-data">Getting the data</h2>
 
-<p>The web API for Dota 2 has two functions we can use to grab match data as a JSON object from some index. The first, <code>GetMatchHistory</code>, has a game mode argument and date argument which would make it ideal for stratifying the data by patch release. However, it has three flaws that preclude its use:</p>
+<p>The web API for Dota 2 has two functions we can use to grab match data as a JSON object from some index. The first, <code class="highlighter-rouge">GetMatchHistory</code>, has a game mode argument and date argument which would make it ideal for stratifying the data by patch release. However, it has three flaws that preclude its use:</p>
 
 <ol>
   <li>It is capped (for some reason, most likely a bug judging from all the angry dev forum posts) at grabbing the most recent 500 games.</li>
@@ -94,51 +77,51 @@
   <li>The game mode argument currently does not work (lol Valve).</li>
 </ol>
 
-<p>The second function, <code>GetMatchHistoryBySequenceNum</code>, does return the pick/ban record and does not have any limitation on how far it can reach, but it does not support any date parameters. Thus, determining the actual patch number a match was played in will necessitate going into the records and accessing the UNIX time that the match was played at. The other complication <code>GetMatchHistoryBySequenceNum</code> has is that the sequence numbers do not directly map to the order in which matches were played- I suspect that the sequence number is issued to a match once it has finished being indexed and processed into the Dota 2 database. In other words, it is no guarantee if the sequence number for match A is higher than the sequence number for match B that match A was played after match B.</p>
+<p>The second function, <code class="highlighter-rouge">GetMatchHistoryBySequenceNum</code>, does return the pick/ban record and does not have any limitation on how far it can reach, but it does not support any date parameters. Thus, determining the actual patch number a match was played in will necessitate going into the records and accessing the UNIX time that the match was played at. The other complication <code class="highlighter-rouge">GetMatchHistoryBySequenceNum</code> has is that the sequence numbers do not directly map to the order in which matches were played- I suspect that the sequence number is issued to a match once it has finished being indexed and processed into the Dota 2 database. In other words, it is no guarantee if the sequence number for match A is higher than the sequence number for match B that match A was played after match B.</p>
 
-<p>The typical output from the <code>GetMatchHistoryBySequenceNum</code> call (for a captain’s mode match) looks like this:</p>
+<p>The typical output from the <code class="highlighter-rouge">GetMatchHistoryBySequenceNum</code> call (for a captain’s mode match) looks like this:</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="p">{</span>
-    <span class="s">&quot;result&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s">&quot;status&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1">// success code</span>
-        <span class="s">&quot;matches&quot;</span><span class="o">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-                <span class="s">&quot;players&quot;</span><span class="o">:</span> <span class="p">[</span>
-                    <span class="p">{</span>
-                    <span class="c1">// omitted: player ids and statistics such as gold earned</span>
-                    <span class="p">}</span>
-                <span class="p">]</span>
-                <span class="p">,</span>
-                <span class="s">&quot;radiant_win&quot;</span><span class="o">:</span> <span class="nb">true</span><span class="p">,</span>
-                <span class="s">&quot;duration&quot;</span><span class="o">:</span> <span class="mi">2333</span><span class="p">,</span> <span class="c1">// our metric for how hard a team won the game</span>
-                <span class="s">&quot;start_time&quot;</span><span class="o">:</span> <span class="mi">1447002472</span><span class="p">,</span>
-                <span class="s">&quot;match_id&quot;</span><span class="o">:</span> <span class="mi">1923658257</span><span class="p">,</span>
-                <span class="s">&quot;match_seq_num&quot;</span><span class="o">:</span> <span class="mi">1700000293</span><span class="p">,</span>
-                <span class="c1">// omitted: other game data not relevant to us</span>
-                <span class="s">&quot;picks_bans&quot;</span><span class="o">:</span> <span class="p">[</span>
-                    <span class="p">{</span>
-                        <span class="s">&quot;is_pick&quot;</span><span class="o">:</span> <span class="nb">false</span><span class="p">,</span>
-                        <span class="s">&quot;hero_id&quot;</span><span class="o">:</span> <span class="mi">75</span><span class="p">,</span>
-                        <span class="s">&quot;team&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1">// 0: radiant, 1: dire</span>
-                        <span class="s">&quot;order&quot;</span><span class="o">:</span> <span class="mi">0</span>
-                    <span class="p">},</span>
-                    <span class="p">{</span>
-                        <span class="s">&quot;is_pick&quot;</span><span class="o">:</span> <span class="nb">false</span><span class="p">,</span>
-                        <span class="s">&quot;hero_id&quot;</span><span class="o">:</span> <span class="mi">85</span><span class="p">,</span>
-                        <span class="s">&quot;team&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-                        <span class="s">&quot;order&quot;</span><span class="o">:</span> <span class="mi">1</span>
-                    <span class="p">},</span>
-                    <span class="c1">// etc. for the rest of the pick/ban records</span>
-                <span class="p">]</span>
-                
-            <span class="p">}</span>
-            <span class="c1">// ... and so on for 99 more matches</span>
-        <span class="p">]</span>
-        
-    <span class="p">}</span>
+	<span class="s">"result"</span><span class="o">:</span> <span class="p">{</span>
+		<span class="s">"status"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1">// success code
+</span>		<span class="s">"matches"</span><span class="o">:</span> <span class="p">[</span>
+			<span class="p">{</span>
+				<span class="s">"players"</span><span class="o">:</span> <span class="p">[</span>
+					<span class="p">{</span>
+					<span class="c1">// omitted: player ids and statistics such as gold earned
+</span>					<span class="p">}</span>
+				<span class="p">]</span>
+				<span class="p">,</span>
+				<span class="s">"radiant_win"</span><span class="o">:</span> <span class="nb">true</span><span class="p">,</span>
+				<span class="s">"duration"</span><span class="o">:</span> <span class="mi">2333</span><span class="p">,</span> <span class="c1">// our metric for how hard a team won the game
+</span>				<span class="s">"start_time"</span><span class="o">:</span> <span class="mi">1447002472</span><span class="p">,</span>
+				<span class="s">"match_id"</span><span class="o">:</span> <span class="mi">1923658257</span><span class="p">,</span>
+				<span class="s">"match_seq_num"</span><span class="o">:</span> <span class="mi">1700000293</span><span class="p">,</span>
+				<span class="c1">// omitted: other game data not relevant to us
+</span>				<span class="s">"picks_bans"</span><span class="o">:</span> <span class="p">[</span>
+					<span class="p">{</span>
+						<span class="s">"is_pick"</span><span class="o">:</span> <span class="nb">false</span><span class="p">,</span>
+						<span class="s">"hero_id"</span><span class="o">:</span> <span class="mi">75</span><span class="p">,</span>
+						<span class="s">"team"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1">// 0: radiant, 1: dire
+</span>						<span class="s">"order"</span><span class="o">:</span> <span class="mi">0</span>
+					<span class="p">},</span>
+					<span class="p">{</span>
+						<span class="s">"is_pick"</span><span class="o">:</span> <span class="nb">false</span><span class="p">,</span>
+						<span class="s">"hero_id"</span><span class="o">:</span> <span class="mi">85</span><span class="p">,</span>
+						<span class="s">"team"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+						<span class="s">"order"</span><span class="o">:</span> <span class="mi">1</span>
+					<span class="p">},</span>
+					<span class="c1">// etc. for the rest of the pick/ban records
+</span>				<span class="p">]</span>
+				
+			<span class="p">}</span>
+			<span class="c1">// ... and so on for 99 more matches
+</span>		<span class="p">]</span>
+		
+	<span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>Since we only want to index captain’s mode matches, it suffices to check if the <code>picks_bans</code> key exists, and parse the serialized JSON into a csv for future use if it is.</p>
+<p>Since we only want to index captain’s mode matches, it suffices to check if the <code class="highlighter-rouge">picks_bans</code> key exists, and parse the serialized JSON into a csv for future use if it is.</p>
 
 <h2 id="basic-observation-hero-popularity">Basic observation: Hero popularity</h2>
 
