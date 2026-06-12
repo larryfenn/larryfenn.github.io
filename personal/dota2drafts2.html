@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Dota 2 Drafting Part 2: Hero Pairings</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://larryfenn.com/personal/dota2drafts2">
+  <link rel="alternate" type="application/rss+xml" title="fenn, larry" href="https://larryfenn.com/feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">fenn, larry</a>
+
+    <nav class="site-nav">
+
+      <div class="trigger">
+        <a class="page-link" href="/about">About</a>
+        <a class="page-link" href="/personal/">Personal</a>
+        <a class="page-link" href="/research/">Research</a>
+        <a class="page-link" href="/classes/">Classes</a>
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Dota 2 Drafting Part 2: Hero Pairings</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2015-11-13T18:55:02-05:00" itemprop="datePublished">Nov 13, 2015
+      </time></p>
+  </header>
+
+  
+  <div class="tags">
+  <h5>Tags:
+  
+  <a href="/tag/python">python</a>
+  
+  <a href="/tag/hadoop">hadoop</a>
+  
+  <a href="/tag/d3js">d3js</a>
+  
+  <a href="/tag/dota2">dota2</a>
+  
+  </h5>
+  </div>
+  
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><a href="/personal/dota2drafts/popularitygraph.html"><img src="/personal/dota2drafts/popularityexample1.png" hspace="20" height="253" width="271" /></a><a href="/personal/dota2drafts/popularitygraph.html"><img src="/personal/dota2drafts/popularityexample2.png" hspace="20" height="195" width="249" /></a>
+<br /></p>
+
+<ul>
+  <li><a href="/personal/dota2drafts/popularitygraph.html">Interactive graph: Hero pair popularity.</a></li>
+  <li><a href="/personal/dota2drafts/winrategraph.html">Interactive graph: Hero pair winrate.</a></li>
+</ul>
+
+<p>The data collected from Valve’s API contains a plethora of information about relationships between heroes, teams, and winrates. This data lends itself to the construction of graphs depicting the relationships. This has a twofold purpose:</p>
+
+<ol>
+  <li>To assess the integrity of the collected data. If the graphs that come out don’t line up with the common strategic thinking about the heroes then additional stratification is necessary (most likely by game skill bracket).</li>
+  <li>To explore the data set to see what hero combinations are popular along with showing which combinations work well and which don’t.</li>
+</ol>
+
+<!--more-->
+
+<h2 id="data-processing">Data Processing</h2>
+
+<p>Since the record for each match contains information as to which team won, and what the picks were, it’s just a matter of another MapReduce job to pull out the relationships between heroes, picks, and win rates. In particular, each game record gives us 5 heroes that won together, and 5 heroes that lost together. Thus our mapper step looks like this (after we get the picks by team):</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">radiantcliq</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="n">itertools</span><span class="p">.</span><span class="nf">combinations</span><span class="p">(</span><span class="n">radiantpicks</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">direcliq</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="n">itertools</span><span class="p">.</span><span class="nf">combinations</span><span class="p">(</span><span class="n">direpicks</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="c1"># one can edit the combinations argument to pull out arbitrary n-cliques
+</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">radiantcliq</span><span class="p">:</span>
+	<span class="k">print</span> <span class="sh">'</span><span class="s">%s,%s:%s</span><span class="se">\t</span><span class="s">%s</span><span class="sh">'</span> <span class="o">%</span> <span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nf">int</span><span class="p">(</span><span class="n">team_win</span> <span class="o">==</span> <span class="sh">'</span><span class="s">True</span><span class="sh">'</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">direcliq</span><span class="p">:</span>
+	<span class="k">print</span> <span class="sh">'</span><span class="s">%s,%s:%s</span><span class="se">\t</span><span class="s">%s</span><span class="sh">'</span> <span class="o">%</span> <span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nf">int</span><span class="p">(</span><span class="n">team_win</span> <span class="o">==</span> <span class="sh">'</span><span class="s">False</span><span class="sh">'</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The result of the MapReduce step is essentially a list of edges and weights. Python has the <code class="language-plaintext highlighter-rouge">networkx</code> library which allows us to create the graph structure without much fuss; even better, it supports JSON output which allows us to use D3.js to render the graphs and play around with them.</p>
+
+<h2 id="the-graphs">The Graphs</h2>
+
+<p><a href="/personal/dota2drafts/winrategraph.html"><img src="/personal/dota2drafts/winrateexample1.png" hspace="20" vspace="20" /></a></p>
+
+<p>Winrates necessitate special treatment. Each hero, indexed as <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span>, has their own, winrate (indexed over all heroes):</p>
+
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mfrac><msub><mi>W</mi><mi>i</mi></msub><msub><mi>N</mi><mi>i</mi></msub></mfrac></mstyle><mo>=</mo><mstyle scriptlevel="0" displaystyle="true"><mfrac><mstyle scriptlevel="0" displaystyle="true"><munder><mo>&#x2211;</mo><mi>j</mi></munder><msub><mi>w</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mstyle><mstyle scriptlevel="0" displaystyle="true"><munder><mo>&#x2211;</mo><mi>j</mi></munder><msub><mi>n</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mstyle></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\dfrac{W_i}{N_i} = \dfrac{\displaystyle\sum_j w_{ij}}{\displaystyle\sum_j n_{ij}}</annotation></semantics></math></span>
+
+<p>For a hero pair <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>i</mi><mo separator="true">,</mo><mi>j</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(i, j)</annotation></semantics></math></span> the hero pair popularity is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>n</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">n_{ij}</annotation></semantics></math></span> and the hero pair winrate is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi>w</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>n</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mfrac></mrow><annotation encoding="application/x-tex">\frac{w_{ij}}{n_{ij}}</annotation></semantics></math></span>. However, this hero pair winrate does not have an obvious relationship with the “absolute” winrates for the heroes, <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi>W</mi><mi>i</mi></msub><msub><mi>N</mi><mi>i</mi></msub></mfrac></mrow><annotation encoding="application/x-tex">\frac{W_i}{N_i}</annotation></semantics></math></span> and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi>W</mi><mi>j</mi></msub><msub><mi>N</mi><mi>j</mi></msub></mfrac></mrow><annotation encoding="application/x-tex">\frac{W_j}{N_j}</annotation></semantics></math></span>. The pair winrate alone is not very informative; what would be informative is a determination of <i>how much better</i> the pair is. The simplest (although coarsest) measure is the difference between the pair winrate and the maximum of the individual winrates:</p>
+
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>r</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mstyle scriptlevel="0" displaystyle="true"><mfrac><msub><mi>w</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>n</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mfrac></mstyle><mo>&#x2212;</mo><mi>max</mi><mo>&#x2061;</mo><mrow><mo fence="true">(</mo><mstyle scriptlevel="0" displaystyle="true"><mfrac><msub><mi>W</mi><mi>i</mi></msub><msub><mi>N</mi><mi>i</mi></msub></mfrac></mstyle><mo separator="true">,</mo><mstyle scriptlevel="0" displaystyle="true"><mfrac><msub><mi>W</mi><mi>j</mi></msub><msub><mi>N</mi><mi>j</mi></msub></mfrac></mstyle><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">r_{ij} = \dfrac{w_{ij}}{n_{ij}} - \max\left(\dfrac{W_i}{N_i}, \dfrac{W_j}{N_j}\right)</annotation></semantics></math></span>
+
+<p>This is a measure of the “improvement” the pair has to working individually.</p>
+
+<h2 id="graph-topology">Graph Topology</h2>
+
+<p>By selecting a threshold parameter and removing edges if their weights fall below the threshold, the graphs for winrates and popularity can be endowed with more interesting topology. Both of the graphs could have a quite different topology depending on the skill level of the population being drawn from. Additionally, different measures of popularity and winrate can easily give rise to different topologies depending on what is being measured. For example, a similar procedure to the winrate improvement measure could be employed on popularity to filter out the existing effect of a hero being popular; it is no surprise that Earthshaker is at the apparent center of the popularity graph since (as we saw in the previous post) he is far and away the most picked hero by himself in the data set.</p>
+
+<p>Ideally, we would prefer measures that give us graph topologies that give rise to many disjoint parts with as few isolated nodes as possible. These disjoint parts would line up with distinct strategies or combinations; for example, the Tiny-Io combination shows up as a disjoint element in the popularity graph already for any threshold below 4800.</p>
+
+<h2 id="further-plans">Further Plans</h2>
+
+<p>The analysis up to now has assumed that heroes perform equally well on radiant and dire side- not necessarily true. Additionally, it has made no distinction in skill groups; all of the analysis has been done on the total data from all the public matches.</p>
+
+<p>Alternative graphs and measures could be used to determine more information. One relationship that may be worth exploring is a “counter-pick” graph that tracks how many times two heroes faced off against each other on separate teams. Another graph worth looking into could be the “anti-pair” graph working to distinguish which heroes fulfill a similar role: if we count up how many times a hero is <i>not</i> picked when another hero is picked. However, there will be a significant amount of noise since any particular game only allows for 5 picks, leaving 95% of the hero pool unpicked as a matter of course.</p>
+
+<ul>
+  <li><a href="/personal/dota2drafts/popularitygraph.html">Hero pair popularity graph</a></li>
+  <li><a href="/personal/dota2drafts/winrategraph.html">Hero pair winrate graph</a></li>
+</ul>
+
+  </div>
+
+  <div class="previous-next">
+    
+    Previous: <a href="/personal/dota2drafts">Dota 2 Drafting Part 1: Data Collection</a>
+    <br>
+    
+    
+    Next: <a href="/personal/gva">Gun Violence Statistics</a>
+    
+  </div>
+
+  <a class="u-url" href="/personal/dota2drafts2" hidden></a>
+</article>
+<script defer src="/assets/js/math-copy.js"></script>
+<script defer src="/assets/js/footnote-popup.js"></script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li><a href="mailto:larry@larryfenn.com"><img src="/mailicon.png" width="16" height="16"> larry@larryfenn.com</a></li>
+		  <li><a href="https://github.com/larryfenn"><span class="icon icon--github"><svg viewBox="0 -2 16 16" height="16" width="16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">larryfenn</span></a>
+</li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>some of my research, thoughts, and projects</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

@@ -1,769 +1,588 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>fenn, larry</title>
-    <description>some of my research, thoughts, and projects.
-</description>
-    <link>http://larryfenn.com/</link>
-    <atom:link href="http://larryfenn.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 03 Dec 2017 17:39:24 -0500</pubDate>
-    <lastBuildDate>Sun, 03 Dec 2017 17:39:24 -0500</lastBuildDate>
-    <generator>Jekyll v3.6.2</generator>
-    
-      <item>
-        <title>Mixed Procedures For Stochastic Optimization - WODES 2016</title>
-        <description>&lt;p&gt;This is part of ongoing work with Professor Felisa Vázquez-Abad of Hunter College. This is the preliminary draft submitted for the WODES 2016 conference. The particularly tricky bit this time around was our decision to use a less trivial example scenario: instead of just a deterministic function plus a normally distributed noise term, we chose to construct a more complicated stochastic function. Crucially, since we wanted to speak to the usefulness of gradient estimation, we wanted a function where IPA derivative estimation could be used.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://larryfenn.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://larryfenn.com/" rel="alternate" type="text/html" /><updated>2026-06-12T10:07:36-04:00</updated><id>https://larryfenn.com/feed.xml</id><title type="html">fenn, larry</title><subtitle>some of my research, thoughts, and projects</subtitle><entry><title type="html">Paper Highlight: The Economic Organisation of a P.O.W. Camp</title><link href="https://larryfenn.com/personal/pow-economics" rel="alternate" type="text/html" title="Paper Highlight: The Economic Organisation of a P.O.W. Camp" /><published>2026-06-10T17:00:01-04:00</published><updated>2026-06-10T17:00:01-04:00</updated><id>https://larryfenn.com/personal/pow-economics</id><content type="html" xml:base="https://larryfenn.com/personal/pow-economics"><![CDATA[<p>This is a fun paper: <a href="/assets/docs/Radford%20-%201945%20-%20The%20Economic%20Organisation%20of%20a%20P.O.W.%20Camp.pdf">The Economic Organisation of a P.O.W. Camp</a>; it is a mostly narrative account of life in various prisoner of war (P.O.W.) camps in World War 2 with an eye on the economic life of these camps.</p>
 
-&lt;p&gt;Put another way, let \(X(\theta)\) be some random variable controlled by the parameter \(\theta\) and let \(h\) be some real-valued measurable mapping where \(\mathbb{E}\left[h\left(X(\theta)\right)\right]\) is defined for any \(\theta\in\Theta\). How do we define \(\dfrac{d}{d\theta}\mathbb{E}\left[h\left(X(\theta)\right)\right]\)?&lt;/p&gt;
+<p>As the author explains,</p>
 
-&lt;p&gt;One way to think about it is by a kind of stretchy analogy with weak derivatives: we are looking for a measurable mapping \(\psi\) such that \(\dfrac{d}{d\theta}\mathbb{E}\left[h\left(X(\theta)\right)\right] = \mathbb{E}\left[\psi\left(h, X(\theta),\theta\right)\right]\). Put this way, if we know that the random variable \(h\left(X(\theta)\right)\) is differentiable and that swapping expectation and differentiation is permitted (ex. through some bounded convergence theorem-like result) then we have an expression for \(\dfrac{d}{d\theta}\mathbb{E}\left[h\left(X(\theta)\right)\right]\); indeed:&lt;/p&gt;
+<blockquote>
+  <p>[the P.O.W. camp economy’s] simplicity renders the demonstration of certain economic hypotheses both amusing and instructive</p>
+</blockquote>
 
-&lt;p&gt;\(\dfrac{d}{d\theta}\mathbb{E}\left[h\left(X(\theta)\right)\right] = \mathbb{E}\left[\dfrac{d}{d\theta}h\left(X(\theta)\right)\right] = \mathbb{E}\left[\left(\dfrac{\partial}{\partial\theta}X(\theta)\right) h^\prime\left(X(\theta)\right)\right]\)&lt;/p&gt;
+<p>Some highlights:</p>
 
-&lt;p&gt;where \(h^\prime\) is just the usual derivative of \(h\). The quantity \(\left(\dfrac{\partial}{\partial\theta}X(\theta)\right)\) is called the &lt;em&gt;sample path derivative&lt;/em&gt; of \(X(\theta)\) and this approach for estimating the derivative of an expected value is called &lt;em&gt;infinitesimal perturbation analysis&lt;/em&gt; (IPA).&lt;/p&gt;
+<ul>
+  <li>
+    <p>An extended aside on the nature of cigarettes as a currency; clipping and volatility</p>
+  </li>
+  <li>
+    <p>An attempt at a paper currency, the “Bully Mark”, backed by food</p>
+  </li>
+  <li>
+    <p>Coffee making its way from British compounds to the French and ultimately to black market cafés in Munich</p>
+  </li>
+</ul>]]></content><author><name></name></author><category term="personal" /><category term="papers" /><category term="economics" /><summary type="html"><![CDATA[This is a fun paper: The Economic Organisation of a P.O.W. Camp; it is a mostly narrative account of life in various prisoner of war (P.O.W.) camps in World War 2 with an eye on the economic life of these camps.]]></summary></entry><entry><title type="html">Mixed Procedures For Stochastic Optimization - WODES 2016</title><link href="https://larryfenn.com/research/wodes" rel="alternate" type="text/html" title="Mixed Procedures For Stochastic Optimization - WODES 2016" /><published>2016-02-01T21:37:14-05:00</published><updated>2016-02-01T21:37:14-05:00</updated><id>https://larryfenn.com/research/wodes</id><content type="html" xml:base="https://larryfenn.com/research/wodes"><![CDATA[<p>This is part of ongoing work with Professor Felisa Vázquez-Abad of Hunter College. This is the preliminary draft submitted for the WODES 2016 conference. The particularly tricky bit this time around was our decision to use a less trivial example scenario: instead of just a deterministic function plus a normally distributed noise term, we chose to construct a more complicated stochastic function. Crucially, since we wanted to speak to the usefulness of gradient estimation, we wanted a function where IPA derivative estimation could be used.</p>
 
-&lt;p&gt;In the paper, we needed a function that not only supported IPA but still had a relatively small curvature so that the non-gradient method we were discussing would converge in reasonable time.&lt;/p&gt;
+<p>Put another way, let <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo stretchy="false">(</mo><mi>&#x3b8;</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">X(\theta)</annotation></semantics></math></span> be some random variable controlled by the parameter <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>&#x3b8;</mi></mrow><annotation encoding="application/x-tex">\theta</annotation></semantics></math></span> and let <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span> be some real-valued measurable mapping where <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">E</mi><mrow><mo fence="true">[</mo><mi>h</mi><mrow><mo fence="true">(</mo><mi>X</mi><mo stretchy="false">(</mo><mi>&#x3b8;</mi><mo stretchy="false">)</mo><mo fence="true">)</mo></mrow><mo fence="true">]</mo></mrow></mrow><annotation encoding="application/x-tex">\mathbb{E}\left[h\left(X(\theta)\right)\right]</annotation></semantics></math></span> is defined for any <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>&#x3b8;</mi><mo>&#x2208;</mo><mi mathvariant="normal">&#x398;</mi></mrow><annotation encoding="application/x-tex">\theta\in\Theta</annotation></semantics></math></span>. How do we define <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mi>&#x3b8;</mi></mrow></mfrac></mstyle><mi mathvariant="double-struck">E</mi><mrow><mo fence="true">[</mo><mi>h</mi><mrow><mo fence="true">(</mo><mi>X</mi><mo stretchy="false">(</mo><mi>&#x3b8;</mi><mo stretchy="false">)</mo><mo fence="true">)</mo></mrow><mo fence="true">]</mo></mrow></mrow><annotation encoding="application/x-tex">\dfrac{d}{d\theta}\mathbb{E}\left[h\left(X(\theta)\right)\right]</annotation></semantics></math></span>?</p>
 
-&lt;p&gt;&lt;a href=&quot;/research/wodes2016.pdf&quot;&gt;Conference paper&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Mon, 01 Feb 2016 21:37:14 -0500</pubDate>
-        <link>http://larryfenn.com/research/2016/02/01/wodes.html</link>
-        <guid isPermaLink="true">http://larryfenn.com/research/2016/02/01/wodes.html</guid>
-        
-        <category>stochastic-optimization</category>
-        
-        <category>optimization</category>
-        
-        
-        <category>research</category>
-        
-      </item>
-    
-      <item>
-        <title>Gun Violence Incident Grouping via PCA</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/preview/gva2.png&quot; height=&quot;163&quot; width=&quot;325&quot; /&gt;&lt;/p&gt;
+<p>One way to think about it is by a kind of stretchy analogy with weak derivatives: we are looking for a measurable mapping <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>&#x3c8;</mi></mrow><annotation encoding="application/x-tex">\psi</annotation></semantics></math></span> such that <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mi>&#x3b8;</mi></mrow></mfrac></mstyle><mi mathvariant="double-struck">E</mi><mrow><mo fence="true">[</mo><mi>h</mi><mrow><mo fence="true">(</mo><mi>X</mi><mo stretchy="false">(</mo><mi>&#x3b8;</mi><mo stretchy="false">)</mo><mo fence="true">)</mo></mrow><mo fence="true">]</mo></mrow><mo>=</mo><mi mathvariant="double-struck">E</mi><mrow><mo fence="true">[</mo><mi>&#x3c8;</mi><mrow><mo fence="true">(</mo><mi>h</mi><mo separator="true">,</mo><mi>X</mi><mo stretchy="false">(</mo><mi>&#x3b8;</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mi>&#x3b8;</mi><mo fence="true">)</mo></mrow><mo fence="true">]</mo></mrow></mrow><annotation encoding="application/x-tex">\dfrac{d}{d\theta}\mathbb{E}\left[h\left(X(\theta)\right)\right] = \mathbb{E}\left[\psi\left(h, X(\theta),\theta\right)\right]</annotation></semantics></math></span>. Put this way, if we know that the random variable <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mrow><mo fence="true">(</mo><mi>X</mi><mo stretchy="false">(</mo><mi>&#x3b8;</mi><mo stretchy="false">)</mo><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">h\left(X(\theta)\right)</annotation></semantics></math></span> is differentiable and that swapping expectation and differentiation is permitted (ex. through some bounded convergence theorem-like result) then we have an expression for <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mi>&#x3b8;</mi></mrow></mfrac></mstyle><mi mathvariant="double-struck">E</mi><mrow><mo fence="true">[</mo><mi>h</mi><mrow><mo fence="true">(</mo><mi>X</mi><mo stretchy="false">(</mo><mi>&#x3b8;</mi><mo stretchy="false">)</mo><mo fence="true">)</mo></mrow><mo fence="true">]</mo></mrow></mrow><annotation encoding="application/x-tex">\dfrac{d}{d\theta}\mathbb{E}\left[h\left(X(\theta)\right)\right]</annotation></semantics></math></span>; indeed:</p>
 
-&lt;p&gt;&lt;em&gt;Note (Oct. 14, 2016): Part of this work was used in a collaboration between the AP &lt;a href=&quot;https://apnews.com/a0d7f11b970f48d68f142b3650e1db36&quot;&gt;here&lt;/a&gt; and USA TODAY NETWORK &lt;a href=&quot;http://www.usatoday.com/story/news/2016/10/14/ap-usa-today-gun-accidents-children/91906700/&quot;&gt;here&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mi>&#x3b8;</mi></mrow></mfrac></mstyle><mi mathvariant="double-struck">E</mi><mrow><mo fence="true">[</mo><mi>h</mi><mrow><mo fence="true">(</mo><mi>X</mi><mo stretchy="false">(</mo><mi>&#x3b8;</mi><mo stretchy="false">)</mo><mo fence="true">)</mo></mrow><mo fence="true">]</mo></mrow><mo>=</mo><mi mathvariant="double-struck">E</mi><mrow><mo fence="true">[</mo><mstyle scriptlevel="0" displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mi>&#x3b8;</mi></mrow></mfrac></mstyle><mi>h</mi><mrow><mo fence="true">(</mo><mi>X</mi><mo stretchy="false">(</mo><mi>&#x3b8;</mi><mo stretchy="false">)</mo><mo fence="true">)</mo></mrow><mo fence="true">]</mo></mrow><mo>=</mo><mi mathvariant="double-struck">E</mi><mrow><mo fence="true">[</mo><mrow><mo fence="true">(</mo><mstyle scriptlevel="0" displaystyle="true"><mfrac><mi mathvariant="normal">&#x2202;</mi><mrow><mi mathvariant="normal">&#x2202;</mi><mi>&#x3b8;</mi></mrow></mfrac></mstyle><mi>X</mi><mo stretchy="false">(</mo><mi>&#x3b8;</mi><mo stretchy="false">)</mo><mo fence="true">)</mo></mrow><msup><mi>h</mi><mo mathvariant="normal">&#x2032;</mo></msup><mrow><mo fence="true">(</mo><mi>X</mi><mo stretchy="false">(</mo><mi>&#x3b8;</mi><mo stretchy="false">)</mo><mo fence="true">)</mo></mrow><mo fence="true">]</mo></mrow></mrow><annotation encoding="application/x-tex">\dfrac{d}{d\theta}\mathbb{E}\left[h\left(X(\theta)\right)\right] = \mathbb{E}\left[\dfrac{d}{d\theta}h\left(X(\theta)\right)\right] = \mathbb{E}\left[\left(\dfrac{\partial}{\partial\theta}X(\theta)\right) h^\prime\left(X(\theta)\right)\right]</annotation></semantics></math></span>
 
-&lt;p&gt;The Gun Violence Archive (GVA) has for each event a list of characteristics. There are 92 distinct tags that are used. Many of these tags are either redundant or unnecessarily specific for the kinds of questions I am interested in investigating:&lt;/p&gt;
+<p>where <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>h</mi><mo mathvariant="normal">&#x2032;</mo></msup></mrow><annotation encoding="application/x-tex">h^\prime</annotation></semantics></math></span> is just the usual derivative of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span>. The quantity <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo fence="true">(</mo><mstyle scriptlevel="0" displaystyle="true"><mfrac><mi mathvariant="normal">&#x2202;</mi><mrow><mi mathvariant="normal">&#x2202;</mi><mi>&#x3b8;</mi></mrow></mfrac></mstyle><mi>X</mi><mo stretchy="false">(</mo><mi>&#x3b8;</mi><mo stretchy="false">)</mo><mo fence="true">)</mo></mrow><annotation encoding="application/x-tex">\left(\dfrac{\partial}{\partial\theta}X(\theta)\right)</annotation></semantics></math></span> is called the <em>sample path derivative</em> of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo stretchy="false">(</mo><mi>&#x3b8;</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">X(\theta)</annotation></semantics></math></span> and this approach for estimating the derivative of an expected value is called <em>infinitesimal perturbation analysis</em> (IPA).</p>
 
-&lt;ul&gt;
-  &lt;li&gt;What are the most frequent kinds of gun-related incidents?&lt;/li&gt;
-  &lt;li&gt;Where are they located and which demographic groups are affected by them?&lt;/li&gt;
-&lt;/ul&gt;
+<p>In the paper, we needed a function that not only supported IPA but still had a relatively small curvature so that the non-gradient method we were discussing would converge in reasonable time.</p>
 
-&lt;!--more--&gt;
+<p><a href="/research/wodes2016.pdf">Conference paper</a></p>]]></content><author><name></name></author><category term="research" /><category term="stochastic-optimization" /><category term="optimization" /><summary type="html"><![CDATA[This is part of ongoing work with Professor Felisa Vázquez-Abad of Hunter College. This is the preliminary draft submitted for the WODES 2016 conference. The particularly tricky bit this time around was our decision to use a less trivial example scenario: instead of just a deterministic function plus a normally distributed noise term, we chose to construct a more complicated stochastic function. Crucially, since we wanted to speak to the usefulness of gradient estimation, we wanted a function where IPA derivative estimation could be used.]]></summary></entry><entry><title type="html">Gun Violence Incident Grouping via PCA</title><link href="https://larryfenn.com/personal/gva2" rel="alternate" type="text/html" title="Gun Violence Incident Grouping via PCA" /><published>2015-12-17T15:00:01-05:00</published><updated>2015-12-17T15:00:01-05:00</updated><id>https://larryfenn.com/personal/gva2</id><content type="html" xml:base="https://larryfenn.com/personal/gva2"><![CDATA[<p><img src="/assets/preview/gva2.png" height="163" width="325" /></p>
 
-&lt;p&gt;The mechanical issue with having so many tags is that if we treated each tag as a unique label then any statistical analysis using them is hopelessly high-dimensional. To that end a significant dimensionality reduction can be gained by using PCA to determine which groupings of tags appear frequently together; these groupings of tags will be our base level unit for categorizing gun violence events.&lt;/p&gt;
+<p><em>Note (Oct. 14, 2016): Part of this work was used in a collaboration between the AP <a href="https://apnews.com/a0d7f11b970f48d68f142b3650e1db36">here</a> and USA TODAY NETWORK <a href="http://www.usatoday.com/story/news/2016/10/14/ap-usa-today-gun-accidents-children/91906700/">here</a>.</em></p>
 
-&lt;h2 id=&quot;encoding-tags&quot;&gt;Encoding Tags&lt;/h2&gt;
+<p>The Gun Violence Archive (GVA) has for each event a list of characteristics. There are 92 distinct tags that are used. Many of these tags are either redundant or unnecessarily specific for the kinds of questions I am interested in investigating:</p>
 
-&lt;p&gt;First we need to encode the data using one-hot encoding: every gun violence event will record either a 0 if that tag is not present or a 1 if it is. The easiest way to do this with the current system for processing data that I established in &lt;a href=&quot;http://larryfenn.com/personal/2015/12/14/gva.html&quot;&gt;the previous post&lt;/a&gt; is:&lt;/p&gt;
+<ul>
+  <li>What are the most frequent kinds of gun-related incidents?</li>
+  <li>Where are they located and which demographic groups are affected by them?</li>
+</ul>
 
-&lt;ol&gt;
-  &lt;li&gt;Represent each event as a python dict, with the tags as keys and the values as 1 entries. Collect all the events in a list.&lt;/li&gt;
-  &lt;li&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;scikit-learn&lt;/code&gt;’s excellent &lt;code class=&quot;highlighter-rouge&quot;&gt;DictVectorizer&lt;/code&gt; to convert this list of dicts into a matrix where the columns correspond to a specific tag and the rows correspond to events.&lt;/li&gt;
-&lt;/ol&gt;
+<!--more-->
 
-&lt;p&gt;After doing that, the &lt;code class=&quot;highlighter-rouge&quot;&gt;decomposition&lt;/code&gt; component of &lt;code class=&quot;highlighter-rouge&quot;&gt;scikit-learn&lt;/code&gt; gives us the &lt;code class=&quot;highlighter-rouge&quot;&gt;SparsePCA&lt;/code&gt; function, which will be our tool of choice here. PCA determines which combinations of the original columns of the data best explain the observed variance in the data. It is these combinations which will make up our tag groupings. However, in practice normal PCA often results in every column in the original data set being used in the new description of the data. This is undesirable for our current context because we want a simple grouping of tags to jump out at us; it would do us no good if our predominant tag grouping involved in some degree all of the original tags; we would have the opposite problem where, rather than too many hyper-descriptive tags we have too few overly-general tags.&lt;/p&gt;
+<p>The mechanical issue with having so many tags is that if we treated each tag as a unique label then any statistical analysis using them is hopelessly high-dimensional. To that end a significant dimensionality reduction can be gained by using PCA to determine which groupings of tags appear frequently together; these groupings of tags will be our base level unit for categorizing gun violence events.</p>
 
-&lt;p&gt;The way out of this is to use a sparse PCA algorithm, which constrains how many columns of the original data set can be used in generating principal components. From the sparse PCA algorithm we will (hopefully) achieve the goal of building robust groupings of tags based on, in some sense, their similarity to one another.&lt;/p&gt;
-&lt;style type=&quot;text/css&quot;&gt;
+<h2 id="encoding-tags">Encoding Tags</h2>
+
+<p>First we need to encode the data using one-hot encoding: every gun violence event will record either a 0 if that tag is not present or a 1 if it is. The easiest way to do this with the current system for processing data that I established in <a href="http://larryfenn.com/personal/2015/12/14/gva.html">the previous post</a> is:</p>
+
+<ol>
+  <li>Represent each event as a python dict, with the tags as keys and the values as 1 entries. Collect all the events in a list.</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">scikit-learn</code>’s excellent <code class="language-plaintext highlighter-rouge">DictVectorizer</code> to convert this list of dicts into a matrix where the columns correspond to a specific tag and the rows correspond to events.</li>
+</ol>
+
+<p>After doing that, the <code class="language-plaintext highlighter-rouge">decomposition</code> component of <code class="language-plaintext highlighter-rouge">scikit-learn</code> gives us the <code class="language-plaintext highlighter-rouge">SparsePCA</code> function, which will be our tool of choice here. PCA determines which combinations of the original columns of the data best explain the observed variance in the data. It is these combinations which will make up our tag groupings. However, in practice normal PCA often results in every column in the original data set being used in the new description of the data. This is undesirable for our current context because we want a simple grouping of tags to jump out at us; it would do us no good if our predominant tag grouping involved in some degree all of the original tags; we would have the opposite problem where, rather than too many hyper-descriptive tags we have too few overly-general tags.</p>
+
+<p>The way out of this is to use a sparse PCA algorithm, which constrains how many columns of the original data set can be used in generating principal components. From the sparse PCA algorithm we will (hopefully) achieve the goal of building robust groupings of tags based on, in some sense, their similarity to one another.</p>
+<style type="text/css">
   .gist-file
   .gist-data {max-height: 10em;}
-&lt;/style&gt;
+</style>
 
-&lt;script src=&quot;https://gist.github.com/larryfenn/97756fe2874ebaa80a78.js&quot;&gt;&lt;/script&gt;
+<script src="https://gist.github.com/larryfenn/97756fe2874ebaa80a78.js"></script>
 
-&lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;
+<h2 id="results">Results</h2>
 
-&lt;p&gt;The way we should interpret the results is that the algorithm has generated new, higher level tags, made up of the original tags. We have to interpret the tags now as continuous numerical quantities, not as single entries of 0 or 1. This turns out to be not so difficult of a task; we can replace the notion of a tag being present or not with simply a level of belief (my words, not a rigorous term) that this tag is &lt;em&gt;appropriate&lt;/em&gt; for this particular event. For example, if I were to describe a particular event to you as recording in the &lt;strong&gt;Accidental Shooting&lt;/strong&gt; column the value “.8”, this should be taken to mean that “more likely than not this was an accidental shooting”.&lt;/p&gt;
+<p>The way we should interpret the results is that the algorithm has generated new, higher level tags, made up of the original tags. We have to interpret the tags now as continuous numerical quantities, not as single entries of 0 or 1. This turns out to be not so difficult of a task; we can replace the notion of a tag being present or not with simply a level of belief (my words, not a rigorous term) that this tag is <em>appropriate</em> for this particular event. For example, if I were to describe a particular event to you as recording in the <strong>Accidental Shooting</strong> column the value “.8”, this should be taken to mean that “more likely than not this was an accidental shooting”.</p>
 
-&lt;p&gt;Now each bar represents a number which represents a weight on how important the individual tag is in this new tag, positive meaning “if this individual tag is present then we should have this much belief (again, not a rigorous term but just one for this explanation) in using this new tag to describe it” and negative (which is not present here but may be) meaning “if this individual tag is not present we should have this much belief in using this new tag”. The actual numerical values are not as important as the &lt;em&gt;relative&lt;/em&gt; differences between numerical values; in other words, think of the numbers as scores attached to labels and not as actual measurements of some quantity.&lt;/p&gt;
+<p>Now each bar represents a number which represents a weight on how important the individual tag is in this new tag, positive meaning “if this individual tag is present then we should have this much belief (again, not a rigorous term but just one for this explanation) in using this new tag to describe it” and negative (which is not present here but may be) meaning “if this individual tag is not present we should have this much belief in using this new tag”. The actual numerical values are not as important as the <em>relative</em> differences between numerical values; in other words, think of the numbers as scores attached to labels and not as actual measurements of some quantity.</p>
 
-&lt;p&gt;This is the first component, the one that explains the most variance in the dataset:
-&lt;img src=&quot;/gva/post_assets/pca/0.png&quot; /&gt;&lt;/p&gt;
+<p>This is the first component, the one that explains the most variance in the dataset:
+<img src="/gva/post_assets/pca/0.png" alt="" /></p>
 
-&lt;p&gt;In plain terms, this new tag grouping is predominantly governed by the presence of the following:&lt;/p&gt;
+<p>In plain terms, this new tag grouping is predominantly governed by the presence of the following:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Accidental Shooting&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Accidental Shooting - Injury&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Accidental/Negligent Discharge&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li><strong>Accidental Shooting</strong></li>
+  <li><strong>Accidental Shooting - Injury</strong></li>
+  <li><strong>Accidental/Negligent Discharge</strong></li>
+</ul>
 
-&lt;p&gt;However, the presence of the following tags also make up nontrivial parts of this new tag:&lt;/p&gt;
+<p>However, the presence of the following tags also make up nontrivial parts of this new tag:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Accidental Shooting - Death&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Cleaning Gun&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Thought gun was unloaded&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Hunting accident&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li><strong>Accidental Shooting - Death</strong></li>
+  <li><strong>Cleaning Gun</strong></li>
+  <li><strong>Thought gun was unloaded</strong></li>
+  <li><strong>Hunting accident</strong></li>
+</ul>
 
-&lt;p&gt;And so on, from largest weight to smallest. At this point it is up to us to give a simple label to this machine-generated hybrid tag; it seems clear to me that this is what we should take to be the “accidentally shot my gun” tag.&lt;/p&gt;
+<p>And so on, from largest weight to smallest. At this point it is up to us to give a simple label to this machine-generated hybrid tag; it seems clear to me that this is what we should take to be the “accidentally shot my gun” tag.</p>
 
-&lt;p&gt;Here is the next component (the one that most explains the variance after we factor out the first component):&lt;/p&gt;
+<p>Here is the next component (the one that most explains the variance after we factor out the first component):</p>
 
-&lt;p&gt;&lt;img src=&quot;/gva/post_assets/pca/1.png&quot; /&gt;&lt;/p&gt;
+<p><img src="/gva/post_assets/pca/1.png" alt="" /></p>
 
-&lt;p&gt;The negative weight here indicates that the lack of the &lt;strong&gt;Shot - Wounded/Injured&lt;/strong&gt; is used by the component; in an interpretative sense, whenever we see &lt;strong&gt;Shot - Wounded/Injured&lt;/strong&gt; we should not expect to apply our new tag and vice versa.&lt;/p&gt;
+<p>The negative weight here indicates that the lack of the <strong>Shot - Wounded/Injured</strong> is used by the component; in an interpretative sense, whenever we see <strong>Shot - Wounded/Injured</strong> we should not expect to apply our new tag and vice versa.</p>
 
-&lt;p&gt;Looking at the remaining values, we can imagine what kind of label we should apply to this tag. In particular, the presence of the following tags lend some insight into what kind of events should carry this tag:&lt;/p&gt;
+<p>Looking at the remaining values, we can imagine what kind of label we should apply to this tag. In particular, the presence of the following tags lend some insight into what kind of events should carry this tag:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;ATF/LE Confiscation/Raid/Arrest&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Drug involvement&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Stolen/illegally owned gun{s} recovered during arrest/warrant&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Possession (gun(s) found during commission of other crimes)&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li><strong>ATF/LE Confiscation/Raid/Arrest</strong></li>
+  <li><strong>Drug involvement</strong></li>
+  <li><strong>Stolen/illegally owned gun{s} recovered during arrest/warrant</strong></li>
+  <li><strong>Possession (gun(s) found during commission of other crimes)</strong></li>
+</ul>
 
-&lt;p&gt;This seems to imply we are looking at a description of “law enforcement gun recording”, what I will use to describe all of the times that guns are logged by law enforcement during the execution of their duties; specifically, the absence of any tags related to robbery, home invasion, murder seem to imply that the events that carry this tag are ones where guns are a secondary concern to the criminal activity going on (hence the strong presence of the &lt;strong&gt;Drug involvement&lt;/strong&gt; tag).&lt;/p&gt;
+<p>This seems to imply we are looking at a description of “law enforcement gun recording”, what I will use to describe all of the times that guns are logged by law enforcement during the execution of their duties; specifically, the absence of any tags related to robbery, home invasion, murder seem to imply that the events that carry this tag are ones where guns are a secondary concern to the criminal activity going on (hence the strong presence of the <strong>Drug involvement</strong> tag).</p>
 
-&lt;p&gt;It is sometimes a fun exercise to try to interpret the principal components. Here are the remaining ones (with my idea of what they represent), down to a point where the variance explained by the component is too small to be worth talking about:&lt;/p&gt;
+<p>It is sometimes a fun exercise to try to interpret the principal components. Here are the remaining ones (with my idea of what they represent), down to a point where the variance explained by the component is too small to be worth talking about:</p>
 
-&lt;p&gt;###”Successful defensive action”:
-&lt;img src=&quot;/gva/post_assets/pca/2.png&quot; /&gt;&lt;/p&gt;
+<h3 id="successful-defensive-action">“Successful defensive action”:</h3>
+<p><img src="/gva/post_assets/pca/2.png" alt="" /></p>
 
-&lt;p&gt;###”Police shootout”:
-&lt;img src=&quot;/gva/post_assets/pca/3.png&quot; /&gt;&lt;/p&gt;
+<h3 id="police-shootout">“Police shootout”:</h3>
+<p><img src="/gva/post_assets/pca/3.png" alt="" /></p>
 
-&lt;p&gt;###”Child plays with gun”:
-&lt;img src=&quot;/gva/post_assets/pca/4.png&quot; /&gt;&lt;/p&gt;
+<h3 id="child-plays-with-gun">“Child plays with gun”:</h3>
+<p><img src="/gva/post_assets/pca/4.png" alt="" /></p>
 
-&lt;p&gt;###”Premeditated murder”:
-&lt;img src=&quot;/gva/post_assets/pca/5.png&quot; /&gt;&lt;/p&gt;
+<h3 id="premeditated-murder">“Premeditated murder”:</h3>
+<p><img src="/gva/post_assets/pca/5.png" alt="" /></p>
 
-&lt;p&gt;###”School safety”:
-&lt;img src=&quot;/gva/post_assets/pca/6.png&quot; /&gt;&lt;/p&gt;
+<h3 id="school-safety">“School safety”:</h3>
+<p><img src="/gva/post_assets/pca/6.png" alt="" /></p>
 
-&lt;p&gt;###”Home safety”:
-&lt;img src=&quot;/gva/post_assets/pca/7.png&quot; /&gt;&lt;/p&gt;
+<h3 id="home-safety">“Home safety”:</h3>
+<p><img src="/gva/post_assets/pca/7.png" alt="" /></p>
 
-&lt;p&gt;###”Public safety”:
-&lt;img src=&quot;/gva/post_assets/pca/8.png&quot; /&gt;&lt;/p&gt;
+<h3 id="public-safety">“Public safety”:</h3>
+<p><img src="/gva/post_assets/pca/8.png" alt="" /></p>
 
-&lt;p&gt;###”Bank/store robbery”:
-&lt;img src=&quot;/gva/post_assets/pca/9.png&quot; /&gt;&lt;/p&gt;
+<h3 id="bankstore-robbery">“Bank/store robbery”:</h3>
+<p><img src="/gva/post_assets/pca/9.png" alt="" /></p>
 
-&lt;p&gt;###”Warning shots”:
-&lt;img src=&quot;/gva/post_assets/pca/10.png&quot; /&gt;&lt;/p&gt;
+<h3 id="warning-shots">“Warning shots”:</h3>
+<p><img src="/gva/post_assets/pca/10.png" alt="" /></p>
 
-&lt;p&gt;Here are some of the last components we will look at. At this level there isn’t a lot of insight to be gained about how the tags group together. In some cases, it can be hard to even determine what the component represents.
-&lt;img src=&quot;/gva/post_assets/pca/11.png&quot; /&gt;
-&lt;img src=&quot;/gva/post_assets/pca/12.png&quot; /&gt;
-&lt;img src=&quot;/gva/post_assets/pca/13.png&quot; /&gt;
-&lt;img src=&quot;/gva/post_assets/pca/14.png&quot; /&gt;&lt;/p&gt;
+<p>Here are some of the last components we will look at. At this level there isn’t a lot of insight to be gained about how the tags group together. In some cases, it can be hard to even determine what the component represents.
+<img src="/gva/post_assets/pca/11.png" alt="" />
+<img src="/gva/post_assets/pca/12.png" alt="" />
+<img src="/gva/post_assets/pca/13.png" alt="" />
+<img src="/gva/post_assets/pca/14.png" alt="" /></p>
 
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+<h2 id="conclusion">Conclusion</h2>
 
-&lt;p&gt;PCA is a useful technique to reduce dimensions. Moving forward, rather than track the presence or absence of 92 separate tags I will use these generated components as references for the nine or fewer significant components I have observed. The boon is that PCA is best understood as a change in coordinates for the original data set; thus I will not lose anything by continuing my analysis using the principal components since all of the information has been preserved.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 17 Dec 2015 15:00:01 -0500</pubDate>
-        <link>http://larryfenn.com/personal/2015/12/17/gva2.html</link>
-        <guid isPermaLink="true">http://larryfenn.com/personal/2015/12/17/gva2.html</guid>
-        
-        <category>python</category>
-        
-        <category>scikit-learn</category>
-        
-        <category>statistics</category>
-        
-        <category>pca</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>Gun Violence Statistics</title>
-        <description>&lt;p&gt;&lt;a href=&quot;/gva&quot;&gt;&lt;img src=&quot;/gva/post_assets/preview.png&quot; height=&quot;192&quot; width=&quot;325&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<p>PCA is a useful technique to reduce dimensions. Moving forward, rather than track the presence or absence of 92 separate tags I will use these generated components as references for the nine or fewer significant components I have observed. The boon is that PCA is best understood as a change in coordinates for the original data set; thus I will not lose anything by continuing my analysis using the principal components since all of the information has been preserved.</p>]]></content><author><name></name></author><category term="personal" /><category term="python" /><category term="scikit-learn" /><category term="statistics" /><category term="pca" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Gun Violence Statistics</title><link href="https://larryfenn.com/personal/gva" rel="alternate" type="text/html" title="Gun Violence Statistics" /><published>2015-12-14T01:55:00-05:00</published><updated>2015-12-14T01:55:00-05:00</updated><id>https://larryfenn.com/personal/gva</id><content type="html" xml:base="https://larryfenn.com/personal/gva"><![CDATA[<p><a href="/gva"><img src="/gva/post_assets/preview.png" height="192" width="325" /></a></p>
 
-&lt;p&gt;The &lt;a href=&quot;http://www.gunviolencearchive.org/&quot;&gt;Gun Violence Archive&lt;/a&gt; (GVA) is a database of gun violence and gun crime in general aggregated from a diverse array of sources. The specific details of their methodology for tagging incidents is listed under their &lt;a href=&quot;http://www.gunviolencearchive.org/methodology&quot;&gt;Methodology&lt;/a&gt;.&lt;/p&gt;
+<p>The <a href="http://www.gunviolencearchive.org/">Gun Violence Archive</a> (GVA) is a database of gun violence and gun crime in general aggregated from a diverse array of sources. The specific details of their methodology for tagging incidents is listed under their <a href="http://www.gunviolencearchive.org/methodology">Methodology</a>.</p>
 
-&lt;!--more--&gt;
+<!--more-->
 
-&lt;div id=&quot;toc&quot;&gt;&lt;/div&gt;
+<div id="toc"></div>
 
-&lt;p&gt;#Table of Contents&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Getting the Data&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#2&quot;&gt;Analysis&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#3&quot;&gt;Visualization&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#4&quot;&gt;Conclusions&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#A1&quot;&gt;Appendix&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+<h1 id="table-of-contents">Table of Contents</h1>
+<ul>
+  <li><a href="#1">Getting the Data</a></li>
+  <li><a href="#2">Analysis</a></li>
+  <li><a href="#3">Visualization</a></li>
+  <li><a href="#4">Conclusions</a></li>
+  <li><a href="#A1">Appendix</a></li>
+</ul>
 
-&lt;div id=&quot;1&quot;&gt;&lt;/div&gt;
+<div id="1"></div>
 
-&lt;h2 id=&quot;getting-the-data&quot;&gt;Getting the Data&lt;/h2&gt;
-&lt;p&gt;After notifying them by e-mail of my intentions, I proceeded to build a small crawler that would index all of the incidents they have on file and dump the relevant block of HTML into a text file for later processing.&lt;/p&gt;
-&lt;style type=&quot;text/css&quot;&gt;
+<h2 id="getting-the-data">Getting the Data</h2>
+<p>After notifying them by e-mail of my intentions, I proceeded to build a small crawler that would index all of the incidents they have on file and dump the relevant block of HTML into a text file for later processing.</p>
+<style type="text/css">
   .gist-file
   .gist-data {max-height: 10em;}
-&lt;/style&gt;
+</style>
 
-&lt;script src=&quot;https://gist.github.com/larryfenn/fccc5e675525ea6ebcc3.js&quot;&gt;&lt;/script&gt;
+<script src="https://gist.github.com/larryfenn/fccc5e675525ea6ebcc3.js"></script>
 
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;results.txt&lt;/code&gt; file stores all of the GVA URL indices and their respective HTML &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;div&amp;gt;&lt;/code&gt; elements containing incident reports. The next step is to create a parser that will read through the HTML and populate a SQLite database of incidents.&lt;/p&gt;
+<p>The <code class="language-plaintext highlighter-rouge">results.txt</code> file stores all of the GVA URL indices and their respective HTML <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> elements containing incident reports. The next step is to create a parser that will read through the HTML and populate a SQLite database of incidents.</p>
 
-&lt;p&gt;Since incidents have only one location and time but potentially no limit on how many people are involved, I decided to make each entry of the database tie to an individual. Thus the parser will create entries for each person who has been involved in a gun-related incident.&lt;/p&gt;
+<p>Since incidents have only one location and time but potentially no limit on how many people are involved, I decided to make each entry of the database tie to an individual. Thus the parser will create entries for each person who has been involved in a gun-related incident.</p>
 
-&lt;p&gt;Of course, additional fields can be defined but the relevant lines of code have to be changed to accommodate them. This particular block of code can take a long time to run because I’m using the html5lib parser, which reads the whole document in. However, this is only a one-time cost (as future updates to the database will be only those events that have happened since we last indexed).&lt;/p&gt;
+<p>Of course, additional fields can be defined but the relevant lines of code have to be changed to accommodate them. This particular block of code can take a long time to run because I’m using the html5lib parser, which reads the whole document in. However, this is only a one-time cost (as future updates to the database will be only those events that have happened since we last indexed).</p>
 
-&lt;script src=&quot;https://gist.github.com/larryfenn/6db23e81328910ae8e28.js&quot;&gt;&lt;/script&gt;
+<script src="https://gist.github.com/larryfenn/6db23e81328910ae8e28.js"></script>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#toc&quot;&gt;Back to top&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
+<ul>
+  <li><a href="#toc">Back to top</a></li>
+</ul>
 
-&lt;div id=&quot;2&quot;&gt;&lt;/div&gt;
+<hr />
 
-&lt;h2 id=&quot;analysis&quot;&gt;Analysis&lt;/h2&gt;
-&lt;p&gt;Now we have a SQLite database called &lt;code class=&quot;highlighter-rouge&quot;&gt;gva.db&lt;/code&gt; with the table GVA in it. We can now ask it some basic questions:&lt;/p&gt;
+<div id="2"></div>
 
-&lt;p&gt;&lt;img src=&quot;/gva/post_assets/gvadb.png&quot; width=&quot;769&quot; /&gt;&lt;/p&gt;
+<h2 id="analysis">Analysis</h2>
+<p>Now we have a SQLite database called <code class="language-plaintext highlighter-rouge">gva.db</code> with the table GVA in it. We can now ask it some basic questions:</p>
 
-&lt;p&gt;With a database in hand, the door is open to all sorts of investigation. In particular, let’s explore the relationship between the individuals in the database, the event (as defined and used by the GVA), and the “outcomes”; here, I will define an outcome as the status of the individual (either perpetrator or victim) at the end of the event. The two contrasts to look at are victim/perpetrator, and male/female. The definition of “perpetrator” in this situation is not always the person using the gun; for example, someone who is shot at during an attempted home invasion will be called a “perpetrator”. Using the GVA’s notation, the possible outcomes are:&lt;/p&gt;
+<p><img src="/gva/post_assets/gvadb.png" width="769" /></p>
 
-&lt;ol&gt;
-  &lt;li&gt;Unharmed.&lt;/li&gt;
-  &lt;li&gt;Injured.&lt;/li&gt;
-  &lt;li&gt;Killed.&lt;/li&gt;
-  &lt;li&gt;Arrested.&lt;/li&gt;
-&lt;/ol&gt;
+<p>With a database in hand, the door is open to all sorts of investigation. In particular, let’s explore the relationship between the individuals in the database, the event (as defined and used by the GVA), and the “outcomes”; here, I will define an outcome as the status of the individual (either perpetrator or victim) at the end of the event. The two contrasts to look at are victim/perpetrator, and male/female. The definition of “perpetrator” in this situation is not always the person using the gun; for example, someone who is shot at during an attempted home invasion will be called a “perpetrator”. Using the GVA’s notation, the possible outcomes are:</p>
 
-&lt;p&gt;A simple python script can automate the access, storage, and plotting of the data:
-&lt;script src=&quot;https://gist.github.com/larryfenn/df194b702fb72812347b.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+<ol>
+  <li>Unharmed.</li>
+  <li>Injured.</li>
+  <li>Killed.</li>
+  <li>Arrested.</li>
+</ol>
 
-&lt;p&gt;With my treatment of the data, these are tags attached to  gun related incidents; it is not quite a direct count of factors, since a single event frequently has many tags attached to it in the GVA. However, the relative frequency of the different tags can still communicate what the nature of gun incidents and gun violence in America looks like:&lt;/p&gt;
+<p>A simple python script can automate the access, storage, and plotting of the data:
+<script src="https://gist.github.com/larryfenn/df194b702fb72812347b.js"></script></p>
 
-&lt;p&gt;###Top event characteristics for all perpetrators in the GVA
-&lt;img src=&quot;/gva/post_assets/pt.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/ptl.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+<p>With my treatment of the data, these are tags attached to  gun related incidents; it is not quite a direct count of factors, since a single event frequently has many tags attached to it in the GVA. However, the relative frequency of the different tags can still communicate what the nature of gun incidents and gun violence in America looks like:</p>
 
-&lt;p&gt;###Top event characteristics for all victims in the GVA
-&lt;img src=&quot;/gva/post_assets/vt.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/vtl.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+<h3 id="top-event-characteristics-for-all-perpetrators-in-the-gva">Top event characteristics for all perpetrators in the GVA</h3>
+<p><img src="/gva/post_assets/pt.png" width="300" /><img src="/gva/post_assets/ptl.png" width="400" height="300" /></p>
 
-&lt;p&gt;DGU stands for “Defensive Gun Use”. Looking at the data for all perpetrators and victims, &lt;strong&gt;Armed robbery&lt;/strong&gt; is the number one tag in use for both. On the victim side, it turns out &lt;strong&gt;Mass Shooting&lt;/strong&gt; sits just below &lt;strong&gt;Accidental Shooting&lt;/strong&gt; in terms of frequency in the GVA database.&lt;/p&gt;
+<h3 id="top-event-characteristics-for-all-victims-in-the-gva">Top event characteristics for all victims in the GVA</h3>
+<p><img src="/gva/post_assets/vt.png" width="300" /><img src="/gva/post_assets/vtl.png" width="400" height="300" /></p>
 
-&lt;p&gt;Now let’s examine the gender differences, if any (for those records where gender is filled in):&lt;/p&gt;
+<p>DGU stands for “Defensive Gun Use”. Looking at the data for all perpetrators and victims, <strong>Armed robbery</strong> is the number one tag in use for both. On the victim side, it turns out <strong>Mass Shooting</strong> sits just below <strong>Accidental Shooting</strong> in terms of frequency in the GVA database.</p>
 
-&lt;p&gt;###Top event characteristics for male perpetrators in the GVA
-&lt;img src=&quot;/gva/post_assets/pm.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/pml.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+<p>Now let’s examine the gender differences, if any (for those records where gender is filled in):</p>
 
-&lt;p&gt;###Top event characteristics for female perpetrators in the GVA
-&lt;img src=&quot;/gva/post_assets/pf.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/pfl.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+<h3 id="top-event-characteristics-for-male-perpetrators-in-the-gva">Top event characteristics for male perpetrators in the GVA</h3>
+<p><img src="/gva/post_assets/pm.png" width="300" /><img src="/gva/post_assets/pml.png" width="400" height="300" /></p>
 
-&lt;p&gt;&lt;strong&gt;Armed robbery&lt;/strong&gt; is at roughly the same frequency for male perpetrators as for the whole database, but for female perpetrators it has fallen down from 1st to 4th most used tag, with &lt;strong&gt;Non-Shooting Incident&lt;/strong&gt; rising from 3rd to 1st most used. &lt;strong&gt;Domestic Violence&lt;/strong&gt; for male perpetrators sits between &lt;strong&gt;Defensive Use&lt;/strong&gt; and &lt;strong&gt;Car-jacking&lt;/strong&gt; at 2.16%, while for female perpetrators it sits between &lt;strong&gt;Brandishing&lt;/strong&gt; and &lt;strong&gt;ATF/LE Confiscation&lt;/strong&gt; at 5.00%. Now let’s flip the relationship and look at victims:&lt;/p&gt;
+<h3 id="top-event-characteristics-for-female-perpetrators-in-the-gva">Top event characteristics for female perpetrators in the GVA</h3>
+<p><img src="/gva/post_assets/pf.png" width="300" /><img src="/gva/post_assets/pfl.png" width="400" height="300" /></p>
 
-&lt;p&gt;###Top event characteristics for male victims in the GVA
-&lt;img src=&quot;/gva/post_assets/vm.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/vml.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+<p><strong>Armed robbery</strong> is at roughly the same frequency for male perpetrators as for the whole database, but for female perpetrators it has fallen down from 1st to 4th most used tag, with <strong>Non-Shooting Incident</strong> rising from 3rd to 1st most used. <strong>Domestic Violence</strong> for male perpetrators sits between <strong>Defensive Use</strong> and <strong>Car-jacking</strong> at 2.16%, while for female perpetrators it sits between <strong>Brandishing</strong> and <strong>ATF/LE Confiscation</strong> at 5.00%. Now let’s flip the relationship and look at victims:</p>
 
-&lt;p&gt;###Top event characteristics for female victims in the GVA
-&lt;img src=&quot;/gva/post_assets/vf.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/vfl.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+<h3 id="top-event-characteristics-for-male-victims-in-the-gva">Top event characteristics for male victims in the GVA</h3>
+<p><img src="/gva/post_assets/vm.png" width="300" /><img src="/gva/post_assets/vml.png" width="400" height="300" /></p>
 
-&lt;p&gt;Flipping from perpetrator to victim we see a dramatic change: &lt;strong&gt;Domestic Violence&lt;/strong&gt; for female victims is top of the list, at 9.24% (compare that to 3.89% when we looked at all victims, and 2.74% for male victims).&lt;/p&gt;
+<h3 id="top-event-characteristics-for-female-victims-in-the-gva">Top event characteristics for female victims in the GVA</h3>
+<p><img src="/gva/post_assets/vf.png" width="300" /><img src="/gva/post_assets/vfl.png" width="400" height="300" /></p>
 
-&lt;p&gt;###Top event characteristics for killed perpetrators in the GVA
-&lt;img src=&quot;/gva/post_assets/pk.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/pkl.png&quot; width=&quot;400&quot; height=&quot;200&quot; /&gt;&lt;/p&gt;
+<p>Flipping from perpetrator to victim we see a dramatic change: <strong>Domestic Violence</strong> for female victims is top of the list, at 9.24% (compare that to 3.89% when we looked at all victims, and 2.74% for male victims).</p>
 
-&lt;p&gt;###Top event characteristics for killed victims in the GVA
-&lt;img src=&quot;/gva/post_assets/vk.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/vkl.png&quot; width=&quot;400&quot; height=&quot;250&quot; /&gt;&lt;/p&gt;
+<h3 id="top-event-characteristics-for-killed-perpetrators-in-the-gva">Top event characteristics for killed perpetrators in the GVA</h3>
+<p><img src="/gva/post_assets/pk.png" width="300" /><img src="/gva/post_assets/pkl.png" width="400" height="200" /></p>
 
-&lt;p&gt;Lastly, looking at how deaths from gun incidents are distributed we see that &lt;strong&gt;Suicide&lt;/strong&gt; and &lt;strong&gt;Murder/Suicide&lt;/strong&gt; are both at the top of the list along with law enforcement related tags (evoking, among other things, the notion of “suicide by cop”). &lt;strong&gt;Suicide&lt;/strong&gt; and &lt;strong&gt;Domestic Violence&lt;/strong&gt; being at the top of the list for killed victims is both a disheartening but important fact to keep in mind about the frequency of these causes in gun casualties.&lt;/p&gt;
+<h3 id="top-event-characteristics-for-killed-victims-in-the-gva">Top event characteristics for killed victims in the GVA</h3>
+<p><img src="/gva/post_assets/vk.png" width="300" /><img src="/gva/post_assets/vkl.png" width="400" height="250" /></p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#toc&quot;&gt;Back to top&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
+<p>Lastly, looking at how deaths from gun incidents are distributed we see that <strong>Suicide</strong> and <strong>Murder/Suicide</strong> are both at the top of the list along with law enforcement related tags (evoking, among other things, the notion of “suicide by cop”). <strong>Suicide</strong> and <strong>Domestic Violence</strong> being at the top of the list for killed victims is both a disheartening but important fact to keep in mind about the frequency of these causes in gun casualties.</p>
 
-&lt;div id=&quot;3&quot;&gt;&lt;/div&gt;
+<ul>
+  <li><a href="#toc">Back to top</a></li>
+</ul>
 
-&lt;h2 id=&quot;visualization&quot;&gt;Visualization&lt;/h2&gt;
+<hr />
 
-&lt;p&gt;The final thing to be done with the data is to make it accessible. I picked four types of event tags that figure prominently in discussions of guns and gun control to highlight:&lt;/p&gt;
+<div id="3"></div>
 
-&lt;ol&gt;
-  &lt;li&gt;Accidental discharge.&lt;/li&gt;
-  &lt;li&gt;Use in defense.&lt;/li&gt;
-  &lt;li&gt;Use by a third party “good samaritan” in defense.&lt;/li&gt;
-  &lt;li&gt;Mass shootings.&lt;/li&gt;
-  &lt;li&gt;Suicide.&lt;/li&gt;
-&lt;/ol&gt;
+<h2 id="visualization">Visualization</h2>
 
-&lt;p&gt;The result of this effort is a &lt;a href=&quot;http://larryfenn.com/gva&quot;&gt;gun violence choropleth, age/gender histogram, and time series&lt;/a&gt; d3.js document. The document aims to put at one’s fingertips national and state level data and sources. From playing around some qualitative observations can be made:&lt;/p&gt;
+<p>The final thing to be done with the data is to make it accessible. I picked four types of event tags that figure prominently in discussions of guns and gun control to highlight:</p>
 
-&lt;ol&gt;
-  &lt;li&gt;Accidental gun injuries and deaths skew younger in general in a bimodal manner with one spike at 3 years and the other at 15 years.&lt;/li&gt;
-  &lt;li&gt;Looking at it per-capita, there is a distinct geographic difference between states where defensive firearm injuries and deaths occur and accidental firearm injuries and deaths occur.&lt;/li&gt;
-  &lt;li&gt;The time series contains many artifacts from how police reports are filed. This is an important thing to take into account if we were to attempt any sort of time series analysis to investigate if gun violence events are correlated across time.&lt;/li&gt;
-  &lt;li&gt;Looking at it by the numbers, “good samaritan” events that lead to injury or death are very rare. This may be a blind spot in the GVA: since the GVA only tracks events that get reported to the police or otherwise make the news, we have no idea how many times a standoff was resolved peacefully without notice or report but &lt;em&gt;with&lt;/em&gt; a gun.&lt;/li&gt;
-&lt;/ol&gt;
+<ol>
+  <li>Accidental discharge.</li>
+  <li>Use in defense.</li>
+  <li>Use by a third party “good samaritan” in defense.</li>
+  <li>Mass shootings.</li>
+  <li>Suicide.</li>
+</ol>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#toc&quot;&gt;Back to top&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
+<p>The result of this effort is a <a href="http://larryfenn.com/gva">gun violence choropleth, age/gender histogram, and time series</a> d3.js document. The document aims to put at one’s fingertips national and state level data and sources. From playing around some qualitative observations can be made:</p>
 
-&lt;div id=&quot;4&quot;&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h2&gt;
-&lt;p&gt;The chief flaw with the GVA dataset is that its tagging system works well for simple events, but becomes difficult for events involving many victims and perpetrators. For example, a naive search of events where someone is “Unharmed” still turns up entries with tags such as “Shot - Wounded/Injured” and “Shot - Dead (murder, accidental, suicide)”. In this instance, the event-centric model of the GVA makes it difficult to proceed in a person-centric model.&lt;/p&gt;
-
-&lt;p&gt;Another flaw of the GVA database is the perennial issue of missing data fields:&lt;/p&gt;
+<ol>
+  <li>Accidental gun injuries and deaths skew younger in general in a bimodal manner with one spike at 3 years and the other at 15 years.</li>
+  <li>Looking at it per-capita, there is a distinct geographic difference between states where defensive firearm injuries and deaths occur and accidental firearm injuries and deaths occur.</li>
+  <li>The time series contains many artifacts from how police reports are filed. This is an important thing to take into account if we were to attempt any sort of time series analysis to investigate if gun violence events are correlated across time.</li>
+  <li>Looking at it by the numbers, “good samaritan” events that lead to injury or death are very rare. This may be a blind spot in the GVA: since the GVA only tracks events that get reported to the police or otherwise make the news, we have no idea how many times a standoff was resolved peacefully without notice or report but <em>with</em> a gun.</li>
+</ol>
 
-&lt;ol&gt;
-  &lt;li&gt;Age: 51.10% of the entries have an age listed.&lt;/li&gt;
-  &lt;li&gt;Relationships: 3.28% have a relationship (Friends, Family, etc.) listed.&lt;/li&gt;
-&lt;/ol&gt;
+<ul>
+  <li><a href="#toc">Back to top</a></li>
+</ul>
 
-&lt;p&gt;That being said, there is still a lot of potential still in the richness of the GVA database and I have only scratched the surface:&lt;/p&gt;
+<hr />
 
-&lt;ol&gt;
-  &lt;li&gt;Location tags: 95.19% of the entries (165,121 entries) have exact GPS coordinates of the event. Knowing the location this precisely opens the door to a huge amount of additional data we can use, from political to demographic content. One potential extension is to join to the database the status of CCW permits (from most permissive to most restrictive). Another idea is to try to use the regional economic data from the BEA.&lt;/li&gt;
-  &lt;li&gt;Guns involved: the GVA tracks (if possible) all the guns reported in the incidents. This is useful potentially to test the hypothesis that different guns are used for primarily different purposes.&lt;/li&gt;
-  &lt;li&gt;Event tags: the tags the GVA applies to all the events can probably be grouped together in sensible ways, providing extra signal about different kinds of gun violence events. Ultimately, this points the way towards developing some type of classifier for gun violence events; when people have conversations about policy it is important to clearly illustrate their impact by ignoring the “noise” of gun violence events that the policy isn’t targeting; for example, a law designed to reduce domestic violence gun incidents should not be judged for failing to reduce the number of drive-by shootings.&lt;/li&gt;
-&lt;/ol&gt;
+<div id="4"></div>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#toc&quot;&gt;Back to top&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
+<h2 id="conclusions">Conclusions</h2>
+<p>The chief flaw with the GVA dataset is that its tagging system works well for simple events, but becomes difficult for events involving many victims and perpetrators. For example, a naive search of events where someone is “Unharmed” still turns up entries with tags such as “Shot - Wounded/Injured” and “Shot - Dead (murder, accidental, suicide)”. In this instance, the event-centric model of the GVA makes it difficult to proceed in a person-centric model.</p>
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;hr /&gt;
+<p>Another flaw of the GVA database is the perennial issue of missing data fields:</p>
 
-&lt;div id=&quot;A1&quot;&gt;&lt;/div&gt;
+<ol>
+  <li>Age: 51.10% of the entries have an age listed.</li>
+  <li>Relationships: 3.28% have a relationship (Friends, Family, etc.) listed.</li>
+</ol>
 
-&lt;h2 id=&quot;appendix-some-extra-graphs&quot;&gt;Appendix: Some Extra Graphs&lt;/h2&gt;
+<p>That being said, there is still a lot of potential still in the richness of the GVA database and I have only scratched the surface:</p>
 
-&lt;p&gt;###Top event characteristics for unharmed perpetrators in the GVA
-&lt;img src=&quot;/gva/post_assets/pu.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/pul.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+<ol>
+  <li>Location tags: 95.19% of the entries (165,121 entries) have exact GPS coordinates of the event. Knowing the location this precisely opens the door to a huge amount of additional data we can use, from political to demographic content. One potential extension is to join to the database the status of CCW permits (from most permissive to most restrictive). Another idea is to try to use the regional economic data from the BEA.</li>
+  <li>Guns involved: the GVA tracks (if possible) all the guns reported in the incidents. This is useful potentially to test the hypothesis that different guns are used for primarily different purposes.</li>
+  <li>Event tags: the tags the GVA applies to all the events can probably be grouped together in sensible ways, providing extra signal about different kinds of gun violence events. Ultimately, this points the way towards developing some type of classifier for gun violence events; when people have conversations about policy it is important to clearly illustrate their impact by ignoring the “noise” of gun violence events that the policy isn’t targeting; for example, a law designed to reduce domestic violence gun incidents should not be judged for failing to reduce the number of drive-by shootings.</li>
+</ol>
 
-&lt;p&gt;###Top event characteristics for unharmed victims in the GVA
-&lt;img src=&quot;/gva/post_assets/vu.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/vul.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+<ul>
+  <li><a href="#toc">Back to top</a></li>
+</ul>
 
-&lt;p&gt;The notable characteristics that jump out here are &lt;strong&gt;Institution/Group/Business&lt;/strong&gt; and &lt;strong&gt;Drug involvement&lt;/strong&gt; on the perpetrator side, and &lt;strong&gt;Defensive Use&lt;/strong&gt; on the victim side- evidence that there are a substantial amount of gun incidents where the victim defensively employs a gun and walks away unharmed.&lt;/p&gt;
+<hr />
 
-&lt;p&gt;###Top event characteristics for injured perpetrators in the GVA
-&lt;img src=&quot;/gva/post_assets/pi.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/pil.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+<p><br /></p>
 
-&lt;p&gt;###Top event characteristics for injured victims in the GVA
-&lt;img src=&quot;/gva/post_assets/vi.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/vil.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+<hr />
 
-&lt;p&gt;###Top event characteristics for arrested perpetrators in the GVA
-&lt;img src=&quot;/gva/post_assets/pa.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/pal.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+<div id="A1"></div>
 
-&lt;p&gt;###Top event characteristics for arrested victims in the GVA
-&lt;img src=&quot;/gva/post_assets/va.png&quot; width=&quot;300&quot; /&gt;&lt;img src=&quot;/gva/post_assets/val.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+<h2 id="appendix-some-extra-graphs">Appendix: Some Extra Graphs</h2>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#toc&quot;&gt;Back to top&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 14 Dec 2015 01:55:00 -0500</pubDate>
-        <link>http://larryfenn.com/personal/2015/12/14/gva.html</link>
-        <guid isPermaLink="true">http://larryfenn.com/personal/2015/12/14/gva.html</guid>
-        
-        <category>python</category>
-        
-        <category>d3js</category>
-        
-        <category>sql</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>Dota 2 Drafting Part 2: Hero Pairings</title>
-        <description>&lt;p&gt;&lt;a href=&quot;/personal/dota2drafts/popularitygraph.html&quot;&gt;&lt;img src=&quot;/personal/dota2drafts/popularityexample1.png&quot; hspace=&quot;20&quot; height=&quot;253&quot; width=&quot;271&quot; /&gt;&lt;/a&gt;&lt;a href=&quot;/personal/dota2drafts/popularitygraph.html&quot;&gt;&lt;img src=&quot;/personal/dota2drafts/popularityexample2.png&quot; hspace=&quot;20&quot; height=&quot;195&quot; width=&quot;249&quot; /&gt;&lt;/a&gt;
-&lt;br /&gt;&lt;/p&gt;
+<h3 id="top-event-characteristics-for-unharmed-perpetrators-in-the-gva">Top event characteristics for unharmed perpetrators in the GVA</h3>
+<p><img src="/gva/post_assets/pu.png" width="300" /><img src="/gva/post_assets/pul.png" width="400" height="300" /></p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/personal/dota2drafts/popularitygraph.html&quot;&gt;Interactive graph: Hero pair popularity.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/personal/dota2drafts/winrategraph.html&quot;&gt;Interactive graph: Hero pair winrate.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+<h3 id="top-event-characteristics-for-unharmed-victims-in-the-gva">Top event characteristics for unharmed victims in the GVA</h3>
+<p><img src="/gva/post_assets/vu.png" width="300" /><img src="/gva/post_assets/vul.png" width="400" height="300" /></p>
 
-&lt;p&gt;The data collected from Valve’s API contains a plethora of information about relationships between heroes, teams, and winrates. This data lends itself to the construction of graphs depicting the relationships. This has a twofold purpose:&lt;/p&gt;
+<p>The notable characteristics that jump out here are <strong>Institution/Group/Business</strong> and <strong>Drug involvement</strong> on the perpetrator side, and <strong>Defensive Use</strong> on the victim side- evidence that there are a substantial amount of gun incidents where the victim defensively employs a gun and walks away unharmed.</p>
 
-&lt;ol&gt;
-  &lt;li&gt;To assess the integrity of the collected data. If the graphs that come out don’t line up with the common strategic thinking about the heroes then additional stratification is necessary (most likely by game skill bracket).&lt;/li&gt;
-  &lt;li&gt;To explore the data set to see what hero combinations are popular along with showing which combinations work well and which don’t.&lt;/li&gt;
-&lt;/ol&gt;
+<h3 id="top-event-characteristics-for-injured-perpetrators-in-the-gva">Top event characteristics for injured perpetrators in the GVA</h3>
+<p><img src="/gva/post_assets/pi.png" width="300" /><img src="/gva/post_assets/pil.png" width="400" height="300" /></p>
 
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;data-processing&quot;&gt;Data Processing&lt;/h2&gt;
-
-&lt;p&gt;Since the record for each match contains information as to which team won, and what the picks were, it’s just a matter of another MapReduce job to pull out the relationships between heroes, picks, and win rates. In particular, each game record gives us 5 heroes that won together, and 5 heroes that lost together. Thus our mapper step looks like this (after we get the picks by team):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;radiantcliq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;itertools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;combinations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;radiantpicks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;direcliq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;itertools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;combinations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;direpicks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# one can edit the combinations argument to pull out arbitrary n-cliques&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;radiantcliq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;s,&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;s:&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\t&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;s'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;team_win&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'True'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;direcliq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;s,&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;s:&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\t&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;s'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;team_win&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'False'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The result of the MapReduce step is essentially a list of edges and weights. Python has the &lt;code class=&quot;highlighter-rouge&quot;&gt;networkx&lt;/code&gt; library which allows us to create the graph structure without much fuss; even better, it supports JSON output which allows us to use D3.js to render the graphs and play around with them.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-graphs&quot;&gt;The Graphs&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;/personal/dota2drafts/winrategraph.html&quot;&gt;&lt;img src=&quot;/personal/dota2drafts/winrateexample1.png&quot; hspace=&quot;20&quot; vspace=&quot;20&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Winrates necessitate special treatment. Each hero, indexed as \(i\), has their own, winrate (indexed over all heroes):&lt;/p&gt;
-
-&lt;p&gt;\[\dfrac{W_i}{N_i} = \dfrac{\displaystyle\sum_j w_{ij}}{\displaystyle\sum_j n_{ij}}\]&lt;/p&gt;
-
-&lt;p&gt;For a hero pair \((i, j)\) the hero pair popularity is \(n_{ij}\) and the hero pair winrate is \(\frac{w_{ij}}{n_{ij}}\). However, this hero pair winrate does not have an obvious relationship with the “absolute” winrates for the heroes, \(\frac{W_i}{N_i}\) and \(\frac{W_j}{N_j}\). The pair winrate alone is not very informative; what would be informative is a determination of &lt;i&gt;how much better&lt;/i&gt; the pair is. The simplest (although coarsest) measure is the difference between the pair winrate and the maximum of the individual winrates:&lt;/p&gt;
-
-&lt;p&gt;\[r_{ij} = \dfrac{w_{ij}}{n_{ij}} - \max\left(\dfrac{W_i}{N_i}, \dfrac{W_j}{N_j}\right)\]&lt;/p&gt;
-
-&lt;p&gt;This is a measure of the “improvement” the pair has to working individually.&lt;/p&gt;
-
-&lt;h2 id=&quot;graph-topology&quot;&gt;Graph Topology&lt;/h2&gt;
-
-&lt;p&gt;By selecting a threshold parameter and removing edges if their weights fall below the threshold, the graphs for winrates and popularity can be endowed with more interesting topology. Both of the graphs could have a quite different topology depending on the skill level of the population being drawn from. Additionally, different measures of popularity and winrate can easily give rise to different topologies depending on what is being measured. For example, a similar procedure to the winrate improvement measure could be employed on popularity to filter out the existing effect of a hero being popular; it is no surprise that Earthshaker is at the apparent center of the popularity graph since (as we saw in the previous post) he is far and away the most picked hero by himself in the data set.&lt;/p&gt;
-
-&lt;p&gt;Ideally, we would prefer measures that give us graph topologies that give rise to many disjoint parts with as few isolated nodes as possible. These disjoint parts would line up with distinct strategies or combinations; for example, the Tiny-Io combination shows up as a disjoint element in the popularity graph already for any threshold below 4800.&lt;/p&gt;
-
-&lt;h2 id=&quot;further-plans&quot;&gt;Further Plans&lt;/h2&gt;
-
-&lt;p&gt;The analysis up to now has assumed that heroes perform equally well on radiant and dire side- not necessarily true. Additionally, it has made no distinction in skill groups; all of the analysis has been done on the total data from all the public matches.&lt;/p&gt;
-
-&lt;p&gt;Alternative graphs and measures could be used to determine more information. One relationship that may be worth exploring is a “counter-pick” graph that tracks how many times two heroes faced off against each other on separate teams. Another graph worth looking into could be the “anti-pair” graph working to distinguish which heroes fulfill a similar role: if we count up how many times a hero is &lt;i&gt;not&lt;/i&gt; picked when another hero is picked. However, there will be a significant amount of noise since any particular game only allows for 5 picks, leaving 95% of the hero pool unpicked as a matter of course.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/personal/dota2drafts/popularitygraph.html&quot;&gt;Hero pair popularity graph&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/personal/dota2drafts/winrategraph.html&quot;&gt;Hero pair winrate graph&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Fri, 13 Nov 2015 18:55:02 -0500</pubDate>
-        <link>http://larryfenn.com/personal/2015/11/13/dota2drafts2.html</link>
-        <guid isPermaLink="true">http://larryfenn.com/personal/2015/11/13/dota2drafts2.html</guid>
-        
-        <category>python</category>
-        
-        <category>hadoop</category>
-        
-        <category>d3js</category>
-        
-        <category>dota2</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>Dota 2 Drafting Part 1: Data Collection</title>
-        <description>&lt;p&gt;Dota 2 captain’s mode entails a drafting phase where a sequence of picks and bans are issued by the team captains. As of this writing, there have been 1,933,725,512 total matches of Dota 2 played, in all modes. It may be possible now with this body of data to build a machine learning algorithm for prediction and for drafting suggestions.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;getting-the-data&quot;&gt;Getting the data&lt;/h2&gt;
-
-&lt;p&gt;The web API for Dota 2 has two functions we can use to grab match data as a JSON object from some index. The first, &lt;code class=&quot;highlighter-rouge&quot;&gt;GetMatchHistory&lt;/code&gt;, has a game mode argument and date argument which would make it ideal for stratifying the data by patch release. However, it has three flaws that preclude its use:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;It is capped (for some reason, most likely a bug judging from all the angry dev forum posts) at grabbing the most recent 500 games.&lt;/li&gt;
-  &lt;li&gt;It does not return the pick/ban record, only the game type of a match.&lt;/li&gt;
-  &lt;li&gt;The game mode argument currently does not work (lol Valve).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;The second function, &lt;code class=&quot;highlighter-rouge&quot;&gt;GetMatchHistoryBySequenceNum&lt;/code&gt;, does return the pick/ban record and does not have any limitation on how far it can reach, but it does not support any date parameters. Thus, determining the actual patch number a match was played in will necessitate going into the records and accessing the UNIX time that the match was played at. The other complication &lt;code class=&quot;highlighter-rouge&quot;&gt;GetMatchHistoryBySequenceNum&lt;/code&gt; has is that the sequence numbers do not directly map to the order in which matches were played- I suspect that the sequence number is issued to a match once it has finished being indexed and processed into the Dota 2 database. In other words, it is no guarantee if the sequence number for match A is higher than the sequence number for match B that match A was played after match B.&lt;/p&gt;
-
-&lt;p&gt;The typical output from the &lt;code class=&quot;highlighter-rouge&quot;&gt;GetMatchHistoryBySequenceNum&lt;/code&gt; call (for a captain’s mode match) looks like this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;s&quot;&gt;&quot;result&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;s&quot;&gt;&quot;status&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// success code
-&lt;/span&gt;		&lt;span class=&quot;s&quot;&gt;&quot;matches&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-			&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-				&lt;span class=&quot;s&quot;&gt;&quot;players&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-					&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-					&lt;span class=&quot;c1&quot;&gt;// omitted: player ids and statistics such as gold earned
-&lt;/span&gt;					&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-				&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-				&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-				&lt;span class=&quot;s&quot;&gt;&quot;radiant_win&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-				&lt;span class=&quot;s&quot;&gt;&quot;duration&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2333&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// our metric for how hard a team won the game
-&lt;/span&gt;				&lt;span class=&quot;s&quot;&gt;&quot;start_time&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1447002472&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-				&lt;span class=&quot;s&quot;&gt;&quot;match_id&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1923658257&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-				&lt;span class=&quot;s&quot;&gt;&quot;match_seq_num&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1700000293&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-				&lt;span class=&quot;c1&quot;&gt;// omitted: other game data not relevant to us
-&lt;/span&gt;				&lt;span class=&quot;s&quot;&gt;&quot;picks_bans&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-					&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-						&lt;span class=&quot;s&quot;&gt;&quot;is_pick&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-						&lt;span class=&quot;s&quot;&gt;&quot;hero_id&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;75&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-						&lt;span class=&quot;s&quot;&gt;&quot;team&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 0: radiant, 1: dire
-&lt;/span&gt;						&lt;span class=&quot;s&quot;&gt;&quot;order&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-					&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-					&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-						&lt;span class=&quot;s&quot;&gt;&quot;is_pick&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-						&lt;span class=&quot;s&quot;&gt;&quot;hero_id&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;85&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-						&lt;span class=&quot;s&quot;&gt;&quot;team&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-						&lt;span class=&quot;s&quot;&gt;&quot;order&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-					&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-					&lt;span class=&quot;c1&quot;&gt;// etc. for the rest of the pick/ban records
-&lt;/span&gt;				&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+<h3 id="top-event-characteristics-for-injured-victims-in-the-gva">Top event characteristics for injured victims in the GVA</h3>
+<p><img src="/gva/post_assets/vi.png" width="300" /><img src="/gva/post_assets/vil.png" width="400" height="300" /></p>
+
+<h3 id="top-event-characteristics-for-arrested-perpetrators-in-the-gva">Top event characteristics for arrested perpetrators in the GVA</h3>
+<p><img src="/gva/post_assets/pa.png" width="300" /><img src="/gva/post_assets/pal.png" width="400" height="300" /></p>
+
+<h3 id="top-event-characteristics-for-arrested-victims-in-the-gva">Top event characteristics for arrested victims in the GVA</h3>
+<p><img src="/gva/post_assets/va.png" width="300" /><img src="/gva/post_assets/val.png" width="400" height="300" /></p>
+
+<ul>
+  <li><a href="#toc">Back to top</a></li>
+</ul>]]></content><author><name></name></author><category term="personal" /><category term="python" /><category term="d3js" /><category term="sql" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Dota 2 Drafting Part 1: Data Collection</title><link href="https://larryfenn.com/personal/dota2drafts" rel="alternate" type="text/html" title="Dota 2 Drafting Part 1: Data Collection" /><published>2015-11-13T18:55:02-05:00</published><updated>2015-11-13T18:55:02-05:00</updated><id>https://larryfenn.com/personal/dota2drafts</id><content type="html" xml:base="https://larryfenn.com/personal/dota2drafts"><![CDATA[<p>Dota 2 captain’s mode entails a drafting phase where a sequence of picks and bans are issued by the team captains. As of this writing, there have been 1,933,725,512 total matches of Dota 2 played, in all modes. It may be possible now with this body of data to build a machine learning algorithm for prediction and for drafting suggestions.</p>
+
+<!--more-->
+
+<h2 id="getting-the-data">Getting the data</h2>
+
+<p>The web API for Dota 2 has two functions we can use to grab match data as a JSON object from some index. The first, <code class="language-plaintext highlighter-rouge">GetMatchHistory</code>, has a game mode argument and date argument which would make it ideal for stratifying the data by patch release. However, it has three flaws that preclude its use:</p>
+
+<ol>
+  <li>It is capped (for some reason, most likely a bug judging from all the angry dev forum posts) at grabbing the most recent 500 games.</li>
+  <li>It does not return the pick/ban record, only the game type of a match.</li>
+  <li>The game mode argument currently does not work (lol Valve).</li>
+</ol>
+
+<p>The second function, <code class="language-plaintext highlighter-rouge">GetMatchHistoryBySequenceNum</code>, does return the pick/ban record and does not have any limitation on how far it can reach, but it does not support any date parameters. Thus, determining the actual patch number a match was played in will necessitate going into the records and accessing the UNIX time that the match was played at. The other complication <code class="language-plaintext highlighter-rouge">GetMatchHistoryBySequenceNum</code> has is that the sequence numbers do not directly map to the order in which matches were played- I suspect that the sequence number is issued to a match once it has finished being indexed and processed into the Dota 2 database. In other words, it is no guarantee if the sequence number for match A is higher than the sequence number for match B that match A was played after match B.</p>
+
+<p>The typical output from the <code class="language-plaintext highlighter-rouge">GetMatchHistoryBySequenceNum</code> call (for a captain’s mode match) looks like this:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+	<span class="s">"result"</span><span class="o">:</span> <span class="p">{</span>
+		<span class="s">"status"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1">// success code</span>
+		<span class="s">"matches"</span><span class="o">:</span> <span class="p">[</span>
+			<span class="p">{</span>
+				<span class="s">"players"</span><span class="o">:</span> <span class="p">[</span>
+					<span class="p">{</span>
+					<span class="c1">// omitted: player ids and statistics such as gold earned</span>
+					<span class="p">}</span>
+				<span class="p">]</span>
+				<span class="p">,</span>
+				<span class="s">"radiant_win"</span><span class="o">:</span> <span class="nb">true</span><span class="p">,</span>
+				<span class="s">"duration"</span><span class="o">:</span> <span class="mi">2333</span><span class="p">,</span> <span class="c1">// our metric for how hard a team won the game</span>
+				<span class="s">"start_time"</span><span class="o">:</span> <span class="mi">1447002472</span><span class="p">,</span>
+				<span class="s">"match_id"</span><span class="o">:</span> <span class="mi">1923658257</span><span class="p">,</span>
+				<span class="s">"match_seq_num"</span><span class="o">:</span> <span class="mi">1700000293</span><span class="p">,</span>
+				<span class="c1">// omitted: other game data not relevant to us</span>
+				<span class="s">"picks_bans"</span><span class="o">:</span> <span class="p">[</span>
+					<span class="p">{</span>
+						<span class="s">"is_pick"</span><span class="o">:</span> <span class="nb">false</span><span class="p">,</span>
+						<span class="s">"hero_id"</span><span class="o">:</span> <span class="mi">75</span><span class="p">,</span>
+						<span class="s">"team"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1">// 0: radiant, 1: dire</span>
+						<span class="s">"order"</span><span class="o">:</span> <span class="mi">0</span>
+					<span class="p">},</span>
+					<span class="p">{</span>
+						<span class="s">"is_pick"</span><span class="o">:</span> <span class="nb">false</span><span class="p">,</span>
+						<span class="s">"hero_id"</span><span class="o">:</span> <span class="mi">85</span><span class="p">,</span>
+						<span class="s">"team"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+						<span class="s">"order"</span><span class="o">:</span> <span class="mi">1</span>
+					<span class="p">},</span>
+					<span class="c1">// etc. for the rest of the pick/ban records</span>
+				<span class="p">]</span>
 				
-			&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-			&lt;span class=&quot;c1&quot;&gt;// ... and so on for 99 more matches
-&lt;/span&gt;		&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+			<span class="p">}</span>
+			<span class="c1">// ... and so on for 99 more matches</span>
+		<span class="p">]</span>
 		
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-&lt;p&gt;Since we only want to index captain’s mode matches, it suffices to check if the &lt;code class=&quot;highlighter-rouge&quot;&gt;picks_bans&lt;/code&gt; key exists, and parse the serialized JSON into a csv for future use if it is.&lt;/p&gt;
+<p>Since we only want to index captain’s mode matches, it suffices to check if the <code class="language-plaintext highlighter-rouge">picks_bans</code> key exists, and parse the serialized JSON into a csv for future use if it is.</p>
 
-&lt;h2 id=&quot;basic-observation-hero-popularity&quot;&gt;Basic observation: Hero popularity&lt;/h2&gt;
+<h2 id="basic-observation-hero-popularity">Basic observation: Hero popularity</h2>
 
-&lt;p&gt;One simple question we can address right now is popularity: which heroes are the most frequently banned or picked? Even better, the ordered nature of the records allows us to distinguish which heroes are frequent first bans or picks. There are two teams, each getting five picks and five bans in some sequence (i.e. there are ten picks and ten bans total per game). After trimming the column headings from the csv, a simple Hadoop MapReduce task accumulates the frequencies for all hero picks and bans by when they occur.&lt;/p&gt;
-&lt;figure&gt;
-    &lt;img src=&quot;/personal/dota2drafts/figure_2.png&quot; width=&quot;800&quot; height=&quot;600&quot; /&gt;
-    &lt;figcaption&gt;Figure 1: Picks (red) and bans (blue) with phase (1-10) represented by bar stack. A lot of heroes are higher priority bans than picks. Some heroes are much more represented in later phases: Anti-Mage, Gyrocopter, TA.&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;Parsing the MapReduce results into a pandas dataframe, I chose to graph the heroes that were most frequently banned/picked in total, with a stacked bar plot showing which phase the bans/picks come in on. This communicates which heroes are popular first picks or bans, i.e. heroes crucial to a team’s strategy succeeding (in the case of bans) or heroes that are particularly strong in the metagame (in the case of picks). Similarly, the timing of a pick or ban has implications; without diving too deep into the strategy of the game, hero drafting revolves around two primary goals:&lt;/p&gt;
+<p>One simple question we can address right now is popularity: which heroes are the most frequently banned or picked? Even better, the ordered nature of the records allows us to distinguish which heroes are frequent first bans or picks. There are two teams, each getting five picks and five bans in some sequence (i.e. there are ten picks and ten bans total per game). After trimming the column headings from the csv, a simple Hadoop MapReduce task accumulates the frequencies for all hero picks and bans by when they occur.</p>
+<figure>
+    <img src="/personal/dota2drafts/figure_2.png" width="800" height="600" />
+    <figcaption>Figure 1: Picks (red) and bans (blue) with phase (1-10) represented by bar stack. A lot of heroes are higher priority bans than picks. Some heroes are much more represented in later phases: Anti-Mage, Gyrocopter, TA.</figcaption>
+</figure>
+<p>Parsing the MapReduce results into a pandas dataframe, I chose to graph the heroes that were most frequently banned/picked in total, with a stacked bar plot showing which phase the bans/picks come in on. This communicates which heroes are popular first picks or bans, i.e. heroes crucial to a team’s strategy succeeding (in the case of bans) or heroes that are particularly strong in the metagame (in the case of picks). Similarly, the timing of a pick or ban has implications; without diving too deep into the strategy of the game, hero drafting revolves around two primary goals:</p>
 
-&lt;ol&gt;
-  &lt;li&gt;Identify an opponents strategy and curtail its effectiveness with the correct selection of one’s own picks and bans.&lt;/li&gt;
-  &lt;li&gt;Implementing your own strategy based on picks while limiting the opponent’s ability to address it with proper bans.&lt;/li&gt;
-&lt;/ol&gt;
+<ol>
+  <li>Identify an opponents strategy and curtail its effectiveness with the correct selection of one’s own picks and bans.</li>
+  <li>Implementing your own strategy based on picks while limiting the opponent’s ability to address it with proper bans.</li>
+</ol>
 
-&lt;p&gt;Of course, the strategy is much deeper and as of this writing still mostly unexplored space. Part of this project is to discern what features lead to a successful drafting phase.&lt;/p&gt;
+<p>Of course, the strategy is much deeper and as of this writing still mostly unexplored space. Part of this project is to discern what features lead to a successful drafting phase.</p>
 
-&lt;h2 id=&quot;future-plans&quot;&gt;Future plans&lt;/h2&gt;
+<h2 id="future-plans">Future plans</h2>
 
-&lt;p&gt;At this point, I have indexed 80 million Dota 2 matches, roughly 500,000 of which are captain’s mode matches. This is a sufficiently large data set to begin mining for insights; there are many possible directions we can go. Currently I have a cluster of Amazon EC2 instances with Hadoop setup and ready to go, and I’ll be poking around the data set for the more ‘obvious’ statistical features while I wait for more data points to accumulate.&lt;/p&gt;
+<p>At this point, I have indexed 80 million Dota 2 matches, roughly 500,000 of which are captain’s mode matches. This is a sufficiently large data set to begin mining for insights; there are many possible directions we can go. Currently I have a cluster of Amazon EC2 instances with Hadoop setup and ready to go, and I’ll be poking around the data set for the more ‘obvious’ statistical features while I wait for more data points to accumulate.</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/personal/dota2drafts/capmodedata.zip&quot;&gt;The data set (csv (zipped), 131 MB, 461,050 games)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/larryfenn/dota2drafts&quot;&gt;https://github.com/larryfenn/dota2drafts&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Fri, 13 Nov 2015 18:55:02 -0500</pubDate>
-        <link>http://larryfenn.com/personal/2015/11/13/dota2drafts.html</link>
-        <guid isPermaLink="true">http://larryfenn.com/personal/2015/11/13/dota2drafts.html</guid>
-        
-        <category>python</category>
-        
-        <category>pandas</category>
-        
-        <category>hadoop</category>
-        
-        <category>statistics</category>
-        
-        <category>dota2</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>Centrality &amp; Maximal Entropy Random Walks</title>
-        <description>&lt;p&gt;Node centrality can be tricky to measure if it is not assumed the whole graph structure is accessible. However, approximation techniques can be used (in particular, an approximation to maximal entropy random walks) to determine central nodes.&lt;/p&gt;
+<ul>
+  <li><a href="/personal/dota2drafts/capmodedata.zip">The data set (csv (zipped), 131 MB, 461,050 games)</a></li>
+  <li><a href="https://github.com/larryfenn/dota2drafts">https://github.com/larryfenn/dota2drafts</a></li>
+</ul>]]></content><author><name></name></author><category term="personal" /><category term="python" /><category term="pandas" /><category term="hadoop" /><category term="statistics" /><category term="dota2" /><summary type="html"><![CDATA[Dota 2 captain’s mode entails a drafting phase where a sequence of picks and bans are issued by the team captains. As of this writing, there have been 1,933,725,512 total matches of Dota 2 played, in all modes. It may be possible now with this body of data to build a machine learning algorithm for prediction and for drafting suggestions.]]></summary></entry><entry><title type="html">Dota 2 Drafting Part 2: Hero Pairings</title><link href="https://larryfenn.com/personal/dota2drafts2" rel="alternate" type="text/html" title="Dota 2 Drafting Part 2: Hero Pairings" /><published>2015-11-13T18:55:02-05:00</published><updated>2015-11-13T18:55:02-05:00</updated><id>https://larryfenn.com/personal/dota2drafts2</id><content type="html" xml:base="https://larryfenn.com/personal/dota2drafts2"><![CDATA[<p><a href="/personal/dota2drafts/popularitygraph.html"><img src="/personal/dota2drafts/popularityexample1.png" hspace="20" height="253" width="271" /></a><a href="/personal/dota2drafts/popularitygraph.html"><img src="/personal/dota2drafts/popularityexample2.png" hspace="20" height="195" width="249" /></a>
+<br /></p>
 
-&lt;h1&gt;Centrality&lt;/h1&gt;
-&lt;p&gt;One of the definitions of centrality for a graph is eigenvalue centrality. Eigenvalue centrality is useful in that it takes into account the centrality of neighbors (and, recursively, neighbors of neighbors and so on). Solving the eigenvalue problem for a graph adjacency matrix is best done numerically. Once finished, every node in the graph receives an appropriate centrality score.&lt;/p&gt;
+<ul>
+  <li><a href="/personal/dota2drafts/popularitygraph.html">Interactive graph: Hero pair popularity.</a></li>
+  <li><a href="/personal/dota2drafts/winrategraph.html">Interactive graph: Hero pair winrate.</a></li>
+</ul>
 
-&lt;p&gt;However, it may be that the structure of the whole graph is not available all at once. For example, consider the social network of friends as defined on all people- obtaining the structure of this graph requires interviewing every person on Earth and asking them to list their friends out. If we permit the existence of local information (for example, the results of interviewing one person), then it may be possible to determine approximate notions of centrality.&lt;/p&gt;
+<p>The data collected from Valve’s API contains a plethora of information about relationships between heroes, teams, and winrates. This data lends itself to the construction of graphs depicting the relationships. This has a twofold purpose:</p>
 
-&lt;p&gt;In the case of degree centrality this is easy and uninteresting: each person’s score is simply the number of people they know. However, it turns out more sophisticated notions of centrality can also be&lt;/p&gt;
+<ol>
+  <li>To assess the integrity of the collected data. If the graphs that come out don’t line up with the common strategic thinking about the heroes then additional stratification is necessary (most likely by game skill bracket).</li>
+  <li>To explore the data set to see what hero combinations are popular along with showing which combinations work well and which don’t.</li>
+</ol>
 
-&lt;h1&gt;Random Walks&lt;/h1&gt;
-&lt;p&gt;The idea is to employ random walks that have high probabilities of being in more central nodes. Random walks on graphs are defined by the probability of travelling along edges conditioned on the current location of the walker. The maximal entropy random walk is essentially the random walk given by uniformly choosing at random a direction &lt;i&gt;among all possible paths in the graph that go through that edge&lt;/i&gt; (contrast this with the uniform random walk, which chooses each edge uniformly at random).&lt;/p&gt;
+<!--more-->
 
-&lt;p&gt;But wait! Isn’t it the case that one would need the global structure of the graph in order to determine the space of “all possible graphs through an edge”? This is in fact the case; however, an approximation to the maximal entropy random walk is possible to define up to an order which represents neighbor distance; for example, using an order 2 approximation to the random walk in the social network problem would consist in interviewing all people with a degree of separation equal to 2 from the current person.&lt;/p&gt;
+<h2 id="data-processing">Data Processing</h2>
 
-&lt;h1&gt;Conclusion&lt;/h1&gt;
-&lt;p&gt;A lot of these subjects were really cool to investigate. Eigenvalue centrality (and other more exotic notions of centrality based on it) introduced me to spectral graph theory, which is a fascinating subject on its own; but better yet, my existing love for numerical analysis, linear algebra, and approximation algorithms blends perfectly with spectral graph theory because all-too often the underlying graph is simply too large for any other technique to work (for example, links between webpages).&lt;/p&gt;
+<p>Since the record for each match contains information as to which team won, and what the picks were, it’s just a matter of another MapReduce job to pull out the relationships between heroes, picks, and win rates. In particular, each game record gives us 5 heroes that won together, and 5 heroes that lost together. Thus our mapper step looks like this (after we get the picks by team):</p>
 
-&lt;p&gt;In a similar vein, random walks (and maximal entropy random walks in particular) fall almost exactly into the same niche, except with probability theory thrown in. Once again, approximation is necessary.&lt;/p&gt;
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">radiantcliq</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="n">itertools</span><span class="p">.</span><span class="nf">combinations</span><span class="p">(</span><span class="n">radiantpicks</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">direcliq</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="n">itertools</span><span class="p">.</span><span class="nf">combinations</span><span class="p">(</span><span class="n">direpicks</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="c1"># one can edit the combinations argument to pull out arbitrary n-cliques
+</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">radiantcliq</span><span class="p">:</span>
+	<span class="k">print</span> <span class="sh">'</span><span class="s">%s,%s:%s</span><span class="se">\t</span><span class="s">%s</span><span class="sh">'</span> <span class="o">%</span> <span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nf">int</span><span class="p">(</span><span class="n">team_win</span> <span class="o">==</span> <span class="sh">'</span><span class="s">True</span><span class="sh">'</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">direcliq</span><span class="p">:</span>
+	<span class="k">print</span> <span class="sh">'</span><span class="s">%s,%s:%s</span><span class="se">\t</span><span class="s">%s</span><span class="sh">'</span> <span class="o">%</span> <span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nf">int</span><span class="p">(</span><span class="n">team_win</span> <span class="o">==</span> <span class="sh">'</span><span class="s">False</span><span class="sh">'</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div></div>
 
-&lt;h1&gt;Files&lt;/h1&gt;
-&lt;p&gt;For those interested in proofs and pretty diagrams, I have written up a more rigorous and detailed treatment on the subject.&lt;br /&gt;
-&lt;a href=&quot;/personal/merw/text.pdf&quot;&gt;PDF&lt;/a&gt;&lt;br /&gt;
-I have also given presentations about this exact topic; here is the slide deck I use.&lt;br /&gt;
-&lt;a href=&quot;/personal/merw/presentation.pdf&quot;&gt;Slides&lt;/a&gt;&lt;br /&gt;
-The implementation and diagrams are from the following Mathematica files.&lt;br /&gt;
-&lt;a href=&quot;/personal/merw/graphs.nb&quot;&gt;Notebook 1&lt;/a&gt;, &lt;a href=&quot;/personal/merw/graphs2.nb&quot;&gt;Notebook 2&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 11 Nov 2015 17:12:00 -0500</pubDate>
-        <link>http://larryfenn.com/personal/2015/11/11/merw.html</link>
-        <guid isPermaLink="true">http://larryfenn.com/personal/2015/11/11/merw.html</guid>
-        
-        <category>graph-theory</category>
-        
-        <category>probability</category>
-        
-        <category>mathematica</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>Assorted Academic Writing</title>
-        <description>&lt;p&gt;This is an archive of expository papers I have written. I have attempted to organize them by most relevant subject area.
-&lt;!--more--&gt;&lt;/p&gt;
-&lt;h1&gt;Algebra&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&quot;/assets/writing/unityhoms.pdf&quot;&gt;The existence of an injective homomorphism between \(\text{Hom}\left(\dfrac{\mathbb{Q}\lvert\zeta\rvert}{\mathbb{Q}}\right)\) and the multiplicative group \(R_n\) where \(\{x\in R_n\colon \gcd(x, n) = 1\}\)&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;/assets/writing/miscalg.pdf&quot;&gt;The group of rigid motions of the cube is isomorphic to \(S_4\), and some group actions from a group to itself.&lt;/a&gt;&lt;/p&gt;
-&lt;h1&gt;Linear Algebra&lt;/h1&gt;
-&lt;p&gt;A series of notes I typed up for the benefit of a student over the course of a spring linear algebra class.&lt;br /&gt;
-&lt;a href=&quot;/assets/writing/linalgnotes/notes.pdf&quot;&gt;Part 1: Definitions, Zorn’s Lemma&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;/assets/writing/linalgnotes/notes2.pdf&quot;&gt;Part 2: Representation, Products, Duals&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;/assets/writing/linalgnotes/notes3.pdf&quot;&gt;Part 3: Infinite Product/Sum Isomorphism, Riesz&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;/assets/writing/linalgnotes/notes4.pdf&quot;&gt;Part 4: Tensor Products&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;/assets/writing/linalgnotes/notes5.pdf&quot;&gt;Part 5: Exterior Products&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;/assets/writing/linalgnotes/notes6.pdf&quot;&gt;Part 6: Determinants&lt;/a&gt;&lt;/p&gt;
+<p>The result of the MapReduce step is essentially a list of edges and weights. Python has the <code class="language-plaintext highlighter-rouge">networkx</code> library which allows us to create the graph structure without much fuss; even better, it supports JSON output which allows us to use D3.js to render the graphs and play around with them.</p>
 
-&lt;h1&gt;Numerical Analysis&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&quot;/assets/writing/numanalysis/cranknicolson.pdf&quot;&gt;Crank-Nicolson notes&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
-A series of notes I typed up for the benefit of a student over the course of a fall numerical analysis class.&lt;br /&gt;
-&lt;a href=&quot;/assets/writing/numanalysis/notes1.pdf&quot;&gt;Part 1: Function Spaces&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;/assets/writing/numanalysis/notes2.pdf&quot;&gt;Part 2: Multi-Index, Fourier Transform&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;/assets/writing/numanalysis/notes3.pdf&quot;&gt;Part 3: Stability, DFT, Lax Equivalence&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;/assets/writing/numanalysis/notes4.pdf&quot;&gt;Part 4: Lax-Richtmyer Theorem&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;/assets/writing/numanalysis/notes5.pdf&quot;&gt;Part 5: Elliptical PDEs, FEM&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+<h2 id="the-graphs">The Graphs</h2>
 
-&lt;h1&gt;Real Analysis/Measure Theory&lt;/h1&gt;
-&lt;p&gt;Proofs of the following:&lt;br /&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Integrability of \( f\) on \(\mathbb{R}\) does not necessarily imply the convergence of \(f(x)\) to \(0\) as \(x\to\infty\)&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;If \( f\) is integrable on \(\mathbb{R}\), then \(F(x) = \displaystyle\int_{-\infty}^x f(t)\ dt\) is uniformly continuous.&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;Chebyshev’s Inequality&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;\(f\) real-valued and integrable on \(\mathbb{R}^d\) and \(\displaystyle\int_E f(x)\ dx\geq 0\) for every measurable \(E\) implies \(f(x) \geq 0\) a.e.&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;A function can be integrable yet unbounded in any interval.&lt;br /&gt;
-&lt;a href=&quot;/assets/writing/ra.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
+<p><a href="/personal/dota2drafts/winrategraph.html"><img src="/personal/dota2drafts/winrateexample1.png" hspace="20" vspace="20" /></a></p>
 
-&lt;h1&gt;Quantum Mechanics&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&quot;/assets/writing/qm.pdf&quot;&gt;Bell’s Inequality discussion.&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 10 Nov 2015 02:05:00 -0500</pubDate>
-        <link>http://larryfenn.com/personal/2015/11/10/assorted-papers.html</link>
-        <guid isPermaLink="true">http://larryfenn.com/personal/2015/11/10/assorted-papers.html</guid>
-        
-        <category>archive</category>
-        
-        <category>algebra</category>
-        
-        <category>linear-algebra</category>
-        
-        <category>numerical-analysis</category>
-        
-        <category>real-analysis</category>
-        
-        <category>quantum-mechanics</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>Mathematica Projects</title>
-        <description>&lt;p&gt;This is the archive listing of all the old Mathematica projects hosted on the old website.&lt;/p&gt;
+<p>Winrates necessitate special treatment. Each hero, indexed as <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span>, has their own, winrate (indexed over all heroes):</p>
 
-&lt;p&gt;&lt;a href=&quot;/personal/airfoil/airfoil.nb&quot;&gt;Dynamic airfoil flow solver.&lt;/a&gt;&lt;/p&gt;
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mfrac><msub><mi>W</mi><mi>i</mi></msub><msub><mi>N</mi><mi>i</mi></msub></mfrac></mstyle><mo>=</mo><mstyle scriptlevel="0" displaystyle="true"><mfrac><mstyle scriptlevel="0" displaystyle="true"><munder><mo>&#x2211;</mo><mi>j</mi></munder><msub><mi>w</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mstyle><mstyle scriptlevel="0" displaystyle="true"><munder><mo>&#x2211;</mo><mi>j</mi></munder><msub><mi>n</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mstyle></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\dfrac{W_i}{N_i} = \dfrac{\displaystyle\sum_j w_{ij}}{\displaystyle\sum_j n_{ij}}</annotation></semantics></math></span>
 
-&lt;p&gt;&lt;a href=&quot;/personal/blackscholes/collocation.nb&quot;&gt;Black-Scholes option pricing implementation via collocation.&lt;/a&gt;&lt;/p&gt;
+<p>For a hero pair <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>i</mi><mo separator="true">,</mo><mi>j</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(i, j)</annotation></semantics></math></span> the hero pair popularity is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>n</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">n_{ij}</annotation></semantics></math></span> and the hero pair winrate is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi>w</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>n</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mfrac></mrow><annotation encoding="application/x-tex">\frac{w_{ij}}{n_{ij}}</annotation></semantics></math></span>. However, this hero pair winrate does not have an obvious relationship with the “absolute” winrates for the heroes, <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi>W</mi><mi>i</mi></msub><msub><mi>N</mi><mi>i</mi></msub></mfrac></mrow><annotation encoding="application/x-tex">\frac{W_i}{N_i}</annotation></semantics></math></span> and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi>W</mi><mi>j</mi></msub><msub><mi>N</mi><mi>j</mi></msub></mfrac></mrow><annotation encoding="application/x-tex">\frac{W_j}{N_j}</annotation></semantics></math></span>. The pair winrate alone is not very informative; what would be informative is a determination of <i>how much better</i> the pair is. The simplest (although coarsest) measure is the difference between the pair winrate and the maximum of the individual winrates:</p>
 
-&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/V2bwRxtws9w&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>r</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mstyle scriptlevel="0" displaystyle="true"><mfrac><msub><mi>w</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>n</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mfrac></mstyle><mo>&#x2212;</mo><mi>max</mi><mo>&#x2061;</mo><mrow><mo fence="true">(</mo><mstyle scriptlevel="0" displaystyle="true"><mfrac><msub><mi>W</mi><mi>i</mi></msub><msub><mi>N</mi><mi>i</mi></msub></mfrac></mstyle><mo separator="true">,</mo><mstyle scriptlevel="0" displaystyle="true"><mfrac><msub><mi>W</mi><mi>j</mi></msub><msub><mi>N</mi><mi>j</mi></msub></mfrac></mstyle><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">r_{ij} = \dfrac{w_{ij}}{n_{ij}} - \max\left(\dfrac{W_i}{N_i}, \dfrac{W_j}{N_j}\right)</annotation></semantics></math></span>
 
-&lt;p&gt;&lt;a href=&quot;/personal/fdm/&quot;&gt;FDM: 3D heat equation, 2D wave equation, cell diffusion.&lt;/a&gt;&lt;/p&gt;
+<p>This is a measure of the “improvement” the pair has to working individually.</p>
 
-&lt;p&gt;&lt;a href=&quot;/personal/fem/fem.nb&quot;&gt;FEM obstructed channel flow solution.&lt;/a&gt;&lt;/p&gt;
+<h2 id="graph-topology">Graph Topology</h2>
 
-&lt;p&gt;&lt;a href=&quot;/personal/fem/helmholtz.nb&quot;&gt;FEM 2D Helmholtz equation solution.&lt;/a&gt;&lt;/p&gt;
+<p>By selecting a threshold parameter and removing edges if their weights fall below the threshold, the graphs for winrates and popularity can be endowed with more interesting topology. Both of the graphs could have a quite different topology depending on the skill level of the population being drawn from. Additionally, different measures of popularity and winrate can easily give rise to different topologies depending on what is being measured. For example, a similar procedure to the winrate improvement measure could be employed on popularity to filter out the existing effect of a hero being popular; it is no surprise that Earthshaker is at the apparent center of the popularity graph since (as we saw in the previous post) he is far and away the most picked hero by himself in the data set.</p>
 
-&lt;p&gt;&lt;a href=&quot;/personal/interpolation/&quot;&gt;Interpolation to arbitrary degree.&lt;/a&gt;&lt;/p&gt;
+<p>Ideally, we would prefer measures that give us graph topologies that give rise to many disjoint parts with as few isolated nodes as possible. These disjoint parts would line up with distinct strategies or combinations; for example, the Tiny-Io combination shows up as a disjoint element in the popularity graph already for any threshold below 4800.</p>
 
-&lt;p&gt;&lt;a href=&quot;/personal/minima/&quot;&gt;Deterministic optimization: gradient search and Newton’s method.&lt;/a&gt;&lt;/p&gt;
+<h2 id="further-plans">Further Plans</h2>
 
-&lt;p&gt;&lt;a href=&quot;/personal/newton/newtonvbisect.nb&quot;&gt;Bisection&lt;/a&gt;, &lt;a href=&quot;/personal/newton/newtonvsecant.nb&quot;&gt;secant method comparisons.&lt;/a&gt;&lt;/p&gt;
+<p>The analysis up to now has assumed that heroes perform equally well on radiant and dire side- not necessarily true. Additionally, it has made no distinction in skill groups; all of the analysis has been done on the total data from all the public matches.</p>
 
-&lt;p&gt;&lt;a href=&quot;/personal/rm/exerciseresistance.nb&quot;&gt;Fixed stepsize&lt;/a&gt;, &lt;a href=&quot;/personal/rm/exerciseresistancedynamic.nb&quot;&gt;dynamic stepsize RM optimization.&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Mon, 09 Nov 2015 16:00:00 -0500</pubDate>
-        <link>http://larryfenn.com/personal/2015/11/09/mathematica.html</link>
-        <guid isPermaLink="true">http://larryfenn.com/personal/2015/11/09/mathematica.html</guid>
-        
-        <category>archive</category>
-        
-        <category>mathematica</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>Mixed Procedures For Stochastic Optimization</title>
-        <description>&lt;p&gt;This is a significant generalization of my earlier stochastic optimization efforts. I presented as an author at the INFORMS 2015 Annual Conference in Philadelphia.&lt;/p&gt;
+<p>Alternative graphs and measures could be used to determine more information. One relationship that may be worth exploring is a “counter-pick” graph that tracks how many times two heroes faced off against each other on separate teams. Another graph worth looking into could be the “anti-pair” graph working to distinguish which heroes fulfill a similar role: if we count up how many times a hero is <i>not</i> picked when another hero is picked. However, there will be a significant amount of noise since any particular game only allows for 5 picks, leaving 95% of the hero pool unpicked as a matter of course.</p>
 
-&lt;p&gt;&lt;a href=&quot;/research/INFORMS2015.pdf&quot;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+<ul>
+  <li><a href="/personal/dota2drafts/popularitygraph.html">Hero pair popularity graph</a></li>
+  <li><a href="/personal/dota2drafts/winrategraph.html">Hero pair winrate graph</a></li>
+</ul>]]></content><author><name></name></author><category term="personal" /><category term="python" /><category term="hadoop" /><category term="d3js" /><category term="dota2" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Centrality &amp;amp; Maximal Entropy Random Walks</title><link href="https://larryfenn.com/personal/merw" rel="alternate" type="text/html" title="Centrality &amp;amp; Maximal Entropy Random Walks" /><published>2015-11-11T17:12:00-05:00</published><updated>2015-11-11T17:12:00-05:00</updated><id>https://larryfenn.com/personal/merw</id><content type="html" xml:base="https://larryfenn.com/personal/merw"><![CDATA[<p>Node centrality can be tricky to measure if it is not assumed the whole graph structure is accessible. However, approximation techniques can be used (in particular, an approximation to maximal entropy random walks) to determine central nodes.</p>
 
-&lt;p&gt;A big part of the generalization was defining a more abstract setting for the problem. In a nutshell, this work concentrates on two things:&lt;/p&gt;
+<h1>Centrality</h1>
+<p>One of the definitions of centrality for a graph is eigenvalue centrality. Eigenvalue centrality is useful in that it takes into account the centrality of neighbors (and, recursively, neighbors of neighbors and so on). Solving the eigenvalue problem for a graph adjacency matrix is best done numerically. Once finished, every node in the graph receives an appropriate centrality score.</p>
 
-&lt;ol&gt;
-  &lt;li&gt;Using interval estimation to provide confidence levels and error tolerances.&lt;/li&gt;
-  &lt;li&gt;Attempting to optimize over continuous and discrete domains.&lt;/li&gt;
-&lt;/ol&gt;
+<p>However, it may be that the structure of the whole graph is not available all at once. For example, consider the social network of friends as defined on all people- obtaining the structure of this graph requires interviewing every person on Earth and asking them to list their friends out. If we permit the existence of local information (for example, the results of interviewing one person), then it may be possible to determine approximate notions of centrality.</p>
 
-&lt;p&gt;Some of the notes created during the research process for both deterministic and stochastic cases: &lt;a href=&quot;/research/stopt2notes1.pdf&quot;&gt;PDF1&lt;/a&gt;, &lt;a href=&quot;/research/stopt2notes2.pdf&quot;&gt;PDF2&lt;/a&gt;&lt;/p&gt;
+<p>In the case of degree centrality this is easy and uninteresting: each person’s score is simply the number of people they know. However, it turns out more sophisticated notions of centrality can also be</p>
 
-&lt;p&gt;The experimental results from the presentation were generated and processed in Python before using Mathematica to render the graphs.&lt;/p&gt;
+<h1>Random Walks</h1>
+<p>The idea is to employ random walks that have high probabilities of being in more central nodes. Random walks on graphs are defined by the probability of travelling along edges conditioned on the current location of the walker. The maximal entropy random walk is essentially the random walk given by uniformly choosing at random a direction <i>among all possible paths in the graph that go through that edge</i> (contrast this with the uniform random walk, which chooses each edge uniformly at random).</p>
 
-&lt;figure&gt;
-	&lt;img src=&quot;/research/epsilonalphasample.png&quot; width=&quot;576&quot; height=&quot;367&quot; /&gt;
-	&lt;figcaption&gt;Figure 1: Samples required as a function of both confidence level (\\(\alpha\\)) and tolerance.&lt;/figcaption&gt;
-&lt;/figure&gt;
+<p>But wait! Isn’t it the case that one would need the global structure of the graph in order to determine the space of “all possible graphs through an edge”? This is in fact the case; however, an approximation to the maximal entropy random walk is possible to define up to an order which represents neighbor distance; for example, using an order 2 approximation to the random walk in the social network problem would consist in interviewing all people with a degree of separation equal to 2 from the current person.</p>
 
-&lt;p&gt;&lt;a href=&quot;/research/noisy.py&quot;&gt;Code&lt;/a&gt;&lt;/p&gt;
+<h1>Conclusion</h1>
+<p>A lot of these subjects were really cool to investigate. Eigenvalue centrality (and other more exotic notions of centrality based on it) introduced me to spectral graph theory, which is a fascinating subject on its own; but better yet, my existing love for numerical analysis, linear algebra, and approximation algorithms blends perfectly with spectral graph theory because all-too often the underlying graph is simply too large for any other technique to work (for example, links between webpages).</p>
 
-&lt;p&gt;This is an ongoing work, so expect to see another post about this before 2016!&lt;/p&gt;
-</description>
-        <pubDate>Wed, 04 Nov 2015 10:02:14 -0500</pubDate>
-        <link>http://larryfenn.com/research/2015/11/04/stochastic-optimization2.html</link>
-        <guid isPermaLink="true">http://larryfenn.com/research/2015/11/04/stochastic-optimization2.html</guid>
-        
-        <category>stochastic-optimization</category>
-        
-        <category>optimization</category>
-        
-        
-        <category>research</category>
-        
-      </item>
-    
-      <item>
-        <title>Decision Trees For Survey Construction</title>
-        <description>&lt;p&gt;This is a companion piece to a piece of research currently being done by Christina Zamfirescu of Hunter College about automated survey construction. As cited in the Electronic Journal of Statistics: Electron. J. Statist. 9 (2015), no. 2, 2202–2254. doi:10.1214/15-EJS1067.&lt;/p&gt;
+<p>In a similar vein, random walks (and maximal entropy random walks in particular) fall almost exactly into the same niche, except with probability theory thrown in. Once again, approximation is necessary.</p>
 
-&lt;p&gt;The article covers a few examples and transformations in parallel with her work which uses a different method.&lt;/p&gt;
+<h1>Files</h1>
+<p>For those interested in proofs and pretty diagrams, I have written up a more rigorous and detailed treatment on the subject.<br />
+<a href="/personal/merw/text.pdf">PDF</a><br />
+I have also given presentations about this exact topic; here is the slide deck I use.<br />
+<a href="/personal/merw/presentation.pdf">Slides</a><br />
+The implementation and diagrams are from the following Mathematica files.<br />
+<a href="/personal/merw/graphs.nb">Notebook 1</a>, <a href="/personal/merw/graphs2.nb">Notebook 2</a></p>]]></content><author><name></name></author><category term="personal" /><category term="graph-theory" /><category term="probability" /><category term="mathematica" /><summary type="html"><![CDATA[Node centrality can be tricky to measure if it is not assumed the whole graph structure is accessible. However, approximation techniques can be used (in particular, an approximation to maximal entropy random walks) to determine central nodes.]]></summary></entry><entry><title type="html">Assorted Academic Writing</title><link href="https://larryfenn.com/personal/assorted-papers" rel="alternate" type="text/html" title="Assorted Academic Writing" /><published>2015-11-10T02:05:00-05:00</published><updated>2015-11-10T02:05:00-05:00</updated><id>https://larryfenn.com/personal/assorted-papers</id><content type="html" xml:base="https://larryfenn.com/personal/assorted-papers"><![CDATA[<p>This is an archive of expository papers I have written. I have attempted to organize them by most relevant subject area.</p>
 
-&lt;p&gt;&lt;a href=&quot;/decisiontrees.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 22 Jul 2015 02:02:03 -0400</pubDate>
-        <link>http://larryfenn.com/research/2015/07/22/decision-trees.html</link>
-        <guid isPermaLink="true">http://larryfenn.com/research/2015/07/22/decision-trees.html</guid>
-        
-        <category>decision-trees</category>
-        
-        
-        <category>research</category>
-        
-      </item>
-    
-  </channel>
-</rss>
+<!--more-->
+
+<h1>Algebra</h1>
+<p><a href="/assets/writing/unityhoms.pdf">The existence of an injective homomorphism between <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>Hom</mtext><mrow><mo fence="true">(</mo><mstyle scriptlevel="0" displaystyle="true"><mfrac><mrow><mi mathvariant="double-struck">Q</mi><mo stretchy="false">&#x2223;</mo><mi>&#x3b6;</mi><mo stretchy="false">&#x2223;</mo></mrow><mi mathvariant="double-struck">Q</mi></mfrac></mstyle><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">\text{Hom}\left(\dfrac{\mathbb{Q}\lvert\zeta\rvert}{\mathbb{Q}}\right)</annotation></semantics></math></span> and the multiplicative group <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">R_n</annotation></semantics></math></span> where <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><mi>x</mi><mo>&#x2208;</mo><msub><mi>R</mi><mi>n</mi></msub><mspace></mspace><mspace width="0.1111em"/><mo lspace="0em" rspace="0.17em"></mo><mtext>&#x2009;&#x2063;</mtext><mo lspace="0em" rspace="0em">:</mo><mspace width="0.3333em"/><mi>gcd</mi><mo>&#x2061;</mo><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>n</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{x\in R_n\colon \gcd(x, n) = 1\}</annotation></semantics></math></span></a><br />
+<a href="/assets/writing/miscalg.pdf">The group of rigid motions of the cube is isomorphic to <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>4</mn></msub></mrow><annotation encoding="application/x-tex">S_4</annotation></semantics></math></span>, and some group actions from a group to itself.</a></p>
+<h1>Linear Algebra</h1>
+<p>A series of notes I typed up for the benefit of a student over the course of a spring linear algebra class.<br />
+<a href="/assets/writing/linalgnotes/notes.pdf">Part 1: Definitions, Zorn’s Lemma</a><br />
+<a href="/assets/writing/linalgnotes/notes2.pdf">Part 2: Representation, Products, Duals</a><br />
+<a href="/assets/writing/linalgnotes/notes3.pdf">Part 3: Infinite Product/Sum Isomorphism, Riesz</a><br />
+<a href="/assets/writing/linalgnotes/notes4.pdf">Part 4: Tensor Products</a><br />
+<a href="/assets/writing/linalgnotes/notes5.pdf">Part 5: Exterior Products</a><br />
+<a href="/assets/writing/linalgnotes/notes6.pdf">Part 6: Determinants</a></p>
+
+<h1>Numerical Analysis</h1>
+<p><a href="/assets/writing/numanalysis/cranknicolson.pdf">Crank-Nicolson notes</a><br /><br />
+A series of notes I typed up for the benefit of a student over the course of a fall numerical analysis class.<br />
+<a href="/assets/writing/numanalysis/notes1.pdf">Part 1: Function Spaces</a><br />
+<a href="/assets/writing/numanalysis/notes2.pdf">Part 2: Multi-Index, Fourier Transform</a><br />
+<a href="/assets/writing/numanalysis/notes3.pdf">Part 3: Stability, DFT, Lax Equivalence</a><br />
+<a href="/assets/writing/numanalysis/notes4.pdf">Part 4: Lax-Richtmyer Theorem</a><br />
+<a href="/assets/writing/numanalysis/notes5.pdf">Part 5: Elliptical PDEs, FEM</a><br /></p>
+
+<h1>Real Analysis/Measure Theory</h1>
+<p>Proofs of the following:<br /></p>
+
+<ol>
+  <li>Integrability of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span> on <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math></span> does not necessarily imply the convergence of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(x)</annotation></semantics></math></span> to <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span> as <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>&#x2192;</mo><mi mathvariant="normal">&#x221e;</mi></mrow><annotation encoding="application/x-tex">x\to\infty</annotation></semantics></math></span><br /></li>
+  <li>If <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span> is integrable on <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math></span>, then <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mstyle scriptlevel="0" displaystyle="true"><msubsup><mo>&#x222b;</mo><mrow><mo>&#x2212;</mo><mi mathvariant="normal">&#x221e;</mi></mrow><mi>x</mi></msubsup><mi>f</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mtext>&#xa0;</mtext><mi>d</mi><mi>t</mi></mstyle></mrow><annotation encoding="application/x-tex">F(x) = \displaystyle\int_{-\infty}^x f(t)\ dt</annotation></semantics></math></span> is uniformly continuous.<br /></li>
+  <li>Chebyshev’s Inequality<br /></li>
+  <li><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span> real-valued and integrable on <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="double-struck">R</mi><mi>d</mi></msup></mrow><annotation encoding="application/x-tex">\mathbb{R}^d</annotation></semantics></math></span> and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><msub><mo>&#x222b;</mo><mi>E</mi></msub><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mtext>&#xa0;</mtext><mi>d</mi><mi>x</mi><mo>&#x2265;</mo><mn>0</mn></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle\int_E f(x)\ dx\geq 0</annotation></semantics></math></span> for every measurable <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span> implies <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>&#x2265;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f(x) \geq 0</annotation></semantics></math></span> a.e.<br /></li>
+  <li>A function can be integrable yet unbounded in any interval.<br />
+<a href="/assets/writing/ra.pdf">PDF</a></li>
+</ol>
+
+<h1>Quantum Mechanics</h1>
+<p><a href="/assets/writing/qm.pdf">Bell’s Inequality discussion.</a></p>]]></content><author><name></name></author><category term="personal" /><category term="archive" /><category term="algebra" /><category term="linear-algebra" /><category term="numerical-analysis" /><category term="real-analysis" /><category term="quantum-mechanics" /><summary type="html"><![CDATA[This is an archive of expository papers I have written. I have attempted to organize them by most relevant subject area.]]></summary></entry><entry><title type="html">Mathematica Projects</title><link href="https://larryfenn.com/personal/mathematica" rel="alternate" type="text/html" title="Mathematica Projects" /><published>2015-11-09T16:00:00-05:00</published><updated>2015-11-09T16:00:00-05:00</updated><id>https://larryfenn.com/personal/mathematica</id><content type="html" xml:base="https://larryfenn.com/personal/mathematica"><![CDATA[<p>This is the archive listing of all the old Mathematica projects hosted on the old website.</p>
+
+<p><a href="/personal/airfoil/airfoil.nb">Dynamic airfoil flow solver.</a></p>
+
+<p><a href="/personal/blackscholes/collocation.nb">Black-Scholes option pricing implementation via collocation.</a></p>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/V2bwRxtws9w" frameborder="0" allowfullscreen=""></iframe>
+
+<p><a href="/personal/fdm/">FDM: 3D heat equation, 2D wave equation, cell diffusion.</a></p>
+
+<p><a href="/personal/fem/fem.nb">FEM obstructed channel flow solution.</a></p>
+
+<p><a href="/personal/fem/helmholtz.nb">FEM 2D Helmholtz equation solution.</a></p>
+
+<p><a href="/personal/interpolation/">Interpolation to arbitrary degree.</a></p>
+
+<p><a href="/personal/minima/">Deterministic optimization: gradient search and Newton’s method.</a></p>
+
+<p><a href="/personal/newton/newtonvbisect.nb">Bisection</a>, <a href="/personal/newton/newtonvsecant.nb">secant method comparisons.</a></p>
+
+<p><a href="/personal/rm/exerciseresistance.nb">Fixed stepsize</a>, <a href="/personal/rm/exerciseresistancedynamic.nb">dynamic stepsize RM optimization.</a></p>]]></content><author><name></name></author><category term="personal" /><category term="archive" /><category term="mathematica" /><summary type="html"><![CDATA[This is the archive listing of all the old Mathematica projects hosted on the old website.]]></summary></entry><entry><title type="html">Mixed Procedures For Stochastic Optimization</title><link href="https://larryfenn.com/research/stochastic-optimization2" rel="alternate" type="text/html" title="Mixed Procedures For Stochastic Optimization" /><published>2015-11-04T10:02:14-05:00</published><updated>2015-11-04T10:02:14-05:00</updated><id>https://larryfenn.com/research/stochastic-optimization2</id><content type="html" xml:base="https://larryfenn.com/research/stochastic-optimization2"><![CDATA[<p>This is a significant generalization of my earlier stochastic optimization efforts. I presented as an author at the INFORMS 2015 Annual Conference in Philadelphia.</p>
+
+<p><a href="/research/INFORMS2015.pdf">Slides</a></p>
+
+<p>A big part of the generalization was defining a more abstract setting for the problem. In a nutshell, this work concentrates on two things:</p>
+
+<ol>
+  <li>Using interval estimation to provide confidence levels and error tolerances.</li>
+  <li>Attempting to optimize over continuous and discrete domains.</li>
+</ol>
+
+<p>Some of the notes created during the research process for both deterministic and stochastic cases: <a href="/research/stopt2notes1.pdf">PDF1</a>, <a href="/research/stopt2notes2.pdf">PDF2</a></p>
+
+<p>The experimental results from the presentation were generated and processed in Python before using Mathematica to render the graphs.</p>
+
+<figure>
+	<img src="/research/epsilonalphasample.png" width="576" height="367" />
+	<figcaption>Figure 1: Samples required as a function of both confidence level (\\(\alpha\\)) and tolerance.</figcaption>
+</figure>
+
+<p><a href="/research/noisy.py">Code</a></p>
+
+<p>This is an ongoing work, so expect to see another post about this before 2016!</p>]]></content><author><name></name></author><category term="research" /><category term="stochastic-optimization" /><category term="optimization" /><summary type="html"><![CDATA[This is a significant generalization of my earlier stochastic optimization efforts. I presented as an author at the INFORMS 2015 Annual Conference in Philadelphia.]]></summary></entry></feed>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Dota 2 Drafting Part 1: Data Collection</title>
+  <meta name="description" content="Dota 2 captain’s mode entails a drafting phase where a sequence of picks and bans are issued by the team captains. As of this writing, there have been 1,933,...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://larryfenn.com/personal/dota2drafts">
+  <link rel="alternate" type="application/rss+xml" title="fenn, larry" href="https://larryfenn.com/feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">fenn, larry</a>
+
+    <nav class="site-nav">
+
+      <div class="trigger">
+        <a class="page-link" href="/about">About</a>
+        <a class="page-link" href="/personal/">Personal</a>
+        <a class="page-link" href="/research/">Research</a>
+        <a class="page-link" href="/classes/">Classes</a>
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Dota 2 Drafting Part 1: Data Collection</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2015-11-13T18:55:02-05:00" itemprop="datePublished">Nov 13, 2015
+      </time></p>
+  </header>
+
+  
+  <div class="tags">
+  <h5>Tags:
+  
+  <a href="/tag/python">python</a>
+  
+  <a href="/tag/pandas">pandas</a>
+  
+  <a href="/tag/hadoop">hadoop</a>
+  
+  <a href="/tag/statistics">statistics</a>
+  
+  <a href="/tag/dota2">dota2</a>
+  
+  </h5>
+  </div>
+  
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Dota 2 captain’s mode entails a drafting phase where a sequence of picks and bans are issued by the team captains. As of this writing, there have been 1,933,725,512 total matches of Dota 2 played, in all modes. It may be possible now with this body of data to build a machine learning algorithm for prediction and for drafting suggestions.</p>
+
+<!--more-->
+
+<h2 id="getting-the-data">Getting the data</h2>
+
+<p>The web API for Dota 2 has two functions we can use to grab match data as a JSON object from some index. The first, <code class="language-plaintext highlighter-rouge">GetMatchHistory</code>, has a game mode argument and date argument which would make it ideal for stratifying the data by patch release. However, it has three flaws that preclude its use:</p>
+
+<ol>
+  <li>It is capped (for some reason, most likely a bug judging from all the angry dev forum posts) at grabbing the most recent 500 games.</li>
+  <li>It does not return the pick/ban record, only the game type of a match.</li>
+  <li>The game mode argument currently does not work (lol Valve).</li>
+</ol>
+
+<p>The second function, <code class="language-plaintext highlighter-rouge">GetMatchHistoryBySequenceNum</code>, does return the pick/ban record and does not have any limitation on how far it can reach, but it does not support any date parameters. Thus, determining the actual patch number a match was played in will necessitate going into the records and accessing the UNIX time that the match was played at. The other complication <code class="language-plaintext highlighter-rouge">GetMatchHistoryBySequenceNum</code> has is that the sequence numbers do not directly map to the order in which matches were played- I suspect that the sequence number is issued to a match once it has finished being indexed and processed into the Dota 2 database. In other words, it is no guarantee if the sequence number for match A is higher than the sequence number for match B that match A was played after match B.</p>
+
+<p>The typical output from the <code class="language-plaintext highlighter-rouge">GetMatchHistoryBySequenceNum</code> call (for a captain’s mode match) looks like this:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+	<span class="s">"result"</span><span class="o">:</span> <span class="p">{</span>
+		<span class="s">"status"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1">// success code</span>
+		<span class="s">"matches"</span><span class="o">:</span> <span class="p">[</span>
+			<span class="p">{</span>
+				<span class="s">"players"</span><span class="o">:</span> <span class="p">[</span>
+					<span class="p">{</span>
+					<span class="c1">// omitted: player ids and statistics such as gold earned</span>
+					<span class="p">}</span>
+				<span class="p">]</span>
+				<span class="p">,</span>
+				<span class="s">"radiant_win"</span><span class="o">:</span> <span class="nb">true</span><span class="p">,</span>
+				<span class="s">"duration"</span><span class="o">:</span> <span class="mi">2333</span><span class="p">,</span> <span class="c1">// our metric for how hard a team won the game</span>
+				<span class="s">"start_time"</span><span class="o">:</span> <span class="mi">1447002472</span><span class="p">,</span>
+				<span class="s">"match_id"</span><span class="o">:</span> <span class="mi">1923658257</span><span class="p">,</span>
+				<span class="s">"match_seq_num"</span><span class="o">:</span> <span class="mi">1700000293</span><span class="p">,</span>
+				<span class="c1">// omitted: other game data not relevant to us</span>
+				<span class="s">"picks_bans"</span><span class="o">:</span> <span class="p">[</span>
+					<span class="p">{</span>
+						<span class="s">"is_pick"</span><span class="o">:</span> <span class="nb">false</span><span class="p">,</span>
+						<span class="s">"hero_id"</span><span class="o">:</span> <span class="mi">75</span><span class="p">,</span>
+						<span class="s">"team"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1">// 0: radiant, 1: dire</span>
+						<span class="s">"order"</span><span class="o">:</span> <span class="mi">0</span>
+					<span class="p">},</span>
+					<span class="p">{</span>
+						<span class="s">"is_pick"</span><span class="o">:</span> <span class="nb">false</span><span class="p">,</span>
+						<span class="s">"hero_id"</span><span class="o">:</span> <span class="mi">85</span><span class="p">,</span>
+						<span class="s">"team"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+						<span class="s">"order"</span><span class="o">:</span> <span class="mi">1</span>
+					<span class="p">},</span>
+					<span class="c1">// etc. for the rest of the pick/ban records</span>
+				<span class="p">]</span>
+				
+			<span class="p">}</span>
+			<span class="c1">// ... and so on for 99 more matches</span>
+		<span class="p">]</span>
+		
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Since we only want to index captain’s mode matches, it suffices to check if the <code class="language-plaintext highlighter-rouge">picks_bans</code> key exists, and parse the serialized JSON into a csv for future use if it is.</p>
+
+<h2 id="basic-observation-hero-popularity">Basic observation: Hero popularity</h2>
+
+<p>One simple question we can address right now is popularity: which heroes are the most frequently banned or picked? Even better, the ordered nature of the records allows us to distinguish which heroes are frequent first bans or picks. There are two teams, each getting five picks and five bans in some sequence (i.e. there are ten picks and ten bans total per game). After trimming the column headings from the csv, a simple Hadoop MapReduce task accumulates the frequencies for all hero picks and bans by when they occur.</p>
+<figure>
+    <img src="/personal/dota2drafts/figure_2.png" width="800" height="600" />
+    <figcaption>Figure 1: Picks (red) and bans (blue) with phase (1-10) represented by bar stack. A lot of heroes are higher priority bans than picks. Some heroes are much more represented in later phases: Anti-Mage, Gyrocopter, TA.</figcaption>
+</figure>
+<p>Parsing the MapReduce results into a pandas dataframe, I chose to graph the heroes that were most frequently banned/picked in total, with a stacked bar plot showing which phase the bans/picks come in on. This communicates which heroes are popular first picks or bans, i.e. heroes crucial to a team’s strategy succeeding (in the case of bans) or heroes that are particularly strong in the metagame (in the case of picks). Similarly, the timing of a pick or ban has implications; without diving too deep into the strategy of the game, hero drafting revolves around two primary goals:</p>
+
+<ol>
+  <li>Identify an opponents strategy and curtail its effectiveness with the correct selection of one’s own picks and bans.</li>
+  <li>Implementing your own strategy based on picks while limiting the opponent’s ability to address it with proper bans.</li>
+</ol>
+
+<p>Of course, the strategy is much deeper and as of this writing still mostly unexplored space. Part of this project is to discern what features lead to a successful drafting phase.</p>
+
+<h2 id="future-plans">Future plans</h2>
+
+<p>At this point, I have indexed 80 million Dota 2 matches, roughly 500,000 of which are captain’s mode matches. This is a sufficiently large data set to begin mining for insights; there are many possible directions we can go. Currently I have a cluster of Amazon EC2 instances with Hadoop setup and ready to go, and I’ll be poking around the data set for the more ‘obvious’ statistical features while I wait for more data points to accumulate.</p>
+
+<ul>
+  <li><a href="/personal/dota2drafts/capmodedata.zip">The data set (csv (zipped), 131 MB, 461,050 games)</a></li>
+  <li><a href="https://github.com/larryfenn/dota2drafts">https://github.com/larryfenn/dota2drafts</a></li>
+</ul>
+
+  </div>
+
+  <div class="previous-next">
+    
+    Previous: <a href="/personal/merw">Centrality & Maximal Entropy Random Walks</a>
+    <br>
+    
+    
+    Next: <a href="/personal/dota2drafts2">Dota 2 Drafting Part 2: Hero Pairings</a>
+    
+  </div>
+
+  <a class="u-url" href="/personal/dota2drafts" hidden></a>
+</article>
+<script defer src="/assets/js/math-copy.js"></script>
+<script defer src="/assets/js/footnote-popup.js"></script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li><a href="mailto:larry@larryfenn.com"><img src="/mailicon.png" width="16" height="16"> larry@larryfenn.com</a></li>
+		  <li><a href="https://github.com/larryfenn"><span class="icon icon--github"><svg viewBox="0 -2 16 16" height="16" width="16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">larryfenn</span></a>
+</li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>some of my research, thoughts, and projects</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
